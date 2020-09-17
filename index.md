@@ -280,67 +280,69 @@ Dependency relations specific to administrative texts include
 
 Administrative texts often exhibit a list-like character without clear sentential structure. 
 
-	1	1(disz)	1	2	nummod
-	2	gu4	bull	0	root
-	3	niga	barley-fattened	2	amod
-	4	ma2	for the ship	2	TERM
-	5	an-na	of An	4	GEN
-	6	sza3	in	2	LOC
-	7	unu{ki}-ga	Uruk	6	GEN
-	8	giri3	the transmitter was		giri3
-	9	bar-bar-re	B.	8	GEN 
-	10	zi-ga	disembursement from	2	ziga
-	11	be-li2-du10	B.	9	GEN
-	12	iti	month of	13	nmod
-	13	a2-ki-ti	Akiti	2	date
-	14	mu	year	13	LOC
-	15	an-sza-an{ki}	when Anshan	16	ABS
-	16	ba-hul	was destroyed	14	acl
-	
+~~~ conllu
+1	1(disz)	_	1	_	_	2	nummod	_	_
+2	gu4	_	bull	_	_	0	root	_	_
+3	niga	_	barley-fattened	_	_	2	appos	_	_
+4	ma2	_	for the ship	_	_	2	TERM	_	_
+5	an-na	_	of An	_	_	4	GEN	_	_
+6	sza3	_	in/at the heart	_	_	2	LOC	_	_
+7	unu{ki}-ga	_	Uruk	_	_	6	GEN	_	_
+8	giri3	_	the transmitter was	_	_	2	giri3	_	_
+9	bar-bar-re	_	B.	_	_	8	GEN	_	_
+10	zi-ga	_	disembursement from	2	ziga	_	_
+11	be-li2-du10	_	B.	_	_	9	GEN	_	_
+12	iti	_	month of	_	_	13	nmod	_	_
+13	a2-ki-ti	_	Akiti	_	_	2	date	_	_
+14	mu	_	year	_	_	13	LOC	_	_
+15	an-sza-an{ki}	_	when Anshan	_	_	16	ABS	_	_
+16	ba-hul	_	was destroyed	_	_	14	acl	_	_
+~~~	
 (P109483)
 
 This text describes a single transaction, but without any explicit verbal element. The obligatory part of a transaction statement is the object being transferred. This is thus modelled as root. A transaction involves a number of functional roles, some of which are partially understood, only. These are identified by morphological case labels (if provided by the morphology annotation, here TERM, LOC), Sumerian technical terms (here ziga, giri3), or semantic role labels (date, agent [= unmarked receiver or supplier], total).
 
-	1	83	83	2	nummod
-	2	gud	bulls	0	root
-	3	niga	barley-fattened	2	appos
-	4	32	32	5	nummod
-	5	gud	bulls	2	list
-	6	u2	grass-fattened	5	appos
-	7	20	18	8	nummod
-	8	la1		7	compound
-	9	2		7	compound
-	10	ab2	cows	2	list
-	11	mu	years	10	appos
-	12	2	two (years old)	11	nummod
-	13	niga	barley-fattened	10	appos
-	14	4	4	15	nummod
-	15	ab2	cows	2	list
-	16	mu	years	15	appos
-	17	2	two (years old)	16	nummod
-	18	u2	grass-fattened	15	appos
-	19	4	4	20	nummod
-	20	amar	calves	2	list
-	21	ga	milk-fed	20	appos
-	22	szu-nigin2	total	2	total
-	23	141	141	24	nummod
-	24	gud-hi-a	assorted cattle	22	appos
-	25	zig3-ga	disembursement	24	amod
-	26	ud	of day	22	date
-	27	30	29	26	nummod
-	28	la1		27	compound
-	29	1-kam		27	compound
-	30	iti	month	31	nmod
-	31	Sze-kar-ra-gal2	Shekaragal	26	LOC
-	32	mu	year	31	LOC
-	33	Si-mu-ru-um{ki}	(when) Simurum	39	ABS
-	34	Lu-lu-bu-um{ki}	and Lulubum	39	ABS
-	35	a-ra2	for the ninth time	39	dep
-	36	10		35	nummod
-	37	la1		36	compound
-	38	1-kam		36	compound
-	39	ba-hul	destroyed	32	acl
-
+~~~ conllu
+1	83	_	83	_	_	2	nummod	_	_
+2	gud	_	bulls	_	_	0	root	_	_
+3	niga	_	barley-fattened	_	_	2	appos	_	_
+4	32	_	32	_	_	5	nummod	_	_
+5	gud	_	bulls	_	_	2	list	_	_
+6	u2	_	grass-fattened	_	_	5	appos	_	_
+7	20	_	18	_	_	8	nummod	_	_
+8	la1	_	_	_	_	7	compound	_	_
+9	2	_	_	_	_	7	compound	_	_
+10	ab2	_	cows	_	_	2	list	_	_
+11	mu	_	years	_	_	10	appos	_	_
+12	2	_	two (years old)	_	_	11	nummod	_	_
+13	niga	_	barley-fattened	_	_	10	appos	_	_
+14	4	_	4	_	_	15	nummod	_	_
+15	ab2	_	cows	_	_	2	list	_	_
+16	mu	_	years	_	_	15	appos	_	_
+17	2	_	two (years old)	_	_	16	nummod	_	_
+18	u2	_	grass-fattened	_	_	15	appos	_	_
+19	4	_	4	_	_	20	nummod	_	_
+20	amar	_	calves	_	_	2	list	_	_
+21	ga	_	milk-fed	_	_	20	appos	_	_
+22	szu-nigin2	_	total	_	_	2	total	_	_
+23	141	141	_	_	_	24	nummod	_	_
+24	gud-hi-a	_	assorted cattle	_	_	22	appos	_	_
+25	zig3-ga	_	disembursement	_	_	24	amod	_	_
+26	ud	_	of day	_	_	22	date	_	_
+27	30	_	29	_	_	26	nummod	_	_
+28	la1	_	_	_	_	27	compound	_	_
+29	1-kam	_	_	_	_	27	compound	_	_
+30	iti	_	month	_	_	31	nmod	_	_
+31	Sze-kar-ra-gal2	_	Shekaragal	_	_	26	LOC	_	_
+32	mu	_	year	_	_	31	LOC	_	_
+33	Si-mu-ru-um{ki}	_	(when) Simurum	_	_	39	ABS	_	_
+34	Lu-lu-bu-um{ki}	_	and Lulubum	_	_	33	appos	_	_
+35	a-ra2	_	for the ninth time	_	_	39	dep	_	_
+36	10	_	_	_	_	35	nummod	_	_
+37	la1	_	_	_	_	36	compound	_	_
+38	1-kam	_	_	_	_	36	compound	_	_
+39	ba-hul	_	destroyed	_	_	32	acl	_	_
+~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
 The list relation holds between entitites of the same kind, here, the objects of transaction. The total is connected by a total relation
@@ -351,24 +353,24 @@ Note that the morphology and the relation of a-ra2 (35) are currently unclear an
 
 Note that administrative texts *can* actually use overt verbs, in this case, the verb is the root, and the object of the transition is assumed to be a terminative argument.
 
-	1	1	1	2	nummod
-	2	lulim	deer	20	TERM
-	3	nitab	male	2	appos
-	4	2	2	5	nummod
-	5	lulim	deer	2	list
-	6	munus	female	5	appos
-	7	1	1	9	nummod
-	8	amar	calf	9	nmod
-	9	lulim	deer	2	list
-	10	munus	milk-fed	9	appos
-	11	ga	female	9	appos
-	12	ba	dead.	13	ABS
-	13	usz2		2	acl
-	...
-	18	{d}Szu-gi-uru-gu10	Shulgiurugu	20	ERG
-	19	szu	received	20	ABS
-	20	ba-ti		0	root
-
+~~~ conllu
+1	1	_	1	_	_	2	nummod	_	_
+2	lulim	_	deer	_	_	16	TERM	_	_
+3	nitab	_	male	_	_	2	appos	_	_
+4	2	_	2	_	_	5	nummod	_	_
+5	lulim	_	deer	_	_	2	list	_	_
+6	munus	_	female	_	_	5	appos	_	_
+7	1	_	1	_	_	9	nummod	_	_
+8	amar	_	calf	_	_	9	nmod	_	_
+9	lulim	_	deer	_	_	2	list	_	_
+10	munus	_	milk-fed	_	_	9	appos	_	_
+11	ga	_	female	_	_	9	appos	_	_
+12	ba	_	dead.	_	_	13	ABS	_	_
+13	usz2 ...	_	_	_	_	2	acl	_	_
+14	{d}Szu-gi-uru-gu10	_	Shulgiurugu	_	_	16	ERG	_	_
+15	szu	_	received	_	_	16	ABS	_	_
+16	ba-ti	_	_	_	_	0	root	_	_
+~~~
 Archi and Pomponio 347, Hayes p.371, not in CDLI
 
 TBC: As for technical terms, the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
@@ -378,54 +380,61 @@ TBC: As for technical terms, the respective person designated is assumed to repr
 
 Head of a date phrase is the first element (day, month or year), connected by a LOC relation. Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
 
-	12	iti	month of	13	nmod
-	13	a2-ki-ti	Akiti	2	date
-	14	mu	year	13	LOC
-	15	an-sza-an{ki}	when Anshan	16	ABS
-	16	ba-hul	was destroyed	14	acl
-	
+Dates are connected by means of the date dependency (could be considered locative? -- anyway, easier to query in this way).
+
+TO CHECK: the year name is *not* an acl, is it?
+
+~~~ conllu
+1	iti	_	month of	_	_	2	nmod	_	_
+2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
+3	mu	_	year	_	_	2	LOC	_	_
+4	an-sza-an{ki}	_	when Anshan	_	_	5	ABS	_	_
+5	ba-hul	_	was destroyed	_	_	3	acl	_	_
+~~~	
 (P109483)
 
-	26	ud	of day	22	date
-	27	30	29	26	nummod
-	28	la1		27	compound
-	29	1-kam		27	compound
-	30	iti	month	31	nmod
-	31	Sze-kar-ra-gal2	Shekaragal	26	LOC
-	32	mu	year	31	LOC
-	33	Si-mu-ru-um{ki}	(when) Simurum	39	ABS
-	34	Lu-lu-bu-um{ki}	and Lulubum	39	ABS
-	35	a-ra2	for the ninth time	39	dep
-	36	10		35	nummod
-	37	la1		36	compound
-	38	1-kam		36	compound
-
+~~~ conllu
+1	ud	_	of day	0	date	_	_
+2	30	_	29	1	nummod	_	_
+3	la1	_	_	2	compound	_	_
+4	1-kam	_	_	2	compound	_	_
+5	iti	_	month	6	nmod	_	_
+6	Sze-kar-ra-gal2	_	Shekaragal	1	LOC	_	_
+7	mu	_	year	6	LOC	_	_
+8	Si-mu-ru-um{ki}	_	(when) Simurum	14	ABS	_	_
+9	Lu-lu-bu-um{ki}	_	and Lulubum	8	appos	_	_
+10	a-ra2	_	for the ninth time	14	dep	_	_
+11	10	_	_	10	nummod	_	_
+12	la1	_	_	11	compound	_	_
+13	1-kam	_	_	11	compound	_	_
+14	ba-hul	_	destroyed	_	_	7	acl	_	_
+~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
-Days, months and years are assumed to be connected by a LOC (temporal) relationship because of their semantics.
+Days, months and years are internally connected by a LOC (temporal) relationship because of their semantics.
 
 Dates can be written discontinuously:
-
-	7	1	1	9	nummod
-	8	amar	calf	9	nmod
-	9	lulim	deer	2	list
-	10	munus	milk-fed	9	appos
-	11	ga	female	9	appos
-	12	ba	dead.	13	ABS
-	13	usz2		2	acl
-	14	ud		20	date
-	15	25-kam		15	nummod
-	16	ki	from Ludigira	20	LOC
-	17	Lu2-digir-ra-ta		16	GEN
-	18	{d}Szu-gi-uru-gu10	Shulgiurugu	20	ERG
-	19	szu	received	20	ABS
-	20	ba-ti		0	root
-	21	iti	Month of Kisig-Ninazu.	22	nmod
-	22	Ki-sig2-{d}Nin-a-zu		20	date
-	23	mu	The year when Shashru was destroyed (Amar-Sin 6).	22	LOC
-	24	Sza-asz-ru{ki}		25	ABS
-	25	ba-hul		23	acl
-
+~~~ conllu
+1	1	_	1	_	_	3	nummod	_	_
+2	amar	_	calf	_	_	3	nmod	_	_
+3	lulim	_	deer	_	_	14	root	_	_
+4	munus	_	milk-fed	_	_	3	appos	_	_
+5	ga	_	female	_	_	3	appos	_	_
+6	ba	_	dead.	_	_	7	ABS	_	_
+7	usz2	_	_	_	_	3	acl	_	_
+8	ud	_	_	_	_	14	date	_	_
+9	25-kam	_	_	_	_	8	nummod	_	_
+10	ki	_	from 	_	_	14	LOC	_	_
+11	Lu2-digir-ra-ta	_	Ludigira	_	_	10	GEN	_	_
+12	{d}Szu-gi-uru-gu10	_	Shulgiurugu	_	_	14	ERG	_	_
+13	szu	_	received	_	_	14	ABS	_	_
+14	ba-ti	_	_	_	_	0	root	_	_
+15	iti	_	Month 	_	_	16	nmod	_	_
+16	Ki-sig2-{d}Nin-a-zu	_	of Kisig-Ninazu.	_	_	20	date	_	_
+17	mu	_	The year when	_	_	16	LOC	_	_
+18	Sza-asz-ru{ki}	_	Shashru	_	_	19	ABS	_	_
+19	ba-hul	_	was destroyed	_	_	17	acl	_	_
+~~~
 (no CDLI, Archi and Pomponio 347, Hayes p.371)
 
 In this case, create multiple date relations with the respective root element.
@@ -434,13 +443,14 @@ In this case, create multiple date relations with the respective root element.
 
 ### Dependency syntax: Other uses of the copula
 
-	1	šag₄	heart	6	ERG
-	2	en-lil₂-la₂-ke₄	DN=GEN=ERG	1	GEN	
-	3	id2idigna-am₃	WN=STM	1	STM	acl?
-	4	a	water	6	ABS	
-	5	dug₃-ga	sweet-PT=ABS	4	amod		
-	6	nam-de₆	MOD-VEN-3.SG.NH.A-bring-3.SG.P	0	root
-						
+~~~ conllu
+1	šag₄	_	heart	_	_	6	ERG	_	_
+2	en-lil₂-la₂-ke₄	_	DN=GEN=ERG	_	_	1	GEN	_	_
+3	id2idigna-am₃	_	WN=STM	_	_	1	STM	acl?	_	_
+4	a	_	water	_	_	6	ABS	_	_
+5	dug₃-ga	_	sweet-PT=ABS	_	_	4	amod	_	_	
+6	nam-de₆	_	MOD-VEN-3.SG.NH.A-bring-3.SG.P	_	_	0	root	_	_
+~~~						
 “The heart of the god Enlil brought sweet water like the river Tigris.”	(Q000377)					
 
 The third word contains the "standard marker"; this actually contains the copula, but lexicalized into a cleft-like construction. This is evident from the ergative case that the subject receives from the verb in line 6. However, it does not depend on szag, because otherwise, the ergative marker would have been placed after the STM. Nevertheless, it is analyzed as an acl here.
