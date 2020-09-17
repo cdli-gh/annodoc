@@ -118,13 +118,15 @@ This is part of the summary section of an administrative text, with the semantic
 
 Note that the construction can also be understood literally:
 
-	1	šag₄	heart	6	ERG
-	2	en-lil₂-la₂-ke₄	DN=GEN=ERG	1	GEN
-	3	id2idigna-am₃	WN=STM	1	acl
-	4	a	water	6	ABS
-	5	dug₃-ga	sweet-PT=ABS	4	amod
-	6	nam-de₆	MOD-VEN-3.SG.NH.A-bring-3.SG.P	0	root
+~~~ conllu
+1	šag₄	_	heart	_	_	6	ERG	_	_
+2	en-lil₂-la₂-ke₄	_	DN=GEN=ERG	_	_	1	GEN	_	_
+3	id2idigna-am₃	_	WN=STM	_	_	1	acl	_	_
+4	a	_	water	_	_	6	ABS	_	_
+5	dug₃-ga	_	sweet-PT=ABS	_	_	4	amod	_	_
+6	nam-de₆	_	MOD-VEN-3.SG.NH.A-bring-3.SG.P	_	_	0	root	_	_
 
+~~~
 “The heart of the god Enlil brought sweet water like the river Tigris.” (Q000377)
 
 As these constructions are analyzed in accordance with their morphology rather than their semantic interpretation in English, the UD label "case" is not used for Sumerian.
