@@ -6,18 +6,15 @@ title: Dependency Syntax for Sumerian
 
 ## Table of contents
 
-Basics of Sumerian grammar
-=
+## Basics of Sumerian grammar
 
 yet to come
 
-Parts of Speech
-=
+## Parts of Speech
 
 yet to come
 
-Syntactic dependencies
-=
+## Syntactic dependencies
 
 The annotation scheme is designed with the goal of mappability to UD v.2, however, the specifics of Sumerian require a language-specific schema. The mapping of native labels to UD dependencies is approached here as a post-processing task. 
 
@@ -37,12 +34,12 @@ Usually, syntactic subordination is morphologically marked, e.g., by means of a 
 Sumerian does not have a relative pronoun, but certain nominals can serve a similar function. For their analysis, we follow Hayes, p.10ff, 157:
 
 ~~~ conllu
-1	Ur-{d}Nammu	_ _ _ _ 0	root
-2	lugal... _ _ _ _ 1	appos
-3	lu2	_ _ _ _ 1	appos
-4	e2	_ _ _ _ 6	ABS
-5	{d}En-lil2-la2	_ _ _ _ 4	GEN
-6	id-du3-a	_ _ _ _ 3	acl
+1 Ur-{d}Nammu _ _ _ _ 0 root
+2 lugal... _ _ _ _ 1 appos
+3 lu2 _ _ _ _ 1 appos
+4 e2 _ _ _ _ 6 ABS
+5 {d}En-lil2-la2 _ _ _ _ 4 GEN
+6 id-du3-a _ _ _ _ 3 acl
 ~~~
 
 "Ur-Nammu, the king ..., (the man) who built the temple of Enlil"
