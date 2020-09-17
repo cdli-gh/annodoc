@@ -65,6 +65,11 @@ As Sumerian employs morphology to mark syntactic relations, we adopt a morpholog
 - We annotate all subordinate clauses as relative clauses (acl). If an adverbial function is evident from the morphology, this involves a case marker, and then a compound label acl+CASE is used. This means that we do not use the dependencies ccomp, xcomp, and csubj.
 - Sumerian does not have the grammatical category ADV. Adverbials are modelled like adjectives, resp. relative clauses, with additional case marking. The dependencies advcl and advmod do not exist.
 
+### Incomplete annotation (dep)
+
+Should be used for damaged or missing signs whose meaning cannot be ascertained.
+In the gold data, dep should be used if a particular source doesn't define the syntactic relations of a particular fragment. This includes, for example, the internal structure of year names according to Jaworski (2009).
+
 ### Subordinate clauses (acl)
 
 Usually, syntactic subordination is morphologically marked, e.g., by means of a nominalization marker. It is thus impossible to distinguish nominalized verbs and relative clauses. All nominalized verbs are annotated as relative clauses (acl, on the use of the amod in place of acl, see below). Several constructions can be distinguished: "full relative clauses" are fully inflected verbs with a nominalization marker (-a), "reduced relative clauses" (participial construction, Mesanepada construction) use uninflected verbs, with the addition of a nominalization marker (-a). The latter are formally identical with the passive participle.
