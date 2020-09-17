@@ -34,28 +34,28 @@ Usually, syntactic subordination is morphologically marked, e.g., by means of a 
 Sumerian does not have a relative pronoun, but certain nominals can serve a similar function. For their analysis, we follow Hayes, p.10ff, 157:
 
 ~~~ conllu
-1 Ur-{d}Nammu _ _ _ _ 0 root
-2 lugal... _ _ _ _ 1 appos
-3 lu2 _ _ _ _ 1 appos
-4 e2 _ _ _ _ 6 ABS
-5 {d}En-lil2-la2 _ _ _ _ 4 GEN
-6 id-du3-a _ _ _ _ 3 acl
+1 Ur-{d}Nammu _ _ _ _ 0 root _ _
+2 lugal... _ _ _ _ 1 appos _ _ 
+3 lu2 _ _ _ _ 1 appos _ _
+4 e2 _ _ _ _ 6 ABS _ _
+5 {d}En-lil2-la2 _ _ _ _ 4 GEN _ _
+6 id-du3-a _ _ _ _ 3 acl _ _
 ~~~
-
-"Ur-Nammu, the king ..., (the man) who built the temple of Enlil"
+"Ur-Nammu, the king ..., (the man) who built the temple of Enlil" (Hayes 2000, p.10ff, 157)
 
 Here, lu2 "man" is in apposition to the "matrix noun". The head of the relative clause is lu2. This analysis corresponds to a translation as "the man who built the temple of Enlil". Note that the Sumerian counterpart of "who" in this analysis is not lu2, but the nominalization marker -a in the verb.
 
 Note that lu2 is not a function word, but a regular noun. Accordingly, it can also be understood literally:
 
-	19	lu₂	25	ABS
-	20	mu-sar-ra-ba	22	LOC
-	21	šu	22	ABS
-	22	bi₂-ib₂-uru₁₂-a	19	acl
-	23	{d}bil₃-ga-meš₃-e	25	ERG
-	24	nam	25	ABS
-	25	ha-ba-da-kud-e	0	root
-
+~~~ conllu
+19	lu₂	_ _ _ _ 25	ABS _ _
+20	mu-sar-ra-ba	_ _ _ _ 22	LOC _ _
+21	šu	_ _ _ _ 22	ABS _ _
+22	bi₂-ib₂-uru₁₂-a	_ _ _ _ 19	acl _ _
+23	{d}bil₃-ga-meš₃-e	_ _ _ _ 25	ERG _ _
+24	nam	_ _ _ _ 25	ABS _ _
+25	ha-ba-da-kud-e	_ _ _ _ 0	root _ _
+~~~~
 "The man [who erases this inscription] may be cursed by Gilgamesh!" (Q001642)
 
 In this example, there is no other "matrix noun" except for lu2 "man".
