@@ -26,8 +26,7 @@ As Sumerian employs morphology to mark syntactic relations, we adopt a morpholog
 - We annotate all subordinate clauses as relative clauses (acl). If an adverbial function is evident from the morphology, this involves a case marker, and then a compound label acl+CASE is used. This means that we do not use the dependencies ccomp, xcomp, and csubj.
 - Sumerian does not have the grammatical category ADV. Adverbials are modelled like adjectives, resp. relative clauses, with additional case marking. The dependencies advcl and advmod do not exist.
 
-Subordinate clauses (acl)
-==
+### Subordinate clauses (acl)
 
 Usually, syntactic subordination is morphologically marked, e.g., by means of a nominalization marker. It is thus impossible to distinguish nominalized verbs and relative clauses. All nominalized verbs are annotated as relative clauses (acl, on the use of the amod in place of acl, see below). Several constructions can be distinguished: "full relative clauses" are fully inflected verbs with a nominalization marker (-a), "reduced relative clauses" (participial construction, Mesanepada construction) use uninflected verbs, with the addition of a nominalization marker (-a). The latter are formally identical with the passive participle.
 
@@ -96,9 +95,7 @@ As for acl+ABS, acl+ERG and acl+DAT, these are systematically ambiguous between 
 
 Note syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
 
-
-Adpositions ("case")
-==
+### Adpositions ("case")
 
 Sumerian does not have prepositions, but it does have a number of nouns that are used to express prepositional functions, e.g., sza3 "heart", also used for to express the meaning of the preposition "in". These are annotated in accordance with their morphology, i.e., as nouns with genitive complement. If no additional case is marked in the morphology annotation, these phrases are considered to be in apposition with the nominal they modify.
 
@@ -126,8 +123,7 @@ Note that the construction can also be understood literally:
 
 As these constructions are analyzed in accordance with their morphology rather than their semantic interpretation in English, the UD label "case" is not used for Sumerian.
 
-Apposition (appos)
-==
+### Apposition (appos)
 
 Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit genitive, or implicit copula.
 
@@ -174,15 +170,13 @@ This can also be interpreted as having an implicit copula (expected to be marked
 
 Appositions and case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
 
-amod
-==
+### "Adjectival" modifiers: amod
 
 Relative clauses without arguments are annotated as amod, cf. acl. All "adjectives" are nominalized verbs, and we follow the morphological analysis as to whether they are annotated as a amod or as appos. Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation as appos would be preferrable.
 
 Sumerian forms two different participles, the "passive participle" in -a (also used to signal clausal subordination) and the "active participle" in -0. The annotation of active participles follows the same pattern with respect to amod/acl distinction as the annotation of passive participles. However, active particiles are more commonly annotated as amod.
 
-nmod
-==
+### Nominal modifiers: nmod
 
 In CDLI annotation, nmod is exclusively used for prenominal nominal modifiers. Postnominal nominal modifiers are marked according to their case or as appos.
 
@@ -195,8 +189,7 @@ Sumerian NPs usually place the head of the NP at their left periphery. For seman
 
 In the mapping to UD interpretation, case-marked adnominal dependents of nominal heads are mapped to nmod. Most prominently, this includes genitives.
 
-det
-==
+### Quantifiers: det
 
 There are no determiners in Sumerian. The label det is used for postnominal quantifiers (themselves nominal).
 
@@ -207,8 +200,7 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 
 "Nothing escaped their clutches." (Q000375)
 	
-conj, cc
-==
+### Syntactic coordination: conj, cc
 
 Conjunction can be expressed morphologically or syntactically.
 
@@ -225,28 +217,24 @@ Conjunction can be expressed morphologically or syntactically.
 
 If conjunction is not explicitly expressed, use appos.
 
-punct
-==
+### Punctuation: punct
 
 No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text, the recommended dependency is punct. Likewise, if a Sumerian transcript includes modern punctuation signs.
 
-Case roles
-==
+### Grammatical roles (morphological case): ABS, ERG, DAT, ABL, ADV, COM, EQU, TERM, LOC, GEN
 
 As a general rule, the syntactic relation of nominal dependents with their head is described by the morphological case associated with it. If no case is provided, adnominal nouns are marked nmod (if premodifying) or appos (if postmodifying).
 As labels for dependencies, we use the case labels employed in morphological annotation, with the exception of locatives (all represented as LOC) and datives (all represented as DAT). Note that locatives include both spatial and temporal relationships.
 
 Where case marking is postulated in the morphology annotation, we follow that analysis, regardless of whether the morpheme is realized in the surface string. In particular, this includes the annotation of administrative texts, where case marking is systematically lacking.
 
-Genres
-=
+## Dependency annotation for Administrative texts 
 
 The description so far focused on prose text. Administrative texts require a slightly different treatment.
 
-Administrative texts
-==
+### Transactions and their participants
 
-specific relations:
+Dependency relations specific to administrative texts include
 - ziga, giri3
 - total, date, agent
 - list
@@ -347,7 +335,7 @@ Archi and Pomponio 347, Hayes p.371, not in CDLI
 
 TBC: As for technical terms, the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
 
-Dates
+### Dates
 ==
 
 Head of a date phrase is the first element (day, month or year), connected by a LOC relation. Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
@@ -403,11 +391,10 @@ Dates can be written discontinuously:
 (no CDLI, Archi and Pomponio 347, Hayes p.371)
 
 In this case, create multiple date relations with the respective root element.
-Open issues
-=
 
-Other uses of the copula
-==
+## Open issues
+
+### Dependency syntax: Other uses of the copula
 
 	1	šag₄	heart	6	ERG
 	2	en-lil₂-la₂-ke₄	DN=GEN=ERG	1	GEN	
