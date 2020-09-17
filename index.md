@@ -59,7 +59,7 @@ project as a revision of the CoNLL-X format.
 2    sleep  sleep  VERB    VBP    _    0    ROOT     _    _
 ~~~
 
-The CoNLL-U format defines 10 fields separated by TAB (in Annodoc: space), again, only fields 1 `ID`, 2 `WORD`, 4 `POS`, 7 `HEAD` and 8 `EDGE` are visualized. As the example shows, only the first sentence of an embedded example is shown.
+The CoNLL-U format defines 10 fields separated by TAB (in Annodoc: space), again, only fields 1 `ID`, 2 `WORD`, 4 `POS`, 7 `HEAD` and 8 `EDGE` are visualized.
 
 As yet another alternative, the Stanford Dependency format can be used:
 
