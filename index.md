@@ -378,7 +378,7 @@ This text describes a single transaction, but without any explicit verbal elemen
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
-The list relation holds between entitites of the same kind, here, the objects of transaction. The total is connected by a total relation
+The list relation holds between entitites of the same kind, here, the objects of transaction. Note that list should not be used to connect transactions. We assume that transactions are inherently sentential, so, use parataxis. The total is connected by a total relation
 
 The internal structure of complex numerals is not analyzed, but represented by compound.
 
@@ -481,6 +481,7 @@ These are revisions of the original approach to annotation, which need to be cha
 
 - numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
 - acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
+- connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
 
 ## Open issues
 
