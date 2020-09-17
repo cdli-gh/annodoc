@@ -490,6 +490,10 @@ These are revisions of the original approach to annotation, which need to be cha
 
 ## Open issues
 
+### Complex numerals
+
+Currently, multi-number numerals are connected by `compound` relations. This also includes *la1* 'minus' -- but this is verbal. Can we motivate a linguistic structure here?  
+
 ### Syntactic relation between mu and year name
 
 Currently annotated as acl. To be confirmed: The year name is *not* an acl, is it? Maybe *that* is a ccomp, then?
