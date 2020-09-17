@@ -179,7 +179,8 @@ implicit genitive
 4	ur-dba-u₂-ka	_	_	_	_	3	appos	_	_
 5	i₃-in-ŋal₂-la-ta	_	_	_	_	1	acl	_	_
 6	tur-re-dam	_	_	_	_	0	root	_	_
-~~~	
+
+~~~
 “These (various animals) are to be subtracted from the sealed tablet of Uršulpae that is in the basket of Urbau.” (P113923)
 
 The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as appos, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
@@ -190,6 +191,7 @@ implicit copula
 2	ki	_	_	_	_	3	ABS	_	_
 3	aŋ₂	_	_	_	_	1	acl+appos	_	_
 4	urim₅{ki}-ma	_	_	_	_	3	GEN	_	_
+
 ~~~
 "Amar-Suen, beloved of Ur" (name of a statue, Q000985)
 
@@ -204,6 +206,7 @@ Relative clauses without arguments are annotated as amod, cf. acl. All "adjectiv
 ~~~ conllu
 1	a	_	water	_	_	0	ABS	_	_
 2	dug₃-ga	_	sweet-PT=ABS	_	_	1	amod	_	_
+
 ~~~
 “sweet water” (Q000377)
 
@@ -220,6 +223,7 @@ Sumerian NPs usually place the head of the NP at their left periphery. For seman
 ~~~ conllu
 1	sukkal	_	minister	_	_	2	nmod	_	_
 2	an-sig₇-ga-ri-a	_	PN.ABS	_	_	0	ABS	_	_
+
 ~~~
 "Minister Ansiga-ria" (Q000370)
 
@@ -234,6 +238,7 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 2	na-me	_	some.ABS	_	_	1	det	_	_
 3	a₂-be₂	_	arm.3.SG.NH.POSS.ABL	_	_	4	ABL	_	_
 4	la-ba-ra-e₃	_	NEG-MID-ABL-leave-3.SG.S	_	_	0	root	_	_
+
 ~~~
 "Nothing escaped their clutches." (Q000375)
 	
@@ -250,6 +255,7 @@ Conjunction can be expressed morphologically or syntactically.
 6	ki	_	N	_	_	8	LOC	_	_
 7	sizkur₂-ra-ka-na	_	N.GEN.3-SG-H-POSS.L1	_	_	6	GEN	_	_
 8	nu-silig-ge	_	NEG.NV.PF.ABS	_	_	1	acl	_	_
+
 ~~~
 "the temple (where) honey, butter and wine in his place of sacrifice shall not cease" (Q001792)
 
@@ -297,6 +303,7 @@ Administrative texts often exhibit a list-like character without clear sententia
 14	mu	_	year	_	_	13	LOC	_	_
 15	an-sza-an{ki}	_	when Anshan	_	_	16	ABS	_	_
 16	ba-hul	_	was destroyed	_	_	14	acl	_	_
+
 ~~~	
 (P109483)
 
@@ -342,6 +349,7 @@ This text describes a single transaction, but without any explicit verbal elemen
 37	la1	_	_	_	_	36	compound	_	_
 38	1-kam	_	_	_	_	36	compound	_	_
 39	ba-hul	_	destroyed	_	_	32	acl	_	_
+
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
@@ -370,19 +378,19 @@ Note that administrative texts *can* actually use overt verbs, in this case, the
 14	{d}Szu-gi-uru-gu10	_	Shulgiurugu	_	_	16	ERG	_	_
 15	szu	_	received	_	_	16	ABS	_	_
 16	ba-ti	_	_	_	_	0	root	_	_
+
 ~~~
 Archi and Pomponio 347, Hayes p.371, not in CDLI
 
 TBC: As for technical terms, the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
 
 ### Dates
-==
 
 Head of a date phrase is the first element (day, month or year), connected by a LOC relation. Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
 
 Dates are connected by means of the date dependency (could be considered locative? -- anyway, easier to query in this way).
 
-TO CHECK: the year name is *not* an acl, is it?
+TO CHECK: the year name is *not* an acl, is it? Could *that* be a ccomp?
 
 ~~~ conllu
 1	iti	_	month of	_	_	2	nmod	_	_
@@ -390,6 +398,7 @@ TO CHECK: the year name is *not* an acl, is it?
 3	mu	_	year	_	_	2	LOC	_	_
 4	an-sza-an{ki}	_	when Anshan	_	_	5	ABS	_	_
 5	ba-hul	_	was destroyed	_	_	3	acl	_	_
+
 ~~~	
 (P109483)
 
@@ -408,6 +417,7 @@ TO CHECK: the year name is *not* an acl, is it?
 12	la1	_	_	11	compound	_	_
 13	1-kam	_	_	11	compound	_	_
 14	ba-hul	_	destroyed	_	_	7	acl	_	_
+
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
@@ -434,12 +444,27 @@ Dates can be written discontinuously:
 17	mu	_	The year when	_	_	16	LOC	_	_
 18	Sza-asz-ru{ki}	_	Shashru	_	_	19	ABS	_	_
 19	ba-hul	_	was destroyed	_	_	17	acl	_	_
+
 ~~~
 (no CDLI, Archi and Pomponio 347, Hayes p.371)
 
 In this case, create multiple date relations with the respective root element.
 
 ## Open issues
+
+### Syntactic relation between mu and year name
+
+Currently annotated as acl. To be confirmed: The year name is *not* an acl, is it? Maybe *that* is a ccomp, then?
+
+~~~ conllu
+1	iti	_	month of	_	_	2	nmod	_	_
+2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
+3	mu	_	year	_	_	2	LOC	_	_
+4	an-sza-an{ki}	_	when Anshan	_	_	5	ABS	_	_
+5	ba-hul	_	was destroyed	_	_	3	acl	_	_
+
+~~~	
+(P109483)
 
 ### Dependency syntax: Other uses of the copula
 
@@ -450,6 +475,7 @@ In this case, create multiple date relations with the respective root element.
 4	a	_	water	_	_	6	ABS	_	_
 5	dug₃-ga	_	sweet-PT=ABS	_	_	4	amod	_	_	
 6	nam-de₆	_	MOD-VEN-3.SG.NH.A-bring-3.SG.P	_	_	0	root	_	_
+
 ~~~						
 “The heart of the god Enlil brought sweet water like the river Tigris.”	(Q000377)					
 
@@ -476,27 +502,11 @@ MTAAC annotations are originally provided in a CoNLL dialect. CoNLL is a family 
 - comments and headers marked by #
 - sentences or documents separated by at least one empty line
 
-CoNLL dialects differ with respect to the kind of annotation they provide and the order of columns. The Annodoc visualization provides partial support for two CoNLL dialects, CoNLL-X and CoNLL-U, with a focus on syntactic dependencies. Note that the original column structure of the data may require adjustments when used in this document. 
-
-CoNLL-X
-
-    ~~~ conllx
-    1    Dogs   dog    _    NNS    _    2    nsubj
-    2    run    run    _    VBP    _    0    ROOT
-    ~~~
-
-
-~~~ conllx
-1    Dogs   dog    _    NNS    _    2    nsubj
-2    run    run    _    VBP    _    0    ROOT
-~~~
-
-The CoNLL-X format defines 10 columns separated by TAB, but only columns 1 (`ID`), 2 (`WORD`), 4 (`POS`), 7 (`HEAD`) and 8 (`EDGE`) are being used in the visualizations. Empty fields must be marked by _.
+CoNLL dialects differ with respect to the kind of annotation they provide and the order of columns. The Annodoc visualization provides partial support for two CoNLL dialects, CoNLL-X and CoNLL-U, with a focus on syntactic dependencies. Note that the original column structure of the data may require adjustments when used in this document. We generally use the CoNLL-U template.
 
 The [CoNLL-U](http://universaldependencies.github.io/docs/format.html) format is another CoNLL format format for representing dependency parses,
 developed in the 
-[Universal Dependencies](universaldependencies.github.io/docs/)
-project as a revision of the CoNLL-X format.
+[Universal Dependencies](universaldependencies.github.io/docs/).
 
     ~~~ conllu
     # this is one sentence
@@ -523,7 +533,7 @@ The CoNLL-U format defines 10 columns separated by TAB (in Annodoc: space), agai
 Note that Annodoc supports either space or tab as column separator, but no mixture. Furthermore, exactly ten columns are required, it is not admissable to omit the trailing empty columns.
 Also note that Annodoc *requires* numerical IDs, starting with 1. CDLI IDs must be replaced, fragments from actual annotations must be adjusted in their ID and HEAD information.
 
-As yet another alternative, the Stanford Dependency format can be used:
+As an alternative, the Stanford Dependency format can be used:
 
     ~~~ sdparse
     The quick brown fox jumped
