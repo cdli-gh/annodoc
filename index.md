@@ -48,13 +48,13 @@ Here, lu2 "man" is in apposition to the "matrix noun". The head of the relative 
 Note that lu2 is not a function word, but a regular noun. Accordingly, it can also be understood literally:
 
 ~~~ conllu
-19	lu₂	_ _ _ _ 25	ABS _ _
-20	mu-sar-ra-ba	_ _ _ _ 22	LOC _ _
-21	šu	_ _ _ _ 22	ABS _ _
-22	bi₂-ib₂-uru₁₂-a	_ _ _ _ 19	acl _ _
-23	{d}bil₃-ga-meš₃-e	_ _ _ _ 25	ERG _ _
-24	nam	_ _ _ _ 25	ABS _ _
-25	ha-ba-da-kud-e	_ _ _ _ 0	root _ _
+19 lu₂ _ _ _ _ 25 ABS _ _
+20 mu-sar-ra-ba _ _ _ _ 22 LOC _ _
+21 šu _ _ _ _ 22 ABS _ _
+22 bi₂-ib₂-uru₁₂-a _ _ _ _ 19 acl _ _
+23 {d}bil₃-ga-meš₃-e _ _ _ _ 25 ERG _ _
+24 nam _ _ _ _ 25 ABS _ _
+25 ha-ba-da-kud-e _ _ _ _ 0 root _ _
 ~~~~
 "The man [who erases this inscription] may be cursed by Gilgamesh!" (Q001642)
 
