@@ -21,6 +21,7 @@ title: Dependency Syntax for Sumerian
 - [Dependency annotation for Administrative texts](#dependency-annotation-for-administrative-texts)
   * [Transactions and their participants](#transactions-and-their-participants)
   * [Dates](#dates)
+- [Changes](#changes)
 - [Open issues](#open-issues)
   * [Syntactic relation between mu and year name](#syntactic-relation-between-mu-and-year-name)
   * [Dependency syntax: Other uses of the copula](#dependency-syntax--other-uses-of-the-copula)
@@ -473,6 +474,13 @@ Dates can be written discontinuously:
 (no CDLI, Archi and Pomponio 347, Hayes p.371)
 
 In this case, create multiple date relations with the respective root element.
+
+## Changes
+
+These are revisions of the original approach to annotation, which need to be changed either above or in the gold data.
+
+- numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
+- acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
 
 ## Open issues
 
