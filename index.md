@@ -63,7 +63,7 @@ Other words can serve similar functions, e.g. ud "day" for temporal clauses:
 
 ~~~ conllu
 1	{d}bil₃-ga-meš₃	_	_	_	_	9	DAT	_	_
-2	...	_	_	_	_	9	_	_	_
+2	...	_	_	_	_	_	_	_	_
 3	ud	_	_	_	_	9	LOC	_	_
 4	e₂	_	_	_	_	6	ABS	_	_
 5	{d}nanna	_	_	_	_	4	GEN	_	_
@@ -71,6 +71,7 @@ Other words can serve similar functions, e.g. ud "day" for temporal clauses:
 7	nam-til₃-la-ni-še₃	_	_	_	_	9	TERM	_	_
 8	a	_	_	_	_	9	ABS	_	_
 9	mu-na-ru	_	_	_	_	0	root	_	_
+
 ~~~~
 "Gilgamesh ..., (on the day) when he built the temple of Nanna, for the sake of his life, dedicated (this vase)" (Q001642)
 
@@ -102,13 +103,15 @@ Note syntactic annotation is morphology-driven. If subordination is not marked i
 
 Sumerian does not have prepositions, but it does have a number of nouns that are used to express prepositional functions, e.g., sza3 "heart", also used for to express the meaning of the preposition "in". These are annotated in accordance with their morphology, i.e., as nouns with genitive complement. If no additional case is marked in the morphology annotation, these phrases are considered to be in apposition with the nominal they modify.
 
-	1	sza3	szag[heart]	N	0	LOC
-	2	ma-da	mada[land]	N	1	GEN
-	3	gir2-su{ki}	Girsu[1][-ak][-ak][-'a]	SN.GEN.GEN.L1	2	GEN
-	4	ugula	ugula[overseer][-ø]	N.ABS	5	nmod
-	5	a-a-kal-la	Ayakala[1]	PN	1	ABS+orphan
-	6	szusz3	kusz[cattle_manager][-ø]	N.ABS	5	appos
+~~~ conllu
+1	sza3	szag[heart]	N	_	_	0	LOC	_	_
+2	ma-da	mada[land]	N	_	_	1	GEN	_	_
+3	gir2-su{ki}	Girsu[1][-ak][-ak][-'a]	SN.GEN.GEN.L1	_	_	2	GEN	_	_
+4	ugula	ugula[overseer][-ø]	N.ABS	_	_	5	nmod	_	_
+5	a-a-kal-la	Ayakala[1]	PN	_	_	1	ABS+orphan	_	_
+6	szusz3	kusz[cattle_manager][-ø]	N.ABS	_	_	5	appos	_	_
 
+~~~
 "In (= at the heart of) the land of Girsu, overseer Ayakala, cattle manager" (P356065)
 
 This is part of the summary section of an administrative text, with the semantic predicate ("attested by", or "registered by") left implicit (hence the orphan relation). Note that the locative function does not arise from the use of sza3 in a locative sense, but from the morphological analysis of the last word of the noun phrase. Also note that the locative morpheme -'a is not actually written in the surface string, as case marking in administrative texts is often defective.
