@@ -424,7 +424,7 @@ MTAAC annotations are originally provided in a CoNLL dialect. CoNLL is a family 
 - comments and headers marked by #
 - sentences or documents separated by at least one empty line
 
-CoNLL dialects differ with respect to the kind of annotation they provide and the order of columns. The Annodoc visualization provides partial support for two CoNLL dialects, CoNLL-X and CoNLL-U, with a focus on syntactic dependencies. Note that the original column structure of the data may require adjustments when used in this document. Also note that Annodoc supports space as column separator.
+CoNLL dialects differ with respect to the kind of annotation they provide and the order of columns. The Annodoc visualization provides partial support for two CoNLL dialects, CoNLL-X and CoNLL-U, with a focus on syntactic dependencies. Note that the original column structure of the data may require adjustments when used in this document. 
 
 CoNLL-X
 
@@ -466,7 +466,10 @@ project as a revision of the CoNLL-X format.
 2    sleep  sleep  VERB    VBP    _    0    ROOT     _    _
 ~~~
 
-The CoNLL-U format defines 10 fields separated by TAB (in Annodoc: space), again, only fields 1 `ID`, 2 `WORD`, 4 `POS`, 7 `HEAD` and 8 `EDGE` are visualized.
+The CoNLL-U format defines 10 columns separated by TAB (in Annodoc: space), again, only fields 1 `ID`, 2 `WORD`, 4 `POS`, 7 `HEAD` and 8 `EDGE` are visualized.
+
+Note that Annodoc supports either space or tab as column separator, but no mixture. Furthermore, exactly ten columns are required, it is not admissable to omit the trailing empty columns.
+Also note that Annodoc *requires* numerical IDs, starting with 1. CDLI IDs must be replaced, fragments from actual annotations must be adjusted in their ID and HEAD information.
 
 As yet another alternative, the Stanford Dependency format can be used:
 
