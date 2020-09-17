@@ -78,7 +78,7 @@ Other words can serve similar functions, e.g. ud "day" for temporal clauses:
 
 ~~~ conllu
 1	{d}bil₃-ga-meš₃	_	_	_	_	9	DAT	_	_
-2	...	_	_	_	_	_	_	_	_
+2	...	_	_	_	_	0	_	_	_
 3	ud	_	_	_	_	9	LOC	_	_
 4	e₂	_	_	_	_	6	ABS	_	_
 5	{d}nanna	_	_	_	_	4	GEN	_	_
@@ -100,6 +100,7 @@ Note that there is no inherent difference between subordinate clauses and adject
 3	ki	_	_	_	_	4	ABS	_	_
 4	aŋ₂	_	_	_	_	2	acl	_	_
 5	{d}nanše-ka-ke₄	_	_	_	_	2	GEN	_	_
+
 ~~~
 
 "(of) Ur-Ningirsu, the beloved priest of Nanshe" (Q001758) 
@@ -290,19 +291,19 @@ Administrative texts often exhibit a list-like character without clear sententia
 1	1(disz)	_	1	_	_	2	nummod	_	_
 2	gu4	_	bull	_	_	0	root	_	_
 3	niga	_	barley-fattened	_	_	2	appos	_	_
-4	ma2	_	for the ship	_	_	2	TERM	_	_
-5	an-na	_	of An	_	_	4	GEN	_	_
-6	sza3	_	in/at the heart	_	_	2	LOC	_	_
-7	unu{ki}-ga	_	Uruk	_	_	6	GEN	_	_
-8	giri3	_	the transmitter was	_	_	2	giri3	_	_
+4	ma2	_	ship	_	_	2	TERM	_	_
+5	an-na	_	An[.GEN.TERM]	_	_	4	GEN	_	_
+6	sza3	_	in	_	_	2	LOC	_	_
+7	unu{ki}-ga	_	Uruk.GEN[.LOC]	_	_	6	GEN	_	_
+8	giri3	_	transmitter	_	_	2	giri3	_	_
 9	bar-bar-re	_	B.	_	_	8	GEN	_	_
-10	zi-ga	_	disembursement from	2	ziga	_	_
+10	zi-ga	_	disembursement-from	2	ziga	_	_
 11	be-li2-du10	_	B.	_	_	9	GEN	_	_
-12	iti	_	month of	_	_	13	nmod	_	_
+12	iti	_	month	_	_	13	nmod	_	_
 13	a2-ki-ti	_	Akiti	_	_	2	date	_	_
 14	mu	_	year	_	_	13	LOC	_	_
-15	an-sza-an{ki}	_	when Anshan	_	_	16	ABS	_	_
-16	ba-hul	_	was destroyed	_	_	14	acl	_	_
+15	an-sza-an{ki}	_	Anshan	_	_	16	ABS	_	_
+16	ba-hul	_	destroyed	_	_	14	acl	_	_
 
 ~~~	
 (P109483)
@@ -321,30 +322,30 @@ This text describes a single transaction, but without any explicit verbal elemen
 9	2	_	_	_	_	7	compound	_	_
 10	ab2	_	cows	_	_	2	list	_	_
 11	mu	_	years	_	_	10	appos	_	_
-12	2	_	two (years old)	_	_	11	nummod	_	_
+12	2	_	two	_	_	11	nummod	_	_
 13	niga	_	barley-fattened	_	_	10	appos	_	_
 14	4	_	4	_	_	15	nummod	_	_
 15	ab2	_	cows	_	_	2	list	_	_
 16	mu	_	years	_	_	15	appos	_	_
-17	2	_	two (years old)	_	_	16	nummod	_	_
+17	2	_	two	_	_	16	nummod	_	_
 18	u2	_	grass-fattened	_	_	15	appos	_	_
 19	4	_	4	_	_	20	nummod	_	_
 20	amar	_	calves	_	_	2	list	_	_
 21	ga	_	milk-fed	_	_	20	appos	_	_
 22	szu-nigin2	_	total	_	_	2	total	_	_
 23	141	141	_	_	_	24	nummod	_	_
-24	gud-hi-a	_	assorted cattle	_	_	22	appos	_	_
+24	gud-hi-a	_	assorted.cattle	_	_	22	appos	_	_
 25	zig3-ga	_	disembursement	_	_	24	amod	_	_
-26	ud	_	of day	_	_	22	date	_	_
+26	ud	_	of.day	_	_	22	date	_	_
 27	30	_	29	_	_	26	nummod	_	_
 28	la1	_	_	_	_	27	compound	_	_
 29	1-kam	_	_	_	_	27	compound	_	_
 30	iti	_	month	_	_	31	nmod	_	_
 31	Sze-kar-ra-gal2	_	Shekaragal	_	_	26	LOC	_	_
 32	mu	_	year	_	_	31	LOC	_	_
-33	Si-mu-ru-um{ki}	_	(when) Simurum	_	_	39	ABS	_	_
-34	Lu-lu-bu-um{ki}	_	and Lulubum	_	_	33	appos	_	_
-35	a-ra2	_	for the ninth time	_	_	39	dep	_	_
+33	Si-mu-ru-um{ki}	_	Simurum	_	_	39	ABS	_	_
+34	Lu-lu-bu-um{ki}	_	Lulubum	_	_	33	appos	_	_
+35	a-ra2	_	ninth.time	_	_	39	dep	_	_
 36	10	_	_	_	_	35	nummod	_	_
 37	la1	_	_	_	_	36	compound	_	_
 38	1-kam	_	_	_	_	36	compound	_	_
@@ -393,26 +394,26 @@ Dates are connected by means of the date dependency (could be considered locativ
 TO CHECK: the year name is *not* an acl, is it? Could *that* be a ccomp?
 
 ~~~ conllu
-1	iti	_	month of	_	_	2	nmod	_	_
+1	iti	_	month	_	_	2	nmod	_	_
 2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
 3	mu	_	year	_	_	2	LOC	_	_
-4	an-sza-an{ki}	_	when Anshan	_	_	5	ABS	_	_
-5	ba-hul	_	was destroyed	_	_	3	acl	_	_
+4	an-sza-an{ki}	_	Anshan	_	_	5	ABS	_	_
+5	ba-hul	_	destroyed	_	_	3	acl	_	_
 
 ~~~	
 (P109483)
 
 ~~~ conllu
-1	ud	_	of day	0	date	_	_
+1	ud	_	day	0	date	_	_
 2	30	_	29	1	nummod	_	_
 3	la1	_	_	2	compound	_	_
 4	1-kam	_	_	2	compound	_	_
 5	iti	_	month	6	nmod	_	_
 6	Sze-kar-ra-gal2	_	Shekaragal	1	LOC	_	_
 7	mu	_	year	6	LOC	_	_
-8	Si-mu-ru-um{ki}	_	(when) Simurum	14	ABS	_	_
-9	Lu-lu-bu-um{ki}	_	and Lulubum	8	appos	_	_
-10	a-ra2	_	for the ninth time	14	dep	_	_
+8	Si-mu-ru-um{ki}	_	Simurum	14	ABS	_	_
+9	Lu-lu-bu-um{ki}	_	Lulubum	8	appos	_	_
+10	a-ra2	_	ninth.time	14	dep	_	_
 11	10	_	_	10	nummod	_	_
 12	la1	_	_	11	compound	_	_
 13	1-kam	_	_	11	compound	_	_
@@ -440,10 +441,10 @@ Dates can be written discontinuously:
 13	szu	_	received	_	_	14	ABS	_	_
 14	ba-ti	_	_	_	_	0	root	_	_
 15	iti	_	Month 	_	_	16	nmod	_	_
-16	Ki-sig2-{d}Nin-a-zu	_	of Kisig-Ninazu.	_	_	20	date	_	_
-17	mu	_	The year when	_	_	16	LOC	_	_
+16	Ki-sig2-{d}Nin-a-zu	_	Kisig-Ninazu	_	_	20	date	_	_
+17	mu	_	year	_	_	16	LOC	_	_
 18	Sza-asz-ru{ki}	_	Shashru	_	_	19	ABS	_	_
-19	ba-hul	_	was destroyed	_	_	17	acl	_	_
+19	ba-hul	_	destroyed	_	_	17	acl	_	_
 
 ~~~
 (no CDLI, Archi and Pomponio 347, Hayes p.371)
@@ -457,11 +458,11 @@ In this case, create multiple date relations with the respective root element.
 Currently annotated as acl. To be confirmed: The year name is *not* an acl, is it? Maybe *that* is a ccomp, then?
 
 ~~~ conllu
-1	iti	_	month of	_	_	2	nmod	_	_
+1	iti	_	month	_	_	2	nmod	_	_
 2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
 3	mu	_	year	_	_	2	LOC	_	_
-4	an-sza-an{ki}	_	when Anshan	_	_	5	ABS	_	_
-5	ba-hul	_	was destroyed	_	_	3	acl	_	_
+4	an-sza-an{ki}	_	Anshan	_	_	5	ABS	_	_
+5	ba-hul	_	destroyed	_	_	3	acl	_	_
 
 ~~~	
 (P109483)
