@@ -61,16 +61,17 @@ In this example, there is no other "matrix noun" except for lu2 "man".
 
 Other words can serve similar functions, e.g. ud "day" for temporal clauses:
 
-	1	{d}bil₃-ga-meš₃	18	DAT
-	...
-	12	ud	18	LOC
-	13	e₂	15	ABS
-	14	{d}nanna	13	GEN
-	15	mu-du₃-a	12	acl
-	16	nam-til₃-la-ni-še₃	18	TERM
-	17	a	18	ABS
-	18	mu-na-ru	0	root
-
+~~~ conllu
+1	{d}bil₃-ga-meš₃	_	_	_	_	9	DAT	_	_
+2	...	_	_	_	_	9	_	_	_
+3	ud	_	_	_	_	9	LOC	_	_
+4	e₂	_	_	_	_	6	ABS	_	_
+5	{d}nanna	_	_	_	_	4	GEN	_	_
+6	mu-du₃-a	_	_	_	_	3	acl	_	_
+7	nam-til₃-la-ni-še₃	_	_	_	_	9	TERM	_	_
+8	a	_	_	_	_	9	ABS	_	_
+9	mu-na-ru	_	_	_	_	0	root	_	_
+~~~~
 "Gilgamesh ..., (on the day) when he built the temple of Nanna, for the sake of his life, dedicated (this vase)" (Q001642)
 
 Head of the relative clause is ud "day", a locative argument (marked at the verb) of the main verb, literally thus "on the day that". Note that this is indeed a relative clause in Sumerian, not an adverbial clause as in English. The adverbial function is expressed by the case of the head noun (morphologically marked at the last element of the noun phrase, here, the verb).
