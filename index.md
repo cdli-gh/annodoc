@@ -78,11 +78,13 @@ Head of the relative clause is ud "day", a locative argument (marked at the verb
 
 Note that there is no inherent difference between subordinate clauses and adjectives. All adjectives are verbs. We thus annotate acl if a relative clause contains clausal arguments, but amod if it does not. The matter is complicated by "compound verbs", which are lexicalized noun-verb combinations with a verbal meaning, e.g., ki ang2 "beloved", literally "place-measuring". As long as the (diachronic) syntactic relation is transparent, these are annotated according to their syntactic function, and thus as acl, not as amod.
 
-	12	ur-{d}nin-ŋir₂-su	10	GEN
-	13	en	12	appos
-	14	ki	15	ABS
-	15	aŋ₂	13	acl
-	16	{d}nanše-ka-ke₄	13	GEN
+~~~ conllu
+1	ur-{d}nin-ŋir₂-su	_	_	_	_	0	GEN	_	_
+2	en	_	_	_	_	1	appos	_	_
+3	ki	_	_	_	_	4	ABS	_	_
+4	aŋ₂	_	_	_	_	2	acl	_	_
+5	{d}nanše-ka-ke₄	_	_	_	_	2	GEN	_	_
+~~~
 
 "(of) Ur-Ningirsu, the beloved priest of Nanshe" (Q001758) 
 
