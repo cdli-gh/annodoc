@@ -413,6 +413,10 @@ The most consistent way to annotate such cases would be to interpret the copula 
 
 Both these models violate the underlying morphology.
 
+## Mapping to UD
+
+yet to come
+
 ## How to edit this document
 
 ### Formatting example annotations
