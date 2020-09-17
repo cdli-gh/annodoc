@@ -6,6 +6,21 @@ title: Dependency Syntax for Sumerian
 
 ## Table of contents
 
+## Status of this document
+
+Draft for annotation guidelines for syntax, under development. Currently documents the design decisions taken in the development of syntax pre-annotation tools. The goal is, however, to provide a full-fledged annotation scheme for Sumerian, a small gold corpus and its export to UD v.2 
+
+Known issues/todos:
+- inconsistent transcription principles (reflecting different sources for the examples), to be normalized according to CDLI conventions
+- incomplete/heterogeneous schemata for POS annotation (reflecting different sources for the examples), to be normalized according to MTAAC conventions
+- add overview of all tags
+- add mapping to UD v.2
+- add sources and literature
+- add section on grammar in general
+- add section on morphology
+- add section on administative texts
+- all analyses to be confirmed by an Assyriologist
+
 ## Basics of Sumerian grammar
 
 yet to come
@@ -137,41 +152,45 @@ Sumerian syntax annotation is morphology-driven. If an adnominal noun does not m
 
 implicit identity
 
-	1	an	10	DAT
-	2	lugal	1	appos
-	3	diŋir-re-ne	2	GEN
-	4	lugal-a-ni	1	appos
+~~~ conllu
+1	an	_	_	_	_	0	DAT	_	_
+2	lugal	_	_	_	_	1	appos	_	_
+3	diŋir-re-ne	_	_	_	_	2	GEN	_	_
+4	lugal-a-ni	_	_	_	_	1	appos	_	_
 
+~~~
 "An, king of the gods, his king" (Q000937)
 
 implicit conjunction
 
-	8	lugal	3	appos
-	9	ki-en-gi	8	GEN
-	10	ki-uri-ke₄	9	appos
-	
+~~~ conllu
+1	lugal	_	_	_	_	0	appos	_	_
+2	ki-en-gi	_	_	_	_	1	GEN	_	_
+3	ki-uri-ke₄	_	_	_	_	2	appos	_	_
+
+~~~
 "king of Sumer (and) Akkad" (Q000953)
 
 implicit genitive
-
-	1	kišib₃	6	ABL
-	2	ur-dšul-pa-e₃-ka	1	GEN
-	3	bešeŋ	5	LOC
-	4	ur-dba-u₂-ka	3	appos
-	5	i₃-in-ŋal₂-la-ta	1	SUB
-	6	tur-re-dam	0	root
-	
+~~~ conllu
+1	kišib₃	_	_	_	_	6	ABL	_	_
+2	ur-dšul-pa-e₃-ka	_	_	_	_	1	GEN	_	_
+3	bešeŋ	_	_	_	_	5	LOC	_	_
+4	ur-dba-u₂-ka	_	_	_	_	3	appos	_	_
+5	i₃-in-ŋal₂-la-ta	_	_	_	_	1	acl	_	_
+6	tur-re-dam	_	_	_	_	0	root	_	_
+~~~	
 “These (various animals) are to be subtracted from the sealed tablet of Uršulpae that is in the basket of Urbau.” (P113923)
 
 The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as appos, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
 
 implicit copula
-
-	17	{d}amar-{d}suen	21	ABS
-	18	ki	19	ABS
-	19	aŋ₂	17	SUB+appos
-	20	urim₅{ki}-ma	19	GEN
-
+~~~ conllu
+1	{d}amar-{d}suen	_	_	_	_	0	ABS	_	_
+2	ki	_	_	_	_	3	ABS	_	_
+3	aŋ₂	_	_	_	_	1	acl+appos	_	_
+4	urim₅{ki}-ma	_	_	_	_	3	GEN	_	_
+~~~
 "Amar-Suen, beloved of Ur" (name of a statue, Q000985)
 
 This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. 197)
@@ -180,9 +199,17 @@ Appositions and case-marked nominal dependents are post-modifying, i.e., the syn
 
 ### "Adjectival" modifiers: amod
 
-Relative clauses without arguments are annotated as amod, cf. acl. All "adjectives" are nominalized verbs, and we follow the morphological analysis as to whether they are annotated as a amod or as appos. Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation as appos would be preferrable.
+Relative clauses without arguments are annotated as amod, cf. acl. All "adjectives" are nominalized verbs, and we follow the morphological analysis as to whether they are annotated as a amod or as appos. 
 
-Sumerian forms two different participles, the "passive participle" in -a (also used to signal clausal subordination) and the "active participle" in -0. The annotation of active participles follows the same pattern with respect to amod/acl distinction as the annotation of passive participles. However, active particiles are more commonly annotated as amod.
+~~~ conllu
+1	a	_	water	_	_	0	ABS	_	_
+2	dug₃-ga	_	sweet-PT=ABS	_	_	1	amod	_	_
+~~~
+“sweet water” (Q000377)
+
+Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable.
+
+Sumerian forms two different participles, the "passive participle" in -a (also used to signal clausal subordination) and the "active participle" in -0. The annotation of active participles follows the same pattern with respect to amod/acl distinction as the annotation of passive participles. However, active participles are more commonly annotated as amod.
 
 ### Nominal modifiers: nmod
 
@@ -190,37 +217,40 @@ In CDLI annotation, nmod is exclusively used for prenominal nominal modifiers. P
 
 Sumerian NPs usually place the head of the NP at their left periphery. For semantic reasons, we deviate from this analysis for epithets (incl. titles, etc.) and units:
 
-	4	sukkal	S[minister	5	nmod
-	5	an-sig₇-ga-ri-a	PN=ABS]	6	ABS
-
+~~~ conllu
+1	sukkal	_	minister	_	_	2	nmod	_	_
+2	an-sig₇-ga-ri-a	_	PN.ABS	_	_	0	ABS	_	_
+~~~
 "Minister Ansiga-ria" (Q000370)
 
 In the mapping to UD interpretation, case-marked adnominal dependents of nominal heads are mapped to nmod. Most prominently, this includes genitives.
 
 ### Quantifiers: det
 
-There are no determiners in Sumerian. The label det is used for postnominal quantifiers (themselves nominal).
+There are no determiners in Sumerian. The label det is used for postnominal quantifiers (themselves nominal). [TO BE CONFIRMED]
 
-	1	niŋ₂	P1thing	4	ABS
-	2	na-me	P2some=P5ABS	1	det
-	3	a₂-be₂	arm=3.SG.NH.POSS=ABL	4	ABL
-	4	la-ba-ra-e₃	NEG-MID-ABL-leave-3.SG.S	0	root
-
+~~~ conllu
+1	niŋ₂	_	thing	_	_	4	ABS	_	_
+2	na-me	_	some.ABS	_	_	1	det	_	_
+3	a₂-be₂	_	arm.3.SG.NH.POSS.ABL	_	_	4	ABL	_	_
+4	la-ba-ra-e₃	_	NEG-MID-ABL-leave-3.SG.S	_	_	0	root	_	_
+~~~
 "Nothing escaped their clutches." (Q000375)
 	
 ### Syntactic coordination: conj, cc
 
 Conjunction can be expressed morphologically or syntactically.
 
-	22	e₂	N1=STEM	30	ABS
-	23	lal₃	N1=STEM.N5=ABS	29	ABS
-	24	i₃-nun	N1=STEM.N5=ABS	23	conj
-	25	u₃	N1=STEM	23	cc
-	26	ŋeštin	N1=STEM.N5=ABS	23	conj
-	27	ki	N1=STEM	30	LOC
-	28	sizkur₂-ra-ka-na	N1=STEM.N5=GEN.N3=3-SG-H-POSS.N5=L1	27	GEN
-	29	nu-silig-ge	NV1=NEG.NV2=STEM.NV3=PF.N5=ABS	22	acl
-
+~~~ conllu
+1	e₂	_	N	_	_	0	ABS	_	_
+2	lal₃	_	N.ABS	_	_	8	ABS	_	_
+3	i₃-nun	_	N.ABS	_	_	2	conj	_	_
+4	u₃	_	STEM	_	_	2	cc	_	_
+5	ŋeštin	_	N.ABS	_	_	2	conj	_	_
+6	ki	_	N	_	_	8	LOC	_	_
+7	sizkur₂-ra-ka-na	_	N.GEN.3-SG-H-POSS.L1	_	_	6	GEN	_	_
+8	nu-silig-ge	_	NEG.NV.PF.ABS	_	_	1	acl	_	_
+~~~
 "the temple (where) honey, butter and wine in his place of sacrifice shall not cease" (Q001792)
 
 If conjunction is not explicitly expressed, use appos.
