@@ -5,6 +5,29 @@ title: Dependency Syntax for Sumerian
 
 
 ## Table of contents
+- [Status of this document](#status-of-this-document)
+- [Basics of Sumerian grammar](#basics-of-sumerian-grammar)
+- [Parts of Speech](#parts-of-speech)
+- [Syntactic dependencies](#syntactic-dependencies)
+  * [Subordinate clauses (acl)](#subordinate-clauses--acl-)
+  * [Adpositions ("case")](#adpositions---case--)
+  * [Apposition (appos)](#apposition--appos-)
+  * ["Adjectival" modifiers: amod](#-adjectival--modifiers--amod)
+  * [Nominal modifiers: nmod](#nominal-modifiers--nmod)
+  * [Quantifiers: det](#quantifiers--det)
+  * [Syntactic coordination: conj, cc](#syntactic-coordination--conj--cc)
+  * [Punctuation: punct](#punctuation--punct)
+  * [Grammatical roles (morphological case): ABS, ERG, DAT, ABL, ADV, COM, EQU, TERM, LOC, GEN](#grammatical-roles--morphological-case---abs--erg--dat--abl--adv--com--equ--term--loc--gen)
+- [Dependency annotation for Administrative texts](#dependency-annotation-for-administrative-texts)
+  * [Transactions and their participants](#transactions-and-their-participants)
+  * [Dates](#dates)
+- [Open issues](#open-issues)
+  * [Syntactic relation between mu and year name](#syntactic-relation-between-mu-and-year-name)
+  * [Dependency syntax: Other uses of the copula](#dependency-syntax--other-uses-of-the-copula)
+- [Mapping to UD](#mapping-to-ud)
+- [How to edit this document](#how-to-edit-this-document)
+  * [Formatting example annotations](#formatting-example-annotations)
+- [Acknowledgements](#acknowledgements)
 
 ## Status of this document
 
