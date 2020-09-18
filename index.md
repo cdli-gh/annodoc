@@ -9,10 +9,10 @@ title: Dependency Syntax for Sumerian
 - [Basics of Sumerian grammar](#basics-of-sumerian-grammar)
 - [Parts of Speech](#parts-of-speech)
 - [Syntactic dependencies](#syntactic-dependencies)
+  * [Adjectival modifiers: amod](#adjectival-modifiers--amod)
   * [Subordinate clauses (acl)](#subordinate-clauses--acl-)
   * [Adpositions ("case")](#adpositions---case--)
   * [Apposition (appos)](#apposition--appos-)
-  * ["Adjectival" modifiers: amod](#-adjectival--modifiers--amod)
   * [Nominal modifiers: nmod](#nominal-modifiers--nmod)
   * [Quantifiers: det](#quantifiers--det)
   * [Syntactic coordination: conj, cc](#syntactic-coordination--conj--cc)
@@ -83,8 +83,16 @@ The model of Sumerian morphology employed at MTAAC approximates that developed b
 |  dug.a   | NV2.NV4       | stem-PT         | NF.V.PT   |Preterite            |
 |  dug.ed  | NV2.NV3       | stem-PF         | NF.V.F    |Present-Future       |
 
-In dependency syntax, these forms are given the label `amod` (if modifying a noun), but only if they carry no clausal arguments on their own. If they do, annotate them as subordinate clause `acl`.
-If they appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments 
+In dependency syntax, these forms are given the label `amod` (if modifying a noun), but only if they carry no clausal arguments on their own. If they do, annotate them as subordinate clause `acl`. Likewise, relative clauses without arguments are annotated as `amod`, as they are morphologically indistinguishable from participles. All "adjectives" are nominalized verbs, and we follow the morphological analysis as to whether they are annotated as a amod or as appos. 
+
+~~~ conllu
+1	a	_	water	_	_	0	ABS	_	_
+2	dug₃-ga	_	NF.V.PT.ABS	_	_	1	amod	_	_
+
+~~~
+“sweet water” (Q000377)
+
+If adjectives appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
 
 ### Subordinate clauses (acl)
 
@@ -244,21 +252,6 @@ implicit copula
 This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. 197)
 
 Appositions and case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
-
-### "Adjectival" modifiers: amod
-
-Relative clauses without arguments are annotated as amod, cf. acl. All "adjectives" are nominalized verbs, and we follow the morphological analysis as to whether they are annotated as a amod or as appos. 
-
-~~~ conllu
-1	a	_	water	_	_	0	ABS	_	_
-2	dug₃-ga	_	sweet-PT=ABS	_	_	1	amod	_	_
-
-~~~
-“sweet water” (Q000377)
-
-Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable.
-
-Sumerian forms two different participles, the "passive participle" in -a (also used to signal clausal subordination) and the "active participle" in -0. The annotation of active participles follows the same pattern with respect to amod/acl distinction as the annotation of passive participles. However, active participles are more commonly annotated as amod.
 
 ### Nominal modifiers: nmod
 
