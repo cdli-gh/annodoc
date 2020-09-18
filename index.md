@@ -51,7 +51,8 @@ yet to come
 
 ## Parts of Speech
 
-yet to come
+See [Tagsets](https://cdli-gh.github.io/guides/guide_tagsets.html).
+Mapping to UD yet to come.
 
 ## Syntactic dependencies
 
@@ -69,6 +70,21 @@ As Sumerian employs morphology to mark syntactic relations, we adopt a morpholog
 
 Should be used for damaged or missing signs whose meaning cannot be ascertained.
 In the gold data, dep should be used if a particular source doesn't define the syntactic relations of a particular fragment. This includes, for example, the internal structure of year names according to Jaworski (2009).
+
+### Adjectival modifiers (amod)
+
+(see [MTAAC’S Approach to Sumerian Morphology](https://cdli-gh.github.io/guides/guide_morphology.html))
+
+The model of Sumerian morphology employed at MTAAC approximates that developed by Gabor Zólyomi, a model demonstrated at the ETCSRI project and articulated in Zólyomi’s 2017 grammar. Some conventions relating to word categorization and tag sets invite explanation: i) according to this model, Sumerian adjectives do not constitute a distinct word class. Instead, they are analyzed as non-finite verbal forms; ii) infinitives and participles, morphologically indistinct from other non-finite forms, are not distinguished; iii) a non-finite verbal form without a suffix is marked as tenseless (or absolute), and a null morpheme is supplied. Non-finite forms consisting of STEM + .a are marked as preterite. Non-finite forms consisting of STEM + .ed are marked as present-future. The following chart displays the relevent non-finite tags:
+
+|Form      | ETCSRI        | Zolyomi 2017, 91| MTAAC     | Tense               |
+|----------| ------------- |:-------------:  | --------: | -------------------:|
+|  dug.ø   | NV2.N5        | stem-TL         | NF.V.ABS  |Tenseless            |
+|  dug.a   | NV2.NV4       | stem-PT         | NF.V.PT   |Preterite            |
+|  dug.ed  | NV2.NV3       | stem-PF         | NF.V.F    |Present-Future       |
+
+In dependency syntax, these forms are given the label `amod` (if modifying a noun), but only if they carry no clausal arguments on their own. If they do, annotate them as subordinate clause `acl`.
+If they appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments 
 
 ### Subordinate clauses (acl)
 
@@ -416,7 +432,9 @@ TBC: As for technical terms, the respective person designated is assumed to repr
 
 ### Dates
 
-Head of a date phrase is the first element (day, month or year), connected by a LOC relation. Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
+For morphological annotation, see [Month Names and Year Names](https://cdli-gh.github.io/guides/month_names.html)
+
+Head of a date phrase is the first element (day, month or year). Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
 
 Dates are connected by means of the date dependency (could be considered locative? -- anyway, easier to query in this way).
 
@@ -487,6 +505,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
 - acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
 - connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
+- TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
 
 ## Open issues
 
