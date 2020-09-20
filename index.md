@@ -530,6 +530,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
 - acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
 - connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
+- change internal structure of complex numerals to appos (add there "implicit addition") rather than compound; for la2, see morphology guidelines 
 - TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
 - TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
 
