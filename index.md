@@ -3,13 +3,13 @@ layout: entry
 title: Dependency Syntax for Sumerian
 ---
 
-
 ## Table of contents
 - [Status of this document](#status-of-this-document)
-- [Basics of Sumerian grammar](#basics-of-sumerian-grammar)
+- [Background and General Information](#background-and-general-information)
 - [Parts of Speech](#parts-of-speech)
 - [Syntactic dependencies](#syntactic-dependencies)
-  * [Adjectival modifiers: amod](#adjectival-modifiers--amod)
+  * [Incomplete annotation (dep)](#incomplete-annotation--dep-)
+  * [Adjectival modifiers (amod)](#adjectival-modifiers--amod-)
   * [Subordinate clauses (acl)](#subordinate-clauses--acl-)
   * [Adpositions ("case")](#adpositions---case--)
   * [Apposition (appos)](#apposition--appos-)
@@ -23,6 +23,7 @@ title: Dependency Syntax for Sumerian
   * [Dates](#dates)
 - [Changes](#changes)
 - [Open issues](#open-issues)
+  * [Complex numerals](#complex-numerals)
   * [Syntactic relation between mu and year name](#syntactic-relation-between-mu-and-year-name)
   * [Dependency syntax: Other uses of the copula](#dependency-syntax--other-uses-of-the-copula)
 - [Mapping to UD](#mapping-to-ud)
