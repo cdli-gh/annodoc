@@ -499,6 +499,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
 - connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
 - TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
+- TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
 
 ## Open issues
 
