@@ -45,9 +45,40 @@ Known issues/todos:
 - add section on administative texts
 - all analyses to be confirmed by an Assyriologist
 
-## Basics of Sumerian grammar
+## Background and General Information
 
-yet to come
+Sumerian language (also cf. [CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=writing_and_language), [Wikipedia](https://en.wikipedia.org/wiki/Sumerian_language))
+
+* writing ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=cuneiform_writing_system))
+	* orthography ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:orthography))
+	* sign list ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_neo-sumerian_period))
+* transliteration (see [CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:transliteration_and_the_diacritics))
+	* CDLI-preferred readings ([CDLI](https://cdli.ucla.edu/methods/sign_reading.html))
+* grammar
+	* linguistic typology ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:typological_structure))
+	* case ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:case))
+	* gender ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:gender))
+	* number ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:number))
+	* verbal stems ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:verbal_stems))
+	* pragmatics ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=sumerian:topic_marking))
+
+* text types (see [CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=text_typologies))
+	* letters ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_letters&s[]=verb))
+	* receipts ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_receipts))
+	* administrative archives ([CDLI legacy file](http://cdli.ox.ac.uk/wiki/doku.php?id=3rd_millennium_administrative_archives#ur_iii724_tags))
+	* seal inscriptions ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=seal_inscriptions))
+	* royal inscriptions ([ETSCRI](http://oracc.museum.upenn.edu/etcsri/))
+	* literary texts (mythological, narrative, historical) ([ETCSL](http://etcsl.orinst.ox.ac.uk/))
+
+* math and calendar
+	* metrology ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_metrological_systems))
+	* Ur III calendars ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_calendars))
+	* year names (see [CDLI wiki](https://cdli.ucla.edu/tools/yearnames/yn_index.html))
+		* [Ur-Namma](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_ur-namma)
+		* [Shulgi](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_shulgi)
+		* [Amar-Suen](http://cdli.ox.ac.uk/wiki/doku.php?id=amar-suen_year-names)
+		* [Shu-Suen](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_shu-suen)
+		* [Ibbi-Suen](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_ibbi-suen)
 
 ## Parts of Speech
 
