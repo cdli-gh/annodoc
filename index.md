@@ -111,9 +111,9 @@ Here, case morphology directly encodes a phrase structure:
 We exploit this characteristic by grounding the annotation of syntax in the annotation of morphology. In particular, we use morphological cases as labels for nominal dependents. Annotation is thus reduced to propagate case to the respective syntactic head:
 
 ~~~conllu 
-1	ig	_	door	0	ABL	_	_
-2	e2	_	house	1	GEN	_	_
-3	lugal-ka-ta	_	king.GEN.GEN.ABL	2	GEN	_	_
+1	ig	_	door	_	_	0	ABL	_	_
+2	e2	_	house	_	_	1	GEN	_	_
+3	lugal-ka-ta	_	king.GEN.GEN.ABL	_	_	2	GEN	_	_
 ~~~
 
 The mapping of case labels to universal dependency labels is performed as a postprocessing step. Adnominal modifiers with case marking are mapped to `nmod`, oblique cases are  to `obl`, dative to `iobj`, ergative to `nsubj`. The mapping of absolutive is more challenging, as it needs to be disambiguated between `nsubj` (for intransitives) and `obj` (for transitives), see discussion below.
@@ -243,6 +243,7 @@ Note that relative clauses can be clausal arguments, and should be marked with t
 5	PN2	_	PN	_	_	7	ABS	_	_
 6	PN3	_	PN	_	_	5	appos	_	_
 7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
+
 ~~~
 
 "PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
@@ -270,12 +271,13 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 (P109483)
 
 ~~~ conllu
-1	13	iti	iti[month]	NOUN	N	Number=Sing	0	date	_	_
-2	14	ses-da-gu7	Sesdagu[1]	PROPN	MN	Number=Sing	1	appos	_	_
-3	15	mu	mu[year]	NOUN	N	Number=Sing	1	LOC	_	_
-4	16	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	6	ABS	_	_
-5	17	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	4	GEN	_	_
-6	18	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	3	acl	_	_
+1	iti	iti[month]	NOUN	N	Number=Sing	0	date	_	_
+2	ses-da-gu7	Sesdagu[1]	PROPN	MN	Number=Sing	1	appos	_	_
+3	mu	mu[year]	NOUN	N	Number=Sing	1	LOC	_	_
+4	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	6	ABS	_	_
+5	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	4	GEN	_	_
+6	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	3	acl	_	_
+
 ~~~
 (P102313)
 
@@ -291,6 +293,7 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
 6	{d}utu	utu	Utu	_	_	7	COM	_	_
 7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
@@ -377,15 +380,15 @@ implicit copula
 ~~~
 "Amar-Suen, beloved of Ur" (name of a statue, Q000985)
 
-This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. 197)
+This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. )
 
 Note that implicit addition in complex numerals is *not* annotated by `appos`, but by `nummod`:
 
 ~~~ conllu
-1	14	3(gesz2)	3(gesz)[sixty]	NUM	NU	_	4	nummod	_	_
-2	15	1(u)	1(u)[ten]	NUM	NU	_	1	nummod	_	_
-3	16	7(disz)	7(disz)[one]	NUM	NU	_	1	nummod	_	_
-4	17	udu	udu[sheep]	NOUN	N	Number=Sing	0	root	_	_
+1	3(gesz2)	3(gesz)[sixty]	NUM	NU	_	4	nummod	_	_
+2	1(u)	1(u)[ten]	NUM	NU	_	1	nummod	_	_
+3	7(disz)	7(disz)[one]	NUM	NU	_	1	nummod	_	_
+4	udu	udu[sheep]	NOUN	N	Number=Sing	0	root	_	_
 
 ~~~
 "197 (180+10+7) sheep" (P102315)
@@ -433,6 +436,7 @@ Morphologically marked conjunction *-bi*:
 4	gal-gin7	gal	big.EQU	_	_	3	amod	_	_
 5	jiri3-bi	jiri3	foot.their	_	_	6	ABS	_	_
 6	nam-mi-in-gub	gub	stand	_	_	0	root	_	_
+
 ~~~
 
 "The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual)
@@ -492,6 +496,7 @@ In headless phrases, concatenate the dependency label of the phrase with the dep
 3	ba-an-jar	jar	to.place	_	_	0	root	_	_
 4	jectug2	jectug2	ear	_	_	3	GEN+ERG	_	_
 5	dajal-la-ke4	dajal	to.be.wide	_	_	4	amod	_	_
+
 ~~~
 "(The one) of wide ear sat in the Duranki" (EnA 11, example from PPCS manual)
 
@@ -506,9 +511,10 @@ Annotation of possession requires co-indexing of arguments. This is not covered 
 The vocative identifies the addressee of the following statements with a noun phrase without case marking. (Does not exist in administrative texts.)
 
 ~~~ conllu
-1	{d}gilgamec2	gilgamec2	Gilgamec	3	voc	_	_
-2	en-ce3	en3-ce3	how long	3	TERM	_	_
-3	i3-nu2-de3-en	nu2	to lie down	0	root	_	_
+1	{d}gilgamec2	gilgamec2	Gilgamec	_	_	3	voc	_	_
+2	en-ce3	en3-ce3	how long	_	_	3	TERM	_	_
+3	i3-nu2-de3-en	nu2	to lie down	_	_	0	root	_	_
+
 ~~~
 
 "Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
@@ -518,18 +524,20 @@ The vocative identifies the addressee of the following statements with a noun ph
 Anticipatory genitives preposed to the clause are attached the additional label `disloc`. If they are adjacent to the nominal they modify, annotate them as nominal dependents. If they are not adjacent to the nominal they modify, annotate them as dependents of the syntactic head of the clause. In UD mapping, the former should become `nmod`, the latter should become `disloc`.
 
 ~~~ conllu
-1	za3-mi2	za3-mi2	hymn.GEN	2	GEN+disloc	_	_
-2	mu-ru-bi-im	murub4	middle.its.COP	0	root	_	_
+1	za3-mi2	za3-mi2	hymn.GEN	_	_	2	GEN+disloc	_	_
+2	mu-ru-bi-im	murub4	middle.its.COP	_	_	0	root	_	_
+
 ~~~
 
 "(It) is the middle of the hymn" (Gudea CylA 30:16, example taken from PPCS manual)
 
 ~~~ conllu
-1	e2-a	e2	house.GEN	5	GEN+disloc	_	_
-2	{d}en-ki-ke4	en-ki	Enki.ERG	5	ERG	_	_
-3	jic-hur-bi	jic-hur	plan.its.LT	5	DAT	_	_
-4	si	si	horn	5	ABS	_	_
-5	mu-na-sa2	sa2	to.equal	0	root	_	_
+1	e2-a	e2	house.GEN	_	_	5	GEN+disloc	_	_
+2	{d}en-ki-ke4	en-ki	Enki.ERG	_	_	5	ERG	_	_
+3	jic-hur-bi	jic-hur	plan.its.LT	_	_	5	DAT	_	_
+4	si	si	horn	_	_	5	ABS	_	_
+5	mu-na-sa2	sa2	to.equal	_	_	0	root	_	_
+
 ~~~
 
 "Enki prepared the plan of the house for him" (Gudea CylA 17:17, example taken from PPCS manual)
@@ -544,6 +552,7 @@ Used for direct speech (probably not relevant to administrative texts).
 3	je26-e	je26	I	_	_	4	ABS	_	_
 4	ga-jen	jen	go	_	_	5	ccomp	_	_
 5	nu-mu-un-na-ab-be2	dug4	NEG.say	_	_	0	root	_	_
+
 ~~~
 
 "No one said: 'I will go to the city'" (L2 272, example from PPCS manual)
@@ -556,6 +565,7 @@ Used for direct speech (probably not relevant to administrative texts).
 5	PN2	_	PN	_	_	7	ABS	_	_
 6	PN3	_	PN	_	_	5	appos	_	_
 7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
+
 ~~~
 
 "PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
@@ -591,7 +601,7 @@ Administrative texts often exhibit a list-like character without clear sententia
 7	unu{ki}-ga	_	Uruk.GEN[.LOC]	_	_	6	GEN	_	_
 8	giri3	_	transmitter	_	_	2	giri3	_	_
 9	bar-bar-re	_	B.	_	_	8	GEN	_	_
-10	zi-ga	_	disembursement-from	2	ziga	_	_
+10	zi-ga	_	disembursement-from	_	_	2	ziga	_	_
 11	be-li2-du10	_	B.	_	_	9	GEN	_	_
 12	iti	_	month	_	_	13	nmod	_	_
 13	a2-ki-ti	_	Akiti	_	_	2	date	_	_
@@ -680,24 +690,25 @@ Archi and Pomponio 347, Hayes p.371, not in CDLI
 As for roles of agents such as *giri3 PN* (by the means of PN), and *kiszib PN* (by the seal of PN), we use the dependencies `giri3`, `kiszib`, etcs., and mark these as syntactic heads, with the proper name in genitive. In the UD mapping, these labels then become `obl`.
 
 ~~~ conllu
-1	1	[n]	_	NUM	NU	_	3	nummod	_	_
+1	[n]	_	NUM	NU	_	3	nummod	_	_
 2	...	_	_	_	_	_	1	_	_	_
-3	4	udu	udu[sheep]	NOUN	N	Number=Sing	10	ABS	_	_
-4	5	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	DAT	_	_
+3	udu	udu[sheep]	NOUN	N	Number=Sing	10	ABS	_	_
+4	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	DAT	_	_
 5	...	_	_	_	_	_	4	_	_	_
-6	26	ki	ki[place]	NOUN	N	Number=Sing	10	ABL	_	_
-7	27	{d}szara2-kam-ta	Szarakam[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	6	GEN	_	_
-8	28	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	ERG	_	_
+6	ki	ki[place]	NOUN	N	Number=Sing	10	ABL	_	_
+7	{d}szara2-kam-ta	Szarakam[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	6	GEN	_	_
+8	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	ERG	_	_
 9	...	_	_	_	_	_	8	_	_	_
-10	31	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	_	_	_
-11	32	giri3	giri[foot]	NOUN	N	Number=Sing	10	giri3	_	_
-12	33	ka5-a-mu	Kayamu[1]	PROPN	PN	Animacy=Hum|Case=Gen|Number=Sing	11	GEN	_	_
-13	34	iti	iti[month]	NOUN	N	Number=Sing	10	date	_	_
-14	35	ezem-me-ki-gal2	Ezemmekegal[1]	PROPN	MN	Number=Sing	13	appos	_	_
-15	36	mu	mu[year]	NOUN	N	Number=Sing	13	LOC	_	_
-16	37	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	18	ABS	_	_
-17	38	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	16	GEN	_	_
-18	39	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	15	acl	_	_
+10	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	_	_	_
+11	giri3	giri[foot]	NOUN	N	Number=Sing	10	giri3	_	_
+12	ka5-a-mu	Kayamu[1]	PROPN	PN	Animacy=Hum|Case=Gen|Number=Sing	11	GEN	_	_
+13	iti	iti[month]	NOUN	N	Number=Sing	10	date	_	_
+14	ezem-me-ki-gal2	Ezemmekegal[1]	PROPN	MN	Number=Sing	13	appos	_	_
+15	mu	mu[year]	NOUN	N	Number=Sing	13	LOC	_	_
+16	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	18	ABS	_	_
+17	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	16	GEN	_	_
+18	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	15	acl	_	_
+
 ~~~
 (P102314)
 
@@ -721,8 +732,9 @@ Annotation is projective (there must be no crossing edges). If a list is interru
 11	ki	ki[place]	NOUN	N	Number=Sing	15	ABL	_	_
 12	{d}szara2-kam-ta	Szarakam[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	11	GEN	_	_
 13	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	15	ERG	_	_
-14	_	_	_	_	_	_	_	_	_
+14	...	_	_	_	_	13	_	_	_
 15	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+
 ~~~
 (P102314)
 
@@ -745,20 +757,20 @@ Dates are connected by means of the `date` dependency on semantic grounds. We se
 (P109483)
 
 ~~~ conllu
-1	ud	_	day	0	date	_	_
-2	30	_	29	1	nummod	_	_
-3	la1	_	_	2	compound	_	_
-4	1-kam	_	_	2	compound	_	_
-5	iti	_	month	6	nmod	_	_
-6	Sze-kar-ra-gal2	_	Shekaragal	1	LOC	_	_
-7	mu	_	year	6	LOC	_	_
-8	Si-mu-ru-um{ki}	_	Simurum	14	ABS	_	_
-9	Lu-lu-bu-um{ki}	_	Lulubum	8	appos	_	_
-10	a-ra2	_	ninth.time	14	dep	_	_
-11	10	_	_	10	nummod	_	_
-12	la1	_	_	11	compound	_	_
-13	1-kam	_	_	11	compound	_	_
-14	ba-hul	_	destroyed	_	_	7	acl	_	_
+1	ud	_	day	_	_	0	date	_	_
+2	30	_	29	_	_	1	nummod	_	_
+3	la1	_	_	_	_	2	acl	_	_
+4	1-kam	_	_	_	_	3	nummod	_	_
+5	iti	_	month	_	_	6	nmod	_	_
+6	Sze-kar-ra-gal2	_	Shekaragal	_	_	1	LOC	_	_
+7	mu	_	year	_	_	6	LOC	_	_
+8	Si-mu-ru-um{ki}	_	Simurum	_	_	14	ABS	_	_
+9	Lu-lu-bu-um{ki}	_	Lulubum	_	_	8	appos	_	_
+10	a-ra2	_	ninth.time	_	_	14	dep	_	_
+11	10	_	_	_	_	10	nummod	_	_
+12	la1	_	_	_	_	11	acl	_	_
+13	1-kam	_	_	_	_	12	nummod	_	_
+14	ba-hul	_	destroyed	_	_	_	_	7	acl	_	_
 
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
@@ -802,6 +814,7 @@ As a design decision, annotation follows the semantic function of numerals as nu
 2	la2	la[hang]	VERB	V	_	1	acl	_	_
 3	1(disz)	1(disz)[one]	NUM	NU	_	2	nummod	_	_
 4	udu	udu[sheep]	NOUN	N	Number=Sing	12	ABS	_	_
+
 ~~~
 `59 sheep' (P102313)
 
@@ -830,6 +843,7 @@ As for the number at the end of administrative text, this is the total number of
 18	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	15	acl	_	_
 19	1(gesz2)	1(gesz)[sixty]	NUM	NU	_	12	_	_	_
 20	7(disz)	7(disz)[one]	NUM	NU	_	19	nummod	_	_
+
 ~~~
 (P102313)
 
@@ -863,6 +877,7 @@ Despite what has been written above: Is that an original `advcl`?
 5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
 6	{d}utu	utu	Utu	_	_	7	COM	_	_
 7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
@@ -870,12 +885,12 @@ Note: this may be an actual advcl. to be confirmed (and fixed in the description
 
 ### Dependency syntax: Other uses of the copula
 
-Emphatic copula/standard marker
+Emphatic copula/standard marker ("STM")
 
 ~~~ conllu
 1	šag₄	_	heart	_	_	6	ERG	_	_
 2	en-lil₂-la₂-ke₄	_	DN=GEN=ERG	_	_	1	GEN	_	_
-3	id2idigna-am₃	_	WN=STM	_	_	1	STM	acl?	_	_
+3	id2idigna-am₃	_	WN=STM	_	_	1	STM	acl?	_
 4	a	_	water	_	_	6	ABS	_	_
 5	dug₃-ga	_	sweet-PT=ABS	_	_	4	amod	_	_	
 6	nam-de₆	_	MOD-VEN-3.SG.NH.A-bring-3.SG.P	_	_	0	root	_	_
@@ -930,12 +945,14 @@ developed in the
 # this is a second sentence
 1    Cats   cat    NOUN    NNS    _    2    nsubj    _    _
 2    sleep  sleep  VERB    VBP    _    0    ROOT     _    _
+
 ~~~
 
 The CoNLL-U format defines 10 columns separated by TAB (in Annodoc: space), again, only fields 1 `ID`, 2 `WORD`, 4 `POS`, 7 `HEAD` and 8 `EDGE` are visualized.
 
 Note that Annodoc supports either space or tab as column separator, but no mixture. Furthermore, exactly ten columns are required, it is not admissable to omit the trailing empty columns.
 Also note that Annodoc *requires* numerical IDs, starting with 1. CDLI IDs must be replaced, fragments from actual annotations must be adjusted in their ID and HEAD information.
+Furthermore, a CoNLL-U snippet must be ended with an empty line
 
 As an alternative, the Stanford Dependency format can be used:
 
