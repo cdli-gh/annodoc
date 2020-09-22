@@ -557,6 +557,35 @@ As a design decision, annotation follows the semantic function of numerals as nu
 ~~~
 `59 sheep' (P102313)
 
+### Detached totals
+
+As for the number at the end of administrative text, this is the total number of the animals recorded above, we take it as a note, and we tag it as `parataxis`.
+
+~~~ conllu
+1	1(gesz2)	1(gesz)[sixty]	NUM	NU	_	4	nummod	_	_
+2	la2	la[hang]	VERB	V	_	1	acl	_	_
+3	1(disz)	1(disz)[one]	NUM	NU	_	2	nummod	_	_
+4	udu	udu[sheep]	NOUN	N	Number=Sing	12	ABS	_	_
+5	8(disz)	8(disz)[one]	NUM	NU	_	6	nummod	_	_
+6	masz2	masz[goat]	NOUN	N	Number=Sing	4	appos	_	_
+7	szu	szu[hand]	NOUN	N	Number=Sing	8	appos	_	_
+8	la2-a	la[entrust]	VERB	V	_	4	acl	_	_
+9	ki	ki[place]	NOUN	N	Number=Sing	12	ABL	_	_
+10	ab-ba-sa6-ga-ta	Abbasaga[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	9	GEN	_	_
+11	be-li2-a-zu	Beli’azu[1]	PROPN	PN	Animacy=Hum|Case=Erg|Number=Sing	12	ERG	_	_
+12	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	_	_	_
+13	iti	iti[month]	NOUN	N	Number=Sing	12	date	_	_
+14	ses-da-gu7	Sesdagu[1]	PROPN	MN	Number=Sing	13	appos	_	_
+15	mu	mu[year]	NOUN	N	Number=Sing	13	LOC	_	_
+16	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	18	ABS	_	_
+17	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	16	GEN	_	_
+18	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	15	acl	_	_
+19	1(gesz2)	1(gesz)[sixty]	NUM	NU	_	12	_	_	_
+20	7(disz)	7(disz)[one]	NUM	NU	_	19	nummod	_	_
+~~~
+(P102313)
+
+
 ## Changes
 
 These are revisions of the original approach to annotation, which need to be changed either above or in the gold data.
