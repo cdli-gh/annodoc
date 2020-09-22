@@ -533,6 +533,8 @@ These are revisions of the original approach to annotation, which need to be cha
 - change internal structure of complex numerals to appos (add there "implicit addition") rather than compound; for la2, see morphology guidelines 
 - TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
 - TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
+- iti+month name: current pre-annotation: iti is head, month in apposition (fix in docu and data)
+- complex numners: head is nummod, internal relation produced by pre-annotation is also nummod (guidelines currently have compound; check whether to be replaced with appos for implicit addition)
 
 ## Open issues
 
