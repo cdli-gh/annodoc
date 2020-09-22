@@ -198,7 +198,30 @@ Note that CDLI annotates adverbial clauses as relative clauses. The label advcl 
 
 As for acl+ABS, acl+ERG and acl+DAT, these are systematically ambiguous between nominal (UD nsubj, obj, iobj) and clausal interpretation (UD csubj, ccomp, xcomp) and asserting one would be artificial and not grounded in Sumerian grammar. If subordination is morphologically marked, the UD label is thus always chosen in accordance with their case (i.e., nominal interpretation). The UD labels csubj, ccomp and xcomp are not being used.
 
-Note syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
+Note that syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
+
+Note that `acl` is also used for the syntactic relation between *mu* `year` and year name (typically a clause), also if subordination is not morphologically marked.
+
+~~~ conllu
+1	iti	_	month	_	_	3	date	_	_
+2	a2-ki-ti	_	Akiti	_	_	1	appos	_	_
+3	mu	_	year	_	_	1	LOC	_	_
+4	an-sza-an{ki}	_	Anshan	_	_	5	ABS	_	_
+5	ba-hul	_	destroyed	_	_	3	acl	_	_
+
+~~~	
+(P109483)
+
+~~~ conllu
+1	13	iti	iti[month]	NOUN	N	Number=Sing	0	date	_	_
+2	14	ses-da-gu7	Sesdagu[1]	PROPN	MN	Number=Sing	1	appos	_	_
+3	15	mu	mu[year]	NOUN	N	Number=Sing	1	LOC	_	_
+4	16	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	6	ABS	_	_
+5	17	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	4	GEN	_	_
+6	18	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	3	acl	_	_
+~~~
+(P102313)
+
 
 ### Adpositions ("case")
 
@@ -463,12 +486,10 @@ Head of a date phrase is the first element (day, month or year). Days are identi
 
 Dates are connected by means of the `date` dependency on semantic grounds. We see that as a specialization of `LOC` (resp. `L1`, in morphology) and in the UD mapping, both would be mapped to `obl`.
 
-TO CHECK: the year name is *not* an acl, is it? Could *that* be a ccomp?
-
 ~~~ conllu
-1	iti	_	month	_	_	2	nmod	_	_
-2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
-3	mu	_	year	_	_	2	LOC	_	_
+1	iti	_	month	_	_	0	date	_	_
+2	a2-ki-ti	_	Akiti	_	_	1	appos	_	_
+3	mu	_	year	_	_	1	LOC	_	_
 4	an-sza-an{ki}	_	Anshan	_	_	5	ABS	_	_
 5	ba-hul	_	destroyed	_	_	3	acl	_	_
 
@@ -550,20 +571,6 @@ These are revisions of the original approach to annotation, which need to be cha
 - complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
 
 ## Open issues
-
-### Syntactic relation between mu and year name
-
-Currently annotated as acl. To be confirmed: The year name is *not* an acl, is it? Maybe *that* is a ccomp, then?
-
-~~~ conllu
-1	iti	_	month	_	_	2	nmod	_	_
-2	a2-ki-ti	_	Akiti	_	_	0	date	_	_
-3	mu	_	year	_	_	2	LOC	_	_
-4	an-sza-an{ki}	_	Anshan	_	_	5	ABS	_	_
-5	ba-hul	_	destroyed	_	_	3	acl	_	_
-
-~~~	
-(P109483)
 
 ### Dependency syntax: Other uses of the copula
 
