@@ -523,6 +523,19 @@ Dates can be written discontinuously:
 
 In this case, create multiple date relations with the respective root element.
 
+### Complex numerals
+
+Complex numerals can include *la2* 'minus', morphologically analyzed as `NF.V.ABS/PT/F` (=`acl`) here. Note that the numeral following *la2* is formally an absolutive argument: this is `NU1 la2 NU2 (NU2 is hung out from NU1)`, so la2=NF.V.ABS=acl; NU2= nsubj:passive.
+As a design decision, annotation follows the semantic function of numerals as nummod.
+
+~~~ conllu
+1	1(gesz2)	1(gesz)[sixty]	NUM	NU	_	4	nummod	_	_
+2	la2	la[hang]	VERB	V	_	1	acl	_	_
+3	1(disz)	1(disz)[one]	NUM	NU	_	2	nummod	_	_
+4	udu	udu[sheep]	NOUN	N	Number=Sing	12	ABS	_	_
+~~~
+`59 sheep' (P102313)
+
 ## Changes
 
 These are revisions of the original approach to annotation, which need to be changed either above or in the gold data.
@@ -534,13 +547,9 @@ These are revisions of the original approach to annotation, which need to be cha
 - TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
 - TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
 - iti+month name: current pre-annotation: iti is head, month in apposition (fix in docu and data)
-- complex numners: head is nummod, internal relation produced by pre-annotation is also nummod (guidelines currently have compound; check whether to be replaced with appos for implicit addition)
+- complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
 
 ## Open issues
-
-### Complex numerals
-
-Currently, multi-number numerals are connected by `compound` relations. This also includes *la1* 'minus' -- but this is verbal. Can we motivate a linguistic structure here?  
 
 ### Syntactic relation between mu and year name
 
@@ -644,5 +653,8 @@ nsubj(jumped-5, fox-4)
 ~~~
 
 ## Acknowledgements
+
+Contributors:
+EPP, JW, LR, ...
 
 This page is based on a fork of the [Annodoc](http://www2.lingfil.uu.se/SLTC2014/abstracts/sltc2014_submission_32.pdf) template, originally under (https://github.com/spyysalo/annodoc). See there for documentation.
