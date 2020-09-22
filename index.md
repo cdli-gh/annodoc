@@ -461,7 +461,7 @@ For morphological annotation, see [Month Names and Year Names](https://cdli-gh.g
 
 Head of a date phrase is the first element (day, month or year). Days are identified by numbers, using the nummod relationship. The head of a day phrase is thus u3 "day". Months are identified by proper names, so that iti "month" is modelled like an epithet, with the month name as head. Year names are normally sentential, we consider the word "mu" as syntactic head, and the actual year name a relative clause.
 
-Dates are connected by means of the date dependency (could be considered locative? -- anyway, easier to query in this way).
+Dates are connected by means of the `date` dependency on semantic grounds. We see that as a specialization of `LOC` (resp. `L1`, in morphology) and in the UD mapping, both would be mapped to `obl`.
 
 TO CHECK: the year name is *not* an acl, is it? Could *that* be a ccomp?
 
