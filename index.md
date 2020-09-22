@@ -98,6 +98,20 @@ As Sumerian employs morphology to mark syntactic relations, we adopt a morpholog
 - We annotate all subordinate clauses as relative clauses (acl). If an adverbial function is evident from the morphology, this involves a case marker, and then a compound label acl+CASE is used. This means that we do not use the dependencies ccomp, xcomp, and csubj.
 - Sumerian does not have the grammatical category ADV. Adverbials are modelled like adjectives, resp. relative clauses, with additional case marking. The dependencies advcl and advmod do not exist.
 
+### UD documentation
+
+{% assign sorted = site.deps | sort: 'title' %}{% for p in sorted %}
+<a id="al-u-dep/{{ p.title }}" class="al-dest"/>
+<h2><code>{{ p.title }}</code>: {{ p.shortdef }}</h2>
+{% if p.content contains "<!--details-->" %}
+{{ p.content | split:"<!--details-->" | first }}
+<a href="{{ p.title }}" class="al-doc">See details</a>
+{% else %}
+{{ p.content }}
+{% endif %}
+<a href="{{ site.git_edit }}/{% if p.collection %}{{ p.relative_path }}{% else %}{{ p.path }}{% endif %}" target="#">edit {{ p.title }}</a>
+{% endfor %}
+
 ### Incomplete annotation (dep)
 
 Should be used for damaged or missing signs whose meaning cannot be ascertained.
