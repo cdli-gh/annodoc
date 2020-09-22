@@ -48,6 +48,10 @@ Known issues/todos:
 
 ## Background and General Information
 
+Previous work on syntactic parsing of cuneiform languages is sparse. For Sumerian, we can only build on individual examples with syntactic analysis in the literature, documentation of pilot studies on query-based parsing and information extraction without code or data releases, and initial steps towards the semiautomatic creation of annotations in the Penn Treebank tradition, the Penn Parsed Corpus of Sumerian (PPCS, 2003-2004). At the moment, only about 400 tokens of syntactically annotated text are available from PPCS and its documentation.[^fn-PPCS]
+
+[^fn-PPCS] The original website is down (http://psd.museum.upenn.edu/ppcs/), but cf. http://oracc.museum.upenn.edu/doc/help/languages/sumerian/syntax/index.html, https://github.com/oracc/oracc/tree/master/misc/ssa3/t (sample data),  https://web.archive.org/web/20121025205450/http://psd.museum.upenn.edu/ppcs/MorphologyTable.html,  https://web.archive.org/web/20130121075848/http://psd.museum.upenn.edu/ppcs/   
+
 Sumerian language (also cf. [CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=writing_and_language), [Wikipedia](https://en.wikipedia.org/wiki/Sumerian_language))
 
 * writing ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=cuneiform_writing_system))
@@ -81,12 +85,40 @@ Sumerian language (also cf. [CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=wr
 		* [Shu-Suen](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_shu-suen)
 		* [Ibbi-Suen](http://cdli.ox.ac.uk/wiki/doku.php?id=year_names_ibbi-suen)
 
+A characteristic feature of Sumerian is "Suffixanhäufung" (case stacking): the syntactic head of the noun phrase is typically its first element, but morphological case is marked at the last element of a phrase. If a noun phrase contains a nominal modifier, this tends to follow its syntactic head, and thus, the case markers of the dependent and of the head are accumulated at the modifier.
+
+	ig   e2    lugal-ka-ta
+	ig   e     lugal.ak.ak.ta
+	door house king.GEN.GEN.ABL
+	"From the door of the king's house" (PPCS manual, example 18)
+
+Here, case morphology directly encodes a phrase structure:
+	
+	[ig   [e     lugal.ak].ak].ta
+	[door [house king.GEN].GEN].ABL
+
+We exploit this characteristic by grounding the annotation of syntax in the annotation of morphology. In particular, we use morphological cases as labels for nominal dependents. Annotation is thus reduced to propagate case to the respective syntactic head:
+
+~~~conllu 
+1	ig	_	door	0	ABL	_	_
+2	e2	_	house	1	GEN	_	_
+3	lugal-ka-ta	_	king.GEN.GEN.ABL	2	GEN	_	_
+~~~
+
+The mapping of case labels to universal dependency labels is performed as a postprocessing step. Adnominal modifiers with case marking are mapped to `nmod`, oblique cases are  to `obl`, dative to `iobj`, ergative to `nsubj`. The mapping of absolutive is more challenging, as it needs to be disambiguated between `nsubj` (for intransitives) and `obj` (for transitives), see discussion below.
+
+Following the morphological principle in syntactic annotation, these labels are being used only if indicated in the morphology annotation. Morphologically unmarked adnominal modification is annotated as `appos`. The same principle applies to the annotation of clausal co(sub)ordination: Morphologically marked subordination is annotated as `acl`, morphologically or syntactically marked coordination as `conj`, unmarked co(sub)ordination as `parataxis`.
+
 ## Parts of Speech
 
 See [Tagsets](https://cdli-gh.github.io/guides/guide_tagsets.html).
 Mapping to UD yet to come.
 
 ## Syntactic dependencies
+
+MTAAC aims to produce Ur III syntax according to the Universal Dependencies (UD 2018), along with semantic role annotations. One important deviation is that for clausal and nominal arguments, we apply the labels of morphological cases. In a subsequent processing step, these are transformed to UD labels. However, this is lossy, and internally, we work with case labels in order to facilitate their subsequent mapping to semantic role annotations. This document describes the MTAAC scheme and its mapping to UD, building in parts on the PPCS documentation.
+
+MTAAC builds on ETSCRI-style morphosyntax. Unlike PPCS, we do not annotate morphemes. For labelling clausal arguments, MTAAC uses case labels as provided by ETSCRI-style morphosyntax, not the richer PPCS inventory. Unlike UD, the root node may carry a dependency relation other than root. In this way, morphological information can be preserved, e.g., in the examples below.
 
 The annotation scheme is designed with the goal of mappability to UD v.2, however, the specifics of Sumerian require a language-specific schema. The mapping of native labels to UD dependencies is approached here as a post-processing task. 
 
@@ -190,6 +222,20 @@ Note that there is no inherent difference between subordinate clauses and adject
 
 "(of) Ur-Ningirsu, the beloved priest of Nanshe" (Q001758) 
 
+Note that relative clauses can be clausal arguments, and should be marked with the corresponding case:
+
+~~~ conllu
+1	PN1	_	PN	_	_	4	ERG	_	_
+2	dam-ce3	_	wife.TERM	_	_	3	TERM	_	_
+3	ha-tuku	_	have	_	_	4	ccomp	_	_
+4	bi2-in-dug4-ga	_	say.NOM	_	_	7	acl+ABS	_	_
+5	PN2	_	PN	_	_	7	ABS	_	_
+6	PN3	_	PN	_	_	5	appos	_	_
+7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
+~~~
+
+"PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
+
 Note that CDLI annotates adverbial clauses as relative clauses. The label advcl is not used. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While we do not use the UD labels advcl (or advmod) in CDLI annotation, these are derived for the UD export as follows:
 	
 	acl+LOC, TERM, EQU, etc. => advcl
@@ -222,6 +268,22 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 ~~~
 (P102313)
 
+### Subordinating conjunction: mark
+
+*tukumbi* 'if'
+
+~~~ conllu
+1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
+2	tukum-bi	tukum-bi	if	_	_	5	mark	_	_
+3	ud-da	ud	day(light)	_	_	5	LOC	_	_
+4	kur-ra	kur	land	_	_	5	LOC	_	_
+5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
+6	{d}utu	utu	Utu	_	_	7	COM	_	_
+7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+~~~
+"If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
+
+Note: this may be an actual advcl. to be confirmed (and fixed in the description above).
 
 ### Adpositions ("case")
 
@@ -306,7 +368,18 @@ implicit copula
 
 This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. 197)
 
-Appositions and case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
+Note that implicit addition in complex numerals is *not* annotated by `appos`, but by `nummod`:
+
+~~~ conllu
+1	14	3(gesz2)	3(gesz)[sixty]	NUM	NU	_	4	nummod	_	_
+2	15	1(u)	1(u)[ten]	NUM	NU	_	1	nummod	_	_
+3	16	7(disz)	7(disz)[one]	NUM	NU	_	1	nummod	_	_
+4	17	udu	udu[sheep]	NOUN	N	Number=Sing	0	root	_	_
+
+~~~
+"197 (180+10+7) sheep" (P102315)
+
+Appositions and most case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
 
 ### Nominal modifiers: nmod
 
@@ -340,6 +413,21 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 
 Conjunction can be expressed morphologically or syntactically.
 
+Morphologically marked conjunction *-bi*:
+
+~~~ conllu
+1	{id2}idigna	idigna	Tigris	_	_	6	ERG	_	_
+2	{id2}buranuna-bi-da	buranuna	Euphrates.CONJ.ERG	_	_	1	conj	_	_
+3	gud	gud	bull	_	_	6	EQU	_	_
+4	gal-gin7	gal	big.EQU	_	_	3	amod	_	_
+5	jiri3-bi	jiri3	foot.their	_	_	6	ABS	_	_
+6	nam-mi-in-gub	gub	stand	_	_	0	root	_	_
+~~~
+
+"The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual)
+
+Syntactically marked conjunction *u3* (nominal conjunction):
+
 ~~~ conllu
 1	e₂	_	N	_	_	0	ABS	_	_
 2	lal₃	_	N.ABS	_	_	8	ABS	_	_
@@ -353,7 +441,24 @@ Conjunction can be expressed morphologically or syntactically.
 ~~~
 "the temple (where) honey, butter and wine in his place of sacrifice shall not cease" (Q001792)
 
-If conjunction is not explicitly expressed, use appos.
+If nominal conjunction is not explicitly expressed or has been restored in morphology annotation, use `appos`.
+
+~~~ conllu
+1	PN1	_	PN	_	_	6	ERG	_	_
+2	arad	_	slave	_	_	1	appos	_	_
+3	PN2-ke4	_	PN.GEN.ERG	_	_	2	GEN	_	_
+4	u3	_	and	_	_	1	cc	_	_
+5	PN3-ke4	_	PN.ERG	_	_	1	conj	_	_
+6	in-ba-a-ne	_	divide	_	_	0	root	_	_
+7	u3	_	and	_	_	10	cc	_	_
+8	egir	_	after	_	_	10	TMP	_	_
+9	ab-ba-ne-ne	_	father.their	_	_	10	ABS	_	_
+10	i3-ba-a-ne	_	divide	_	_	6	conj	_	_
+~~~
+
+"PN , slave of PN  and PN  divide (the inheritance), and after they divide their father('s estate)" (NG 7 17-21, example from PPCS manual)
+
+If clausal conjunction is not explicitly expressed or has been restored in morphology annotation, use `parataxis`. 
 
 ### Punctuation: punct
 
@@ -365,6 +470,91 @@ As a general rule, the syntactic relation of nominal dependents with their head 
 As labels for dependencies, we use the case labels employed in morphological annotation, with the exception of locatives (all represented as LOC) and datives (all represented as DAT). Note that locatives include both spatial and temporal relationships.
 
 Where case marking is postulated in the morphology annotation, we follow that analysis, regardless of whether the morpheme is realized in the surface string. In particular, this includes the annotation of administrative texts, where case marking is systematically lacking.
+
+#### Case of headless phrases
+
+In headless phrases, concatenate the dependency label of the phrase with the dependency of the (implicit) head, separated by `+`
+
+~~~ conllu
+1	dur-an-ki-ka	dur-an-ki	Dur-an-ki	_	_	3	LOC	_	_
+2	dur2	dur2	rump	_	_	3	ABS	_	_
+3	ba-an-jar	jar	to.place	_	_	0	root	_	_
+4	jectug2	jectug2	ear	_	_	3	GEN+ERG	_	_
+5	dajal-la-ke4	dajal	to.be.wide	_	_	4	amod	_	_
+~~~
+"(The one) of wide ear sat in the Duranki" (EnA 11, example from PPCS manual)
+
+Here, *jectug2* is the (head of the explicit) genitive phrase, its (implicit) head serves as ergative argument of the clause. In UD mapping, preserve the grammatical function of the implicit head only, here `nsubj`.
+
+#### Possession
+
+Annotation of possession requires co-indexing of arguments. This is not covered by the dependency annotation as this leads to non-projective structures. Argument co-indexing is left as a future extension for the DEPRELS column of CoNLL-U.
+
+### Vocative: voc
+
+The vocative identifies the addressee of the following statements with a noun phrase without case marking. (Does not exist in administrative texts.)
+
+~~~ conllu
+1	{d}gilgamec2	gilgamec2	Gilgamec	3	voc	_	_
+2	en-ce3	en3-ce3	how long	3	TERM	_	_
+3	i3-nu2-de3-en	nu2	to lie down	0	root	_	_
+~~~
+
+"Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
+
+### Dislocation: +disloc
+
+Anticipatory genitives preposed to the clause are attached the additional label `disloc`. If they are adjacent to the nominal they modify, annotate them as nominal dependents. If they are not adjacent to the nominal they modify, annotate them as dependents of the syntactic head of the clause. In UD mapping, the former should become `nmod`, the latter should become `disloc`.
+
+~~~ conllu
+1	za3-mi2	za3-mi2	hymn.GEN	2	GEN+disloc	_	_
+2	mu-ru-bi-im	murub4	middle.its.COP	0	root	_	_
+~~~
+
+"(It) is the middle of the hymn" (Gudea CylA 30:16, example taken from PPCS manual)
+
+~~~ conllu
+1	e2-a	e2	house.GEN	5	GEN+disloc	_	_
+2	{d}en-ki-ke4	en-ki	Enki.ERG	5	ERG	_	_
+3	jic-hur-bi	jic-hur	plan.its.LT	5	DAT	_	_
+4	si	si	horn	5	ABS	_	_
+5	mu-na-sa2	sa2	to.equal	0	root	_	_
+~~~
+
+"Enki prepared the plan of the house for him" (Gudea CylA 17:17, example taken from PPCS manual)
+
+### Clausal complement: ccomp
+
+Used for direct speech (probably not relevant to administrative texts).
+
+~~~ conllu
+1	lu2	lu2	person	_	_	5	ERG	_	_
+2	iri-ce3	iri	town.TERM	_	_	4	TERM	_	_
+3	je26-e	je26	I	_	_	4	ABS	_	_
+4	ga-jen	jen	go	_	_	5	ccomp	_	_
+5	nu-mu-un-na-ab-be2	dug4	NEG.say	_	_	0	root	_	_
+~~~
+
+"No one said: 'I will go to the city'" (L2 272, example from PPCS manual)
+
+~~~ conllu
+1	PN1	_	PN	_	_	7	ERG	_	_
+2	dam-ce3	_	wife.TERM	_	_	3	TERM	_	_
+3	ha-tuku	_	have	_	_	4	ccomp	_	_
+4	bi2-in-dug4-ga	_	say.NOM	_	_	7	acl	_	_
+5	PN2	_	PN	_	_	7	ABS	_	_
+6	PN3	_	PN	_	_	5	appos	_	_
+7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
+~~~
+
+"PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
+
+
+### Copula clauses: cop
+
+The head of a copula clause is the (head of the) nominal predicate, that is either the phrase at which the copula is morphologically marked, or the phrase that precedes an independent copula element. An independent copula is to be annotated as `cop`.
+
+Note that the (nominal) head of a copula may be a deverbal noun, i.e., a relative clause (`acl` or `amod`).
 
 ## Dependency annotation for Administrative texts 
 
@@ -650,7 +840,26 @@ These are revisions of the original approach to annotation, which need to be cha
 
 ## Open issues
 
+### Adverbial clauses: advcl
+
+Despite what has been written above: Is that an original `advcl`?
+
+~~~ conllu
+1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
+2	tukum-bi	tukum-bi	if	_	_	5	mark	_	_
+3	ud-da	ud	day(light)	_	_	5	LOC	_	_
+4	kur-ra	kur	land	_	_	5	LOC	_	_
+5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
+6	{d}utu	utu	Utu	_	_	7	COM	_	_
+7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+~~~
+"If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
+
+Note: this may be an actual advcl. to be confirmed (and fixed in the description above).
+
 ### Dependency syntax: Other uses of the copula
+
+Emphatic copula/standard marker
 
 ~~~ conllu
 1	šag₄	_	heart	_	_	6	ERG	_	_
@@ -739,7 +948,12 @@ nsubj(jumped-5, fox-4)
 
 ## Acknowledgements
 
-Contributors:
-EPP, JW, LR, ...
+funded by T-AP (NEH, SSHRC, DFG); MTAAC 
+
+### Contributors
+CC, EPP, IK, JW, LR, ...
 
 This page is based on a fork of the [Annodoc](http://www2.lingfil.uu.se/SLTC2014/abstracts/sltc2014_submission_32.pdf) template, originally under (https://github.com/spyysalo/annodoc). See there for documentation.
+
+### References
+- PPCS (2004), PPCS (Penn Parsed Corpus of Sumerian): A Brief Introduction to the Syntactic Annotation System of the PPCS, version of 6/14/04, available from https://www.yumpu.com/en/document/view/12162126/ppcs-penn-parsed-corpus-of-sumerian-a-brief-introduction-to-the- and https://web.archive.org/web/20070708210654if_/http://psd.museum.upenn.edu/ppcs/ppcs-manual.pdf, author is unnamed (Fumi Karahashi)
