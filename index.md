@@ -373,7 +373,7 @@ The description so far focused on prose text. Administrative texts require a sli
 ### Transactions and their participants
 
 Dependency relations specific to administrative texts include
-- ziga, giri3
+- ziga, giri3, kiszib
 - total, date, agent
 - list
 - compound (in nominals)
@@ -447,9 +447,9 @@ This text describes a single transaction, but without any explicit verbal elemen
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
-The list relation holds between entitites of the same kind, here, the objects of transaction. Note that list should not be used to connect transactions. We assume that transactions are inherently sentential, so, use parataxis. The total is connected by a total relation
+The list relation holds between entitites of the same kind, here, the objects of transaction. Note that list should not be used to connect transactions. We assume that transactions are inherently sentential, so, use `parataxis`. The total is connected by a total relation
 
-The internal structure of complex numerals is not analyzed, but represented by compound.
+The internal structure of complex numerals is represented by `nummod` (design decision; chosen here in favour of `compound` or `flat` which would be equally possible).
 
 Note that the morphology and the relation of a-ra2 (35) are currently unclear and may be revised. Maybe, this is some kind of verbal form?
 
@@ -476,7 +476,9 @@ Note that administrative texts *can* actually use overt verbs, in this case, the
 ~~~
 Archi and Pomponio 347, Hayes p.371, not in CDLI
 
-TBC: As for technical terms, the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
+As for roles of agents such as *giri3 PN* (by the means of PN), and *kiszib PN* (by the seal of PN), we use the dependencies `giri3`, `kiszib`, etcs., and mark these as syntactic heads, with the proper name in genitive. In the UD mapping, these labels then become `obl`.
+
+TBC for other roles: the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
 
 ### Dates
 
@@ -598,6 +600,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
 - iti+month name: current pre-annotation: iti is head, month in apposition (fix in docu and data)
 - complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
+- TODO: 11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)
 
 ## Open issues
 
