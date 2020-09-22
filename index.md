@@ -447,11 +447,11 @@ This text describes a single transaction, but without any explicit verbal elemen
 ~~~
 (no CDLI, Kang 252, Hayes 2000, p. 367)
 
-The list relation holds between entitites of the same kind, here, the objects of transaction. Note that list should not be used to connect transactions. We assume that transactions are inherently sentential, so, use `parataxis`. The total is connected by a total relation
+The `list` relation holds between entitites of the same kind, here, the objects of transaction. Note that `list` should *not* be used to connect transactions. We assume that transactions are inherently sentential, so, use `parataxis`. The total is connected by a total relation
 
 The internal structure of complex numerals is represented by `nummod` (design decision; chosen here in favour of `compound` or `flat` which would be equally possible).
 
-Note that the morphology and the relation of a-ra2 (35) are currently unclear and may be revised. Maybe, this is some kind of verbal form?
+Note that the morphology and the relation of a-ra2 (35) may be revised.
 
 Note that administrative texts *can* actually use overt verbs, in this case, the verb is the root, and the object of the transition is assumed to be a terminative argument.
 
@@ -478,7 +478,52 @@ Archi and Pomponio 347, Hayes p.371, not in CDLI
 
 As for roles of agents such as *giri3 PN* (by the means of PN), and *kiszib PN* (by the seal of PN), we use the dependencies `giri3`, `kiszib`, etcs., and mark these as syntactic heads, with the proper name in genitive. In the UD mapping, these labels then become `obl`.
 
+~~~ conllu
+1	1	[n]	_	NUM	NU	_	3	nummod	_	_
+2	...	_	_	_	_	_	1	_	_	_
+3	4	udu	udu[sheep]	NOUN	N	Number=Sing	10	ABS	_	_
+4	5	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	DAT	_	_
+5	...	_	_	_	_	_	4	_	_	_
+6	26	ki	ki[place]	NOUN	N	Number=Sing	10	ABL	_	_
+7	27	{d}szara2-kam-ta	Szarakam[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	6	GEN	_	_
+8	28	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	10	ERG	_	_
+9	...	_	_	_	_	_	8	_	_	_
+10	31	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	_	_	_
+11	32	giri3	giri[foot]	NOUN	N	Number=Sing	10	giri3	_	_
+12	33	ka5-a-mu	Kayamu[1]	PROPN	PN	Animacy=Hum|Case=Gen|Number=Sing	11	GEN	_	_
+13	34	iti	iti[month]	NOUN	N	Number=Sing	10	date	_	_
+14	35	ezem-me-ki-gal2	Ezemmekegal[1]	PROPN	MN	Number=Sing	13	appos	_	_
+15	36	mu	mu[year]	NOUN	N	Number=Sing	13	LOC	_	_
+16	37	{d}gu-za	guza[chair]	NOUN	N	Number=Sing	18	ABS	_	_
+17	38	{d}en-lil2-la2	Enlil[1]	PROPN	DN	Animacy=Hum|Case=Gen,Abs|Number=Sing	16	GEN	_	_
+18	39	ba-dim2	dim[create]	VERB	V	Number=Sing|Person=3|Voice=Mid	15	acl	_	_
+~~~
+(P102314)
+
 TBC for other roles: the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
+
+### Discontinuous lists
+
+Annotation is projective (there must be no crossing edges). If a list is interrupted by a clausal argument and then continued, attach the second list as an independent argument of the head of the first list, using the same dependency label as that one had. In the following example, the *gu4* does thus not continue the list of sheep that came before. 
+
+~~~ conllu
+1	[n]	_	NUM	NU	_	4	nummod	_	_
+2	n	_	NUM	NU	_	1	nummod	_	_
+3	5(u)	5(u)[ten]	NUM	NU	_	1	nummod	_	_
+4	udu	udu[sheep]	NOUN	N	Number=Sing	15	ABS	_	_
+5	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	15	DAT	_	_
+6	ensi2	ensik[ruler]	NOUN	N	Animacy=Hum|Number=Sing	5	appos	_	_
+7	1(gesz2)	1(gesz)[sixty]	NUM	NU	_	9	nummod	_	_
+8	1(u)	1(u)[ten]	NUM	NU	_	7	nummod	_	_
+9	gu4	gud[ox]	NOUN	N	Number=Sing	15	ABS	_	_
+10	_	_	_	_	_	9	list	_	_
+11	ki	ki[place]	NOUN	N	Number=Sing	15	ABL	_	_
+12	{d}szara2-kam-ta	Szarakam[1]	PROPN	PN	Animacy=Hum|Case=Gen,Abl|Number=Sing	11	GEN	_	_
+13	ur-{d}lamma	Urlamma[1]	PROPN	PN	Animacy=Hum|Number=Sing	15	ERG	_	_
+14	_	_	_	_	_	_	_	_	_
+15	i3-dab5	n]	VERB	V	Number=Sing|Person=3|VerbForm=Fin	0	root	_	_
+~~~
+(P102314)
 
 ### Dates
 
@@ -601,6 +646,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - iti+month name: current pre-annotation: iti is head, month in apposition (fix in docu and data)
 - complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
 - TODO: 11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)
+- double-check ziga role, cf. analysis in P102314
 
 ## Open issues
 
