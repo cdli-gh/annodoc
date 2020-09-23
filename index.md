@@ -138,10 +138,14 @@ As Sumerian employs morphology to mark syntactic relations, we adopt a morpholog
 - co(sub)ordination: If subordination or coordination is not made explicit in the morphology annotation, we annotate appos (between a noun and its nominal dependents) or parataxis (between verbs [clauses])
 - We use morphological annotations for case as labels for syntactic dependencies of nouns, with two exceptions: all locatives are marked LOC, all datives are marked DAT.
 - Sumerian does not have the grammatical category ADJ. The label amod is used for relative clauses without clausal arguments. This also applies to all participles (morphologically, Sumerian relative clauses are participles or nominalizations).
-- We annotate all subordinate clauses as relative clauses (acl). If an adverbial function is evident from the morphology, this involves a case marker, and then a compound label acl+CASE is used. This means that we do not use the dependencies ccomp, xcomp, and csubj.
-- Sumerian does not have the grammatical category ADV. Adverbials are modelled like adjectives, resp. relative clauses, with additional case marking. The dependencies advcl and advmod do not exist.
+- We annotate all subordinate clauses without `mark` as relative clauses (acl). If an adverbial function is evident from the morphology, this involves a case marker, and then a compound label acl+CASE is used. This means that we do not use the dependencies xcomp, and csubj; ccomp is used for direct speech, only. 
+- Sumerian does not have the grammatical category ADV. Adverbials are modelled like adjectives, resp. relative clauses, with additional case marking. The dependency `advcl` is used for subordinate clauses whose `mark` indicates an adverbial function (like *tukumbi* "if").
 
-### Incomplete annotation (dep)
+### Root: root
+
+The label `root` designates the top node of a syntax tree. In CDLI annotation, the top node can also carry other labels (for morphological case or syntactic subordination) if these are morphologically marked. For the UD mapping, these are to be replaced by `root`. In most cases, `root` is the main predicate, e.g., V; N.2-SG-POSS.ABS in sealing.
+
+### Incomplete annotation: dep
 
 Should be used for damaged or missing signs whose meaning cannot be ascertained.
 In the gold data, dep should be used if a particular source doesn't define the syntactic relations of a particular fragment. This includes, for example, the internal structure of year names according to Jaworski (2009).
@@ -248,7 +252,7 @@ Note that relative clauses can be clausal arguments, and should be marked with t
 
 "PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
 
-Note that CDLI annotates adverbial clauses as relative clauses. The label advcl is not used. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While we do not use the UD labels advcl (or advmod) in CDLI annotation, these are derived for the UD export as follows:
+Note that CDLI annotates adverbial clauses without `mark` as relative clauses. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While the use of `advcl` and `advmod` is limited in CDLI annotation, these are derived for the UD export as follows:
 	
 	acl+LOC, TERM, EQU, etc. => advcl
 	acl+GEN => acl (modifying a noun)
@@ -283,7 +287,7 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 
 ### Subordinating conjunction: mark
 
-*tukumbi* 'if'
+Subordinate markers (CNJ), like *tukumbi* 'if'
 
 ~~~ conllu
 1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
@@ -297,9 +301,7 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
-Note: this may be an actual advcl. to be confirmed (and fixed in the description above).
-
-### Adpositions ("case")
+### Adpositions: case
 
 Sumerian does not have prepositions, but it does have a number of nouns that are used to express prepositional functions, e.g., sza3 "heart", also used for to express the meaning of the preposition "in". These are annotated in accordance with their morphology, i.e., as nouns with genitive complement. If no additional case is marked in the morphology annotation, these phrases are considered to be in apposition with the nominal they modify.
 
@@ -458,6 +460,8 @@ Syntactically marked conjunction *u3* (nominal conjunction):
 
 If nominal conjunction is not explicitly expressed or has been restored in morphology annotation, use `appos`.
 
+Syntactically marked conjunction *u3* (clausal conjunction):
+
 ~~~ conllu
 1	PN1	_	PN	_	_	6	ERG	_	_
 2	arad	_	slave	_	_	1	appos	_	_
@@ -474,6 +478,14 @@ If nominal conjunction is not explicitly expressed or has been restored in morph
 "PN , slave of PN  and PN  divide (the inheritance), and after they divide their father('s estate)" (NG 7 17-21, example from PPCS manual)
 
 If clausal conjunction is not explicitly expressed or has been restored in morphology annotation, use `parataxis`. 
+
+> But note the "tag list" (GDrive syntax folder)
+> `conj` "Several elements in the same function (including two verbal chains, nouns, nmods, etc). 
+
+For the unmarked enumeration of transferred goods on a list, use `list`, not `conj`, unless a conjunction is used:
+
+> But note the "tag list":
+> There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example,   sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use conj in these cases."
 
 ### Punctuation: punct
 
@@ -506,9 +518,11 @@ Here, *jectug2* is the (head of the explicit) genitive phrase, its (implicit) he
 
 Annotation of possession requires co-indexing of arguments. This is not covered by the dependency annotation as this leads to non-projective structures. Argument co-indexing is left as a future extension for the DEPRELS column of CoNLL-U.
 
+> Note: The taglist on the syntax folder at GDrive recommended `nmod` also for possessives. 
+
 ### Vocative: voc
 
-The vocative identifies the addressee of the following statements with a noun phrase without case marking. (Does not exist in administrative texts.)
+The vocative identifies the addressee of the following statements with a noun phrase without case marking.
 
 ~~~ conllu
 1	{d}gilgamec2	gilgamec2	Gilgamec	_	_	3	voc	_	_
@@ -518,6 +532,8 @@ The vocative identifies the addressee of the following statements with a noun ph
 ~~~
 
 "Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
+
+In the Ur III corpus also used for absolutive arguments before the non-verbal clause in the seal.
 
 ### Dislocation: +disloc
 
@@ -542,9 +558,23 @@ Anticipatory genitives preposed to the clause are attached the additional label 
 
 "Enki prepared the plan of the house for him" (Gudea CylA 17:17, example taken from PPCS manual)
 
+### Numeral modifiers: nummod
+
+The label `nummod` is assigned on semantic grounds (regardless of morphology) to every numeral that modifies a nominal or verb. Possible morphological tags include `NU`, `NU.GEN.COP-3-SG`, `NU.ABS.COP-3-SG`, etc.
+
+Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
+
+> Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
+
+### Compound: compound
+
+Used for the nominal part of a compound verb (if a list of compound verbs is provided). Without such a list, this is annotated according to its grammatical structure (if transparent).
+
+> Note: The earlier use of `compound` for complex numbers is deprecated.
+
 ### Clausal complement: ccomp
 
-Used for direct speech (probably not relevant to administrative texts).
+Used for direct speech; the clause following “someone said that”:
 
 ~~~ conllu
 1	lu2	lu2	person	_	_	5	ERG	_	_
@@ -570,6 +600,28 @@ Used for direct speech (probably not relevant to administrative texts).
 
 "PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
 
+### Adverbial clause: advcl
+
+`advcl` is used for subordinate clauses with an explicit `mark` that indicates an adverbial function, e.g., *tukumbi* "if":
+
+~~~ conllu
+1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
+2	tukum-bi	tukum-bi	if	_	_	5	mark	_	_
+3	ud-da	ud	day(light)	_	_	5	LOC	_	_
+4	kur-ra	kur	land	_	_	5	LOC	_	_
+5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
+6	{d}utu	utu	Utu	_	_	7	COM	_	_
+7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+
+~~~
+"If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
+
+
+### Parataxis: parataxis
+
+Morphologically and syntactically unmarked sequence of clausal arguments (or expressions that imply a clausal structure, e.g., transactions).
+
+Also used for pisagdubak, notes (usually NU), the sealing.
 
 ### Copula clauses: cop
 
@@ -584,7 +636,7 @@ The description so far focused on prose text. Administrative texts require a sli
 ### Transactions and their participants
 
 Dependency relations specific to administrative texts include
-- ziga, giri3, kiszib
+- giri3, kiszib
 - total, date, agent
 - list
 - compound (in nominals)
@@ -611,6 +663,8 @@ Administrative texts often exhibit a list-like character without clear sententia
 
 ~~~	
 (P109483)
+
+> Note: confirm `ziga` role in the annotation
 
 This text describes a single transaction, but without any explicit verbal element. The obligatory part of a transaction statement is the object being transferred. This is thus modelled as root. A transaction involves a number of functional roles, some of which are partially understood, only. These are identified by morphological case labels (if provided by the morphology annotation, here TERM, LOC), Sumerian technical terms (here ziga, giri3), or semantic role labels (date, agent [= unmarked receiver or supplier], total).
 
@@ -853,7 +907,7 @@ As for the number at the end of administrative text, this is the total number of
 These are revisions of the original approach to annotation, which need to be changed either above or in the gold data.
 
 - numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
-- acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data.
+- acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data. Note that the GDrive tag list preserves `SUB`, mapped to `acl:relcl`
 - connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
 - change internal structure of complex numerals to appos (add there "implicit addition") rather than compound; for la2, see morphology guidelines 
 - TODO: synchronize with (https://cdli-gh.github.io/guides/month_names.html), (https://cdli-gh.github.io/guides/verbal_chain_slot_system.html), (https://cdli-gh.github.io/guides/lists.html)
@@ -862,26 +916,47 @@ These are revisions of the original approach to annotation, which need to be cha
 - complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
 - TODO: 11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)
 - double-check ziga role, cf. analysis in P102314
+- advcl does exist (tukumbi)
 
 ## Open issues
 
-### Adverbial clauses: advcl
+### Multiple agents in a transaction
 
-Despite what has been written above: Is that an original `advcl`?
+When we have not only one obl, like u4…...ki…..ta….kiszib……(on the 4th day, from the place of PN, through the seal of PN), do we use conj to link them together?
 
-~~~ conllu
-1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
-2	tukum-bi	tukum-bi	if	_	_	5	mark	_	_
-3	ud-da	ud	day(light)	_	_	5	LOC	_	_
-4	kur-ra	kur	land	_	_	5	LOC	_	_
-5	i-ni-in-ku4-ku4-de3	kur9	enter	_	_	7	advcl	_	_
-6	{d}utu	utu	Utu	_	_	7	COM	_	_
-7	he2-me-da-an-zu	zu	know	_	_	0	root	_	_
+Current approach to provide different labels for these agents. Without explicit verb, the head is the transferred good. In UD mapping, these relations become `obl`.
 
-~~~
-"If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
+### Discussion of Date structure
 
-Note: this may be an actual advcl. to be confirmed (and fixed in the description above).
+1. Problems about temporal indication, day, month and year:
+For the day, 
+u4	N
+2(u)	NU
+3-kam	NU.GEN.COP-3-SG
+
+A. if we take it as “on the 23rd day” and we need add a L1, we have 
+u4		N	obl
+2(u)		NU	numod
+3-kam[-’a]	NU.GEN.COP-3-SG.L1	flat
+
+B. if we take it as an interjected phrase, “the 23rd day”, we have:
+u4	N	disclose
+2(u)	NU	numod
+3-kam	NU.GEN.COP-3-SG	flat
+
+C. if we take it as an interjected norminal clause, “(it is the 23rd day)”, we have:
+u4	N	parataxis
+2(u)	NU	numod
+3-kam[-ø]	NU.GEN.COP-3-SG.ABS	flat
+
+For the month, the situation is similar, and we need to decide the relationship between the iti and MN.
+For the year, the situation is more complicated, because not only we need to decide the case of ‘mu’, but also the relationship between ‘mu’ and the clause followed.
+We also need to decide whether MU and ITI are in conj relationship.
+
+There is another structure of temporal indication, 
+iti X (-ta), u4 NU (-kam) zal-la-’a  After the NUth day passed from the month (obl phrase)
+iti X (-ta), u4 NU-am3 zal-la-’a, in this case, we ignore the copula, we define NU-am3 as NU, not V.
+
 
 ### Dependency syntax: Other uses of the copula
 
@@ -908,7 +983,33 @@ Both these models violate the underlying morphology.
 
 ## Mapping to UD
 
-yet to come
+incomplete
+
+	(top-level node)	=>	root
+	ABL	=>	obl
+	ABS	=>	nsubj; nsubj:passive; obj
+	acl	=>	acl
+	advcl	=>	advcl
+	advmod	=>	advmod
+	appos	=>	appos
+	cc	=>	cc
+	ccomp	=>	ccomp
+	compound	=>	compound
+	conj	=>	conj
+	DAT	=>	iobj
+	ERG	=>	nsubj
+	GEN	=>	nmod
+	giri3	=>	obl
+	kiszib	=>	obl
+	LOC	=>	obl
+	mark	=>	mark
+	nmod	=>	nmod
+	nummod	=>	nummod
+	parataxis	=>	parataxis
+	TERM	=>	obl
+	vocative	=>	vocative
+
+tbc: does compound exist? is the list complete?
 
 ## How to edit this document
 
