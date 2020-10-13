@@ -237,7 +237,20 @@ Note that there is no inherent difference between subordinate clauses and adject
 
 "(of) Ur-Ningirsu, the beloved priest of Nanshe" (Q001758) 
 
-Note that relative clauses can be clausal arguments, and should be marked with the corresponding case:
+Note that headless relative clauses can be clausal arguments, and should be marked with the corresponding case:
+
+~~~ conllu
+1	2(barig)	_	_	_	_	2	nummod	_	_
+2	kasz	_	_	_	_	17	parataxis	_	_
+3	elam	_	_	_	_	4	ABL	_	_
+4	ki-masz{ki}-me	_	_	_	_	2	acl+DAT	_	_
+
+~~~
+"120 liter beer for those (slaves) from Elam" (P315784)
+
+elam ki-masz{ki}-me carries a copula and is thus analyzed as a predicate here.
+
+Todo: check the treatment of clauses in absolutive case
 
 ~~~ conllu
 1	PN1	_	PN	_	_	4	ERG	_	_
@@ -396,6 +409,75 @@ Note that implicit addition in complex numerals is *not* annotated by `appos`, b
 "197 (180+10+7) sheep" (P102315)
 
 Appositions and most case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
+
+Note that `appos` is overloaded and may require disambiguation. If an element is head of both an identity-marking apposition and a conjunction-marking apposition, it is recommended to use `list` for implicit conjunction. This is a very frequent pattern in administrative texts, but also occurs in contracts:
+
+~~~ conllu
+1	a-gu-a	_	Agua,	_	_	17	ABS	_	_
+2	ugula-gesz2-da	_	the overseer of a crew of 60 men	_	_	1	appos	_	_
+3	a-da-mu	_	Adamu,	_	_	1	list	_	_
+4	dumu	_	the son	_	_	3	appos	_	_
+5	x-x	_	of X,	_	_	4	GEN	_	_
+6	szu-a-ba	_	Shu-Aba,	_	_	1	list	_	_
+7	a-zu	_	the physician,	_	_	6	appos	_	_
+8	im-ti-dam	_	Imtidam,	_	_	1	list	_	_
+9	aszgab	_	the leather worker,	_	_	8	appos	_	_
+10	a2-bi2-a-ti	_	Abiati,	_	_	1	list	_	_
+11	szu-e2-a	_	Shuea,	_	_	1	list	_	_
+12	dumu	_	the son	_	_	11	appos	_	_
+13	EDIN-szi-la-at	_	of Edenshilat,	_	_	12	GEN	_	_
+14	da-a-da-a	_	and Dada,	_	_	1	list	_	_
+15	dumu	_	the son	_	_	14	appos	_	_
+16	a-hu-szu-ni	_	of Ahushuni	_	_	15	GEN	_	_
+17	lu2-inim-ma-bi-me-esz2	_	are the relevant witnesses	_	_	0	parataxis	_	_
+
+~~~
+"Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
+
+### List: list
+
+The `list` relation holds between entitites of the same kind and expresses the meaning of an implicit conjunction. We anticipate two main applications. 
+In administrative texts, lists of commodities which are not marked by an explicit conjunction should be connected by `list`, not by `appos`.
+
+~~~ conllu
+1	83	_	83	_	_	2	nummod	_	_
+2	gud	_	bulls	_	_	0	root	_	_
+3	niga	_	barley-fattened	_	_	2	appos	_	_
+4	32	_	32	_	_	5	nummod	_	_
+5	gud	_	bulls	_	_	2	list	_	_
+6	u2	_	grass-fattened	_	_	5	appos	_	_
+7	...	_	...	_	_	2	list	_	_
+
+~~~
+"83 barley-fattened bulls, 32 grass-fattened bulls, ..." (no CDLI, Kang 252, Hayes 2000, p. 367)
+
+Note that `list` should *not* be used to connect transactions. We assume that transactions are inherently sentential, so, use `parataxis`.
+
+Another use of `list` is as a means to disambiguate identity-marking and conjunction-marking apposition in a series of entities of the same kind: 
+If an element is head of both an identity-marking apposition and a conjunction-marking apposition, it is recommended to use `list` for implicit conjunction. The commodity-linking function is an instance of this pattern, but this also occurs in contracts:
+
+~~~ conllu
+1	a-gu-a	_	Agua,	_	_	17	ABS	_	_
+2	ugula-gesz2-da	_	the overseer of a crew of 60 men	_	_	1	appos	_	_
+3	a-da-mu	_	Adamu,	_	_	1	list	_	_
+4	dumu	_	the son	_	_	3	appos	_	_
+5	x-x	_	of X,	_	_	4	GEN	_	_
+6	szu-a-ba	_	Shu-Aba,	_	_	1	list	_	_
+7	a-zu	_	the physician,	_	_	6	appos	_	_
+8	im-ti-dam	_	Imtidam,	_	_	1	list	_	_
+9	aszgab	_	the leather worker,	_	_	8	appos	_	_
+10	a2-bi2-a-ti	_	Abiati,	_	_	1	list	_	_
+11	szu-e2-a	_	Shuea,	_	_	1	list	_	_
+12	dumu	_	the son	_	_	11	appos	_	_
+13	EDIN-szi-la-at	_	of Edenshilat,	_	_	12	GEN	_	_
+14	da-a-da-a	_	and Dada,	_	_	1	list	_	_
+15	dumu	_	the son	_	_	14	appos	_	_
+16	a-hu-szu-ni	_	of Ahushuni	_	_	15	GEN	_	_
+17	lu2-inim-ma-bi-me-esz2	_	are the relevant witnesses	_	_	0	parataxis	_	_
+
+~~~
+"Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
+
 
 ### Nominal modifiers: nmod
 
@@ -940,7 +1022,7 @@ u4		N	obl
 3-kam[-’a]	NU.GEN.COP-3-SG.L1	flat
 
 B. if we take it as an interjected phrase, “the 23rd day”, we have:
-u4	N	disclose
+u4	N	discourse
 2(u)	NU	numod
 3-kam	NU.GEN.COP-3-SG	flat
 
@@ -949,14 +1031,16 @@ u4	N	parataxis
 2(u)	NU	numod
 3-kam[-ø]	NU.GEN.COP-3-SG.ABS	flat
 
+At the moment, we go with option (A), but use `date` as a dependency to be able to retrieve all examples for future revisions. TODO: apply consistently.
+
 For the month, the situation is similar, and we need to decide the relationship between the iti and MN.
 For the year, the situation is more complicated, because not only we need to decide the case of ‘mu’, but also the relationship between ‘mu’ and the clause followed.
-We also need to decide whether MU and ITI are in conj relationship.
+We also need to decide whether MU and ITI are in `conj` relationship.
+(At the moment, they are internally connected by `LOC`, as it refers to a month *in* or *of* a particular year. This is semantically motivated, but it has no morphological basis.)
 
 There is another structure of temporal indication, 
 iti X (-ta), u4 NU (-kam) zal-la-’a  After the NUth day passed from the month (obl phrase)
 iti X (-ta), u4 NU-am3 zal-la-’a, in this case, we ignore the copula, we define NU-am3 as NU, not V.
-
 
 ### Dependency syntax: Other uses of the copula
 
