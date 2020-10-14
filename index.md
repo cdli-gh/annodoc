@@ -371,7 +371,7 @@ implicit conjunction
 ~~~
 "king of Sumer (and) Akkad" (Q000953)
 
-implicit genitive
+implicit genitive or equative
 ~~~ conllu
 1	kišib₃	_	_	_	_	6	ABL	_	_
 2	ur-dšul-pa-e₃-ka	_	_	_	_	1	GEN	_	_
@@ -385,6 +385,8 @@ implicit genitive
 
 The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as appos, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
 
+The pattern applies to both adnominal cases, i.e., GEN and EQU. Note that equatives forms nominal sentences, an implicit equative can thus always also be interpreted as implicit copula. We thus do not annotate implicit equatives as such. Instead, apply the annotation of implicit copula.
+
 implicit copula
 ~~~ conllu
 1	{d}amar-{d}suen	_	_	_	_	0	ABS	_	_
@@ -395,7 +397,20 @@ implicit copula
 ~~~
 "Amar-Suen, beloved of Ur" (name of a statue, Q000985)
 
-This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000, p. )
+This can also be interpreted as having an implicit copula (expected to be marked at 20, cf. Hayes 2000). An alternative annotation is as implicit copula. When annotating a text with a given translation, follow the interpretation of the translation:
+
+~~~ conllu
+1	{d}i-bi2-	_	Ibbi-	_	_	8	voc	_	_
+2	{d}zuen	_	Suen	_	_	1	flat	_	_
+3	...	_	...	_	_	1	appos	_	_
+4	da-da	_	Dada	_	_	8	ABS	_	_
+5	ensi2	_	ensi	_	_	4	appos	_	_
+6	nibru{ki}	_	of.Nippur	_	_	4	GEN	_	_
+7	...	_	...	_	_	4	appos	_	_
+8	arad2-zu	_	servant	_	_	0	root	_	_
+
+~~~
+"Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
 
 Note that implicit addition in complex numerals is *not* annotated by `appos`, but by `nummod`:
 
@@ -511,7 +526,7 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 
 Conjunction can be expressed morphologically or syntactically.
 
-Morphologically marked conjunction *-bi*:
+Morphologically marked conjunction is *-bi-da*, frequently written as *-bi*, and typically occurring between nouns. Originally, *-bi* marks possession and *-da* marks comitative (Hayes p.356). Annotated as `conj` here, not `COM`. 
 
 ~~~ conllu
 1	{id2}idigna	idigna	Tigris	_	_	6	ERG	_	_
@@ -524,6 +539,27 @@ Morphologically marked conjunction *-bi*:
 ~~~
 
 "The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual)
+
+If applied to a clausal argument, it can express a circumstantial meaning. For these cases, we annotate `acl+COM`, not `conj`.
+
+~~~ conllu
+1	dug4-ga-ni-zid-da	_	_	_	_	9	LOC	_	_
+2	ab-ba-ni	_	_	_	_	4	ABS	_	_
+3	ama-ni	_	_	_	_	4	ABS	_	_
+4	nu-u3-zu-bi	_	_	_	_	1	acl+COM	_	_
+5	nig2-{d}ba-u2	_	_	_	_	9	ERG	_	_
+6	ab-ba-	_	_	_	_	5	appos	_	_
+7	Ha-la-{d}ba-u2-ka-ke4	_	_	_	_	5	GEN	_	_
+8	mu-lugal	_	_	_	_	9	ABS	_	_
+9	ba-ni-pad3-da-sze3	_	_	_	_	0	parataxis	_	_
+10	Ha-la-{d}ba-u2-ka-ke4	_	_	_	_	11	ERG	_	_
+11	ba-tag4	_	_	_	_	9	parataxis	_	_
+
+~~~
+
+""
+
+TBC: head is preceding nominal or clause?
 
 Syntactically marked conjunction *u3* (nominal conjunction):
 
@@ -596,6 +632,45 @@ In headless phrases, concatenate the dependency label of the phrase with the dep
 
 Here, *jectug2* is the (head of the explicit) genitive phrase, its (implicit) head serves as ergative argument of the clause. In UD mapping, preserve the grammatical function of the implicit head only, here `nsubj`.
 
+#### Genitive case: GEN
+
+Along with equative, the genitive is an adnominal case (not resumed by any dimensional prefix) indicating possession, origin or affiliation.
+In the mapping to UD, represented as `nmod`.
+
+The anticipatory genitive (`GEN+disloc`, see `disloc`) involves a dislocation. As this can be iterated (anticipatory genitive of an anticipatory genitive), we annotate the head in an opportunistic fashion: Where this is adjacent to the semantic head, annotate the semantic head, where it is detached, annotate the head of the clause as head. In UD, the first use should be `nmod`, the second should be `disloc`.
+
+#### Equative case: EQU
+
+Along with genitive, the equative (equitative) case, marked by *gin7*, is an adnominal case and not resumed by any dimensional prefix. It can be used to create nominal sentences. 
+
+~~~ conllu
+1	a-ba	_	who	_	_		root	_	_
+2	szesz-gu10-gin7	_	like.my.brother	_	_	1	EQU	_	_
+
+~~~
+"Who is like my brother?" (Hayes, p.312, TCS 1,200)
+
+As a general rule, nominal sentences without explicit morphological marks in the text (or their restauration in the morphology annotation) should be annotated as having an implicit copula, i.e., either as `appos` (if an appositional/equational reading is preferred, first nominal is head), or as clause (second nominal is copular predicate and head, first nominal is `ABS`). In a sequence of clauses, the copular annotation is preferred:
+
+~~~ conllu
+1	di-til-la	_	Ditila	_	_	0	root	_	_
+2	{m}szag4-szu-nigin2	_	Shagshunigin	_	_	7	ABS	_	_
+3	dumu-u2-sze3-he2-gin	_	daughter.of.Ushehegin	_	_	2	appos	_	_
+4	udul	_	cowherd	_	_	3	appos	_	_
+5	ur-{d}nansze	_	Ur-Nanshe	_	_	7	ERG	_	_
+6	dumu-ba-szi-szag4-ra-gi-ke4	_	son.of.Bashishagragi	_	_	5	appos	_	_
+7	ba-an-tuku	_	married	_	_	1	parataxis	_	_
+8	...	_	...	_	_	7	_	_	_
+9	ur-{d}ig-alim	_	Ur-Igalim	_	_	11	ABS	_	_
+10	dumu-lu2-gu10	_	son.of.Lugu,	_	_	9	appos	_	_
+11	maszkim	_	bailiff	_	_	7	parataxis	_	_
+
+~~~
+(Hayes p.327, NSGU 1)
+
+
+TBC: In the mapping to UD, equative rendered as xcomp or nmod?
+
 #### Possession
 
 Annotation of possession requires co-indexing of arguments. This is not covered by the dependency annotation as this leads to non-projective structures. Argument co-indexing is left as a future extension for the DEPRELS column of CoNLL-U.
@@ -615,7 +690,21 @@ The vocative identifies the addressee of the following statements with a noun ph
 
 "Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
 
-In the Ur III corpus also used for absolutive arguments before the non-verbal clause in the seal.
+Also used in seals: 
+"In seal inscriptuons, the initial nominal phrase contains the name of the king as a vocative. The vocative normally has no marking in Sumerian ... [, but t]here are a few cases where the vocative is marked by .e; this is presumably an extension in use of the lcoative-terminative case." (Hayes, p. 275)
+
+~~~ conllu
+1	{d}i-bi2-	_	Ibbi-	_	_	8	voc	_	_
+2	{d}zuen	_	Suen	_	_	1	flat	_	_
+3	...	_	...	_	_	1	appos	_	_
+4	da-da	_	Dada	_	_	8	ABS	_	_
+5	ensi2	_	ensi	_	_	4	appos	_	_
+6	nibru{ki}	_	of.Nippur	_	_	4	GEN	_	_
+7	...	_	...	_	_	4	appos	_	_
+8	arad2-zu	_	servant	_	_	0	root	_	_
+
+~~~
+"Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
 
 ### Dislocation: +disloc
 
@@ -654,9 +743,37 @@ Used for the nominal part of a compound verb (if a list of compound verbs is pro
 
 > Note: The earlier use of `compound` for complex numbers is deprecated.
 
+### Flat: flat
+
+Use for expressions whose internal structure is opaque, e.g., proper names that are not to be further substructured. To be avoided whenever possible.
+
+~~~ conllu
+1	bad3-mar-tu	_	the.Martu.wall	_	_	0	ABS	_	_
+2	mu-ri-iq	_	Muriq	_	_	1	appos	_	_
+3	ti-id-ni-im	_	Tidnim	_	_	2	flat	_	_
+
+~~~
+"the Martu-wall (whose name is) Muriq Tidnim" (Shu-Sin 9)
+
+In the following text, a name otherwise treated as a single token is split to different lines, `flat` can be used as a means of repair in this case.
+
+~~~ conllu
+1	{d}i-bi2-	_	Ibbi-	_	_	8	voc	_	_
+2	{d}zuen	_	Suen	_	_	1	flat	_	_
+3	...	_	...	_	_	1	appos	_	_
+4	da-da	_	Dada	_	_	8	ABS	_	_
+5	ensi2	_	ensi	_	_	4	appos	_	_
+6	nibru{ki}	_	of.Nippur	_	_	4	GEN	_	_
+7	...	_	...	_	_	4	appos	_	_
+8	arad2-zu	_	servant	_	_	0	root	_	_
+
+~~~
+"Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
+
+
 ### Clausal complement: ccomp
 
-Used for direct speech; the clause following “someone said that”:
+Used for direct speech and quotations; the clause following “someone said that”:
 
 ~~~ conllu
 1	lu2	lu2	person	_	_	5	ERG	_	_
@@ -679,8 +796,45 @@ Used for direct speech; the clause following “someone said that”:
 7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
 
 ~~~
+"PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (contract; NG 15:6-9, 16:6-11, example from PPCS manual)
 
-"PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
+
+~~~ conllu
+1	kiszib-ba	_	seal	_	_	5	GEN+disloc	_	_
+2	lugal-gu10	_	king	_	_	4	voc	_	_
+3	gesztug3-nig2-sag5-ga-ka-ne2	_	ear.of.favor	_	_	4	LOC	_	_
+4	ga-an-ti-il	_	keep.alive	_	_	5	ccomp	_	_
+5	mu-bi	_	name	_	_	0	parataxis	_	_
+
+~~~
+"The name of this seal is: 'Oh my king, let me keep him alive at his ear of favor.'" (seal; Hayes p.291, Shulgi 47)
+
+Commonly used in Ur III letters:
+
+~~~ conllu
+1	ba-lu5-lu5	_	to.Balulu	_	_	2	DAT	_	_
+2	u3-na-a-dug4	_	speak	_	_	0	root	_	_
+3	dam	_	wife	_	_	6	DAT	_	_
+4	gu-za-ni-ra	_	of.Guzani	_	_	3	GEN	_	_
+5	szu	_	(compound)	_	_	6	ABS	_	_
+6	ha-bar-re	_	release	_	_	2	ccomp	_	_
+7	na-mi-gur-re	_	not.argue	_	_	6	parataxis	_	_
+
+~~~
+"To Balulu speak; the wife of Guzani have him  release; let him not argue." (letter; Hayes p.304, TCS 1,46; Michaelowski 126)
+
+~~~ conllu
+1	ni-kal-la-ar	_	to.Nikala	_	_	2	DAT	_	_
+2	u3-na-a-dug4	_	speak	_	_	0	root	_	_
+3	en-u2-a	_	Enua	_	_	4	ABS	_	_
+4	na-an-ba-an-du3	_	not.detain	_	_	2	ccomp	_	_
+5	lu2-ne2	_	his.man	_	_	7	ERG	_	_
+6	szu	_	(compound)	_	_	7	ABS	_	_
+7	he2-am3-ba-re	_	release	_	_	4	parataxis	_	_
+
+~~~
+"To Nikala speak; let him not detain Enua; let his man release him." (Hayes p.308, TCS 1,193)
+
 
 ### Adverbial clause: advcl
 
@@ -698,12 +852,99 @@ Used for direct speech; the clause following “someone said that”:
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
+Circumstantial clauses created by the copula can be annotated as `advcl` (TBC).
+
+~~~ conllu
+1	{d}nanna	_	for.Nanna	_	_	13	DAT	_	_
+2	...	_	...	_	_	0	_	_	_
+3	{d}amar-{d}zuen	_	Amar-Sin	_	_	13	ERG	_	_
+4	...	_	...	_	_	0	_	_	_
+5	ud-ul-li2-a-la	_	from.of.old	_	_	7	GEN.ABL	_	_
+6	gi6-par4-bi	_	its.giparu	_	_	7	ABS	_	_
+7	nu-du3-am3	_	not-built	_	_	13	advcl	_	_
+8	en	_	en-priestess	_	_	9	ABS	_	_
+9	nu-un-til3-la-am3	_	not.taken.up.residence	_	_	13	advcl	_	_
+10	{d}amar-{d}zuen	_	Amar-Sin	_	_	13	ERG	_	_
+11	...	_	...	_	_	0	_	_	_
+12	gi6-par4-kug-ga-ni	_	pure.giparu	_	_	13	ABS	_	_
+13	mu-na-du3	_	build	_	_	0	root	_	_
+
+~~~
+"For Nanna, Amar-Sin -- from ancient times, its giparu not having built, no en-priestess having taken up residence -- built its giparu." (Amar-Suen 11, following Hayes, p.225)
 
 ### Parataxis: parataxis
 
 Morphologically and syntactically unmarked sequence of clausal arguments (or expressions that imply a clausal structure, e.g., transactions).
 
-Also used for pisagdubak, notes (usually NU), the sealing.
+Also used for pisagdubak, notes (usually NU), the sealing, when non-sentential units are to be connected by means of a sentential interpretation:
+
+~~~ conllu
+1	5	_	5	_	_	2	nummod	_	_
+2	ma-na	_	minas	_	_	0	root	_	_
+3	gi-na	_	standard	_	_	2	amod	_	_
+4	{d}szu-{d}zuen	_	Shu-Sin	_	_	2	parataxis	_	_
+5	lugal-kalag-ga	_	mighty.king	_	_	4	appos	_	_
+6	lugal-urim5{ki}-ma	_	king.of.Ur	_	_	4	appos	_	_
+7	lugal-an-ub-da	_	king	_	_	4	appos	_	_
+8	limmu2-ba	_	of.the.four.quarters	_	_	7	GEN	_	_
+
+~~~
+"5 standard minas. Shu-Sin, the mighty king, king of Ur, king of the four quarters" (Shu-Sin 17)
+
+This is a weight inscription without any explicit verb. The sentential interpretation (implicit in this text) is "(This is a weight of) 5 minas; (it is authorized by) Shu-Sin ...".
+
+~~~ conllu
+1	di-til-la	_	Ditila	_	_	0	root	_	_
+2	{m}szag4-szu-nigin2	_	Shagshunigin	_	_	7	ABS	_	_
+3	dumu-u2-sze3-he2-gin	_	daughter.of.Ushehegin	_	_	2	appos	_	_
+4	udul	_	cowherd	_	_	3	appos	_	_
+5	ur-{d}nansze	_	Ur-Nanshe	_	_	7	ERG	_	_
+6	dumu-ba-szi-szag4-ra-gi-ke4	_	son.of.Bashishagragi	_	_	5	appos	_	_
+7	ba-an-tuku	_	married	_	_	1	parataxis	_	_
+
+~~~
+"Ditila. Ur-Nanshe, the son of Bashishagragi, has married Shagshunigin, the daughter of Ushehegin the cowherd" (Hayes p.327, NSGU 1)
+
+Ditila is a summary of a completed legal case. The initial phrase ditila is considered as an independent statement with a sentential interpretation, thus following sentences are connected by `parataxis`, referring to ditila as their head.
+
+Note that the elements conjoined by `parataxis` can be subject to further means of syntactic co(sub)ordination:
+
+~~~ conllu
+1	di-til-la	_	Ditila	_	_	0	root	_	_
+2	{m}szesz-kal-la	_	Sheshkala	_	_	7	ERG	_	_
+3	dumu-ur-{d}lamar-ka-ke4	_	son.of.Ur-Lamar	_	_	2	appos	_	_
+4	arad2-	_	slave	_	_	7	ccomp	_	_
+5	ur-{d}sahar-{d}ba-u2-ka	_	of.Ur-Sahar-Bau	_	_	4	GEN	_	_
+6	nu-u3-me-en3	_	not.COP	_	_	4	cop	_	_
+7	bi2-in-dug4	_	said	_	_	1	parataxis	_	_
+8	ur-{d}lamar	_	to.Ur-Lamar	_	_	20	LOC	_	_
+9	ab-ba-szesz-kal-la-ke4	_	father.of.Sheshkala	_	_	8	appos	_	_
+10	e2-	_	in.the.house	_	_	20	LOC	_	_
+11	ur-{d}sahar-{d}bau-u2	_	of.Ur-Sahar-Bau	_	_	10	GEN	_	_
+12	dumu	_	son	_	_	11	appos	_	_
+13	na-mu-ka	_	of.Namuka	_	_	12	GEN	_	_
+14	sze-ba	_	barley.rations	_	_	20	ABS	_	_
+15	siki-ba	_	wool.rations	_	_	14	appos	_	_
+16	szu	_	for.the.hand	_	_	20	ABL	_	_
+17	al-la	_	of.Alla	_	_	16	GEN	_	_
+18	dub-sar-ta	_	scribe	_	_	17	appos	_	_
+19	nam-arad2-sze3	_	because.of.arad2.status	_	_	20	TERM	_	_
+20	ba-na-sum	_	given	_	_	30	acl	_	_
+21	u3	_	and	_	_	20	cc	_	_
+22	ur-{d}lamar-ke4	_	to.Ur-Lamar	_	_	27	ERG	_	_
+23	szesz-kal-la	_	Sheshkala	_	_	27	ABS	_	_
+24	arad2	_	slave	_	_	23	appos	_	_
+25	ki	_	on.premises	_	_	27	LOC	_	_
+26	ur-{d}sahar-{d}ba-u2-ka-am3	_	of.Ur-Sahar-Bau	_	_	25	GEN	_	_
+27	i3-tud-da	_	born	_	_	20	conj	_	_
+28	lu2-dug3-ga	_	Luduga	_	_	30	ABS	_	_
+29	du-du-mu	_	Dudumu	_	_	30	appos	_	_
+30	nam-erim2-am3	_	swear.oath	_	_	7	parataxis	_	_
+
+~~~
+"Ditila. Sheshkala, the son of Ur-Lamar, said: 'I am not the slave of Ur-Sahar-Bau!'. It is an oath of Luguda and Dudumu that barley rations and wool rations had been given to Ur-Lamar, the father of Sheshkala, in the house of Ur-Sahar-Baz, the son of Namu, on the authority of Alla the scribe, because of his status as slave, and that Sheshkala the save was born to Ur-Lamar on the very premises of Ur-Sahar-Bau."" (Hayes p.334, NSGU 32)
+
+In this analysis (according to Hayes), two paratactically linked clauses ("Barley rations and wool rations have been given to Ur-Lamar ..." and "Sheshkala the slave was born to Ur-Lamar on the premises of Ur-Sahar-Bau") form a complex relative clause (morphologically marked at i3-tud-da, at the end of the second clause) that is an argument to (the content of) the oath that Luguda and Dumudu swore. Only the oath is a complete sentence.
 
 ### Copula clauses: cop
 
@@ -711,9 +952,24 @@ The head of a copula clause is the (head of the) nominal predicate, that is eith
 
 Note that the (nominal) head of a copula may be a deverbal noun, i.e., a relative clause (`acl` or `amod`).
 
-## Dependency annotation for Administrative texts 
+## Genre specifics
 
 The description so far focused on prose text. Administrative texts require a slightly different treatment.
+
+### Scope of dates in Ditilas
+
+Ditilas represent a summary of a closed legal case, e.g., a marriage, with the typical structure:
+
+	1. heading "ditila"
+	2. summary of the case
+	3. statement of an oath
+	4. name of bailiff
+	5. list of judges
+	6. date
+	
+We assume that the heading is inherently sentential ("This is a Ditila") and the `root` of the text, the other sections being separate clauses connected with `parataxis`. The date takes ditila as its head, not to any of the more adjacent clauses. This practice should be followed whenever a dated statement takes scope over a range of subsequent clauses (high attachment).
+
+Note: If the annotation of dates would ever change to parataxis, the head of the date would be the list of judges.
 
 ### Transactions and their participants
 
@@ -849,6 +1105,24 @@ As for roles of agents such as *giri3 PN* (by the means of PN), and *kiszib PN* 
 (P102314)
 
 TBC for other roles: the respective person designated is assumed to represent the syntactic head, with the technical term treated like epithet or unit identifier
+
+### Units
+
+In a list of commodities, the conventional structure is `number -nummod-> unit -nmod-> product`. For the sequence `number product unit`, we annotate the unit as an `appos` to the product that is the head. The objective is to have the product systematically as head.
+
+~~~ conllu
+1	a-bi-a-ti	_	to.Abiati	_	_	2	DAT	_	_
+2	u3-na-a-dug4	_	speak	_	_	0	root	_	_
+3	1	_	1	_	_	4	nummod	_	_
+4	sze	_	barley	_	_	7	ABS	_	_
+5	gur	_	gur	_	_	4	appos	_	_
+6	za-ri-iq	_	to.Zarriq	_	_	7	DAT	_	_
+7	he2-na-ab-sum-mu	_	give	_	_	2	ccomp	_	_
+
+~~~
+
+"To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
+
 
 ### Discontinuous lists
 
@@ -988,7 +1262,7 @@ As for the number at the end of administrative text, this is the total number of
 
 These are revisions of the original approach to annotation, which need to be changed either above or in the gold data.
 
-- numbered product: conventional structure is `number -nummod-> unit -nmod-> product`. Problematic case is the sequence `number product unit`. Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. The reason is to have the product systematically as head.
+- units: Change modelling in gold data to `number -nummod-> product <-appos- unit` (instead of `number -nummod-> [product -nmod-> unit]`). Check whether there are any such cases in the guidelines. 
 - acl: originally, the morphological feature was used for annotation (e.g., SUB, TL, etc.). Replace globally with `acl`. This is done here but must be applied to gold data. Note that the GDrive tag list preserves `SUB`, mapped to `acl:relcl`
 - connect transactions by parataxis (not by list, as this is used for numbered products and could be conflated)
 - change internal structure of complex numerals to appos (add there "implicit addition") rather than compound; for la2, see morphology guidelines 
@@ -996,11 +1270,83 @@ These are revisions of the original approach to annotation, which need to be cha
 - TODO: add material from https://drive.google.com/drive/folders/1bYRho0QkHCiTE-ajPlvJTTmM8bViI4da
 - iti+month name: current pre-annotation: iti is head, month in apposition (fix in docu and data)
 - complex numbers: head is nummod, internal relation produced by pre-annotation is also nummod; change guidelines and examples (currently compound); add comment that an alternative analysis would be with `appos` (with appos for implicit addition), but that (as a design decision), this is not done here.
-- TODO: 11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)
+- TODO: "11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)" => tag giri3 as "via" (giri3 being [nominal] head), kiszib3 as "under" (kiszib3 being [nominal] head) with genitive complement ("under the seal of ...")
 - double-check ziga role, cf. analysis in P102314
 - advcl does exist (tukumbi)
+- year name: annotate as ccomp, not as acl, because this is (kind of) direct speech
 
 ## Open issues
+
+### nam-erim2-am3
+
+This is a frequent formula in ditilas, roughly meaning "it is an oath". According to Hayes (p.346 and elsewhere), this is nominal, with the preceding (agentive) noun presumably in genitive. According to the general structure of ditilas, however, we would expect a sentential element here. In the absence of a theory-guided decision, we annotate this in accordance with the English translation as an (implicit) copula. Hayes (p.346) suggests the person swearing the oath to be the genitive argument of the nominal element in the copular predicate. As the genitive is unmarked, we follow the previous analysis in the PPCS and annotate it as copular argument, instead. (Note that PPCS annotated copular arguments as ERG, whereas we annotate these as ABS.)
+
+~~~ conllu
+1	PN1	_	PN	_	_	4	ERG	_	_
+2	dam-ce3	_	wife.TERM	_	_	3	TERM	_	_
+3	ha-tuku	_	have	_	_	4	ccomp	_	_
+4	bi2-in-dug4-ga	_	say.NOM	_	_	7	acl+ABS	_	_
+5	PN2	_	PN	_	_	7	ABS	_	_
+6	PN3	_	PN	_	_	5	appos	_	_
+7	nam-erim2-am3	_	swear.COP	_	_	0	root	_	_
+
+~~~
+
+"PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
+
+
+~~~ conllu
+1	di-til-la	_	Ditila	_	_	0	root	_	_
+2	{m}szesz-kal-la	_	Sheshkala	_	_	7	ERG	_	_
+3	dumu-ur-{d}lamar-ka-ke4	_	son.of.Ur-Lamar	_	_	2	appos	_	_
+4	arad2-	_	slave	_	_	7	ccomp	_	_
+5	ur-{d}sahar-{d}ba-u2-ka	_	of.Ur-Sahar-Bau	_	_	4	GEN	_	_
+6	nu-u3-me-en3	_	not.COP	_	_	4	cop	_	_
+7	bi2-in-dug4	_	said	_	_	1	parataxis	_	_
+8	ur-{d}lamar	_	to.Ur-Lamar	_	_	20	LOC	_	_
+9	ab-ba-szesz-kal-la-ke4	_	father.of.Sheshkala	_	_	8	appos	_	_
+10	e2-	_	in.the.house	_	_	20	LOC	_	_
+11	ur-{d}sahar-{d}bau-u2	_	of.Ur-Sahar-Bau	_	_	10	GEN	_	_
+12	dumu	_	son	_	_	11	appos	_	_
+13	na-mu-ka	_	of.Namuka	_	_	12	GEN	_	_
+14	sze-ba	_	barley.rations	_	_	20	ABS	_	_
+15	siki-ba	_	wool.rations	_	_	14	appos	_	_
+16	szu	_	for.the.hand	_	_	20	ABL	_	_
+17	al-la	_	of.Alla	_	_	16	GEN	_	_
+18	dub-sar-ta	_	scribe	_	_	17	appos	_	_
+19	nam-arad2-sze3	_	because.of.arad2.status	_	_	20	TERM	_	_
+20	ba-na-sum	_	given	_	_	30	acl	_	_
+21	u3	_	and	_	_	20	cc	_	_
+22	ur-{d}lamar-ke4	_	to.Ur-Lamar	_	_	27	ERG	_	_
+23	szesz-kal-la	_	Sheshkala	_	_	27	ABS	_	_
+24	arad2	_	slave	_	_	23	appos	_	_
+25	ki	_	on.premises	_	_	27	LOC	_	_
+26	ur-{d}sahar-{d}ba-u2-ka-am3	_	of.Ur-Sahar-Bau	_	_	25	GEN	_	_
+27	i3-tud-da	_	born	_	_	20	conj	_	_
+28	lu2-dug3-ga	_	Luduga	_	_	30	ABS	_	_
+29	du-du-mu	_	Dudumu	_	_	30	appos	_	_
+30	nam-erim2-am3	_	swear.oath	_	_	7	parataxis	_	_
+
+~~~
+"Ditila. Sheshkala, the son of Ur-Lamar, said: 'I am not the slave of Ur-Sahar-Bau!'. It is an oath of Luguda and Dudumu that barley rations and wool rations had been given to Ur-Lamar, the father of Sheshkala, in the house of Ur-Sahar-Baz, the son of Namu, on the authority of Alla the scribe, because of his status as slave, and that Sheshkala the save was born to Ur-Lamar on the very premises of Ur-Sahar-Bau."" (Hayes p.334, NSGU 32)
+
+
+### Suppliers and receivers
+
+~~~ conllu
+1	a-bi-a-ti	_	to.Abiati	_	_	2	DAT	_	_
+2	u3-na-a-dug4	_	speak	_	_	0	root	_	_
+3	1	_	1	_	_	4	nummod	_	_
+4	sze	_	barley	_	_	7	ABS	_	_
+5	gur	_	gur	_	_	4	appos	_	_
+6	za-ri-iq	_	to.Zarriq	_	_	7	DAT	_	_
+7	he2-na-ab-sum-mu	_	give	_	_	2	ccomp	_	_
+
+~~~
+
+"To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
+
+If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS.
 
 ### Multiple agents in a transaction
 
@@ -1064,6 +1410,57 @@ An alternative (and shallower) analysis would be to interpret the copula literal
 The most consistent way to annotate such cases would be to interpret the copula like a morphological case (or, if non-clitic, as a ,focus particle). Requires deeper study. This is, however, not relevant to administrative texts.
 
 Both these models violate the underlying morphology.
+
+Hayes mentions that copula seems to be able to replace any case marker (but can also appear in combination with them).
+
+### Hard examples
+
+Collect examples here that are not satisfactorily analyzed, yet.
+
+	# Hayes p.354, NSGU 15								
+	1		1	di-til-la		Ditila	0	root	
+	2		2	dug4-ga-ni-zid		Duganizid,	5	ERG	
+	3		2	dumu-		the son	2	appos	
+	4		2	szesz-kal-la-ke4		of Sheshkala	3	GEN	
+	5		3	igi-ni		testified and said	16	acl	nominalizer marked at bi-in-dug4-ga -- I'm not sure whether this is the verb of a nominal complement
+	6		3	in-{ga2}gar{ar}		and said	5	parataxis	
+	7		4	mu-lugal		"By the name of the king,		ABS	"It is hard to say how mu-lugal ties in syntacically with the rest of the sentence. Perhaps, mu-lugal is the subject of a nominal sentence and what follows is a predicate." (Hayes p.355)
+	8		5	nin-dub-sar		Nindubsar,	12	ABS	
+	9		5	dumu-		the daughter	8	appos	
+	10		5	ka5-a		of Kaa,	9	GEN	
+	11		6	dam-sze3		as a wife	12	TERM	
+	12		6	HA-tuku		let me take her."	7	acl	
+	13		6	bi2-in-dug4-ga			6	ccomp	nominalizer extends to the testimony
+	14		7	nin-nam-ha-ni		of Ninnamhani	16	ABS	Hayes postilates genitive here, we use ABS (copular argument)
+	15		8	ur-{d}lamar		and Ur-Lamar	14	appos	
+	16		9	nam-erim2-am3		it is an oath.	1	parataxis	
+	17		10	dug4-ga-ni-zid		Duganizid	19	ERG	
+	18		11	nin-dub-sar		Nindubsar	19	ABS	
+	19		11	ba-an-tuku		married.	16	parataxis	
+	20		12	mu-lugal		By the name of the king	31	TERM	mu...sze3 "because" (acl+GEN+TERM), marked on ba-ni-gad3-da-sze3
+	21		12	dug4-ga-ni-zid-da		to Duganizid,	29	LOC	instead of earlier DAT
+	22		13	ab-ba-ni		while (Duganizig's) father	24	ABS	
+	23		13	ama-ni		and mother	24	ABS	not appos, but double ABS according to Hayes p.356
+	24		13	nu-u3-zu-bi		were unaware,	21	acl+COM	-bi stands for -bi-da, morph. conjunction; for clausal arguments, not annotated as conjunction, but as acl+COM
+	25		14	nig2-{d}ba-u2		Nig-Bau	29	ERG	before, we annotated the swearer as ABS, but here, we take mu-lugal to be ABS, hence ERG. find a systematic solution
+	26		14	ab-ba-		father	25	appos	
+	27		14	Ha-la-{d}ba-u2-ka-ke4		of Hala-Bau	25	GEN	
+	28		15	mu-lugal		By the name of the king	29	ABS	case unclear
+	29		15	ba-ni-pad3-da-sze3		had sworn	20	acl+GEN	mu...sze3 "because" (acl+GEN+TERM)
+	30		16	Ha-la-{d}ba-u2-ka-ke4		Hala-Bau 	31	ERG	Hayes gives no case, but -e is ERG (the action isn't agentive, though)
+	31		16	ba-tag4		was set aside.	19	parataxis	
+	32		17	ur-ki-gu-la		Ur-Kigula	33	ABS	
+	33		17	maszkim		was bailiff.	31	parataxis	
+	#		#	(space)					
+	34		18	lu2-{d}szara2		Lu-Shara,	38	ABS	
+	35		19	lu2-{d}ib-gal		Lu-Ibgal,	34	appos	
+	36		20	lu2-digir-ra		Ludigira,	34	appos	
+	37		21	ur-{d}isztaran		and Ur-Isztaram	34	appos	
+	38		22	di-kur5-bi-me		were the relevant judges.	33	parataxis	
+	39		23	mu		The year	1	date	
+	40		24	...		...	39	ccomp	
+
+
 
 ## Mapping to UD
 
