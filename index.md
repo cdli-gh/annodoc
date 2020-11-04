@@ -173,7 +173,11 @@ In dependency syntax, these forms are given the label `amod` (if modifying a nou
 
 If adjectives appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
 
-### Subordinate clauses (acl)
+### Subordinate clauses: acl
+
+`acl` is primarily applied to finite and non-finite clauses that modify a nominal. In CDLI, however, its annotation is guided by the morphological analysis, i.e., for `NF.V.ABS/PT/F`, `N-NF.V.ABS`, etc.
+
+> The taglist also has `acl:relcl` for `SUB`. Confirm treatment in pre-annotation and whether this can be reliably extrapolated from annotation projection. Current suggestion is to use `acl` also in this case.
 
 Usually, syntactic subordination is morphologically marked, e.g., by means of a nominalization marker. It is thus impossible to distinguish nominalized verbs and relative clauses. All nominalized verbs are annotated as relative clauses (acl, on the use of the amod in place of acl, see below). Several constructions can be distinguished: "full relative clauses" are fully inflected verbs with a nominalization marker (-a), "reduced relative clauses" (participial construction, Mesanepada construction) use uninflected verbs, with the addition of a nominalization marker (-a). The latter are formally identical with the passive participle.
 
@@ -314,6 +318,9 @@ Subordinate markers (CNJ), like *tukumbi* 'if'
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
+TODO: clarify whether `CNJ` in morphology can reliably distinguish coordinating and subordinating conjunctions
+TODO: list coordinating and subordinating conjunctions
+
 ### Adpositions: case
 
 Sumerian does not have prepositions, but it does have a number of nouns that are used to express prepositional functions, e.g., sza3 "heart", also used for to express the meaning of the preposition "in". These are annotated in accordance with their morphology, i.e., as nouns with genitive complement. If no additional case is marked in the morphology annotation, these phrases are considered to be in apposition with the nominal they modify.
@@ -346,7 +353,7 @@ Note that the construction can also be understood literally:
 
 As these constructions are analyzed in accordance with their morphology rather than their semantic interpretation in English, the UD label "case" is not used for Sumerian.
 
-### Apposition (appos)
+### Apposition: appos
 
 Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit genitive, or implicit copula.
 
@@ -493,6 +500,9 @@ If an element is head of both an identity-marking apposition and a conjunction-m
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
 
+TODO: Check `conj` vs. `list` in taglist
+
+	There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example, sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use `conj` or `list` in these cases.
 
 ### Nominal modifiers: nmod
 
@@ -576,6 +586,8 @@ Syntactically marked conjunction *u3* (nominal conjunction):
 ~~~
 "the temple (where) honey, butter and wine in his place of sacrifice shall not cease" (Q001792)
 
+> Note: The taglist uses the POS tag `CNJ`, compare with morphology annotation
+
 If nominal conjunction is not explicitly expressed or has been restored in morphology annotation, use `appos`.
 
 Syntactically marked conjunction *u3* (clausal conjunction):
@@ -605,6 +617,12 @@ For the unmarked enumeration of transferred goods on a list, use `list`, not `co
 > But note the "tag list":
 > There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example,   sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use conj in these cases."
 
+TODO: Check treatment of `appos` versus `conj` in case of implicit conjunction.
+
+TODO: Check `conj` vs. `list` in taglist
+
+	There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example, sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use `conj` or `list` in these cases.
+
 ### Punctuation: punct
 
 No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text, the recommended dependency is punct. Likewise, if a Sumerian transcript includes modern punctuation signs.
@@ -615,6 +633,55 @@ As a general rule, the syntactic relation of nominal dependents with their head 
 As labels for dependencies, we use the case labels employed in morphological annotation, with the exception of locatives (all represented as LOC) and datives (all represented as DAT). Note that locatives include both spatial and temporal relationships.
 
 Where case marking is postulated in the morphology annotation, we follow that analysis, regardless of whether the morpheme is realized in the surface string. In particular, this includes the annotation of administrative texts, where case marking is systematically lacking.
+
+#### Core arguments: ERG vs. ABS vs. nsubj vs. obj
+
+In CDLI annotation, do not try to map to `nsubj` or `obj` but follow the morphological analysis and annotate for case (i.e. `ABS` and `ERG`). Mappings (https://docs.google.com/document/d/1rTnDPM6CnLu-2msZ_Seh1umnu9xYb0Tel-Y31VpjnP8/edit)
+
+	nsubj	ERG;ABS
+	nsubj:passive	ABS
+	obj	ABS
+
+For the sake of UD conversion, disambiguation of `ABS` labels is not decided yet. As a first approximation, we could just map `ABS` to `obj` and `ERG` to `nsubj` (as a design decision, subject to subsequent adjustment) as there does not seem to be a reliable way to detect transitives.
+
+TODO: check behaviour of pre-annotator and annotation projection
+
+TODO: check treatment of ERG and ABS in other ergative UD languages
+
+Note that absolutives in vocative use are annotates as `vocative` (not `ABS`) in both CDLI and UD
+
+#### Datives
+
+In morphology, labels are `DAT-H` and `DAT-NH`. Suggestion: Simplify as `DAT` (to better align with annotation projection)
+
+> Taglist originally said to map `DAT-H` to `iobj`, only.
+ 
+Terminative-locatives (if annotated as such) in dative function are treated as oblique arguments, not as datives.
+
+#### Oblique arguments: LOC, TERM, ABL
+
+In CDLI annotation, use morphological case as labels. In UD export, map to `obl`. For better alignment with annotation projection, use `LOC` in place of `L1`, `L2-NH` and `L3-NH`, etc.
+
+TODO: Check treatment in pre-annotation.
+
+#### Adominal dependents: GEN, EQU
+
+In CDLI, annotated according to morphological case. In UD export as `nmod`. If no morphological case is annotated, use `nmod` for pre-modifying nominals, `appos` for post-modifying nominals.
+
+	N; GEN；N.3-SG-POSS (Its weight, size……..)
+	N-N.3-SG-POSS
+
+> Taglist doesn't make the difference between `appos` and `nmod` explicit. TODO: confirm treatment in pre-annotation and in annotation projection.
+
+#### "Functional obliques"
+
+Agents in a transaction without morphological marks for their grammatical structure.
+
+	PN.GEN/ N.GEN (giri/ kiszib of a person or occupation)
+	giri PN occupation N 
+	kiszib PN = obl to verb
+
+In UD export, annotated as `obl`. CDLI labels should be human-readable English short-hands, guided by common translations, e.g., `via` for *giri3*. TODO: Check annotation projection and current treatment in pre-annotation.
 
 #### Case of headless phrases
 
@@ -690,8 +757,9 @@ The vocative identifies the addressee of the following statements with a noun ph
 
 "Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
 
-Also used in seals: 
-"In seal inscriptuons, the initial nominal phrase contains the name of the king as a vocative. The vocative normally has no marking in Sumerian ... [, but t]here are a few cases where the vocative is marked by .e; this is presumably an extension in use of the lcoative-terminative case." (Hayes, p. 275)
+Also used for absolutive arguments before the non-verbal clause in seals:
+
+"In seal inscriptions, the initial nominal phrase contains the name of the king as a vocative. The vocative normally has no marking in Sumerian ... [, but t]here are a few cases where the vocative is marked by .e; this is presumably an extension in use of the lcoative-terminative case." (Hayes, p. 275)
 
 ~~~ conllu
 1	{d}i-bi2-	_	Ibbi-	_	_	8	voc	_	_
@@ -731,7 +799,21 @@ Anticipatory genitives preposed to the clause are attached the additional label 
 
 ### Numeral modifiers: nummod
 
-The label `nummod` is assigned on semantic grounds (regardless of morphology) to every numeral that modifies a nominal or verb. Possible morphological tags include `NU`, `NU.GEN.COP-3-SG`, `NU.ABS.COP-3-SG`, etc.
+The label `nummod` is assigned on semantic grounds (regardless of morphology) to every numeral that modifies a nominal or verb. Possible morphological tags include `NU` but also numerals with a verbal (copular) component such as `NU.GEN.COP-3-SG`, `NU.ABS.COP-3-SG`, etc.
+
+~~~ conllu
+1	...	_	NU	_	_	2	nummod	_	_
+2	...	_	N	_	_	0	root	_	_
+
+~~~
+(premodifying numeral)
+
+~~~ conllu
+1	...	_	N	_	_	0	root	_	_
+2	...	_	NU.GEN.COP-3-SG	_	_	1	nummod	_	_
+
+~~~
+(postmodifying numeral)
 
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
@@ -742,6 +824,8 @@ Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of
 Used for the nominal part of a compound verb (if a list of compound verbs is provided). Without such a list, this is annotated according to its grammatical structure (if transparent).
 
 > Note: The earlier use of `compound` for complex numbers is deprecated.
+
+TODO: list of compound verbs
 
 ### Flat: flat
 
@@ -770,6 +854,9 @@ In the following text, a name otherwise treated as a single token is split to di
 ~~~
 "Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
 
+> Note: the earlier use of `flat` for the second part of a number (`NU`; `NU.GEN.COP-3-SG`) is deprecated.
+
+TODO: fix numerical `flat` in pre-annotation.
 
 ### Clausal complement: ccomp
 
@@ -872,6 +959,12 @@ Circumstantial clauses created by the copula can be annotated as `advcl` (TBC).
 ~~~
 "For Nanna, Amar-Sin -- from ancient times, its giparu not having built, no en-priestess having taken up residence -- built its giparu." (Amar-Suen 11, following Hayes, p.225)
 
+Taglist:
+> taglist: advcl - Adverbial clauses, subordinate clause with or without subordinate mark, like tukumbi (if)
+> comment IK: look into it ;)
+
+TODO: compare with MTAAC preannotation, ETSCRI preannotation and annotation projection
+
 ### Parataxis: parataxis
 
 Morphologically and syntactically unmarked sequence of clausal arguments (or expressions that imply a clausal structure, e.g., transactions).
@@ -945,6 +1038,22 @@ Note that the elements conjoined by `parataxis` can be subject to further means 
 "Ditila. Sheshkala, the son of Ur-Lamar, said: 'I am not the slave of Ur-Sahar-Bau!'. It is an oath of Luguda and Dudumu that barley rations and wool rations had been given to Ur-Lamar, the father of Sheshkala, in the house of Ur-Sahar-Baz, the son of Namu, on the authority of Alla the scribe, because of his status as slave, and that Sheshkala the save was born to Ur-Lamar on the very premises of Ur-Sahar-Bau."" (Hayes p.334, NSGU 32)
 
 In this analysis (according to Hayes), two paratactically linked clauses ("Barley rations and wool rations have been given to Ur-Lamar ..." and "Sheshkala the slave was born to Ur-Lamar on the premises of Ur-Sahar-Bau") form a complex relative clause (morphologically marked at i3-tud-da, at the end of the second clause) that is an argument to (the content of) the oath that Luguda and Dumudu swore. Only the oath is a complete sentence.
+
+? special treatment of seals
+
+taglist suggests `admin` for the relationship between the text and the sealing
+	
+> comment CC: IMHO, the label vague and may be misinterpreted. If at all, it must be more specific, because also the transaction agents serve certain administrative functions, why not `seal`? Linguistically, I see  no argument for not having that as a parataxis, but we could do `parataxis:seal` 
+
+Discussion on taglist: 
+
+> taglist: parataxis	for pisagdubak; notes (usually NU); the sealing 
+> comment IK: replace with something else?
+> comment Jinyan Wang: `admin`?
+> comment CC: only if we can detect those reliably
+> taglist (reverse list): parataxis for pisagdubak[filing_basket], `admin` for the relation between text and sealing 
+
+TODO: check treatment in pre-annotation and annotation projection.
 
 ### Copula clauses: cop
 
@@ -1214,6 +1323,13 @@ Dates can be written discontinuously:
 
 In this case, create multiple date relations with the respective root element.
 
+TODO: consolidate guidelines and data:
+- taglist recommends `appos` for `MN` (month name), with head being the day [this entails that *iti* is an epithet and annotated as `nmod` dependent]
+	- the examples above use `LOC` for dependencies within dates and `date` for the head element of a date
+- taglist recommends `appos` for the clause after MU
+	- examples have `ccomp`
+- check treatment in pre-annotation and annotation projection
+
 ### Complex numerals
 
 Complex numerals can include *la2* 'minus', morphologically analyzed as `NF.V.ABS/PT/F` (=`acl`) here. Note that the numeral following *la2* is formally an absolutive argument: this is `NU1 la2 NU2 (NU2 is hung out from NU1)`, so la2=NF.V.ABS=acl; NU2= nsubj:passive.
@@ -1276,6 +1392,24 @@ These are revisions of the original approach to annotation, which need to be cha
 - year name: annotate as ccomp, not as acl, because this is (kind of) direct speech
 
 ## Open issues
+
+### internal structure of functional dependents
+
+analysis of *giri3 XY "gave"*
+
+	[giri3 -nmod-> XY] -obl-> "gave"
+
+semantically, that makes a lot of sense, but it is inconsistent with the idea of having morphology-driven syntactic annotation. the case is not always missing, and at least these, should really be
+
+	[giri3 <-GEN- XY.GEN] -obl-> "gave"
+
+discussion:
+- the annotation of `GEN` as `obl` stated in the taglist
+- TODO: check treatment in pre-annotation and annotation projection
+
+### complex dependencies
+
+Clarify whether dependencies with compound labels (`GEN+disloc`, `acl+TERM`, `GEN+TERM`, etc.) can be reliably identified from pre-annotation and annotation projection. Otherwise, simplify.
 
 ### nam-erim2-am3
 
@@ -1350,34 +1484,70 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 
 ### Multiple agents in a transaction
 
-When we have not only one obl, like u4…...ki…..ta….kiszib……(on the 4th day, from the place of PN, through the seal of PN), do we use conj to link them together?
+When we have not only one obl, we use not use `conj` to link them together, but treat them as independent arguments. E.g., in
 
-Current approach to provide different labels for these agents. Without explicit verb, the head is the transferred good. In UD mapping, these relations become `obl`.
+~~~ conllu
+1	...	_	_	_	_	_	_	_	_
+2	u4	_	N	_	_	1	date	_	_
+3	...	_	NU	_	_	2	nummod	_	_
+4	ki	_	N	_	_	1	obl	_	_
+5	...ta	_	PN.GEN	_	_	4	GEN	_	_
+6	kiszib	_	N	_	_	1	obl	_	_
+7	...	_	PN.GEN	_	_	6	GEN	_	_
+
+~~~
+"on the 4th day, from the place of PN, through the seal of PN"
+
+Current approach to provide different labels for these agents. Without explicit verb, the head is the transferred good. In UD mapping, these relations become `obl`. CDLI labels yet to be determined. TODO: consult annotation projection and pre-annotation.
 
 ### Discussion of Date structure
 
 1. Problems about temporal indication, day, month and year:
-For the day, 
-u4	N
-2(u)	NU
-3-kam	NU.GEN.COP-3-SG
+
+~~~ conllu
+1	...	_	...	_	_	_	_	_	_
+2	u4	_	N	_	_	_	_	_	_
+3	2(u)	_	NU	_	_	_	_	_	_	
+4	3-kam	_	NU.GEN.COP-3-SG	_	_	_	_	_	_
+
+~~~
+"For the day,"
+
+Different possible analyses for (implicit) morphology of *3-kam*.
 
 A. if we take it as “on the 23rd day” and we need add a L1, we have 
-u4		N	obl
-2(u)		NU	numod
-3-kam[-’a]	NU.GEN.COP-3-SG.L1	flat
+
+~~~ conllu
+1	...	_	...	_	_	_	_	_	_
+2	u4	_	N	_	_	1	obl	_	_
+3	2(u)	_	NU	_	_	2	nummod	_	_	
+4	3-kam[-'a]	_	NU.GEN.COP-3-SG.L1	_	_	2	flat	_	_
+
+~~~
 
 B. if we take it as an interjected phrase, “the 23rd day”, we have:
-u4	N	discourse
-2(u)	NU	numod
-3-kam	NU.GEN.COP-3-SG	flat
+
+~~~ conllu
+1	...	_	...	_	_	_	_	_	_
+2	u4	_	N	_	_	1	discourse	_	_
+3	2(u)	_	NU	_	_	2	nummod	_	_	
+4	3-kam	_	NU.GEN.COP-3-SG	_	_	3	flat	_	_
+
+~~~
+
 
 C. if we take it as an interjected norminal clause, “(it is the 23rd day)”, we have:
-u4	N	parataxis
-2(u)	NU	numod
-3-kam[-ø]	NU.GEN.COP-3-SG.ABS	flat
 
-At the moment, we go with option (A), but use `date` as a dependency to be able to retrieve all examples for future revisions. TODO: apply consistently.
+~~~ conllu
+1	...	_	...	_	_	_	_	_	_
+2	u4	_	N	_	_	1	parataxis	_	_
+3	2(u)	_	NU	_	_	2	nummod	_	_	
+4	3-kam[-0]	_	NU.GEN.COP-3-SG.ABS	_	_	3	flat	_	_
+
+~~~
+
+The manual morphology annotations goes with option (A). 
+For syntax annotation, we differ from this original concept by having `date` as a dependency (to be able to retrieve all examples for future revisions) and to replace `flat` by `nummod` (for all numerals). TODO: check pre-annotation and annotation projection. 
 
 For the month, the situation is similar, and we need to decide the relationship between the iti and MN.
 For the year, the situation is more complicated, because not only we need to decide the case of ‘mu’, but also the relationship between ‘mu’ and the clause followed.
@@ -1385,8 +1555,30 @@ We also need to decide whether MU and ITI are in `conj` relationship.
 (At the moment, they are internally connected by `LOC`, as it refers to a month *in* or *of* a particular year. This is semantically motivated, but it has no morphological basis.)
 
 There is another structure of temporal indication, 
-iti X (-ta), u4 NU (-kam) zal-la-’a  After the NUth day passed from the month (obl phrase)
-iti X (-ta), u4 NU-am3 zal-la-’a, in this case, we ignore the copula, we define NU-am3 as NU, not V.
+
+~~~ conllu
+1	iti	_	_	_	_	_	_	_	_
+2	X[-ta],	_	_	_	_	_	_	_	_
+3	u4	_	_	_	_	_	_	_	_
+4	NU[-kam]	_	_	_	_	_	_	_	_
+5	zal-la-’a	_	_	_	_	_	_	_	_
+
+~~~
+
+"After the NUth day passed from the month" (obl phrase)
+
+In this case, we ignore the copula, we define NU-am3 as NU, not V:
+
+~~~ conllu
+1	iti	_	_	_	_	_	_	_	_
+2	X[-ta],	_	_	_	_	_	_	_	_
+3	u4	_	_	_	_	_	_	_	_
+4	NU-am3	_	_	_	_	_	_	_	_
+5	zal-la-’a	_	_	_	_	_	_	_	_
+
+~~~
+
+Note: this is consistent with the application of `nummod` to all occurrences of numerals.
 
 ### Dependency syntax: Other uses of the copula
 
