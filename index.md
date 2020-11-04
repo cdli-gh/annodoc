@@ -1324,7 +1324,8 @@ Dates can be written discontinuously:
 In this case, create multiple date relations with the respective root element.
 
 TODO: consolidate guidelines and data:
-- taglist recommends `appos` for `MN` (month name), with head being the day [this entails that *iti* is an epithet and annotated as `nmod` dependent]
+- taglist recommends `appos` for `MN` (month name), with head being the word *iti* (month)
+	- this is also implemented in the MTAAC pre-annotation
 	- the examples above use `LOC` for dependencies within dates and `date` for the head element of a date
 - taglist recommends `appos` for the clause after MU
 	- examples have `ccomp`
