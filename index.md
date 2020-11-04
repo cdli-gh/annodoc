@@ -1786,3 +1786,61 @@ This page is based on a fork of the [Annodoc](http://www2.lingfil.uu.se/SLTC2014
 - PPCS (2004), PPCS (Penn Parsed Corpus of Sumerian): A Brief Introduction to the Syntactic Annotation System of the PPCS, version of 6/14/04, available from https://www.yumpu.com/en/document/view/12162126/ppcs-penn-parsed-corpus-of-sumerian-a-brief-introduction-to-the- and https://web.archive.org/web/20070708210654if_/http://psd.museum.upenn.edu/ppcs/ppcs-manual.pdf, author is Fumi Karahashi
 - Joachim KRECHER (1987), Morphemless Syntax in Sumerian as Seen on the Background of Word-Composition in Chukchee, ASJ 9, 1987
 - Zolyomi 2017
+
+## Appendix
+
+### Compound verbs
+
+ki  ag
+igi bar
+a de2
+szu de6
+en.nu.ug3 du3
+szu du7
+igi du8
+di dug4
+mi2 dug4
+szu dug4
+szu.tag dug4
+a2 e3
+pa e3
+ad gi4
+ki-bi gi4
+sa gi4
+szu gi4
+ma2 gid2
+szu gid2
+igi gal2
+kiri4 szu gal2
+zi sza3 gal2
+giri3-sze3 gar
+igi gar
+inim gar
+ki gar
+szu gar
+gisz hur
+ki hur
+igi il2
+sag il2
+nam kud
+nam.erim2 kud
+szu nigin
+szu ra
+na ri
+a ru
+si sa2
+szu-sze3 si
+szu sud
+gesztug2 sum
+ki sur
+gisz tag
+ki tag
+szu tag
+szu tag4
+en3 tar
+nam tar
+szu ti
+a tu5
+gisz tuku
+ma2 u5
+szu us2
