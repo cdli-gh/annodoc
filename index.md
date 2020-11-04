@@ -673,6 +673,12 @@ In CDLI, annotated according to morphological case. In UD export as `nmod`. If n
 
 > Taglist doesn't make the difference between `appos` and `nmod` explicit. TODO: confirm treatment in pre-annotation and in annotation projection.
 
+The relation N (head noun) + N.GEN can be used to create genitive attribute, sometimes considered a compound construction where N.GEN is adjectivally modifying the head noun, rather than being possessed ‘of’. (Krecher 1987, p.72) An example here from our texts may be: 
+
+	nu-banda3 gu4[-ak]
+	
+While the the relationship between *nubanda* and *gu* may be either (or both) gentival and compound (according to Krecher’s thought), we annotate it as genitive only.
+
 #### "Functional obliques"
 
 Agents in a transaction without morphological marks for their grammatical structure.
@@ -823,6 +829,22 @@ Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of
 
 Used for the nominal part of a compound verb (if a list of compound verbs is provided). Without such a list, this is annotated according to its grammatical structure (if transparent).
 
+There are many other compound constructions in Sumerian: not only compound verbs, but compound nouns and  “adjective-like compound constructions”.
+
+An example of a N - ADJ compound is: 
+
+	s i p a z i(- d) "loyal-shepherd
+
+An example of a N - VERB/Adj (or ‘dub-sar’) compound:
+
+	k i n g a I "director of labours" (or the like)
+
+literally "someone who is great with respect to the labours" (certainly not "the great work" or "the great assembly',);
+
+In discussing the syntax of these sort of compound constructions, Krecher states that they are built “just like compounds without however ceasing to be two words” (Joachim Krecher, 1987, ASJ 9, 1987. p. 70).
+
+In the CDLI corpus, most (or all?) compound nouns such as dub-sar (dub sar) will appear segmented as a single unit, to be tagged as a noun rather than a compound noun. While realizing there are compound noun, we will nevertheless treat them as a single unit syntactically. This is not without precedent in digital databases:  dub-sar constructions are analyzed as compound nouns in Zolyomi 2017, 92 — often consisting of a noun + non-finite verbal form ((dub=ø sar-ø : tablet=ABS write-TL) “he who writes tablets”. However, at ETCSRI, dub-sar is simply tagged N1 (noun phrase one – head), i.e. analyzed as a noun. If any compound nouns appear in the CDLI corpus, they should be marked using UD’s `compound` tag.
+
 > Note: The earlier use of `compound` for complex numbers is deprecated.
 
 TODO: list of compound verbs
@@ -968,6 +990,8 @@ TODO: compare with MTAAC preannotation, ETSCRI preannotation and annotation proj
 ### Parataxis: parataxis
 
 Morphologically and syntactically unmarked sequence of clausal arguments (or expressions that imply a clausal structure, e.g., transactions).
+
+Also to be used for copular biclausal constructions (Zolyomi 2017, p. 144), as found, for example in P248792 and P100065.
 
 Also used for pisagdubak, notes (usually NU), the sealing, when non-sentential units are to be connected by means of a sentential interpretation:
 
@@ -1759,4 +1783,6 @@ CC, EPP, IK, JW, LR, ...
 This page is based on a fork of the [Annodoc](http://www2.lingfil.uu.se/SLTC2014/abstracts/sltc2014_submission_32.pdf) template, originally under (https://github.com/spyysalo/annodoc). See there for documentation.
 
 ### References
-- PPCS (2004), PPCS (Penn Parsed Corpus of Sumerian): A Brief Introduction to the Syntactic Annotation System of the PPCS, version of 6/14/04, available from https://www.yumpu.com/en/document/view/12162126/ppcs-penn-parsed-corpus-of-sumerian-a-brief-introduction-to-the- and https://web.archive.org/web/20070708210654if_/http://psd.museum.upenn.edu/ppcs/ppcs-manual.pdf, author is unnamed (Fumi Karahashi)
+- PPCS (2004), PPCS (Penn Parsed Corpus of Sumerian): A Brief Introduction to the Syntactic Annotation System of the PPCS, version of 6/14/04, available from https://www.yumpu.com/en/document/view/12162126/ppcs-penn-parsed-corpus-of-sumerian-a-brief-introduction-to-the- and https://web.archive.org/web/20070708210654if_/http://psd.museum.upenn.edu/ppcs/ppcs-manual.pdf, author is Fumi Karahashi
+- Joachim KRECHER (1987), Morphemless Syntax in Sumerian as Seen on the Background of Word-Composition in Chukchee, ASJ 9, 1987
+- Zolyomi 2017
