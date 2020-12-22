@@ -385,7 +385,9 @@ Note that `acl` is also used for the syntactic relation between *mu* `year` and 
 
 ### Subordinating conjunction: mark
 
-Subordinate markers (CNJ), like *tukumbi* 'if'
+Subordinate markers (CNJ). According to Jagersma (2010:82), "[t]here are three subordinating conjunctions, en-na ‘until’, u4-da ‘if’, and tukum-bé ‘if’".
+
+TODO: change to CDLI transcriptions, e.g., *tukumbi* 'if', ...
 
 ~~~ conllu
 1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
@@ -398,6 +400,25 @@ Subordinate markers (CNJ), like *tukumbi* 'if'
 
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
+
+	# Jagersma, Chap. 27 (56)					
+	# ‘seed barley, as much as Ur-Kush-Bau calls for’					
+	# (AuOr 17-18,218 1 4-5; L; 21)					
+	1	še-numun	še.numun	seed.barley	0	root
+	2	ur-dkuš7-dba-ú-ke4	ur.kuš7.ba.ú.k=e	Ur.Kush.Bau=ERG	6	ERG
+	3	/	_	_	6	punct
+	4	en-na	en.na	until	6	mark
+	5	gù	gù=Ø	voice=ABS	6	ABS
+	6	ba-dé-a	ba-dé-e-'a	3N.IO-pour-3SG.A:IPFV-NOM	1	acl
+
+	# Jagersma, Chap. 15 (30)					
+	# ‘if he says “I have no barley”’					
+	# (TCS 1:157 7; L; 21)					
+	1	u4-da	u4.da	if	3	mark
+	2	še	še=Ø	barley=ABS	3	ABS
+	3	nu-tuku	nu='i-'-tuku-Ø	NEG=VP-1SG.A-have-3N.S/DO	4	ccomp
+	4	íb-bé	'i-b-'e-e	VP-3N.OO-say:IPFV-3SG.A:IPFV	0	root
+
 
 TODO: clarify whether `CNJ` in morphology can reliably distinguish coordinating and subordinating conjunctions
 TODO: list coordinating and subordinating conjunctions
