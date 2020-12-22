@@ -316,7 +316,19 @@ Note that CDLI annotates adverbial clauses without `mark` as relative clauses. W
 	acl+GEN => acl (modifying a noun)
 	acl => acl (in apposition with a noun)
 
-As for acl+ABS, acl+ERG and acl+DAT, these are systematically ambiguous between nominal (UD nsubj, obj, iobj) and clausal interpretation (UD csubj, ccomp, xcomp) and asserting one would be artificial and not grounded in Sumerian grammar. If subordination is morphologically marked, the UD label is thus always chosen in accordance with their case (i.e., nominal interpretation). The UD labels csubj, ccomp and xcomp are not being used.
+In the following example, an adverbial interpretation of the clause is morphologically expressed by `DIR`. Subordination is not overtly marked, but inferred from the application of a nominal case to a finite clause, hence annotated as `acl+DIR`:
+
+	# Jagersma, Chap. 27 (32)						
+	# ‘that a stranger had slept with her without Ur-Lama, (her) husband, knowing it’						
+	# (NG 205 21-22; L; 21)						
+	1	ur-dlama3	ur.lama3	Urlama	3	ERG	
+	2	dam-e	dam=e	husband=ERG	1	appos	
+	3	nu-ù-zu-bé	nu='i-n-zu-Ø=be=e	NEG=VP-3SG.A-know-3N.S/DO=its=DIR	6	acl+DIR	acl inferred from clausal
+	4	/	_	_	6	punct	
+	5	lú-kúr	lú.kúr=Ø	stranger=ABS	6	ABS	
+	6	in-da-nú-a	'i-n-da-nú-Ø-'a	VP-3SG-with-lie-3SG.S/DO-NOM	0	acl	
+
+As for `acl+ABS`, `acl+ERG` and `acl+DAT`, these are systematically ambiguous between nominal (UD `nsubj`, `obj`, `iobj`) and clausal interpretation (UD `csubj`, `ccomp`, `xcomp`) and asserting one would be artificial and not grounded in Sumerian grammar. If subordination is morphologically marked, the UD label is thus always chosen in accordance with their case (i.e., nominal interpretation). The UD labels `csubj` and `xcomp` are not being used in CDLI, `ccomp` is restricted to direct speech.
 
 Note that syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
 
