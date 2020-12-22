@@ -887,6 +887,21 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 ~~~
 (postmodifying numeral)
 
+	# Jagersma, Chap. 7 (324)						
+	# ‘that after Kuda(‘s death) fifteen years ago (lit. “since fifteen with the years”), Urbagara took him (a slave) as his share (in the inheritance)’						
+	# (NG 34 6-7; L; 21)						
+	1	eger5	eger5	back	7	ABL	
+	2	ku5-da-ta	ku5.da=ak=ta	Kuda=GEN=ABL	1	GEN	
+	3	mu-da	mu=da	year=COM	7	COM	
+	4	15-ta	15=ta	15=ABL	7	nummod	morphologically marked as ABL
+	5	/	_	_	7	punct	
+	6	ur-ba-gara2-ke4	ur.ba.gara2.k=e	Urbagara=ERG	7	ERG	
+	7	in-ba-a	'i-n-ba-Ø-'a	VP-3SG.A-portion.out-3SG.S/DO-NOM	0	acl	
+
+(numeral [oblique] argument)
+
+For numeral oblique arguments, we ignore the morphologically marked case. (TBC: How is this analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
+
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
@@ -1483,6 +1498,41 @@ These are revisions of the original approach to annotation, which need to be cha
 - year name: annotate as ccomp, not as acl, because this is (kind of) direct speech
 
 ## Open issues
+
+### `advmod`
+
+So far, we posit that adverbials don't really exist, and it seems most adverbials can be analyzed differently, e.g., *eger* as a nominal with an oblique case (`LOC` or `ABL`):
+
+	# Jagersma, Chap. 4 (32)			
+	# ‘Later (lit.“on the back”) Namhani, the scribe said:(...).’			
+	# (NG 69 8-9; U; 21)			
+	1	eger-a	eger='a	back=LOC
+	2	nam-ha-né	nam.ha.né	Namhani
+	3	dub-sar-e	dub.sar=e	scribe=ERG
+	4	/	_	_
+	5	(...)	_	_
+	6	bí-in-du11	Ø-bi-n-du11.g-Ø	VP-3N.OO-3SG.A-say-3N.S/DO
+
+	# Jagersma, Chap. 8 (57)			
+	# ‘on the reverse of our tablet’			
+	# (UET 6/2:150 1; Ur; OB)			
+	1	eger	eger	back
+	2	dub-me-ka	dub=mē=ak='a	tablet=our=GEN=LOC
+
+	# Jagersma, Chap. 4 (33)			
+	# ‘afterwards (lit.“from its back”)’			
+	# (NG 103 8; L; 21)			
+	1	eger5-bé-ta	eger5=be=ta	back=its=ABL
+
+
+	# Jagersma, Chap. 7 (274)			
+	# ‘after stock-taking (lit. “from the back of stock-taking”)’			
+	# (Nik 1:156 3:4; L; 24)			
+	1	eger4	eger4	back
+	2	gurum2-ma-ta	gurum2=ak=ta	stock.taking=GEN=ABL
+
+
+TODO: provide a list of "adverbials"
 
 ### heads of copular clauses with clausal predicate
 	
