@@ -1442,6 +1442,41 @@ These are revisions of the original approach to annotation, which need to be cha
 
 ## Open issues
 
+### heads of copular clauses with clausal predicate
+	
+	1	še	še	barley
+	2	šuku-řá	šuku.ř=ak	subsistence=GEN
+	3	/	_	_	
+	4	lú	lú	man	
+	5	amar-ki	amar.ki	Amarki	
+	6	/	_	_		
+	7	ugula	ugula=ak	foreman=GEN	
+	8	/	_	_	
+	9	ba-ug7-ge-a-kam	Ø-ba-'ug7-eš-'a=ak=Ø='am	VP-MM-die:PLUR-3PL.S/DO-NOM=GEN=ABS=be:3N.S
+
+Jagersma, Chap. 27 (10)						
+‘This is the subsistence barley of Amarki the foreman’s men who have died.’						(VS 14:39 1:2-5; L; 24)					
+
+What's the head of the clause, here? Without the final copula *'am* in (9), everything is a modification of *sze* in (1):
+
+	[sze <-GEN- lú Amarki <-acl- baugea]
+	
+But with the copula, *sze* in (1) actually becomes the ABS argument of the outer copular clause (marked on 9 as its final dependent):
+
+	[sze <-GEN- lú Amarki ] -ABS-> baugeakam
+
+With this annotation, we completely loose the information about the relation between the *lú Amarki* and *baugea* (they are the subjects).
+
+The "correct" annotation would require sub-token dependencies:
+
+	[sze <-GEN- lù Amarki <-acl- baugea] -ABS-> -am
+
+Suggestion: Follow the interpretation of the copula as an emphatic particle that modifies the final dependent of *sze*. This means to annotate the relative clause, not the copular clause
+
+	[sze <-GEN- lú Amarki <-acl- baugea]
+
+If this phrase requires a clausal interpretation, we assume that it is a nominal clause (despite the overt copula!), so that *sze* would be head of the clause.
+
 ### internal structure of functional dependents
 
 analysis of *giri3 XY "gave"*
