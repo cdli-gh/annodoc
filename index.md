@@ -1501,7 +1501,7 @@ These are revisions of the original approach to annotation, which need to be cha
 
 ### `advmod`
 
-So far, we posit that adverbials don't really exist, and it seems most adverbials can be analyzed differently, e.g., *eger* as a nominal with an oblique case (`LOC` or `ABL`):
+So far, we posit that adverbials don't really exist, and it seems most adverbials can be analyzed differently, e.g., *eger* as a nominal with an oblique case (`LOC` for spatial interpretation "on the other side" or `ABL` for temporal interpretation "after(wards)"). 
 
 	# Jagersma, Chap. 4 (32)			
 	# ‘Later (lit.“on the back”) Namhani, the scribe said:(...).’			
@@ -1530,6 +1530,7 @@ So far, we posit that adverbials don't really exist, and it seems most adverbial
 	# (Nik 1:156 3:4; L; 24)			
 	1	eger4	eger4	back
 	2	gurum2-ma-ta	gurum2=ak=ta	stock.taking=GEN=ABL
+
 
 
 TODO: provide a list of "adverbials"
