@@ -345,6 +345,19 @@ Subordinate markers (CNJ), like *tukumbi* 'if'
 TODO: clarify whether `CNJ` in morphology can reliably distinguish coordinating and subordinating conjunctions
 TODO: list coordinating and subordinating conjunctions
 
+Note that not every expression that translates into a subordination markers in English is to be annotated as such. In *mu ...=ak-sze* "because", this is literally "for[*-sze*/`TERM`] the name [*mu*] of [*-ak*/`GEN`] that (= dependent relative clause)".
+
+	# Jagersma, Chap. 27 (25)						
+	# ‘because he had been killed and the estate was destroyed’						
+	# (MVN 2:2 case 3; L; 21)						
+	1	mu	mu	name	0	TERM	mu ...=ak=sze => because, marked on 5
+	2	ba-gaz	Ø-ba-gaz-Ø	VP-MM-kill-3SG.S/DO	1	acl+GEN	marked on 5
+	3	é	é=Ø	house=ABS	4	ABS	
+	4	hulu-a	hulu-Ø-'a	destroy-NFIN-NOM	2	parataxis	copular predicate, actually, this is a relative clause
+	5	ì-me-a-šè	'i-me-Ø-'a=ak=še	VP-be-3N.S-NOM=GEN=TERM	4	cop	
+
+
+
 ### Adpositions: case
 
 Sumerian does not have prepositions, but it does have a number of nouns that are used to express prepositional functions, e.g., sza3 "heart", also used for to express the meaning of the preposition "in". These are annotated in accordance with their morphology, i.e., as nouns with genitive complement. If no additional case is marked in the morphology annotation, these phrases are considered to be in apposition with the nominal they modify.
