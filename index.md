@@ -278,6 +278,23 @@ Note that headless relative clauses can be clausal arguments, and should be mark
 
 elam ki-masz{ki}-me carries a copula and is thus analyzed as a predicate here.
 
+	# Jagersma, Chap. 27 (28)					
+	# ‘When the ruler stayed in the Emi, this was brought to the Emi.’					
+	# (DP 164 3:5-9; L; 24)					
+	1	ensi2	ensi2.k=Ø	ruler=ABS	5	ABS
+	2	/	_	_	5	punct
+	3	é-mí-a	é.mí='a	Emi=LOC	5	LOC
+	4	/	_	_	5	punct
+	5	mu-ti-la-a	Ø-mu-n(i)-ti.l-Ø-'a='a	VP-VENT-in-live-3SG.S/DO-NOM=LOC	9	acl+LOC
+	6	/	_	_	9	punct
+	7	é-mí-šè	é.mí=še	Emi=TERM	9	TERM
+	8	/	_	_	9	punct
+	9	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root
+
+With an explicit head such as *ud* "day", this would be
+
+	[*ud <-acl- ensi emia mutila emisze bare ] -LOC-> ...
+
 Todo: check the treatment of clauses in absolutive case
 
 ~~~ conllu
