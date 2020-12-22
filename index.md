@@ -195,7 +195,27 @@ In dependency syntax, these forms are given the label `amod` (if modifying a nou
 ~~~
 “sweet water” (Q000377)
 
-If adjectives appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
+	# Jagersma, Chap. 27 (46)					
+	# ‘the year that follows it’					
+	# (NATN 109 15; N; 21)					
+	1	mu	mu	year	0	root
+	2	ab-ús-sa	'a-b-'ús-Ø-'a	VP-3N.OO-be.next.to-3N.S/DO-NOM	1	amod
+
+If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. 
+
+	# Jagersma, Chap. 27 (34)						
+	# ‘one in which it is sieved for me’						
+	1	gema-an-sim	Ø-ma-n(i)-sim-Ø	VP-1SG.IO-in-sieve-3N.S/DO	0	ABS	
+
+Etymologically, this is a headless relative clause, but it is lexicalized as a noun; according to CDLI conventions, that is originally an `amod`, because it comes without arguments
+
+	# Jagersma, Chap. 27 (36)						
+	# ‘one who has died’						
+	1	ba-úš	Ø-ba-'úš-Ø	VP-MM-die-3SG/3N.S/DO	0	ABS	
+
+Etymologically, this is a headless relative clause, but it is lexicalized as a noun.
+
+Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
 
 ### Subordinate clauses: acl
 
