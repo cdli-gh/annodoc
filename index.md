@@ -215,6 +215,14 @@ Etymologically, this is a headless relative clause, but it is lexicalized as a n
 
 Etymologically, this is a headless relative clause, but it is lexicalized as a noun.
 
+	# Jagersma, Chap. 27 (53)						
+	# ‘on whose right and left lions were laying’						
+	# (Cyl A 5:16; L; 22)						
+	1	zi-da	zi.d-Ø-'a	be.right-NFIN-NOM	4	LOC	morphologically, this is amod+LOC
+	2	gabu2-na	gabu2=ane='a	left=his=LOC	1	appos	
+	3	piriĝ	piriĝ=Ø	lion=ABS	4	ABS	
+	4	ì-nú-nú-a	'i-b(i)-nú-nú-Ø-'a	VP-3N:on-lie-lie-3N.S/DO-NOM	0	acl	
+
 Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
 
 ### Subordinate clauses: acl
