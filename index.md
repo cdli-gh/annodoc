@@ -1869,6 +1869,19 @@ Hayes mentions that copula seems to be able to replace any case marker (but can 
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+A headless relative clause serving as predicate of a copula sentence whose root is on the same token:
+
+	# Jagersma, Chap. 27 (71)						
+	# ‘It is (the) one that lives with PN, the fattener.’						
+	# (DP 338 1:2-4; L; 24)						
+	1	PN	PN	PN	5	COM	marked on 3
+	2	/	_	_	1	punct	
+	3	gurušta-da	gurušta=da	fattener=COM	1	appos	
+	4	/	_	_	5	punct	
+	5	mu-da-lu5-ka-am6	Ø-mu-n-da-lu5.k-Ø-'a=Ø='am	VP-VENT-3SG-with-live-3N.S/DO-NOM=ABS=be:3N.S	0	root	
+	
+Token 5 is acl+ABS serving as predicate (= head) of the copular clause (to be marked on token 5). Could be annotated as clause (`root`, `parataxis` etc., depending on context) or as argument (`acl+ABS`). In either case, the attachment of token 1 to the inner (relative) clause rather than to the outer (copular) clause can only be inferred from the inner relative clause not being annotated as `amod` (resp. `ABS` because `amod+ABS` is to be reduced to `ABS`).
+
 	# Hayes p.354, NSGU 15								
 	1		1	di-til-la		Ditila	0	root	
 	2		2	dug4-ga-ni-zid		Duganizid,	5	ERG	
