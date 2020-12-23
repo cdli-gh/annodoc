@@ -994,6 +994,18 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 
 For numeral oblique arguments, we ignore the morphologically marked case. (TBC: How is this analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
 
+This extends to headless numerals:
+
+	# Jagersma, Chap. 27 (73)						
+	# ‘This is what the gardeners turned over in the second transfer (lit. “turned on the hands in that of the second one”).’						
+	# (VS 14:113 2:2-4; L; 24)						
+	1	2-kam-ma-ka	2-kamma=ak='a	2-ORD=GEN=LOC	6	nummod	(not nummod+GEN+LOC)
+	2	/	_	_	6	punct	
+	3	nu-kiri6-ke4-ne	nu.kiri6.k=enē=e	gardener=PL=ERG	6	ERG	
+	4	/	_	_	6	punct	
+	5	šu-a	šu='a	hand=LOC	6	LOC	
+	6	bí-gi4-a-am6	Ø-bi-n-gi4-eš-'a=Ø='am	VP-3N:on-3SG.A-turn-3PL-NOM=ABS=be:3N.S	0	acl+ABS	or root
+
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
