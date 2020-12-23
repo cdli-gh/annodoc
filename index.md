@@ -330,6 +330,16 @@ Note that headless relative clauses can be clausal arguments, and should be mark
 
 elam ki-masz{ki}-me carries a copula and is thus analyzed as a predicate here.
 
+Note that our definition of "headless relative clause" differs from that of Jagersma (2010), who states that headless relative clauses occur only in lexicalized nominals. This is because a syntactic head realized as morphological argument argument is *not* considered an overt head in dependency annotation. In the following example, the head is realized in the morpheme *-en*, but not as an individual token:
+
+	# Jagersma, Chap. 27 (70)					
+	# ‘you, who will build my temple for me’					
+	# (Cyl A 9:8; L; 22)					
+	1	é-ĝu10	é=ĝu=Ø	house=my=ABS	2	ABS
+	2	ma-řú-na	Ø-ma-řú-en-'a	VP-1SG.IO-erect-2SG.S/A:IPFV-NOM	0	acl
+
+Headless relative clauses are relative clauses that serve a nominal function, e.g., by carrying a case marker that cannot be propagated to a nominal head:
+
 	# Jagersma, Chap. 27 (28)					
 	# ‘When the ruler stayed in the Emi, this was brought to the Emi.’					
 	# (DP 164 3:5-9; L; 24)					
