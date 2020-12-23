@@ -357,7 +357,7 @@ With an explicit head such as *ud* "day", this would be
 
 	[*ud <-acl- ensi emia mutila emisze bare ] -LOC-> ...
 
-Todo: check the treatment of clauses in absolutive case
+Note that headless relative clauses include cases with absolutive case (which is morphologically unmarked):
 
 ~~~ conllu
 1	PN1	_	PN	_	_	4	ERG	_	_
@@ -371,6 +371,15 @@ Todo: check the treatment of clauses in absolutive case
 ~~~
 
 "PN  (and) PN  swore that PN  declared: 'I will marry (her)'" (NG 15:6-9, 16:6-11, example from PPCS manual)
+
+	# Jagersma, Chap. 27 (72)						
+	# ‘These (beams) are what went in from the House of Mekulabata's Hill.’						
+	# (DP 438 2:2-3; L; 24)						
+	1	é	é	house	5	ABL	
+	2	du6	du6	hill	1	GEN	
+	3	me-kul-ab{ki}-ta-ka-ta	me.kul.ab4.ta=ak=ak=ta	Mekulabata=GEN=GEN=ABL	2	GEN	
+	4	/	_	_	5	punct	
+	5	ì-ku(DU)-a-am	'i-n(i)-ku4.ř-Ø-'a=Ø='am	VP-in-enter-3N.S/DO-NOM=ABS=be:3N.S	0	acl+ABS
 
 Note that CDLI annotates adverbial clauses without `mark` as relative clauses. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While the use of `advcl` and `advmod` is limited in CDLI annotation, these are derived for the UD export as follows:
 	
