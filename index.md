@@ -196,10 +196,18 @@ In dependency syntax, these forms are given the label `amod` (if modifying a nou
 “sweet water” (Q000377)
 
 	# Jagersma, Chap. 27 (46)					
-	# ‘the year that follows it’					
+	# ‘the year that follows it’ ("next year")					
 	# (NATN 109 15; N; 21)					
 	1	mu	mu	year	0	root
 	2	ab-ús-sa	'a-b-'ús-Ø-'a	VP-3N.OO-be.next.to-3N.S/DO-NOM	1	amod
+
+Semantically, the following would be `acl` but as the verb has no overtly realized arguments, we consider that as `amod`.
+
+	# Jagersma, Chap. 27 (65)						
+	# ‘on to the field which he has seized’						
+	# (TCS 1:229 7; L; 21)						
+	1	a-šà	a.šà.g	field	0	LOC	marked on 2
+	2	in-dab5-ba-na	'i-n-dab5-Ø-'a=ane='a	VP-3SG.A-seize-3N.S/DO-NOM=his=LOC	1	amod	no overt arguments, hence amod, not acl
 
 If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. 
 
@@ -293,6 +301,22 @@ Note that there is no inherent difference between subordinate clauses and adject
 
 "(of) Ur-Ningirsu, the beloved priest of Nanshe" (Q001758) 
 
+At the same time, relative clauses are annotated as `amod`, not as `acl` if they have no overtly realized arguments. This includes verbs that translate into adjectives in English.
+
+	# Jagersma, Chap. 27 (46)					
+	# ‘the year that follows it’ ("next year")					
+	# (NATN 109 15; N; 21)					
+	1	mu	mu	year	0	root
+	2	ab-ús-sa	'a-b-'ús-Ø-'a	VP-3N.OO-be.next.to-3N.S/DO-NOM	1	amod
+
+However, this also includes verbs that translate into relative clauses in English if no overt arguments occur:
+
+	# Jagersma, Chap. 27 (65)						
+	# ‘on to the field which he has seized’						
+	# (TCS 1:229 7; L; 21)						
+	1	a-šà	a.šà.g	field	0	LOC	marked on 2
+	2	in-dab5-ba-na	'i-n-dab5-Ø-'a=ane='a	VP-3SG.A-seize-3N.S/DO-NOM=his=LOC	1	amod	no overt arguments, hence amod, not acl
+
 Note that headless relative clauses can be clausal arguments, and should be marked with the corresponding case:
 
 ~~~ conllu
@@ -360,7 +384,7 @@ As for `acl+ABS`, `acl+ERG` and `acl+DAT`, these are systematically ambiguous be
 
 Note that syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
 
-Note that `acl` is also used for the syntactic relation between *mu* `year` and year name (typically a clause), also if subordination is not morphologically marked.
+TBC: Note that `acl` is also used for the syntactic relation between *mu* `year` and year name (typically a clause), also if subordination is not morphologically marked.
 
 ~~~ conllu
 1	iti	_	month	_	_	3	date	_	_
