@@ -614,6 +614,25 @@ Note that `appos` is overloaded and may require disambiguation. If an element is
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
 
+Note that implicit conjunction also covers cases of implicit meronymy as (possibly) in the following example:
+
+	# Jagersma, Chap. 27 (76)						
+	# ‘In Bazizi’s house there is one chariot with two ... It is so that my man saw it.’						
+	# (FAOS 19 Ad 8 9-12; A; 23)						
+	1	é	é	house	9	LOC	
+	2	ba-zi-zi-ka	ba.zi.zi=ak='a	Bazizi=GEN=LOC	1	GEN	
+	3	/	_	_	9	punct	
+	4	1	1	1	4	nummod	
+	5	ĝišgigir2	gigir2	chariot	9	ABS	marked on 7
+	6	é-UMBINxLU	é.UMBINxLU	??	5	appos	implicit conjunction (meronymy)
+	7	2	2=Ø	2=ABS	6	nummod	
+	8	/	_	_	9	punct	
+	9	al-ĝál	'a-ĝál-Ø	VP-be.there-3N.S/DO	0	root	
+	10	/	_	_	9	punct	
+	11	lú-ĝu10	lú=ĝu=e	man=my=ERG	13	ERG	
+	12	igi	igi=Ø	eye=ABS	13	ABS	
+	13	im-mi-du8-àm	'i-m(u)-bi-n-du8-Ø='am	VP-VENT-3N.OO-3SG.A-spread-3N.S/DO=be:3N.S	9	parataxis	
+
 ### List: list
 
 The `list` relation holds between entitites of the same kind and expresses the meaning of an implicit conjunction. We anticipate two main applications. 
