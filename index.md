@@ -1053,6 +1053,13 @@ This extends to headless numerals:
 	5	šu-a	šu='a	hand=LOC	6	LOC	
 	6	bí-gi4-a-am6	Ø-bi-n-gi4-eš-'a=Ø='am	VP-3N:on-3SG.A-turn-3PL-NOM=ABS=be:3N.S	0	acl+ABS	or root
 
+This also extends to numerals that are predicates of copula clauses:
+
+	# Jagersma, Chap. 5 (16)					
+	# ‘This is of the six of them.’					
+	# (VS 14:172 8:9; L; 24)					
+	1	6-a-ne-ne-kam	6=anēnē=ak='am	six=their=GEN=be:3N.S	0	nummod
+
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
