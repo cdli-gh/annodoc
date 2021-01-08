@@ -1085,6 +1085,17 @@ This also extends to numerals that are predicates of copula clauses:
 	# (VS 14:172 8:9; L; 24)					
 	1	6-a-ne-ne-kam	6=anēnē=ak='am	six=their=GEN=be:3N.S	0	nummod
 
+This also extends to numerals that carry clausal modifiers:
+
+	# Jagersma, Chap. 5 (22)					
+	# ‘These are the second ones that were brought to the palace.’					
+	# (VS 14:48 2:4-6; L; 24)					
+	1	2-kam-ma	min-kamma	two-ORD	0	nummod
+	2	/	_	_	1	punct
+	3	é-gal-šè	é.gal=še	palace=TERM	5	TERM
+	4	/	_	_	5	punct
+	5	ře6-a-am6	ře6-Ø-'a=Ø='am	carry-NFIN-NOM=ABS=be:3N.S	1	acl
+
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
