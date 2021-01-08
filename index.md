@@ -853,7 +853,14 @@ TODO: Check `conj` vs. `list` in taglist
 
 ### Punctuation: punct
 
-No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text, the recommended dependency is punct. Likewise, if a Sumerian transcript includes modern punctuation signs.
+No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text (as done, for example, by Jagersma 2010), the recommended dependency is `punct`. Likewise, if a Sumerian transcript includes modern punctuation signs.
+
+	# Jagersma, Chap. 5 (26)					
+	# ‘with Lugalkesh, the scribe’					
+	# (DP 116 10:3-4; L; 24)					
+	1	lugal-kèš{ki}	lugal.kèš	Lugalkesh	0	COM
+	2	/	_	_	1	punct
+	3	dub-sar-da	dub.sar=da	scribe=COM	1	appos
 
 ### Grammatical roles (morphological case): ABS, ERG, DAT, ABL, ADV, COM, EQU, TERM, LOC, GEN
 
