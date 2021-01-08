@@ -397,6 +397,16 @@ Analoguously for other cases:
 	4	/	_	_	5	punct
 	5	mu-ti-la-a	Ø-mu-n(i)-ti.l-Ø-'a='a	VP-VENT-in-live-3SG.S/DO-NOM=LOC	0	acl+LOC
 
+Note that these are not limited to adverbial (spatio-temporal) interpretations: 
+
+	# Jagersma, Chap. 5 (25)					
+	# ‘what Ningirsu has agreed with Irikagena’					
+	# (locative) (Ukg.34 1; L; 24)					
+	1	{d}nin-ĝír-sú-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	3	ERG
+	2	iri-ka-ge-na-da	iri.ka.ge.na.k=da	Irikagena=COM	3	COM
+	3	e-da-du11-ga-a	'i-n-da-n-du11.g-Ø-'a='a	VP-3SG-with-3SG.A-say-3N.S/DO-NOM=LOC	0	acl+LOC
+
+
 
 Note that headless relative clauses include cases with absolutive case (which is morphologically unmarked):
 
