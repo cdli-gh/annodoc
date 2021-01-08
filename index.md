@@ -796,6 +796,8 @@ If an element is head of both an identity-marking apposition and a conjunction-m
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
 
+As other examples show, the `list` relation stands here for an implicit conjunction:
+
 	# Jagersma, Chap. 5 (64)					
 	# ‘PN1, the chief scribe, and PN2, the surveyor, claim this (land).’					
 	# (MVN 6:319 rev 1:3-7; L; 21)					
@@ -803,9 +805,9 @@ If an element is head of both an identity-marking apposition and a conjunction-m
 	2	/	_	_	1	punct
 	3	dub-sar-mah	dub.sar.mah	chief.scribe	1	appos
 	4	/	_	_	1	punct
-	5	PN2	PN2	PN2	1	list
+	5	PN2	PN2	PN2	1	conj
 	6	/	_	_	5	punct
-	7	lú-éš-gíd-bé	lú.éš.gíd=be=e	surveyor=and=ERG	5	appos
+	7	lú-éš-gíd-bé	lú.éš.gíd=be=e	surveyor=and=ERG	5	appos	morphological conjunction!
 	8	/	_	_	10	punct
 	9	inim	inim=Ø	word=ABS	10	ABS
 	10	bí-ĝar-éš	Ø-bi-n-ĝar-eš	VP-3N:on-3SG.A-place-3PL	0	root
