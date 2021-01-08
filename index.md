@@ -777,6 +777,26 @@ For units, the quantified commodity is to be annotated as syntactic head. Numera
 ~~~
 "Minister Ansiga-ria" (Q000370)
 
+	# Jagersma, Chap. 5 (43)					
+	# ‘lord Ningirsu (ergative)’					
+	# (Cyl A 23:16; L; 22)					
+	1	en	en	lord	2	nmod
+	2	dnin-ĝír-su-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	0	ERG
+
+Note that the epithet also applies to proper names other than personal names, e.g., locations:
+
+	# Jagersma, Chap. 5 (41)					
+	# ‘the land Lagash (ergative)’					
+	# (Cyl A 12:23; L; 22)					
+	1	ki	ki	land	2	nmod
+	2	lagaski-e	lagas=e	Lagash=ERG	0	ERG
+
+	# Jagersma, Chap. 5 (42)					
+	# ‘from the mountain land Dilmun’					
+	# (VS 14:30 2:4; L; 24)					
+	1	kur	kur	mountains	2	nmod
+	2	dilmunki-ta	dilmun=ta	Dilmun=ABL	0	ABL
+
 The epithet rule is not limited to formal, lexicalized titles, but applies to all cases in which a proper name come to stand in an identity-marking apposition relation with a modifying noun:
 
 	# Jagersma, Chap. 5 (30)					
@@ -788,7 +808,28 @@ The epithet rule is not limited to formal, lexicalized titles, but applies to al
 	4	/	_	_	5	punct
 	5	{d}nin-ĝír-su-ra	nin.ĝír.su.k=ra	Ningirsu=DAT	0	DAT
 
-In the mapping to UD interpretation, case-marked adnominal dependents of nominal heads are mapped to nmod. Most prominently, this includes genitives.
+The epithet rule does not apply to year names, as these are propositional:
+
+	# Jagersma, Chap. 5 (45)					
+	# ‘from the year “Urbilum was destroyed” to the year “Huhunure was destroyed”’					
+	# (ITT 3:4913 6-7; L; 21)					
+	1	mu	mu	year	0	ABL
+	2	ur-bí-lumki	ur.bí.lum=Ø	Urbilum=ABS	2	ABS
+	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	ccomp
+	4	/	_	_	1	punct
+	5	mu	mu.	year	1	TERM
+	6	hu-nu-reki	hu.nu.re=Ø	Huhunure=ABS	7	ABS
+	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	ccomp
+
+TO BE CONFIRMED: Are months treated like epithets?
+
+	# Jagersma, Chap. 5 (44)						
+	# ‘in the month of Sikiba’						
+	# (Nik 1:229 1:4; L; 24)						
+	1	iti	iti.d	month	2	nmod	check treatment of month names
+	2	siki-ba-a	siki.ba='a	wool.distribution=LOC	0	LOC	
+
+In the subsequent mapping to UD, case-marked adnominal dependents of nominal heads are mapped to `nmod`. Most prominently, this includes genitives.
 
 ### Quantifiers: det
 
@@ -971,7 +1012,18 @@ According to Jagersma (2010, p.90), "[a] noun phrase can also contain another no
 	5	kuš	kuš	hide	1	ABL	marked on 5
 	6	5-ta	5=ta	five=ABL	5	nummod	
 
-This example isn't fully clear because context is not given. In an alternative analysis, both could also be considered oblique arguments of a clause, with the relation between them established by the verb. If both interpretations are possible, annotate morphologically marked arguments other than genitives as clausal rather than adnominal arguments.
+	# Jagersma, Chap. 5 (45)					
+	# ‘from the year “Urbilum was destroyed” to the year “Huhunure was destroyed”’					
+	# (ITT 3:4913 6-7; L; 21)					
+	1	mu	mu	year	0	ABL
+	2	ur-bí-lumki	ur.bí.lum=Ø	Urbilum=ABS	2	ABS
+	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	ccomp
+	4	/	_	_	1	punct
+	5	mu	mu.	year	1	TERM
+	6	hu-nu-reki	hu.nu.re=Ø	Huhunure=ABS	7	ABS
+	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	ccomp
+
+Both examples are not fully clear because context is not given. In an alternative analysis, both arguments could also be considered oblique arguments of a clause, with the relation between them established by the verb. If both interpretations are possible, annotate morphologically marked arguments other than genitives as clausal rather than adnominal arguments.
 
 #### "Functional obliques"
 
