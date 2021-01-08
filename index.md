@@ -1636,6 +1636,11 @@ These are revisions of the original approach to annotation, which need to be cha
 
 So far, we posit that adverbials don't really exist, and it seems most adverbials can be analyzed differently, e.g., *eger* as a nominal with an oblique case (`LOC` for spatial interpretation "on the other side" or `ABL` for temporal interpretation "after(wards)"). 
 
+	# Jagersma, Chap. 4 (30)					
+	# ‘then (lit.“on this day”)’					
+	# (Ent.8 7:7; L; 25)					
+	1	u4-ba	u4.d=be='a	day=this=LOC	0	LOC
+
 	# Jagersma, Chap. 4 (32)			
 	# ‘Later (lit.“on the back”) Namhani, the scribe said:(...).’			
 	# (NG 69 8-9; U; 21)			
