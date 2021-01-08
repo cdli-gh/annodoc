@@ -1619,6 +1619,16 @@ These are revisions of the original approach to annotation, which need to be cha
 - double-check ziga role, cf. analysis in P102314
 - advcl does exist (tukumbi)
 - year name: annotate as ccomp, not as acl, because this is (kind of) direct speech
+- ABS heads of copular clause: annotate (head of) copular predicate as root, e.g.
+
+	# Jagersma, Chap. 4 (22)						
+	# ‘These are the barley rations and barley supplies of Bau’s men.’						
+	# (STH 1:4 2:3; L; 24)						
+	1	še-ba	[še.ba	[ration.barley	0	root	ABS => copular predicate
+	2	še-ĝar	še.ĝar	supply.barley	1	appos	implicit conjunction
+	3	lú	[lú	[man	1	GEN	
+	4	{d}ba-ú-ke4-ne-kam	[ba.ú=ak]=enē=ak]=Ø]='am	[Bau=GEN]=PL=GEN]=ABS]=be:3N.S	3	GEN	
+
 
 ## Open issues
 
