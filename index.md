@@ -796,6 +796,21 @@ If an element is head of both an identity-marking apposition and a conjunction-m
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
 
+	# Jagersma, Chap. 5 (64)					
+	# ‘PN1, the chief scribe, and PN2, the surveyor, claim this (land).’					
+	# (MVN 6:319 rev 1:3-7; L; 21)					
+	1	PN1	PN1	PN1	10	ERG
+	2	/	_	_	1	punct
+	3	dub-sar-mah	dub.sar.mah	chief.scribe	1	appos
+	4	/	_	_	1	punct
+	5	PN2	PN2	PN2	1	list
+	6	/	_	_	5	punct
+	7	lú-éš-gíd-bé	lú.éš.gíd=be=e	surveyor=and=ERG	5	appos
+	8	/	_	_	10	punct
+	9	inim	inim=Ø	word=ABS	10	ABS
+	10	bí-ĝar-éš	Ø-bi-n-ĝar-eš	VP-3N:on-3SG.A-place-3PL	0	root
+
+
 TODO: Check `conj` vs. `list` in taglist
 
 	There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example, sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use `conj` or `list` in these cases.
@@ -909,6 +924,22 @@ Morphologically marked conjunction is *-bi-da*, frequently written as *-bi*, and
 ~~~
 
 "The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual)
+
+Note that Jagersma seems to annotate the same example with a different gloss *bé*:
+
+	# Jagersma, Chap. 5 (63)					
+	# ‘the Tigris and the Euphrates’					
+	# (FAOS 5/2 Luzag. 1 2:6-7; N; 24)					
+	1	idigna	idigna	Tigris	0	root
+	2	/	_	_	1	punct
+	3	buranun-bé	buranun=be	Euphrates=and	1	conj
+
+	# Jagersma, Chap. 5 (62)					
+	# ‘for Ningirsu and Shara’					
+	# (Ent. 28 1:5-6; L; 25)					
+	1	dnin-ĝír-su	nin.ĝír.su.k	Ningirsu	0	DAT
+	2	/	_	_	1	punct
+	3	dšara2-bé	šara2=be=r(a)	Shara=and=DAT	1	conj
 
 If applied to a clausal argument, it can express a circumstantial meaning. For these cases, we annotate `acl+COM`, not `conj`.
 
