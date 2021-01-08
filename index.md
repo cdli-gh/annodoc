@@ -1171,6 +1171,15 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 ~~~
 (premodifying numeral)
 
+	# Jagersma, Chap. 5 (47)					
+	# ‘fifteen full-grown oxen (having) healthy eyes’					
+	# (VS 14:66 1:1; L; 24)					
+	1	15	15	15	2	nummod
+	2	gu4	gu4.ř	bull	0	root
+	3	gal-gal	gal-gal	big-big	2	amod
+	4	igi	igi	eye	5	ABS
+	5	silim	silim-Ø	be.healthy-NFIN	2	acl
+
 ~~~ conllu
 1	...	_	N	_	_	0	root	_	_
 2	...	_	NU.GEN.COP-3-SG	_	_	1	nummod	_	_
@@ -1185,6 +1194,14 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 	2	7	imin	seven	1	nummod
 	3	dba-ú	ba.ú=ak=Ø	Bau=GEN=ABS	1	GEN
 
+	# Jagersma, Chap. 5 (48)						
+	# ‘his seven-cornered house (lit. “his seven-corners house”)’						
+	# (St D 2:11; L; 22)						
+	1	é	é	house	0	ABS	marked on 3
+	2	ub	ub	corner	1	appos	
+	3	imin-na-né	imin=ane=Ø	seven=his=ABS	2	nummod	
+
+Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, regardless of their morphological case:
 
 	# Jagersma, Chap. 7 (324)						
 	# ‘that after Kuda(‘s death) fifteen years ago (lit. “since fifteen with the years”), Urbagara took him (a slave) as his share (in the inheritance)’						
@@ -1199,13 +1216,12 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 
 (numeral [oblique] argument)
 
-For numeral oblique arguments, we ignore the morphologically marked case. (TBC: How is this analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
+(TBC: How is the following example to be analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
 
 	# Jagersma, Chap. 4 (34)						
 	# ‘subsequently (lit “for the second one”)’						
 	# (Cyl A 9:5; L; 22)						
-	1	2-kam-ma-šè	min-kamma=še	two-ORD=TERM	0	nummod	more correct would be nummod+TERM
-
+	1	2-kam-ma-šè	min-kamma=še	two-ORD=TERM	0	nummod	morphologically marked as TERM
 
 This extends to headless numerals:
 
@@ -1226,7 +1242,7 @@ This also extends to numerals that are predicates of copula clauses:
 	# (VS 14:172 8:9; L; 24)					
 	1	6-a-ne-ne-kam	6=anēnē=ak='am	six=their=GEN=be:3N.S	0	nummod
 
-This also extends to numerals that carry clausal modifiers:
+And to numerals that carry clausal modifiers:
 
 	# Jagersma, Chap. 5 (22)					
 	# ‘These are the second ones that were brought to the palace.’					
