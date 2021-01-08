@@ -765,6 +765,17 @@ Sumerian NPs usually place the head of the NP at their left periphery. For seman
 ~~~
 "Minister Ansiga-ria" (Q000370)
 
+The epithet rule is not limited to formal, lexicalized titles, but applies to all cases in which a proper name come to stand in an identity-marking apposition relation with a modifying noun:
+
+	# Jagersma, Chap. 5 (30)					
+	# ‘for his master who loves him, Ningirsu’					
+	# (Ent.28 5:14-15; L; 25)					
+	1	lugal	lugal	master	5	nmod
+	2	ki	ki=Ø	place=ABS	3	ABS
+	3	an-na-áĝ-ĝá-né	'a-nna-n-'áĝ-Ø-'a=ane	VP-3SG.IO-3SG.A-measure.out-3N.S/DO-NOM=his	1	acl
+	4	/	_	_	5	punct
+	5	{d}nin-ĝír-su-ra	nin.ĝír.su.k=ra	Ningirsu=DAT	0	DAT
+
 In the mapping to UD interpretation, case-marked adnominal dependents of nominal heads are mapped to nmod. Most prominently, this includes genitives.
 
 ### Quantifiers: det
