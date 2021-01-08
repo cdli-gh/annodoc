@@ -1664,6 +1664,11 @@ locative, ablative, or terminative.
 	5	(...)	_	_
 	6	bí-in-du11	Ø-bi-n-du11.g-Ø	VP-3N.OO-3SG.A-say-3N.S/DO
 
+	# Jagersma, Chap. 4 (38)					
+	# ‘there (lit.“in the place of this”)’					
+	# (Cyl A 10:26; L; 22)					
+	1	ki-ba	ki=be='a	place=its=LOC	0	LOC
+
 	# Jagersma, Chap. 8 (57)			
 	# ‘on the reverse of our tablet’			
 	# (UET 6/2:150 1; Ur; OB)			
