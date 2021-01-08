@@ -454,7 +454,16 @@ As for `acl+ABS`, `acl+ERG` and `acl+DAT`, these are systematically ambiguous be
 
 Note that syntactic annotation is morphology-driven. If subordination is not marked in the morphological annotation, we resort to parataxis. Note that subordination morphemes may have gone unwritten (e.g., because of assimilation processes or deficiencies of the writing), but if (unambiguously) so, we expect them to be restored in the morphological annotation.
 
-TBC: Note that `acl` is also used for the syntactic relation between *mu* `year` and year name (typically a clause), also if subordination is not morphologically marked.
+In year names, `acl` should be used for the syntactic relation between *mu* "year" and the year name. Although this is often not morphologically marked, there are examples that use a nominalizer here:
+
+	# Jagersma, Chap. 5 (46)					
+	# ‘the year that Huhnure was destroyed’					
+	# (BE 3/1:4 16; N; 21)					
+	1	mu	mu	year	0	LOC
+	2	hu-ùh-nu-reki	hu.ùh.nu.re=Ø	Huhnure=ABS	3	ABS
+	3	ba-hulu-a	Ø-ba-hulu-Ø-'a	VP-MM-destroy-3N.S/DO-NOM	1	acl
+
+Example without morphological marking:
 
 ~~~ conllu
 1	iti	_	month	_	_	3	date	_	_
@@ -476,6 +485,8 @@ TBC: Note that `acl` is also used for the syntactic relation between *mu* `year`
 
 ~~~
 (P102313)
+
+TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
 ### Subordinating conjunction: mark
 
@@ -815,11 +826,11 @@ The epithet rule does not apply to year names, as these are propositional:
 	# (ITT 3:4913 6-7; L; 21)					
 	1	mu	mu	year	0	ABL
 	2	ur-bí-lumki	ur.bí.lum=Ø	Urbilum=ABS	2	ABS
-	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	ccomp
+	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	acl
 	4	/	_	_	1	punct
 	5	mu	mu.	year	1	TERM
 	6	hu-nu-reki	hu.nu.re=Ø	Huhunure=ABS	7	ABS
-	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	ccomp
+	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	acl
 
 TO BE CONFIRMED: Are months treated like epithets?
 
@@ -1017,11 +1028,11 @@ According to Jagersma (2010, p.90), "[a] noun phrase can also contain another no
 	# (ITT 3:4913 6-7; L; 21)					
 	1	mu	mu	year	0	ABL
 	2	ur-bí-lumki	ur.bí.lum=Ø	Urbilum=ABS	2	ABS
-	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	ccomp
+	3	ba-hulu-ta	ba-hulu-Ø=ta	MM-destroy-3N.S/DO=ABL	1	acl
 	4	/	_	_	1	punct
 	5	mu	mu.	year	1	TERM
 	6	hu-nu-reki	hu.nu.re=Ø	Huhunure=ABS	7	ABS
-	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	ccomp
+	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	acl
 
 Both examples are not fully clear because context is not given. In an alternative analysis, both arguments could also be considered oblique arguments of a clause, with the relation between them established by the verb. If both interpretations are possible, annotate morphologically marked arguments other than genitives as clausal rather than adnominal arguments.
 
@@ -1349,6 +1360,7 @@ Commonly used in Ur III letters:
 ~~~
 "To Nikala speak; let him not detain Enua; let his man release him." (Hayes p.308, TCS 1,193)
 
+Note that year names should not be annotated as `ccomp` (although they could be considered direct speech), but as `acl` (as they are sometimes morphologically marked as such).
 
 ### Adverbial clause: advcl
 
@@ -1775,8 +1787,8 @@ TODO: consolidate guidelines and data:
 - taglist recommends `appos` for `MN` (month name), with head being the word *iti* (month)
 	- this is also implemented in the MTAAC pre-annotation
 	- the examples above use `LOC` for dependencies within dates and `date` for the head element of a date
-- taglist recommends `appos` for the clause after MU
-	- examples have `ccomp`
+- taglist recommends `appos` for the clause after *mu*
+	- apply `acl` systematically, check in the data
 - check treatment in pre-annotation and annotation projection
 
 ### Complex numerals
@@ -1838,7 +1850,7 @@ These are revisions of the original approach to annotation, which need to be cha
 - TODO: "11. As for giri3 PN (by the means of PN), and kishib PN (by the seal of PN), we tag giri3/kishib as obl, mark dependent as GEN (in data and doc)" => tag giri3 as "via" (giri3 being [nominal] head), kiszib3 as "under" (kiszib3 being [nominal] head) with genitive complement ("under the seal of ...")
 - double-check ziga role, cf. analysis in P102314
 - advcl does exist (tukumbi)
-- year name: annotate as ccomp, not as acl, because this is (kind of) direct speech
+- year name: annotate as `acl`, not as `ccomp` (because there are instances where this is explicitly marked) not as `appos` (because they are clausal)
 - ABS heads of copular clause: annotate (head of) copular predicate as root, e.g.
 
 	# Jagersma, Chap. 4 (22)						
