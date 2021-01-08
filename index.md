@@ -575,7 +575,7 @@ As these constructions are analyzed in accordance with their morphology rather t
 
 ### Apposition: appos
 
-Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit genitive, implicit meronymy or implicit copula.
+Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit meronymy, implicit genitive, implicit equative or implicit copula.
 
 implicit identity
 
@@ -643,9 +643,9 @@ implicit genitive or equative
 ~~~
 “These (various animals) are to be subtracted from the sealed tablet of Uršulpae that is in the basket of Urbau.” (P113923)
 
-The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as appos, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
+The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as `appos` or `GEN`, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
 
-The pattern applies to both adnominal cases, i.e., GEN and EQU. Note that equatives forms nominal sentences, an implicit equative can thus always also be interpreted as implicit copula. We thus do not annotate implicit equatives as such. Instead, apply the annotation of implicit copula.
+The pattern applies to both adnominal cases, i.e., `GEN` and `EQU`. Note that equatives forms nominal sentences, an implicit equative can thus always also be interpreted as implicit copula. We thus do not annotate implicit equatives as such. Instead, apply the annotation of implicit copula.
 
 implicit copula
 ~~~ conllu
@@ -671,6 +671,17 @@ This can also be interpreted as having an implicit copula (expected to be marked
 
 ~~~
 "Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
+
+Implicit equatives also include (implicit) modification:
+
+	# Jagersma, Chap. 5 (50)					
+	# ‘for two two-year-old cows (lit. “two two-years cows”)’					
+	# (MVN 18:130 5; D; 21)					
+	1	2	2	2	2	nummod
+	2	áb	áb	cow	0	TERM
+	3	mu	mu	year	2	appos
+	4	2-šè	2=še	two=TERM	3	nummod
+
 
 Note that implicit addition in complex numerals is *not* annotated by `appos`, but by `nummod`:
 
