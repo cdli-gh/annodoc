@@ -904,6 +904,8 @@ No punctuation in Sumerian. However, breaks (new line, different column, differe
 	1	lugal-kèš{ki}	lugal.kèš	Lugalkesh	0	COM
 	2	/	_	_	1	punct
 	3	dub-sar-da	dub.sar=da	scribe=COM	1	appos
+	
+In general, the head of `punct` should be the highest element in the tree that can be reached without crossing another dependency relation.
 
 ### Grammatical roles (morphological case): ABS, ERG, DAT, ABL, ADV, COM, EQU, TERM, LOC, GEN
 
