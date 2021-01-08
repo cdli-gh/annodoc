@@ -738,7 +738,19 @@ According to Jagersma (2010:92), "if the head is followed by two or more apposit
 	9	/	_	_	8	punct	
 	10	{d}en-líl-ke4	en.líl=ak=e	Enlil=GEN=ERG	8	GEN	
 
-In such cases, annotate `appos`, nevertheless. Note that automated annotation will most likely represent such cases as multiple independent arguments with the same role. For dependencies other than `LOC`, all cases of verbs with multiple dependencies of the same type must be manually inspected.
+	# Jagersma, Chap. 5 (57)					
+	# ‘An, Enlil, (fifteen other gods), and my personal god Ningishzida’					
+	# (St B 8:44-9:4; L; 22)					
+	1	an-e	an=e	An=ERG	0	ERG
+	2	/	_	_	1	punct
+	3	den-líl-e	en.líl=e	Enlil=ERG	1	appos
+	4	/	_	_	1	punct
+	5	(...)	_	_	1	dep
+	6	/	_	_	1	punct
+	7	diĝir-ĝu10	diĝir=ĝu	god=my	8	nmod
+	8	dnin-ĝiš-zi-da-ke4	nin.ĝiš.zi.da.k=e	Ningishzida=ERG	1	appos
+
+In such cases, annotate `appos` *despite the morphology*. Note that automated annotation will most likely represent such cases as multiple independent arguments with the same role. For dependencies other than `LOC`, all cases of verbs with multiple dependencies of the same type must be manually inspected.
 
 ### List: list
 
