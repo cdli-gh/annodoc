@@ -998,6 +998,14 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 ~~~
 (postmodifying numeral)
 
+	# Jagersma, Chap. 5 (7)					
+	# ‘Bau’s septuplets (lit.“the seven twins of Bau”)’					
+	# (Cyl B 11:11; L; 22)					
+	1	dumu-maš	dumu.maš	twin	0	ABS
+	2	7	imin	seven	1	nummod
+	3	dba-ú	ba.ú=ak=Ø	Bau=GEN=ABS	1	GEN
+
+
 	# Jagersma, Chap. 7 (324)						
 	# ‘that after Kuda(‘s death) fifteen years ago (lit. “since fifteen with the years”), Urbagara took him (a slave) as his share (in the inheritance)’						
 	# (NG 34 6-7; L; 21)						
