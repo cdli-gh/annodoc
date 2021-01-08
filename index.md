@@ -1013,6 +1013,12 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 
 For numeral oblique arguments, we ignore the morphologically marked case. (TBC: How is this analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
 
+	# Jagersma, Chap. 4 (34)						
+	# ‘subsequently (lit “for the second one”)’						
+	# (Cyl A 9:5; L; 22)						
+	1	2-kam-ma-šè	min-kamma=še	two-ORD=TERM	0	nummod	more correct would be nummod+TERM
+
+
 This extends to headless numerals:
 
 	# Jagersma, Chap. 27 (73)						
@@ -1673,8 +1679,18 @@ So far, we posit that adverbials don't really exist, and it seems most adverbial
 
 TODO: provide a list of "adverbials"
 
+In accordance with the principle to annotate numerals as `nummod`, the following should be annotated without case: 
+
+	# Jagersma, Chap. 4 (34)						
+	# ‘subsequently (lit “for the second one”)’						
+	# (Cyl A 9:5; L; 22)						
+	1	2-kam-ma-šè	min-kamma=še	two-ORD=TERM	0	nummod	more correct would be nummod+TERM
+
+
 ### heads of copular clauses with clausal predicate
-	
+
+TOFIX: predicate should be head of copular predicate. In the cases below, this is not the element that carries the copula, but the adjacent (often ABS) argument. The analyses below are thus partially wrong.
+
 	1	še	še	barley
 	2	šuku-řá	šuku.ř=ak	subsistence=GEN
 	3	/	_	_	
