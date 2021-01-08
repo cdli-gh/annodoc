@@ -1641,6 +1641,13 @@ These are revisions of the original approach to annotation, which need to be cha
 ### `advmod`
 
 So far, we posit that adverbials don't really exist, and it seems most adverbials can be analyzed differently, e.g., *eger* as a nominal with an oblique case (`LOC` for spatial interpretation "on the other side" or `ABL` for temporal interpretation "after(wards)"). 
+This is in line with Jagersma, p.83:
+
+> Sumerian lacks a distinct word class of adverbs. It expresses adverbial meanings in other ways,
+mostly with adjectives, verbal affixes, or noun phrases. As Poebel (1923: §388) already observed,
+the most common way is by means of a noun phrase. Thus, the Sumerian equivalent of
+an English time adverb is a noun phrase in a case which can have a temporal meaning – the
+locative, ablative, or terminative.
 
 	# Jagersma, Chap. 4 (30)					
 	# ‘then (lit.“on this day”)’					
