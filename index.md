@@ -1474,6 +1474,18 @@ In a list of commodities, the conventional structure is `number -nummod-> unit -
 
 "To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
 
+Occasionally, units are postposed. To be confirmed: Annotate these as `nmod` (according to their function) or `appos` (according to their syntax)? 
+
+	# Jagersma, Chap. 5 (11)						
+	# ‘with five hides per (lit.“in”) two shekels of silver’						
+	# (Nik 1:230 5:2-3; L; 24)						
+	1	kù	kù.g	silver	7	LOC	marked on 3
+	2	giĝ4	giĝ4	shekel	1	appos	unit, would be nmod if preposed
+	3	2-a	2='a	two=LOC	2	nummod	
+	4	/	_	_	7	punct	
+	5	kuš	kuš	hide	1	ABL	marked on 5
+	6	5-ta	5=ta	five=ABL	5	nummod	
+
 
 ### Discontinuous lists
 
