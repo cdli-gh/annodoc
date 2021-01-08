@@ -639,7 +639,7 @@ Note that implicit addition in complex numerals is *not* annotated by `appos`, b
 ~~~
 "197 (180+10+7) sheep" (P102315)
 
-Appositions and most case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as nmod.
+Appositions and most case-marked nominal dependents are post-modifying, i.e., the syntactic head of a noun phrase should be its first element. For exceptions to this rule established on semantic grounds (epithets/titles and units), premodifying nominals are marked as `nmod`.
 
 Note that `appos` is overloaded and may require disambiguation. If an element is head of both an identity-marking apposition and a conjunction-marking apposition, it is recommended to use `list` for implicit conjunction. This is a very frequent pattern in administrative texts, but also occurs in contracts:
 
@@ -683,6 +683,26 @@ Note that implicit conjunction also covers cases of implicit meronymy as (possib
 	11	lú-ĝu10	lú=ĝu=e	man=my=ERG	13	ERG	
 	12	igi	igi=Ø	eye=ABS	13	ABS	
 	13	im-mi-du8-àm	'i-m(u)-bi-n-du8-Ø='am	VP-VENT-3N.OO-3SG.A-spread-3N.S/DO=be:3N.S	9	parataxis	
+
+In rare cases, a phrase in a longer sequence of complex appositions may copy the case marker of its head although it does not mark the end of the phrase. 
+
+According to Jagersma (2010:92), "if the head is followed by two or more appositions, the case marker is sometimes placed after every apposition and thus repeated several times. This happens chiefly when the number of appositions is particularly large. Take, for instance, the following example, which gives only the first two appositions out of a series of twelve, all of them with an ergative case marker:"
+
+	# Jagersma, Chap. 5 (29)						
+	# ‘Eannatum, the ruler of Lagash, the one nominated by Enlil, (...)’						
+	# (Ean.3 1:7-3:5; L; 25) The noun phrase and its parts 93						
+	1	é-an-na-túm	é.an.na.túm	Eannatum		ERG	marked on 5 and 10
+	2	/	_	_	1	punct	
+	3	ensi2	ensi2.k	ruler	1	appos	
+	4	/	_	_	3	punct	
+	5	lagas{ki}-ke4	lagas=ak=e	Lagash=GEN=ERG	3	GEN	
+	6	/	_	_	1	punct	
+	7	mu	mu=Ø	name=ABS	7	ABS	
+	8	pà-da	pà.d-Ø-'a	call-NFIN-NOM	1	acl	(not acl+ERG)
+	9	/	_	_	8	punct	
+	10	{d}en-líl-ke4	en.líl=ak=e	Enlil=GEN=ERG	8	GEN	
+
+In such cases, annotate `appos`, nevertheless. Note that automated annotation will most likely represent such cases as multiple independent arguments with the same role. For dependencies other than `LOC`, all cases of verbs with multiple dependencies of the same type must be manually inspected.
 
 ### List: list
 
