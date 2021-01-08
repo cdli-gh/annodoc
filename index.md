@@ -1687,6 +1687,15 @@ locative, ablative, or terminative.
 	1	eger4	eger4	back
 	2	gurum2-ma-ta	gurum2=ak=ta	stock.taking=GEN=ABL
 
+"Noun phrases with non-finite verbal forms as their heads can also be used to express adverbial
+meanings" (Jagersma, p. 84)
+
+	# Jagersma, Chap. 4 (39)					
+	# ‘He brought it to him into the temple joyfully (lit.“in being happy”).’					
+	# (Cyl A 7:30; L; 22)					
+	1	é-a	é='a	house=LOC	3	LOC
+	2	húl-la	húl-Ø='a	be.happy-NFIN=LOC	3	acl+LOC
+	3	ì-na-ni-ku4	'i-nna-ni-n-ku4.r-Ø	VP-3SG.IO-in-3SG.A-enter-3N.S/DO	0	root
 
 
 TODO: provide a list of "adverbials"
