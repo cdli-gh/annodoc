@@ -1697,6 +1697,16 @@ meanings" (Jagersma, p. 84)
 	2	húl-la	húl-Ø='a	be.happy-NFIN=LOC	3	acl+LOC
 	3	ì-na-ni-ku4	'i-nna-ni-n-ku4.r-Ø	VP-3SG.IO-in-3SG.A-enter-3N.S/DO	0	root
 
+Note that the dependency label `ADV` does not refer to adverbial function, but it refers to a morphological case (*adverbial case*). Its UD equivalent is thus `obl`, not `advmod`.
+
+	# Jagersma, Chap. 4 (40)						
+	# ‘He built his master’s temple in the right way.’						
+	# (Cyl A 24:8; L; 22)						
+	1	é	é	house	4	ABS	
+	2	lugal-na	lugal=ane=ak=Ø	master=his=GEN=ABS	1	GEN	
+	3	zi-dè-éš	zi.d=eš	rightness=ADV	4	ADV	note that this is not advmod, but adverbial case
+	4	mu-řú	Ø-mu-n-řú-Ø	VP-VENT-3SG.A-erect-3N.S/DO	0	root	
+
 
 TODO: provide a list of "adverbials"
 
