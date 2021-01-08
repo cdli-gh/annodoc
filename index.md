@@ -338,7 +338,7 @@ Note that our definition of "headless relative clause" differs from that of Jage
 	1	é-ĝu10	é=ĝu=Ø	house=my=ABS	2	ABS
 	2	ma-řú-na	Ø-ma-řú-en-'a	VP-1SG.IO-erect-2SG.S/A:IPFV-NOM	0	acl
 
-Headless relative clauses are relative clauses that serve a nominal function, e.g., by carrying a case marker that cannot be propagated to a nominal head:
+Headless relative clauses are relative clauses that serve a nominal function, e.g., by carrying a case marker that cannot be propagated to a nominal head. These are annotated with `acl+CASE` for the respective case:
 
 	# Jagersma, Chap. 27 (28)					
 	# ‘When the ruler stayed in the Emi, this was brought to the Emi.’					
@@ -356,6 +356,31 @@ Headless relative clauses are relative clauses that serve a nominal function, e.
 With an explicit head such as *ud* "day", this would be
 
 	[*ud <-acl- ensi emia mutila emisze bare ] -LOC-> ...
+
+Analoguously for other cases:
+
+	# Jagersma, Chap. 5 (18)					
+	# ‘of (the fact) that Anumu had paid barley’					
+	# (NG 127 14; U; 21)					
+	1	a-na-ĝu10	a.na.ĝu10=e	Anamu=ERG	3	ERG
+	2	[š]e	še=Ø	barley=ABS	3	ABS
+	3	áĝ-a	áĝ-Ø-'a=ak	measure.out-NFIN-NOM=GEN	0	acl+GEN
+
+	# Jagersma, Chap. 5 (19)					
+	# ‘for buying bitumen’					
+	# (MVN 16:1257 obv 1; U; 21)					
+	1	esir2-ra	esir2='a	bitumen=LOC	2	LOC
+	2	sa10-sa10-dè	sa10:RDP-ed-Ø=e	barter:IPFV-IPFV-NFIN=DIR	0	acl+DIR
+
+	# Jagersma, Chap. 5 (20)					
+	# ‘when the ruler stayed in the Emi’					
+	# (DP1643:5-7; L;24)					
+	1	ensi2	ensi2.k=Ø	ruler=ABS	5	ABS
+	2	/	_	_	5	punct
+	3	é-mí-a	é.mí='a	Emi=LOC	5	LOC
+	4	/	_	_	5	punct
+	5	mu-ti-la-a	Ø-mu-n(i)-ti.l-Ø-'a='a	VP-VENT-in-live-3SG.S/DO-NOM=LOC	0	acl+LOC
+
 
 Note that headless relative clauses include cases with absolutive case (which is morphologically unmarked):
 
