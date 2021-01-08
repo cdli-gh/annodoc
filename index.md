@@ -338,7 +338,23 @@ Note that our definition of "headless relative clause" differs from that of Jage
 	1	é-ĝu10	é=ĝu=Ø	house=my=ABS	2	ABS
 	2	ma-řú-na	Ø-ma-řú-en-'a	VP-1SG.IO-erect-2SG.S/A:IPFV-NOM	0	acl
 
-Headless relative clauses are relative clauses that serve a nominal function, e.g., by carrying a case marker that cannot be propagated to a nominal head. These are annotated with `acl+CASE` for the respective case:
+Headless relative clauses are relative clauses that serve a nominal function, e.g., by carrying a case marker that cannot be propagated to a nominal head. These are annotated with `acl+CASE` for the respective case.
+
+This includes core arguments:
+
+	# Jagersma, Chap. 5 (23)						
+	# ‘the one given strength by Ningirsu’						
+	# (ergative) (Ean.11 1:7-8; L; 24)						
+	1	á	á=Ø	strength=ABS	2	ABS	
+	2	šúm-ma	šúm-Ø-'a	give-NFIN-NOM	0	acl+ERG	marked on 4
+	3	/	_	_	2	punct	
+	4	{d]nin-ĝír-su-ke4	nin.ĝír.su.k=ak=e	Ningirsu=GEN=ERG	2	GEN	
+
+With an explicit head such as *lu* "man", this would be
+
+	[*lu <-acl- a szumma ningirsuke ] -ERG-> ...
+
+This also includes oblique arguments:
 
 	# Jagersma, Chap. 27 (28)					
 	# ‘When the ruler stayed in the Emi, this was brought to the Emi.’					
