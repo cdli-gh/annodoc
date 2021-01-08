@@ -575,7 +575,7 @@ As these constructions are analyzed in accordance with their morphology rather t
 
 ### Apposition: appos
 
-Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit genitive, or implicit copula.
+Sumerian syntax annotation is morphology-driven. If an adnominal noun does not morphologically or syntactically mark its relation with its head, it is marked as appos. Appositions are widely used and cover interpretations such as implicit identity, implicit coordination, implicit genitive, implicit meronymy or implicit copula.
 
 implicit identity
 
@@ -597,6 +597,39 @@ implicit conjunction
 
 ~~~
 "king of Sumer (and) Akkad" (Q000953)
+
+Note that implicit conjunction also covers cases of implicit meronymy as in the following examples:
+
+	# Jagersma, Chap. 27 (76)						
+	# ‘In Bazizi’s house there is one chariot with two ... It is so that my man saw it.’						
+	# (FAOS 19 Ad 8 9-12; A; 23)						
+	1	é	é	house	9	LOC	
+	2	ba-zi-zi-ka	ba.zi.zi=ak='a	Bazizi=GEN=LOC	1	GEN	
+	3	/	_	_	9	punct	
+	4	1	1	1	4	nummod	
+	5	ĝišgigir2	gigir2	chariot	9	ABS	marked on 7
+	6	é-UMBINxLU	é.UMBINxLU	??	5	appos	implicit conjunction (meronymy)
+	7	2	2=Ø	2=ABS	6	nummod	
+	8	/	_	_	9	punct	
+	9	al-ĝál	'a-ĝál-Ø	VP-be.there-3N.S/DO	0	root	
+	10	/	_	_	9	punct	
+	11	lú-ĝu10	lú=ĝu=e	man=my=ERG	13	ERG	
+	12	igi	igi=Ø	eye=ABS	13	ABS	
+	13	im-mi-du8-àm	'i-m(u)-bi-n-du8-Ø='am	VP-VENT-3N.OO-3SG.A-spread-3N.S/DO=be:3N.S	9	parataxis	
+
+	# Jagersma, Chap. 5 (48)					
+	# ‘his seven-cornered house (lit. “his seven-corners house”)’					
+	# (St D 2:11; L; 22)					
+	1	é	é	house	0	ABS
+	2	ub	ub	corner	1	appos
+	3	imin-na-né	imin=ane=Ø	seven=his=ABS	2	nummod
+
+	# Jagersma, Chap. 5 (49)					
+	# ‘the Samana-demon (having) the mouth of a lion’					
+	# (Studies Borger p.73 2; ?; 21)					
+	1	sa-ma-na	sa.ma.na	Samana	0	root
+	2	ka	ka.g	mouth	1	appos
+	3	piriĝ-ĝá	piriĝ=ak	lion=GEN	2	GEN
 
 implicit genitive or equative
 ~~~ conllu
@@ -675,25 +708,6 @@ Note that `appos` is overloaded and may require disambiguation. If an element is
 
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
-
-Note that implicit conjunction also covers cases of implicit meronymy as (possibly) in the following example:
-
-	# Jagersma, Chap. 27 (76)						
-	# ‘In Bazizi’s house there is one chariot with two ... It is so that my man saw it.’						
-	# (FAOS 19 Ad 8 9-12; A; 23)						
-	1	é	é	house	9	LOC	
-	2	ba-zi-zi-ka	ba.zi.zi=ak='a	Bazizi=GEN=LOC	1	GEN	
-	3	/	_	_	9	punct	
-	4	1	1	1	4	nummod	
-	5	ĝišgigir2	gigir2	chariot	9	ABS	marked on 7
-	6	é-UMBINxLU	é.UMBINxLU	??	5	appos	implicit conjunction (meronymy)
-	7	2	2=Ø	2=ABS	6	nummod	
-	8	/	_	_	9	punct	
-	9	al-ĝál	'a-ĝál-Ø	VP-be.there-3N.S/DO	0	root	
-	10	/	_	_	9	punct	
-	11	lú-ĝu10	lú=ĝu=e	man=my=ERG	13	ERG	
-	12	igi	igi=Ø	eye=ABS	13	ABS	
-	13	im-mi-du8-àm	'i-m(u)-bi-n-du8-Ø='am	VP-VENT-3N.OO-3SG.A-spread-3N.S/DO=be:3N.S	9	parataxis	
 
 In rare cases, a phrase in a longer sequence of complex appositions may copy the case marker of its head although it does not mark the end of the phrase. 
 
