@@ -841,9 +841,9 @@ In CDLI annotation, use morphological case as labels. In UD export, map to `obl`
 
 TODO: Check treatment in pre-annotation.
 
-#### Adominal dependents: GEN, EQU
+#### Adnominal dependents: GEN, EQU
 
-In CDLI, annotated according to morphological case. In UD export as `nmod`. If no morphological case is annotated, use `nmod` for pre-modifying nominals, `appos` for post-modifying nominals.
+Adnominal cases are predominantly `GEN` or `EQU` and annotated according to their morphological case. In UD export as `nmod`. If no morphological case is annotated, use `nmod` for pre-modifying nominals, `appos` for post-modifying nominals.
 
 	N; GEN；N.3-SG-POSS (Its weight, size……..)
 	N-N.3-SG-POSS
@@ -855,6 +855,20 @@ The relation N (head noun) + N.GEN can be used to create genitive attribute, som
 	nu-banda3 gu4[-ak]
 	
 While the the relationship between *nubanda* and *gu* may be either (or both) gentival and compound (according to Krecher’s thought), we annotate it as genitive only.
+
+According to Jagersma (2010, p.90), "[a] noun phrase can also contain another noun phrase in the locative (§7.7.2), directive (§7.6.2), terminative (§7.8.2), or ablative (§7.10)".
+
+	# Jagersma, Chap. 5 (11)						
+	# ‘with five hides per (lit.“in”) two shekels of silver’						
+	# (Nik 1:230 5:2-3; L; 24)						
+	1	kù	kù.g	silver	0	LOC	marked on 3
+	2	giĝ4	giĝ4	shekel	1	nmod	unit, would be nmod if preposed
+	3	2-a	2='a	two=LOC	2	nummod	
+	4	/	_	_	1	punct	
+	5	kuš	kuš	hide	1	ABL	marked on 5
+	6	5-ta	5=ta	five=ABL	5	nummod	
+
+This example isn't fully clear because context is not given. In an alternative analysis, both could also be considered oblique arguments of a clause, with the relation between them established by the verb. If both interpretations are possible, annotate morphologically marked arguments other than genitives as clausal rather than adnominal arguments.
 
 #### "Functional obliques"
 
