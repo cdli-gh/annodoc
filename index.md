@@ -756,7 +756,19 @@ TODO: Check `conj` vs. `list` in taglist
 
 In CDLI annotation, nmod is exclusively used for prenominal nominal modifiers. Postnominal nominal modifiers are marked according to their case or as appos.
 
-Sumerian NPs usually place the head of the NP at their left periphery. For semantic reasons, we deviate from this analysis for epithets (incl. titles, etc.) and units:
+Sumerian NPs usually place the head of the NP at their left periphery. For semantic reasons, we deviate from this analysis for units and epithets (incl. titles, etc.):
+
+	# Jagersma, Chap. 5 (31)					
+	# ‘two and a halve shekels of silver, Aba’s debt’					
+	# (NATN 131 obv 13; N; 21)					
+	1	2	2	2	3	nummod
+	2	½	½	½	1	nummod
+	3	giĝ4	giĝ4	shekel	4	nmod
+	4	kù-babbar	kù.babbar	silver	0	ABS
+	5	ur5	ur5	debt	4	appos
+	6	a-ba	a.ba=ak=Ø	Aba=GEN=ABS	5	GEN
+
+For units, the quantified commodity is to be annotated as syntactic head. Numeral modifiers adjacent to the unit are annotated as dependents of the unit, not the commodity. If the commodity stands *between* numeral and unit, numerals modify the commodity.
 
 ~~~ conllu
 1	sukkal	_	minister	_	_	2	nmod	_	_
