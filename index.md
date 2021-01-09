@@ -617,6 +617,17 @@ Implicit conjunction can be made explicit with a conjunction:
 	3	ù	ù	and	1	cc
 	4	apin-[lá]	apin.lá=ak	rent=GEN	1	conj
 
+Implicit conjunction also covers cases of implicit disjunction:
+
+	# Jagersma, Chap. 5 (84)					
+	# ‘They did not pass two or three days with him.’					
+	# (Cyl A 23:2; L; 22)					
+	1	u4	u4.d	day	5	ABS
+	2	2	2	2	1	nummod
+	3	u4	u4.d	day	1	appos
+	4	3	3=Ø	3=ABS	3	nummod
+	5	nu-ma-da-ab-zal	nu='i-m(u)-ba-n-da-b-zal-Ø	NEG=VP-VENT-MM-3SG-with-3N.A-pass-3N.S/DO	0	root
+
 Note that implicit conjunction also covers cases of implicit meronymy as in the following examples:
 
 	# Jagersma, Chap. 27 (76)						
