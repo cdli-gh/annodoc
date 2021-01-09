@@ -2431,6 +2431,37 @@ Both these models violate the underlying morphology.
 
 Hayes mentions that copula seems to be able to replace any case marker (but can also appear in combination with them).
 
+### Negation with *nu*
+
+Negation is normally expressed with a proclitic, but occasionally, it appears as individual word. Jagersma (2010, p.717) hints at the possibility that these may be analysed as `cop`, but then the relation between the copular clause and the following relative clause that modifies its predicate (as well as the relation between both copular clauses) is unclear.
+
+	# Jagersma, Chap. 6 (11)					
+	# ‘NOT PN1, the farmer; NOT PN2, the farmer: the barley of their subsistence-fields not to be given’					
+	# (ASJ 9 p.334:9 1-3; L; 21)					
+	1	nu	nu	NEG	2	cop	?
+	2	PN1	PN1	PN1	0	root
+	3	engar	engar	farmer	2	appos
+	5	n[u]	nu	NEG	6	cop	?
+	6	PN2	PN2	PN2	2	parataxis	?
+	7	engar	engar	farmer	6	appos
+	9	še	še	barley	11	ABS
+	10	šuku-ba	šuku.r=be=ak=Ø	subsistence=its=GEN=ABS	9	GEN
+	11	nu-šúm-mu	nu=šúm-ed-Ø	NEG=give-IPFV-NFIN	2	acl
+
+For the annotation of the relative clause, cf. an example with a numeral:
+
+	# Jagersma, Chap. 6 (10)					
+	# ‘1 PN, the farmer: the barley of his subsistence-field not to be given’					
+	# (ASJ 9 p.334:9 7; L;21)					
+	1	1	1	1	2	nummod
+	2	PN	PN	PN	0	root
+	3	engar	engar	farmer	2	appos
+	4	še	še	barley	6	ABS
+	5	šuku-ra-na	šuku.r=ane=ak=Ø	subsistence=his=GEN=ABS	4	GEN
+	6	nu-šúm-mu	nu=šúm-ed-Ø	NEG=give-IPFV-NFIN	2	acl
+
+As the copula can be annotated as particle, a particle-based annotation for negation could be considered here. TODO: develop principled handling of such cases.
+
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
