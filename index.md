@@ -2338,9 +2338,10 @@ This is a frequent formula in ditilas, roughly meaning "it is an oath". Accordin
 
 ### Suppliers and receivers
 
-TO BE CONFIRMED: If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS.
+If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS. This corresponds to the verbal frame of "give":
 
-TODO: compare with explicit verbs of supply and reception:
+
+"give": ERG supplier, DAT recipient, ABS commodity, ABL source
 
 ~~~ conllu
 1	a-bi-a-ti	_	to.Abiati	_	_	2	DAT	_	_
@@ -2354,6 +2355,23 @@ TODO: compare with explicit verbs of supply and reception:
 ~~~
 
 "To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
+
+	# Jagersma, Chap. 6 (60)					
+	# ‘PN2, wife of PN3, the king of Lagash, gave this from the palace to PN1, the chief merchant.’					
+	# (VS 14:43 3:3-4:4; L; 24)					
+	1	PN1	PN1	PN1	16	DAT
+	3	gal-dam-gara3	gal.dam.gara3=r(a)	merchant.in.chief=DAT	1	appos
+	5	PN2	PN2	PN2	16	ERG
+	7	dam	dam	wife	5	appos
+	8	PN3	PN3	PN3	7	GEN
+	10	lugal	lugal	king	8	appos
+	12	lagas{ki}-ka-ke4	lagas=ak=ak=e	Lagash=GEN=GEN=ERG	10	GEN
+	14	é-gal-ta	é.gal=ta	palace=ABL	16	ABL
+	16	e-na-šúm	'i-nna-n-šúm-Ø	VP-3SG.IO-3SG.A-give-3N.S/DO	0	root
+
+TODO: compare with other explicit verbs of supply and reception:
+
+"receive": ERG receiver, ?ABS commodity
 
 	# Jagersma, Chap. 6 (3)					
 	# ‘Beli-arik and Urnigingar received this.’					
@@ -2381,7 +2399,7 @@ TODO: compare with explicit verbs of supply and reception:
 
 ### Multiple agents in a transaction
 
-When we have not only one obl, we use not use `conj` to link them together, but treat them as independent arguments. E.g., in
+When we have not only one obl in different roles, we use not use `conj` to link them together, but treat them as independent arguments. E.g., in
 
 ~~~ conllu
 1	...	_	_	_	_	_	_	_	_
