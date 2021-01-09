@@ -848,7 +848,7 @@ For units, the quantified commodity is to be annotated as syntactic head. Numera
 	1	en	en	lord	2	nmod
 	2	dnin-ĝír-su-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	0	ERG
 
-Note that the epithet also applies to proper names other than personal names, e.g., locations:
+Note that the epithet also applies to proper names other than personal names, e.g., locations (cities, countries, fields, etc.):
 
 	# Jagersma, Chap. 5 (41)					
 	# ‘the land Lagash (ergative)’					
@@ -861,6 +861,19 @@ Note that the epithet also applies to proper names other than personal names, e.
 	# (VS 14:30 2:4; L; 24)					
 	1	kur	kur	mountains	2	nmod
 	2	dilmunki-ta	dilmun=ta	Dilmun=ABL	0	ABL
+
+	# Jagersma, Chap. 5 (70)						
+	# ‘as ... barley of the field Ennegubade and the field Ugig’						
+	# (Nik 1:74 3:1-3; L; 24)						
+	1	še	še	barley	0	TERM	marked on 8
+	2	(...)	_	_	1	dep	
+	3	/	_	_	1	punct	
+	4	ašag	ašag	field	5	nmod	epithet
+	5	en-né-gù-ba-dé	en.né.gù.ba.dé	Ennegubade	1	GEN	
+	6	/	_	_	5	punct	
+	7	ašag	ašag	field	8	nmod	
+	8	ù-gig-bé-da-šè	ù.gig=be=da=ak=še	Ugig=and=COM=GEN=TERM	5	conj	
+
 
 The epithet rule is not limited to formal, lexicalized titles, but applies to all cases in which a proper name come to stand in an identity-marking apposition relation with a modifying noun:
 
@@ -913,7 +926,21 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 
 Conjunction can be expressed morphologically or syntactically.
 
-Morphologically marked conjunction is *-bi-da*, frequently written as *-bi*, and typically occurring between nouns. Originally, *-bi* marks possession and *-da* marks comitative (Hayes p.356). Annotated as `conj` here, not `COM`. 
+Morphologically marked conjunction is *-bi(-da)* (Jagersma: *-bé(-da)*), and typically occurring between nouns. Originally, *-bi* marks possession and *-da* marks comitative (Hayes p.356). The comitative marking is not systematically applied, so that *-bi* is sometimes glosses as conjunction. In either case, annotate as `conj`. If the comitative does occur, do not annotate `COM`. 
+
+	# Jagersma, Chap. 5 (70)						
+	# ‘as ... barley of the field Ennegubade and the field Ugig’						
+	# (Nik 1:74 3:1-3; L; 24)						
+	1	še	še	barley	0	TERM	marked on 8
+	2	(...)	_	_	1	dep	
+	3	/	_	_	1	punct	
+	4	ašag	ašag	field	5	nmod	epithet
+	5	en-né-gù-ba-dé	en.né.gù.ba.dé	Ennegubade	1	GEN	
+	6	/	_	_	5	punct	
+	7	ašag	ašag	field	8	nmod	
+	8	ù-gig-bé-da-šè	ù.gig=be=da=ak=še	Ugig=and=COM=GEN=TERM	5	conj	
+
+The variants *-bi-da* and *-bi* are exchangeable:
 
 ~~~ conllu
 1	{id2}idigna	idigna	Tigris	_	_	6	ERG	_	_
@@ -925,9 +952,7 @@ Morphologically marked conjunction is *-bi-da*, frequently written as *-bi*, and
 
 ~~~
 
-"The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual)
-
-Note that Jagersma seems to annotate the same example with a different gloss *bé*:
+"The Tigris and the Euphrates stood like great bulls" (EE 28, example from PPCS manual, with *-bi-da*)
 
 	# Jagersma, Chap. 5 (63)					
 	# ‘the Tigris and the Euphrates’					
@@ -936,14 +961,16 @@ Note that Jagersma seems to annotate the same example with a different gloss *b�
 	2	/	_	_	1	punct
 	3	buranun-bé	buranun=be	Euphrates=and	1	conj
 
+(same?) example by Jagersma, glossed with *-bé*.
+
 	# Jagersma, Chap. 5 (62)					
 	# ‘for Ningirsu and Shara’					
 	# (Ent. 28 1:5-6; L; 25)					
 	1	dnin-ĝír-su	nin.ĝír.su.k	Ningirsu	0	DAT
 	2	/	_	_	1	punct
 	3	dšara2-bé	šara2=be=r(a)	Shara=and=DAT	1	conj
-
-If applied to a clausal argument, it can express a circumstantial meaning. For these cases, we annotate `acl+COM`, not `conj`.
+	
+If applied to a clausal argument, *bi-da* can express a circumstantial meaning. For these cases, we annotate `acl+COM`, not `conj`.
 
 ~~~ conllu
 1	dug4-ga-ni-zid-da	_	_	_	_	9	LOC	_	_
