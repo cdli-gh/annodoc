@@ -848,7 +848,7 @@ For units, the quantified commodity is to be annotated as syntactic head. Numera
 	1	en	en	lord	2	nmod
 	2	dnin-ĝír-su-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	0	ERG
 
-Note that the epithet also applies to proper names other than personal names, e.g., locations (cities, countries, fields, etc.):
+Note that the epithet also applies to proper names other than personal names, e.g., locations (cities, countries, fields, rivers, etc.):
 
 	# Jagersma, Chap. 5 (41)					
 	# ‘the land Lagash (ergative)’					
@@ -874,6 +874,23 @@ Note that the epithet also applies to proper names other than personal names, e.
 	7	ašag	ašag	field	8	nmod	
 	8	ù-gig-bé-da-šè	ù.gig=be=da=ak=še	Ugig=and=COM=GEN=TERM	5	conj	
 
+	# Jagersma, Chap. 5 (73)						
+	# ‘the river Tigris and the river Euphrates’						
+	# (Cyl B 17:10; L; 22)						
+	1	íd	íd	river	2	nmod	epithet
+	2	idigna	idigna	Tigris	0	root	
+	3	íd	íd	river	4	nmod	
+	4	buranun-bé-da	buranun=be=da	Euphrates=and=COM	2	conj	
+	
+Note that in the latter example, we follow the existing transliteration as to whether *id* is a determinative (written `{id}idigna`) or an epithet (written `id idigna`). Note that the PPCS manual features example Jagersma 5:73 with determinative interpretation:
+
+	~~~ conllu
+	1	{id2}idigna	idigna	Tigris	_	_	6	ERG	_	_
+	2	{id2}buranuna-bi-da	buranuna	Euphrates.CONJ.ERG	_	_	1	conj	_	_
+
+	~~~
+
+	(EE 28, example from PPCS manual
 
 The epithet rule is not limited to formal, lexicalized titles, but applies to all cases in which a proper name come to stand in an identity-marking apposition relation with a modifying noun:
 
@@ -962,6 +979,14 @@ The variants *-bi-da* and *-bi* are exchangeable:
 	3	buranun-bé	buranun=be	Euphrates=and	1	conj
 
 (same?) example by Jagersma, glossed with *-bé*.
+
+	# Jagersma, Chap. 5 (73)						
+	# ‘the river Tigris and the river Euphrates’						
+	# (Cyl B 17:10; L; 22)						
+	1	íd	íd	river	2	nmod	epithet
+	2	idigna	idigna	Tigris	0	root	
+	3	íd	íd	river	4	nmod	
+	4	buranun-bé-da	buranun=be=da	Euphrates=and=COM	2	conj	
 
 	# Jagersma, Chap. 5 (62)					
 	# ‘for Ningirsu and Shara’					
