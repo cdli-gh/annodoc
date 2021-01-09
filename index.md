@@ -1616,6 +1616,17 @@ Note that year names should not be annotated as `ccomp` (although they could be 
 ~~~
 "If you (have to) enter the mountain, you should inform Utu (of it)" (example from PPCS manual)
 
+	# Jagersma, Chap. 6 (43)					
+	# ‘if after today Ur-Sha’usha and my children run away’					
+	# (ZA 55 p.68:ITT 5:9594 3'-4'; L; 21)					
+	1	tukum-bé	tukum.bé	if	7	mark
+	2	u4-da-ta	u4.da=ta	today=ABL	7	ABL
+	4	ur-dša-u18-ša	ur.ša.u18.ša	Ur.Sha’usha 	7	ABS
+	5	ù	ù	and 	4	cc
+	6	dumu-ĝu10-ne	dumu=ĝu=enē=Ø	child=my=PL=ABS 	4	conj
+	7	ba-zàh-dè-eš	h:=Ø-ba-zàh-ed-eš	MOD=VP-MM-run.away-IPFV-3PL.S:IPFV	0	advcl
+
+
 Circumstantial clauses created by the copula can be annotated as `advcl` (TBC).
 
 ~~~ conllu
@@ -1636,7 +1647,7 @@ Circumstantial clauses created by the copula can be annotated as `advcl` (TBC).
 ~~~
 "For Nanna, Amar-Sin -- from ancient times, its giparu not having built, no en-priestess having taken up residence -- built its giparu." (Amar-Suen 11, following Hayes, p.225)
 
-As for relative clauses with oblique case that translate to adverbial clauses in English, these are annotated according to their morphology, e.g., `acl+ABL` and `acl+DIR` in the following examples:
+As for relative clauses with oblique case that translate to adverbial clauses in English, these are not annotated as `advcl` but according to their morphology, e.g., `acl+ABL` and `acl+DIR` in the following examples:
 
 	# Jagersma, Chap. 6 (41)					
 	# ‘after Ursisi, the barber, had raised AN.LUH’s sons for three years’					
