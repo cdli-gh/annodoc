@@ -172,7 +172,22 @@ The label `root` designates the top node of a syntax tree. In CDLI annotation, t
 ### Incomplete annotation: dep
 
 Should be used for damaged or missing signs whose meaning cannot be ascertained.
-In the gold data, dep should be used if a particular source doesn't define the syntactic relations of a particular fragment. This includes, for example, the internal structure of year names according to Jaworski (2009).
+In the gold data, `dep` should be used if a particular source doesn't define the syntactic relations of a particular fragment. This includes, for example, the internal structure of year names according to Jaworski (2009).
+
+Also, if an example is incompletely given, `dep` can be used to attach the symbols that mark the omission:
+
+	# Jagersma, Chap. 7 (5)						
+	# ‘the Dublamah – this temple was unbuilt, apart from that it had been (a...since time immemorial)’						
+	# (FAOS9/2 Amarsuen123-8; Ur;21)						
+	1	dub-lá-mah	dub.lá.mah	Dublamah	0	root	
+	3	(...)	(...)	(...)	1	dep	
+	5	ì-me-a-na-an-na	'i-me-Ø-'a=nanna	VP-be-3N.S-NOM=apart.from	1	acl	# not amod, as there are dependents in 3
+	7	é-bé	é=be=Ø	house=this=ABS	8	ABS	
+	8	nu-řú-àm	nu=řú-Ø='am	NEG=erect-NFIN=be:3N.S	1	acl	
+
+In general, `dep` should not have further dependents. If a specific assumption leads you to assume that a dependency relation between an omitted/broken expression and a readable expression holds, annotate the relation, not `dep`.
+
+As for head of `dep`, attach it as high as possible without creating a non-projective tree.
 
 ### Adjectival modifiers (amod)
 
