@@ -2272,6 +2272,10 @@ This is a frequent formula in ditilas, roughly meaning "it is an oath". Accordin
 
 ### Suppliers and receivers
 
+TO BE CONFIRMED: If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS.
+
+TODO: compare with explicit verbs of supply and reception:
+
 ~~~ conllu
 1	a-bi-a-ti	_	to.Abiati	_	_	2	DAT	_	_
 2	u3-na-a-dug4	_	speak	_	_	0	root	_	_
@@ -2285,7 +2289,24 @@ This is a frequent formula in ditilas, roughly meaning "it is an oath". Accordin
 
 "To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
 
-If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS.
+	# Jagersma, Chap. 6 (3)					
+	# ‘Beli-arik and Urnigingar received this.’					
+	# (PIOL 19:278 8-10; D; 21)					
+	1	be-lí-a-rí-ik	be.lí.a.rí.ik	Beliarik	6	ERG
+	3	ù	ù	and	1	cc
+	4	ur-nigin3-ĝar-ke4	ur.nigin3.ĝar.k=e	Urnigingar=ERG	1	conj
+	5	šu	šu=e	hand=DIR	6	DIR
+	6	ba-an-ti-éš	Ø-ba-n-ti-eš	VP-3N.IO-3SG.A-approach-3PL	0	root
+
+	# Jagersma, Chap. 6 (4)					
+	# ‘Beli-arik and Urnigingar received this.’					
+	# (BIN 3:611 8-10; D; 21)					
+	1	be-lí-a-rí-ik	be.lí.a.rí.ik	Beliarik	7	ERG
+	3	ù	ù	and	1	cc
+	4	ur-nigin3-ĝar	ur.nigin3.ĝar.k=e	Urnigingar=ERG	1	conj
+	6	šu	šu=e	hand=DIR	7	DIR
+	7	ba-ab-ti	Ø-ba-b-ti-Ø	VP-3N.IO-3N.A-approach-3N.S/DO	0	root
+
 
 ### Multiple agents in a transaction
 
