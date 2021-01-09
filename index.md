@@ -2200,13 +2200,26 @@ If this phrase requires a clausal interpretation, we assume that it is a nominal
 
 ### internal structure of functional dependents
 
-analysis of *giri3 XY "gave"*
+There are two principal possibilities to analyze the internal structure of functional dependents with nominal "function words": as `nmod` in accordance with the epithet rule, or as head.
+
+Possible `nmod` analysis of *giri3 XY "gave"*
 
 	[giri3 -nmod-> XY] -obl-> "gave"
 
-semantically, that makes a lot of sense, but it is inconsistent with the idea of having morphology-driven syntactic annotation. the case is not always missing, and at least these, should really be
+However, the epithet analysis is inconsistent with cases in which explicit morphology is provided. For *giri3*, the agent (*XY*) can be marked as genitive:
 
 	[giri3 <-GEN- XY.GEN] -obl-> "gave"
+
+Analysis of functional dependents should follow examples where explicit morphology is provided, e.g., for *ki* 
+
+	# Jagersma, Chap. 6 (18)					
+	# ‘from the slave women’					
+	# (MVN 22:273 obv 2; L; 21)					
+	1	ki	ki	place	0	ABL
+	2	geme2-ne-ta	geme2=enē=ak=ta	slave.woman=PL=GEN=ABL	1	GEN
+
+TO BE CONFIRMED: This means that the epithet analysis is to be avoided in such cases.
+TODO: list all possible functional dependents, along with explicit examples, if possible.
 
 discussion:
 - the annotation of `GEN` as `obl` stated in the taglist
