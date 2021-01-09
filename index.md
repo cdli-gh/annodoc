@@ -201,7 +201,7 @@ In dependency syntax, these forms are given the label `amod` (if modifying a nou
 	1	mu	mu	year	0	root
 	2	ab-ús-sa	'a-b-'ús-Ø-'a	VP-3N.OO-be.next.to-3N.S/DO-NOM	1	amod
 
-Semantically, the following would be `acl` but as the verb has no overtly realized arguments, we consider that as `amod`.
+Semantically, the following would be `acl` but as the verb has no overtly realized arguments, we annotate that as `amod`.
 
 	# Jagersma, Chap. 27 (65)						
 	# ‘on to the field which he has seized’						
@@ -209,13 +209,13 @@ Semantically, the following would be `acl` but as the verb has no overtly realiz
 	1	a-šà	a.šà.g	field	0	LOC	marked on 2
 	2	in-dab5-ba-na	'i-n-dab5-Ø-'a=ane='a	VP-3SG.A-seize-3N.S/DO-NOM=his=LOC	1	amod	no overt arguments, hence amod, not acl
 
-If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. 
+If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, annotate them like nouns, i.e., use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. 
 
 	# Jagersma, Chap. 27 (34)						
 	# ‘one in which it is sieved for me’						
 	1	gema-an-sim	Ø-ma-n(i)-sim-Ø	VP-1SG.IO-in-sieve-3N.S/DO	0	ABS	
 
-Etymologically, this is a headless relative clause, but it is lexicalized as a noun; according to CDLI conventions, that is originally an `amod`, because it comes without arguments
+Etymologically, this is a headless relative clause, but it is lexicalized as a noun; according to CDLI conventions, that is originally an `amod`, because it comes without arguments. 
 
 	# Jagersma, Chap. 27 (36)						
 	# ‘one who has died’						
@@ -232,6 +232,16 @@ Etymologically, this is a headless relative clause, but it is lexicalized as a n
 	4	ì-nú-nú-a	'i-b(i)-nú-nú-Ø-'a	VP-3N:on-lie-lie-3N.S/DO-NOM	0	acl	
 
 Titles or functionaries can be referred to with (lexicalized) nominalizations, and then, an annotation like a nominal (nmod or appos) would be preferrable. Here, we follow the decision taken in morphology annotation.
+
+If a lexicalized nominalization is segmented into multiple tokens in the transliteration, annotate its parts individually:
+
+	# Jagersma, Chap. 6 (62)					
+	# ‘freedom (lit.“returning to mother”)’					
+	# (MVN 6:52 rev 8; L; 22) 					
+	1	ama-ar-	ama=r(a)	mother=DAT	2	DAT
+	2	gi4	gi4-Ø	turn-NFIN	0	acl
+	
+Note that this should not normally occur in CDLI data. If such instances are found, they should also be marked for subsequent checks of the transliteration/segmentation.
 
 ### Subordinate clauses: acl
 
