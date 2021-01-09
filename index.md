@@ -2325,6 +2325,11 @@ TODO: compare with explicit verbs of supply and reception:
 	6	šu	šu=e	hand=DIR	7	DIR
 	7	ba-ab-ti	Ø-ba-b-ti-Ø	VP-3N.IO-3N.A-approach-3N.S/DO	0	root
 
+	# Jagersma, Chap. 6 (33)					
+	# ‘The fatteners took them.’					
+	# (BCT 1:119 13; D; 21)					
+	1	gurušta-e	gurušta=e	fattener=ERG	2	ERG
+	2	íb-dab5	'i-b-dab5-Ø	VP-3N.A-take-3N.S/DO	0	root
 
 ### Multiple agents in a transaction
 
