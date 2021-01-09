@@ -1636,7 +1636,7 @@ Circumstantial clauses created by the copula can be annotated as `advcl` (TBC).
 ~~~
 "For Nanna, Amar-Sin -- from ancient times, its giparu not having built, no en-priestess having taken up residence -- built its giparu." (Amar-Suen 11, following Hayes, p.225)
 
-As for relative clauses with oblique case that translate to adverbial clauses in English, these are annotated according to their morphology, e.g., `acl+ABL` in the following example:
+As for relative clauses with oblique case that translate to adverbial clauses in English, these are annotated according to their morphology, e.g., `acl+ABL` and `acl+DIR` in the following examples:
 
 	# Jagersma, Chap. 6 (41)					
 	# ‘after Ursisi, the barber, had raised AN.LUH’s sons for three years’					
@@ -1649,6 +1649,13 @@ As for relative clauses with oblique case that translate to adverbial clauses in
 	7	šu-i	šu.i=e	barber=ERG	6	appos
 	9	á	á=Ø	strength=ABS	10	ABS
 	10	ì-è-éš-a-ta	'i-n-'è-eš-'a=ta	VP-3SG.A-go.out-3PL.S/DO-NOM=ABL	0	acl+ABL
+
+	# Jagersma, Chap. 6 (42)					
+	# ‘in order to arrest fugitives’					
+	# (RTC 355 10; L; 21)					
+	1	lú-zàh	lú.zàh=Ø	fugitive=ABS	2	ABS
+	2	dab5-dab5-dè	dab5-dab5-ed-Ø=e	take-take-IPFV-NFIN=DIR	0	acl+DIR
+
 
 Taglist:
 > taglist: advcl - Adverbial clauses, subordinate clause with or without subordinate mark, like tukumbi (if)
