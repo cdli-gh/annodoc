@@ -1293,6 +1293,27 @@ Agents in a transaction without morphological marks for their grammatical struct
 
 In UD export, annotated as `obl`. CDLI labels should be human-readable English short-hands, guided by common translations, e.g., `via` for *giri3*. TODO: Check annotation projection and current treatment in pre-annotation.
 
+List all examples here.
+
+QUESTION: Does that include *a-gù* "on (the account of)"?
+
+	# Jagersma, Chap. 7 (9)						
+	# ‘on the administrator of the god An’						
+	# (CM 26:142 4; D; 21)						
+	1	a-gù	a.gù	top	0	LOC	
+	2	šabra	šabra	administrator	1	appos	GEN?
+	3	an-na-ka	an=ak='a	An=GEN=LOC	2	GEN	
+
+	# Jagersma, Chap. 15 (28)			
+	# ‘He should not place it on his account, but he should place 14.4.0 gur on his account.’			
+	# (AuOr 17/18 p. 219:5 6-10; L; 21)			
+	1	a-gù-a-na	a.gù=ane='a	top=his=LOC
+	3	na-bí-ĝá-ĝá	nan-bi-b-ĝar:RDP-e	NEG.MOD-3N:on-3N.DO-place:IPFV-3SG.A:IPFV
+	5	14.04.2000	14.04.2000	14.04.2000
+	6	gur	gur=Ø	gur=ABS
+	8	a-gù-a-na	a.gù=ane='a	top=his=LOC
+	10	ha-ab-ĝá-ĝá	ha=Ø-b(i)-ĝar:RDP-e	MOD=VP-3N:on-place:IPFV-3SG.A:IPFV
+
 #### Case of headless phrases
 
 In headless phrases, concatenate the dependency label of the phrase with the dependency of the (implicit) head, separated by `+`
