@@ -1175,7 +1175,23 @@ TODO: check behaviour of pre-annotator and annotation projection
 
 TODO: check treatment of ERG and ABS in other ergative UD languages
 
-Note that absolutives in vocative use are annotates as `vocative` (not `ABS`) in both CDLI and UD
+Note that absolutives in vocative use are annotated as `vocative` (not `ABS`) in both CDLI and UD
+
+Note that a compound verb may seem to have core arguments multiple times, e.g., if an original `ABS` argument is lexicalized into a part of the verbal meaning. If such relations are transparent, they are also annoted as such:
+
+	# Jagersma, Chap. 6 (41)						
+	# ‘after Ursisi, the barber, had raised AN.LUH’s sons for three years’						
+	# (BIN 8:293 3:2-5; N; 23)						
+	1	mu	mu	year	10	ABL	cop on 2 ignored as emphatic article (is that right?)
+	2	3-àm	3='am	3=be:3N.S	1	nummod	
+	3	dumu	dumu	son	10	ABS	marked on 4
+	4	AN.LUH	AN.LUH=ak=Ø	AN.LUH=GEN=ABS	3	GEN	
+	6	ur-si4-si4	ur.si4.si4	Ursisi	10	ERG	
+	7	šu-i	šu.i=e	barber=ERG	6	appos	
+	9	á	á=Ø	strength=ABS	10	ABS	
+	10	ì-è-éš-a-ta	'i-n-'è-eš-'a=ta	VP-3SG.A-go.out-3PL.S/DO-NOM=ABL	0	acl+ABL	
+
+In UD, only the outer `ABS` argument (*dumu AN.LU*) should be annotated as `obj`, the inner (*á*) as `mwe`.
 
 #### Datives
 
