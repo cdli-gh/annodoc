@@ -405,8 +405,13 @@ Note that these are not limited to adverbial (spatio-temporal) interpretations:
 	1	{d}nin-ĝír-sú-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	3	ERG
 	2	iri-ka-ge-na-da	iri.ka.ge.na.k=da	Irikagena=COM	3	COM
 	3	e-da-du11-ga-a	'i-n-da-n-du11.g-Ø-'a='a	VP-3SG-with-3SG.A-say-3N.S/DO-NOM=LOC	0	acl+LOC
-
-
+	
+	# Jagersma, Chap. 6 (30)					
+	# ‘the surveyors (lit. “man of pulling the rope”)’					
+	# (Ukg. 4 4:2-6; L; 24)					
+	1	lú	lú	man	0	root
+	2	éš	éš=Ø	rope=ABS	3	ABS
+	3	gíd	gíd-Ø=ak	pull-NFIN=GEN	1	acl+GEN
 
 Note that headless relative clauses include cases with absolutive case (which is morphologically unmarked):
 
