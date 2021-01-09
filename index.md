@@ -627,6 +627,32 @@ Implicit conjunction also covers cases of implicit disjunction:
 	3	u4	u4.d	day	1	appos
 	4	3	3=Ø	3=ABS	3	nummod
 	5	nu-ma-da-ab-zal	nu='i-m(u)-ba-n-da-b-zal-Ø	NEG=VP-VENT-MM-3SG-with-3N.A-pass-3N.S/DO	0	root
+	
+Note that explicit disjunction is clausal, not adnominal: It uses a modal form of the verb *me* "be" (Jagersma 2010, p. 100). In those cases, annotate `parataxis`:
+
+	# Jagersma, Chap. 5 (85)					
+	# ‘whether he be a lamentation priest, or a brewer, or a steward, or an overseer: when he paid a silver tax for (lit. “placed on”) the fleece of a semi-weaned lamb’					
+	# (Ukg. 1 4:26-31; L; 24)					
+	1	[...]	_	_	4	dep
+	2	/	_	_	4	punct
+	3	gala	gala=Ø	lamentation.priest=ABS	4	ABS
+	4	hé-ĝá-a	ha='i-m(e)-Ø	MOD=VP-be-3SG.S	0	root
+	5	/	_	_	4	punct
+	6	lú-bappir3	lú.bappir3.k=Ø	brewer=ABS	7	ABS
+	7	[hé]	ha='i-m(e)-Ø	MOD=VP-be-3SG.S	4	parataxis
+	8	/	_	_	7	punct
+	9	agrig	agrig=Ø	steward=ABS	10	ABS
+	10	hé	ha='i-m(e)-Ø	MOD=VP-be-3SG.S	7	parataxis
+	11	/	_	_	10	punct
+	12	ugula	ugula=Ø	overseer=ABS	13	ABS
+	13	hé	ha='i-m(e)-Ø	MOD=VP-be-3SG.S	10	parataxis
+	14	/	_	_	4	punct
+	15	bar	bar	fleece	20	LOC
+	16	sila4	sila4	lamb	16	GEN
+	17	gaba-ka-ka	gaba=ak=ak='a	breast=GEN=GEN=LOC	16	GEN
+	18	/	_	_	4	punct
+	19	kù	kù.g=Ø	silver=ABS	20	ABS
+	20	a-ĝá-ĝá-a	'a-b(i)-ĝar:RDP-e-'a='a	VP-3N:on-place:IPFV-IPFV.3SG.A-NOM=LOC	4	acl+LOC
 
 Note that implicit conjunction also covers cases of implicit meronymy as in the following examples:
 
