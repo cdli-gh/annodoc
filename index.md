@@ -2537,6 +2537,18 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+Jagersma's 2010 glosses don't add up to a valid parse:
+
+	# Jagersma, Chap. 6 (50)						
+	# ‘its features great features, surpassing all features’						
+	# (Cyl A 9:12; L; 22)						
+	1	me-bé	me=be=Ø	being=its=ABS	2	ABS	
+	2	me	me	being	0	root	interpreted as copular clause with implicit copula
+	3	gal-gal	gal-gal	big-big	2	amod	
+	4	me-me-a	me-me='a	being-being=LOC	5	LOC	
+	5	diri-ga	diri.g-Ø-'a	exceed-NFIN-NOM	2	acl	
+
+
 A headless relative clause serving as predicate of a copula sentence whose root is on the same token:
 
 	# Jagersma, Chap. 27 (71)						
