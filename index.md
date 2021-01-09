@@ -1135,6 +1135,17 @@ While the the relationship between *nubanda* and *gu* may be either (or both) ge
 
 According to Jagersma (2010, p.90), "[a] noun phrase can also contain another noun phrase in the locative (§7.7.2), directive (§7.6.2), terminative (§7.8.2), or ablative (§7.10)".
 
+	# Jagersma, Chap. 5 (74)					
+	# ‘Dudu, the administrator, together with his wife and children will eat this.’					
+	# (DP 224 6:5-9; L; 24)					
+	1	du-du	du.du	Dudu	10	ERG
+	3	saĝĝa	saĝĝa	administrator	1	appos
+	5	dam	dam	wife	1	ABL
+	6	dumu-né-ta	dumu=ane=ta=e	child=his=ABL=ERG	5	appos
+	10	ì-gu7-ne	'i-b-gu7-enē	VP-3N.DO-eat-3PL.A:IPFV	0	root
+
+While this is an undebatable example, there can also be ambiguity as to whether ablatives, terminatives, etc. are adnominal or clausal arguments (the following analyses according to Jagersma):
+
 	# Jagersma, Chap. 5 (11)						
 	# ‘with five hides per (lit.“in”) two shekels of silver’						
 	# (Nik 1:230 5:2-3; L; 24)						
