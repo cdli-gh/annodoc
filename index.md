@@ -1087,6 +1087,8 @@ TODO: Check `conj` vs. `list` in taglist
 
 	There are some cases where some conclusive phrases are put to describe different goods mentioned above, for example, sheep, goats, donkeys, the delivery/ offering/ expenditure/ wage. It is more convenient to use `conj` or `list` in these cases.
 
+TODO: confirm and validate where to attach `cc`
+
 ### Punctuation: punct
 
 No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text (as done, for example, by Jagersma 2010), the recommended dependency is `punct`. Likewise, if a Sumerian transcript includes modern punctuation signs.
