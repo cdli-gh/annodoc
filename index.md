@@ -959,7 +959,17 @@ The epithet rule is not limited to formal, lexicalized titles, but applies to al
 	4	/	_	_	5	punct
 	5	{d}nin-ĝír-su-ra	nin.ĝír.su.k=ra	Ningirsu=DAT	0	DAT
 
-The epithet rule does not apply to year names, as these are propositional:
+The epithet rule does not apply to proper names in dependent clauses:
+
+	# Jagersma, Chap. 6 (1)						
+	# ‘one female slave, Šarrūa is her name, “its” price...’						
+	# (FAOS 17:10 1-2; N; 21)						
+	1	1	1	1	2	nummod	
+	2	saĝ-mí	saĝ.mí	slave.woman	6	root
+	3	sar-ru-a	sar.ru.a=Ø	Šarrūa=ABS	4	ABS	
+	4	mu-né-em	mu=ane=Ø=('a)m	name=her=ABS=be:3SG.S	2	acl	
+
+Likewise, the epithet rule does not apply to year names, as these are clausal:
 
 	# Jagersma, Chap. 5 (45)					
 	# ‘from the year “Urbilum was destroyed” to the year “Huhunure was destroyed”’					
