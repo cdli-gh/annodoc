@@ -588,6 +588,8 @@ implicit identity
 ~~~
 "An, king of the gods, his king" (Q000937)
 
+Implicit identity can be made explicit with a copula or equative (see below).
+
 implicit conjunction
 
 ~~~ conllu
@@ -597,6 +599,23 @@ implicit conjunction
 
 ~~~
 "king of Sumer (and) Akkad" (Q000953)
+
+Implicit conjunction can be made explicit with a conjunction:
+
+	# Jagersma, Chap. 5 (82a)					
+	# ‘prebendal and rented land (lit. “land of prebend and rent”)’					
+	# (STH 1:40 4:9; L; 24)					
+	1	gana2	gana2	land	0	root
+	2	šuku	šuku.ř	prebend	1	GEN
+	3	apin-lá	apin.lá=ak	rent=GEN	2	appos
+
+	# Jagersma, Chap. 5 (82b)					
+	# ‘prebendal and rented land’					
+	# (MVN 6:309 rev 1:14; L; 22)					
+	1	gana2	gana2	land	0	root
+	2	šuku	šuku.ř	prebend	1	GEN
+	3	ù	ù	and	1	cc
+	4	apin-[lá]	apin.lá=ak	rent=GEN	1	conj
 
 Note that implicit conjunction also covers cases of implicit meronymy as in the following examples:
 
