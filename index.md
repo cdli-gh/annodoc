@@ -258,6 +258,15 @@ If a lexicalized nominalization is segmented into multiple tokens in the transli
 	
 Note that this should not normally occur in CDLI data. If such instances are found, they should also be marked for subsequent checks of the transliteration/segmentation.
 
+TO BE DISCUSSED: abandon in favor of acl? (when working through Jagersma's glosses, confusing them seems to be a frequent source of errors)
+		
+	# Jagersma, Chap. 7 (74)					
+	# ‘because of the couriers (lit.“the ones of running”)’					
+	# (AUCT 2:122 3; D; 21)					
+	1	mu	mu	name	0	TERM
+	2	kas4-ke4-ne-šè	kas4-Ø=ak=enē=ak=še	run-NFIN=GEN=PL=GEN=TERM	1	amod+GEN
+
+
 ### Subordinate clauses: acl
 
 `acl` is primarily applied to finite and non-finite clauses that modify a nominal. In CDLI, however, its annotation is guided by the morphological analysis, i.e., for `NF.V.ABS/PT/F`, `N-NF.V.ABS`, etc.
