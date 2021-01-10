@@ -1557,6 +1557,14 @@ And to numerals that carry clausal modifiers:
 	4	/	_	_	5	punct
 	5	ře6-a-am6	ře6-Ø-'a=Ø='am	carry-NFIN-NOM=ABS=be:3N.S	1	acl
 
+However, numerals that constitute independent clause that do not modify or stand in apposition to anything should be annotated as clauses:
+	
+	# Jagersma, Chap. 7 (22)					
+	# ‘This is of the three of them.’					
+	# (DP 223 10:5'; L; 24)					
+	1	3-a-ne-ne-kam	3=anēnē=ak='am	three=their=GEN=be:3N.S	0	root	(parataxis, etc.)
+
+
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
