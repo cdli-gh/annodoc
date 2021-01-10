@@ -960,6 +960,14 @@ Note that the epithet also applies to proper names other than personal names, e.
 	7	ašag	ašag	field	8	nmod	
 	8	ù-gig-bé-da-šè	ù.gig=be=da=ak=še	Ugig=and=COM=GEN=TERM	5	conj	
 
+	# Jagersma, Chap. 7 (205b)						
+	# ‘This (barley) was taken to the field Planted Emblem.’						
+	# (DP 537 3:2-3; L; 24)						
+	1	ašag	ašag	field	2	nmod	epithet
+	2	uri3	uri3	emblem	5	TERM	
+	3	řú-a	řú-Ø-'a=š(e)	erect-NFIN-NOM=TERM	2	amod	
+	5	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
+
 	# Jagersma, Chap. 5 (73)						
 	# ‘the river Tigris and the river Euphrates’						
 	# (Cyl B 17:10; L; 22)						
@@ -1814,6 +1822,31 @@ If a noun phrase is to be connected with a statement and overt morphology for sy
 	4	lugal-šè	lugal=ak=še	king=GEN=TERM	3	GEN	
 	6	ur-gi7-re	ur.gi7.r=e	dog=ERG	7	ERG	
 	7	íb-dab5	'i-b-dab5-Ø	VP-3N.A-take-3N.S/DO	2	acl	no morphological marks of subordination. parataxis ? (=> one bear is propositional)
+
+	# Jagersma, Chap. 7 (247)						
+	# ‘15 men: With three cubits of work for one man, they took it in charge.’						
+	# (VS 25:86 1:1- 4; L; 24)						
+	1	15	15	15	2	nummod	
+	2	lú	lú	man	0	root	
+	4	lú	lú	man	11	TERM	
+	5	1-šè	1=še	1=TERM	4	nummod	
+	7	kíĝ	kíĝ	work	11	ABL	
+	8	kùš	kùš	cubit	7	appos	
+	9	3-ta	3=ta	3=ABL	8	nummod	
+	11	e-dab5	'i-b-dab5-Ø	VP-3N.A-take-3N.S/DO	2	parataxis	? acl
+
+alternative analysis here with 2 being ABS argument of 6, and 6 being acl of 1. However, this means to ignore the copula at 2
+	
+	# Jagersma, Chap. 9 (9)						
+	# ‘because (lit. “for the name of that”) three sheep of the palace were caught among his sheep’						
+	# (AAICAB I/2 pl. 104 Ashm. 1937-61 3-4; D; 21)						
+	1	mu	mu	name	0	TERM	
+	2	udu	udu	sheep	1	acl+GEN	marked on 6
+	3	é-gal	é.gal=ak	palace=GEN	2	GEN	
+	4	3-àm	eš=Ø='am	three=ABS=be:3N.S	2	nummod	
+	5	udu-na	udu=ane='a	sheep=his=LOC	6	LOC	
+	6	ba-an-dab5-ba-šè	Ø-ba-n(i)-dab5-Ø-'a=ak=še	VP-MM-in-take-3N.S/DO-NOM=GEN=TERM	2	parataxis	
+
 
 DISCUSSION: special treatment of seals
 
