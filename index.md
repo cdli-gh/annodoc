@@ -1425,6 +1425,19 @@ In the mapping to UD, represented as `nmod`.
 
 The anticipatory genitive (`GEN+disloc`, see `disloc`) involves a dislocation. As this can be iterated (anticipatory genitive of an anticipatory genitive), we annotate the head in an opportunistic fashion: Where this is adjacent to the semantic head, annotate the semantic head, where it is detached, annotate the head of the clause as head. In UD, the first use should be `nmod`, the second should be `disloc`.
 
+According to Jagersma (2010, p. 152), "[a] noun phrase in the genitive case can also be used as a constituent of a clause. It is then not syntactically dependent on a noun or another noun phrase. Such a noun phrase in the genitive case will be called a headless genitive. A headless genitive expresses the same meanings as English ‘the one(s) of ...’, ‘that of ...’, and the like":
+
+	# Jagersma, Chap. 7 (77)					
+	# ‘when in the new house the leather workers turned in that of the chariot’					
+	# (Nik 1:93 3:3-6; L; 24)					
+	1	ašgab-bé-ne	ašgab=enē=e	leather.worker=PL=ERG	9	ERG
+	3	é	é	house	9	LOC
+	4	gibil-a	gibil='a	new=LOC	3	amod
+	6	{ĝiš}gigir2-ra	gigir2=ak	chariot=GEN	9	GEN+ABS
+	8	šu-a	šu='a	hand=LOC	9	LOC
+	9	bí-gi4-a	Ø-bi-b-gi4-'a='a	VP-3N:on-3N.A-turn-NOM=LOC	0	acl+LOC
+
+
 #### Equative case: EQU
 
 Along with genitive, the equative (equitative) case, marked by *gin7*, is an adnominal case and not resumed by any dimensional prefix. It can be used to create nominal sentences. 
