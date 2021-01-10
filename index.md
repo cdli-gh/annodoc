@@ -2399,7 +2399,7 @@ Analysis of functional dependents should follow examples where explicit morpholo
 	1	ki	ki	place	0	ABL
 	2	geme2-ne-ta	geme2=enē=ak=ta	slave.woman=PL=GEN=ABL	1	GEN
 
-cf. *szag* "in"
+cf. *szag*+ABL "out of"
 
 	# Jagersma, Chap. 19 (70)					
 	# ‘when he had taken his hand out of the midst of 216000 men’					
@@ -2409,6 +2409,14 @@ cf. *szag* "in"
 	3	216000-ta	216000=ak=ta	216000=GEN=ABL	2	nummod
 	5	šu-né	šu=ane=Ø	hand=his=ABS	6	ABS
 	6	ba-ta-an-dab5-ba-a	Ø-ba-ta-n-dab5-Ø-'a='a	VP-MM-from-3SG.A-take-3N.S/DO-NOM=LOC	0	acl+LOC
+
+*szag*+LOC "in, among"
+
+	# Jagersma, Chap. 7 (18)					
+	# ‘in the middle of that year’					
+	# (Ukg.4 12:29; L; 24)					
+	1	šà	šà.g	heart	0	LOC
+	2	mu-ba-ka	mu=be=ak='a	year=its=GEN=LOC	1	GEN
 
 tbc: case of szag in the following
 
