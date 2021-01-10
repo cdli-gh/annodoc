@@ -140,9 +140,45 @@ We exploit this characteristic by grounding the annotation of syntax in the anno
 3	lugal-ka-ta	_	king.GEN.GEN.ABL	_	_	2	GEN	_	_
 ~~~
 
+	# Jagersma, Chap. 7 (56)						
+	# ‘planks for (“of”) boats of thirty gur and boats of fifteen gur’						
+	# (MVN 20:93 obv.5 rev. 2; U;21).						
+	1	{ĝiš}mi-rí-za	[mi.rí.za	[plank	0	root	
+	2	má	[má	[boat	1	GEN	marked on 8
+	3	30	[30	[30	4	nummod	
+	4	gur	gur=ak]	gur=GEN]	2	GEN	
+	5	ù	ù	and	2	cc	
+	6	má	má	boat	2	conj	
+	7	15	[15	[15	8	nummod	
+	8	gur-ka	gur=ak]=ak]	gur=GEN]=GEN]	6	GEN	
+
+A note on parsing: Although Sumerian morphology encodes many syntactic relations explicitly, syntactic parsing cannot be simply reduced to morphological parsing because the scope of a particular morpheme (markers of case, possession, number or syntactic subordination) needs to be recovered. 
+
+	# Jagersma, Chap. 7 (66)						
+	# ‘from the room of Shulshaganak which is built in the gate of Bau’						
+	# (VS 27:2 3:3-5; L; 24)						
+	1	é	é	room	0	ABL	marked on 7
+	2	dšul-šà-ga-na-ka	DN=ak	DN=GEN	1	GEN	
+	4	a-bul5-la	a.bul5.la	gate	7	LOC	
+	5	dba-ú-ka	ba.ú=ak='a	Bau=GEN=LOC	4	GEN	
+	7	řú-a-ta	řú-Ø-'a=ta	erect-NFIN-NOM=ABL	1	acl	
+
 The mapping of case labels to universal dependency labels is performed as a postprocessing step. Adnominal modifiers with case marking are mapped to `nmod`, oblique cases are  to `obl`, dative to `iobj`, ergative to `nsubj`. The mapping of absolutive is more challenging, as it needs to be disambiguated between `nsubj` (for intransitives) and `obj` (for transitives), see discussion below.
 
 Following the morphological principle in syntactic annotation, these labels are being used only if indicated in the morphology annotation. Morphologically unmarked adnominal modification is annotated as `appos`. The same principle applies to the annotation of clausal co(sub)ordination: Morphologically marked subordination is annotated as `acl`, morphologically or syntactically marked coordination as `conj`, unmarked co(sub)ordination as `parataxis`.
+
+Note: Morphological marking of case stacking seems to be limited if the same morpheme is to be repeated more than two times.
+If a case can be reliably reconstructed, annotate it in dependency syntax as case, not as `appos`. The objective is that
+in these cases, it is unclear which of the (syntactically required) case markers are omitted.
+In case of ambiguity between a case and `appos` in these cases, annotate `appos`
+
+	# Jagersma, Chap. 7 (49)						
+	# ‘This is the ceremonial gift of the wife of the administrator of the Ebabbar temple.’						
+	# (DP 2171:2-3; L;24)						
+	1	maš da ri-a	maš da ri.a	ceremonial.gift	0	root	ABS => copular predicate
+	3	dam	dam	wife	1	GEN	
+	4	saĝĝa	saĝĝa	administrator	3	GEN	
+	5	é-bar6-bar6-ka-kam	é.bar6.bar6=ak=ak=Ø='am	Ebabbar=GEN=GEN=ABS=be:3N.S	4	GEN
 
 ## Parts of Speech
 
@@ -525,7 +561,7 @@ Example without morphological marking:
 ~~~
 (P102313)
 
-Note that the implicitcopula allows to treat *every word* to be head of a relative clause:
+Note that the implicit copula allows to treat *every word* to be head of a relative clause:
 
 	# Jagersma, Chap. 8 (94)						
 	# ‘the knowledge acquired by me, which is now this and that,’						
@@ -535,6 +571,8 @@ Note that the implicitcopula allows to treat *every word* to be head of a relati
 	3	ì-ne-šè	ì.ne.šè	now	4	LOC	?
 	4	ne-e	nēn	this	1	acl	ABS => copular predicate => (implicit) relative clause
 	5	ur5-ra-àm	ur5=Ø='am	that=ABS=be:3N.SG	4	appos	
+
+Note: If a clause is ambiguous between an analysis as a (morphologically unmarked) relative clause or a declarative clause, annotate it as declarative clause.
 
 TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
