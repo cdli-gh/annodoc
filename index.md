@@ -1404,6 +1404,14 @@ In headless phrases, concatenate the dependency label of the phrase with the dep
 
 Here, *jectug2* is the (head of the explicit) genitive phrase, its (implicit) head serves as ergative argument of the clause. In UD mapping, preserve the grammatical function of the implicit head only, here `nsubj`.
 
+	# Jagersma, Chap. 7 (76)					
+	# ‘when Geme-tarsirsira was chosen by extispicy (lit.“was found by a young he-goat”) in the one of (the god) Mesandu’					
+	# (Nik1:1744:1-3; L;24)					
+	1	[geme2]-tar-[sír]-sír-ra	PN=Ø	PN=ABS	6	ABS
+	3	dmes-an-du-ka	mes.an.du=ak='a	Mesandu=GEN=LOC	6	GEN+LOC
+	5	maš-e	maš=e	kid=ERG	6	ERG
+	6	pà-da-a	pà.d-Ø-'a='a	find-NFIN-NOM=LOC	0	acl+LOC
+
 	# Jagersma, Chap. 8 (33)					
 	# ‘because of your captive wife’					
 	# (Inanna B 141; OB copy)					
