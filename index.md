@@ -1865,6 +1865,16 @@ Also used for pisagdubak, notes (usually NU), the sealing, when non-sentential u
 
 This is a weight inscription without any explicit verb. The sentential interpretation (implicit in this text) is "(This is a weight of) 5 minas; (it is authorized by) Shu-Sin ...".
 
+	# Jagersma, Chap. 7 (86)					
+	# ‘of Ashniu’s sealed documents which are at Kitushlu’s place, their duplicates’					
+	# (TPTS 1:123 14-16; ?; 21)					
+	1	kišib	kišib	seal	0	root
+	2	aš-ni-u18	aš.ni.u18=ak	Ashniu=GEN	1	GEN
+	4	ki	ki	place	7	LOC
+	5	ki-tuš-lú-ka	ki.tuš.lú=ak='a	Kitushlu=GEN=LOC	4	GEN
+	7	mu-ĝál-la	Ø-mu-n(i)-ĝál-Ø-'a=ak	VP-VENT-in-be.there-3N.S/DO-NOM=GEN	1	acl
+	8	gaba-ri-bé	gaba.ri=be	copy=its	1	parataxis
+
 ~~~ conllu
 1	di-til-la	_	Ditila	_	_	0	root	_	_
 2	{m}szag4-szu-nigin2	_	Shagshunigin	_	_	7	ABS	_	_
