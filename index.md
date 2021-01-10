@@ -1489,6 +1489,13 @@ The vocative identifies the addressee of the following statements with a noun ph
 
 "Gilgamesh! how long will you sleep?" (GH 81, example from PPCS manual)
 
+	# Jagersma, Chap. 7 (117)					
+	# ‘Ningirsu, I am going to build your house for you.’					
+	# (Cyl A 8:18; L; 22)					
+	1	dnin-ĝír-su	nin.ĝír.su.k=Ø	Ningirsu=ABS	3	voc
+	2	é-zu	é=zu=Ø	house=your=ABS	3	ABS
+	3	ma-ra-řú-e	Ø-mu-ra-řú'-en	VP-VENT-2SG.IO-erect-1SG.A/S:IPFV	0	root
+
 Also used for absolutive arguments before the non-verbal clause in seals:
 
 "In seal inscriptions, the initial nominal phrase contains the name of the king as a vocative. The vocative normally has no marking in Sumerian ... [, but t]here are a few cases where the vocative is marked by .e; this is presumably an extension in use of the lcoative-terminative case." (Hayes, p. 275)
@@ -1505,6 +1512,12 @@ Also used for absolutive arguments before the non-verbal clause in seals:
 
 ~~~
 "Ibbi-Suen, ..., Dada, ensi of Nippur, ..., is your servant." (Hayes p. 274, Ibbi-Sin 7)
+
+Discussion: depending on context, vocatives can also be annotated as parataxis, if a clausal interpretation of the preposed nominal is likely. This includes all cases of (physical) deixis and cases where ellipsis can be demonstrated on grounds of parallel examples. 
+
+TODO: make consistent throughout this document.
+
+TODO: what's default here?
 
 ### Dislocation: +disloc
 
