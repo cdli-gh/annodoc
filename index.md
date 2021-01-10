@@ -1509,6 +1509,17 @@ Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, reg
 
 (numeral [oblique] argument)
 
+Likewise for pronoinal numerals. Note that these can be subsequently disambiguated on grounds of morphology: 
+
+	# Jagersma, Chap. 9 (68)						
+	# ‘This was taken away among the second ones that went.’						
+	# (DP 313 2:2-3; L; 24)						
+	1	2-kam-ma	2-kamma	2-ORD	4	nummod	morphologically marked LOC ignored
+	2	ĝen-na-a	ĝen-Ø-'a='a	go-NFIN-NOM=LOC	1	acl	
+	4	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
+
+
+
 (TBC: How is the following example to be analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
 
 	# Jagersma, Chap. 4 (34)						
@@ -1549,6 +1560,8 @@ And to numerals that carry clausal modifiers:
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
+
+Note: The `nummod` rule is motivated by the need to facilitate automated annotation and to improve inter-annotator agreement.
 
 ### Compound: compound
 
