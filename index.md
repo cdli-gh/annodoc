@@ -2305,6 +2305,47 @@ TODO: consolidate guidelines and data:
 	- apply `acl` systematically, check in the data
 - check treatment in pre-annotation and annotation projection
 
+### Head of verb-less transactions
+
+In transactions that lack an explicit verb, annotate the commodity as functional head, without marking its case. This may not not reflect the linguistic reality, but the commodity is the only obligatory part of a transaction, so this will produce more coherent annotations.
+
+"Distributive expressions (...) in their full form contain a verbal form" (Jagersma 2010, p.158)
+
+	# Jagersma, Chap. 7 (105)					
+	# ‘One labourer makes it with (a work load of) two nindan in one day.’					
+	# (TMHC NF 1/2:294 6-7; N; 21)					
+	1	ĝuruš	ĝuruš	labourer	8	ERG
+	2	1-e	1=e	1=ERG	1	nummod
+	3	u4	u4.d	day	8	LOC
+	4	1-a	1='a	1=LOC	3	nummod
+	5	2	2	2	6	nummod
+	6	nindan-ta	nindan=ta	nindan=ABL	8	ABL
+	8	ì-a-ke4	'i-'ak-e	VP-make-3SG.A:IPFV	0	root
+	
+"Usually, however, such expressions lack the verbal form:" (Jagersma 2010, p.158)	
+						
+	# Jagersma, Chap. 7 (106)						
+	# ‘with half a nindan by one labourer’						
+	# (CT 7 pl.43:BM 17759 rev 12; L; 21)						
+	1	ĝuruš	ĝuruš	labourer	4	ERG	
+	2	1-e	1=e	1=ERG	1	nummod	
+	3	½	½	½	4	nummod	
+	4	nindan-ta	nindan=ta	nindan=ABL	0	root	treat commodity as functional head
+							
+In those eamples, assume that the commodity is the functional head. This may not correspond to the linguistic reality of these concepts.
+
+	# Jagersma, Chap. 7 (107)						
+	# ‘with 210 litres of NÍG.KI-fish per month by a spear labourer’						
+	# (MVN 10:149 =TLB 3:145 =TLB 3:146 obv 1:4; L; 21)						
+	1	ĝuruš	ĝuruš	labourer	6	ERG	
+	2	ĝiš-gíd-da-ke4	ĝiš.gíd.da=ak=e	spear=GEN=ERG	1	GEN	
+	3	iti	iti.d	month	6	LOC	
+	4	1-a	1='a	1=LOC	3	nummod	
+	5	ku6	ku6	fish	6	nmod	assuming this is a proper name
+	6	NÍG.KI	NÍG.KI	NÍG.KI	0	ABL	ellipsis => commodity as head
+	7	0.3.3-ta	0.3.3=ta	0.3.3=ABL	6	nummod	
+
+
 ### Complex numerals
 
 Complex numerals can include *la2* 'minus', morphologically analyzed as `NF.V.ABS/PT/F` (=`acl`) here. Note that the numeral following *la2* is formally an absolutive argument: this is `NU1 la2 NU2 (NU2 is hung out from NU1)`, so la2=NF.V.ABS=acl; NU2= nsubj:passive.
