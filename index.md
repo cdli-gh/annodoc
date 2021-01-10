@@ -2501,7 +2501,7 @@ cf. place on:
 	5	ga-ra-a-ĝá-ar	ga-ra-e-ĝar	MOD:1SG.A/S-2SG.IO-on-place	0	root
 
 give:
-	?ABS commodity
+	ABS theme (thing given)
 	ERG supplier
 	DAT receiver
 	
@@ -2523,15 +2523,185 @@ give:
 	17	dam-[ga]ra3	dam.gara3=r(a)	merchant=DAT	16	appos	
 	18	in-na-šúm	'i-nna-b-šúm-Ø	VP-3SG.IO-3N.A-give-3N.S/DO	0	root	
 
+	# Jagersma, Chap. 13 (25)					
+	# ‘King Enki gave an oracle for it.’					
+	# (Cyl B 4:3; L; 22)					
+	1	lugal	lugal	king	2	nmod
+	2	den-ki-ke4	en.ki.k=e	Enki=ERG	4	ERG
+	3	eš-bar-kíĝ	eš.bar.kíĝ=Ø	oracle=ABS	4	ABS
+	4	ba-an-šúm	Ø-ba-n-šúm-Ø	VP-3N.IO-3SG.A-give-3N.S/DO	0	root
+
+
 take:
+	ABS theme (thing taken)
 	ERG receiver
-	?ABS commodity
+	ABL source
+
+	# Jagersma, Chap. 6 (23)					
+	# ‘barley rations of the persons holding a subsistence field’					
+	# Jagersma, Chap. 6 (e.g., DP 154 1:2; L; 24)					
+	1	še-ba	še.ba	ration.barley	0	root
+	2	lú	lú	man	1	GEN
+	3	šuku	šuku.ř=Ø	subsistence=ABS	4	ABS
+	4	dab5-ba-ne	dab5-Ø-'a=enē=ak	take-NFIN-NOM=PL=GEN	2	acl
 
 	# Jagersma, Chap. 6 (33)					
 	# ‘The fatteners took them.’					
 	# (BCT 1:119 13; D; 21)					
 	1	gurušta-e	gurušta=e	fattener=ERG	2	ERG
 	2	íb-dab5	'i-b-dab5-Ø	VP-3N.A-take-3N.S/DO	0	root
+
+	# Jagersma, Chap. 7 (103)					
+	# ‘Donkeys were seized by the shepherd.’					
+	# (Ukg. 4 3:7-8; L; 24)					
+	1	anše	anše=Ø	donkey=ABS	4	ABS
+	2	ú-du-le	ú.du.l=e	shepherd=ERG	4	ERG
+	4	e-dab5	'i-n-dab5-Ø	VP-3SG.A-take-3N.S/DO	0	root
+
+	# Jagersma, Chap. 7 (174)					
+	# ‘In those days, the chief bargee took charge of the boats.’					
+	# (Ukg. 4 3:4-6; L; 24)					
+	1	u4-bé-a	u4.d=be='a	day=its=LOC	7	LOC
+	3	lú	lú	man	7	ERG
+	4	má-lah5-ke4	má.lah5.d=ak=e	boatman=GEN=ERG	3	GEN
+	6	má	má=Ø	boat=ABS	7	ABS
+	7	e-dab5	'i-n-dab5-Ø	VP-3SG.A-take-3N.S/DO	0	root
+
+	# Jagersma, Chap. 13 (29a)					
+	# ‘when he had taken his hand from among 216000 men’					
+	# (St B 3:10-11; L; 22)					
+	1	šà	šà.g	heart	6	ABL
+	2	lú	lú	man	1	GEN
+	3	216000-ta	216000=ta	216000=ABL	2	nummod
+	5	šu-né	šu=ane=Ø	hand=his=ABS	6	ABS
+	6	ba-ta-an-dab5-ba-a	Ø-ba-ta-n-dab5-Ø-'a='a	VP-MM-from-3SG.A-take-3N.S/DO-NOM=LOC	0	root
+
+put on
+	ABS theme (thing given)
+	LOC target (receiver)
+	?ERG agent (supplier)
+	
+	# Jagersma, Chap. 7 (175)					
+	# ‘This silver was put on their hands.’					
+	# (TMTIM 61 7-8; ?; 23)					
+	1	kù-bé	kù.g=be=Ø	silver=this=ABS	4	ABS
+	2	šu-ne-ne-a	šu=anēnē='a	hand=their=LOC	4	LOC
+	4	ab-si	'a-b(i)-si.g-Ø	VP-3N:on-put-3N.S/DO	0	root
+
+buy (barter towards)	
+	ABS theme (thing bought)
+	TERM(1) price
+	TERM(1) supplier (seller)
+	ERG receiver (buyer)
+
+	# Jagersma, Chap. 7 (248)					
+	# ‘One male slave Abbagena bought from (lit. “bartered towards”) Lu-Nanna (in ex- change) for five shekels of silver.’					
+	# (FAOS 17:94*** 1-5; U; 21)					
+	1	1	1	1	2	nummod
+	2	saĝ-nita2	saĝ.nita2=Ø	male.slave=ABS	12	ABS
+	4	kù	kù.g	silver	12	TERM
+	5	5	5	5	6	nummod
+	6	giĝ4-šè	giĝ4=še	shekel=TERM	4	appos
+	8	lú-dnanna-šè	lú.nanna=še	Lunanna=TERM	12	TERM
+	10	ab-ba-ge-na-a	ab.ba.ge.na=e	Abbagena=ERG	12	ERG
+	12	in-ši-sa10	'i-n-ši-n-sa10-Ø	VP-3SG-to-3SG.A-barter-3SG.S/DO	12	root
+
+send (turn)
+	ERG sender
+	ABS theme (people sent)
+	DAT goal (receiver)
+
+	# Jagersma, Chap. 13 (71b)					
+	# ‘Let him send PN1, PN2, and twenty gardeners here with it!’					
+	# (TCS 1:56 5-8; U; 21)					
+	1	PN1	PN1	PN1	10	ABS
+	3	PN2	PN2	PN2	1	conj
+	5	ù	ù	and	1	cc
+	6	20	20	20	7	nummod
+	7	ĝuruš	ĝuruš	man	1	conj
+	8	nu-ĝiškiri6	nu.kiri6=Ø	gardener=ABS	7	appos
+	10	hé-em-da-ab-gi4-gi4	ha=Ø-mu-nnē-gi4:RDP-e	MOD=VP-VENT-3PL.DO-turn:IPFV-3SG.A:IPFV	0	root
+	
+	# Jagersma, Chap. 15 (8)					
+	# ‘He should send me a driver!’					
+	# (MVN 11:168 18; U; 21)					
+	1	lú-ús	lú.ús=Ø	follower=ABS	3	ABS
+	2	ĝá-ar	ĝe26=r(a)	I=DAT	3	DAT
+	3	ha-mu-ši-in-gi4-gi4	ha=Ø-mu-'-ši-n-gi4:RDP-e	MOD=VP-VENT-1SG-to-3SG.DO-turn:IPFV-3SG.A:IPFV	0	root
+	
+bring
+	ABS theme (thing brought)
+	ERG agent (supplier)
+	TERM(1) amount
+	ABL/LOC source
+	TERM(2) goal
+	
+	# Jagersma, Chap. 9 (90)					
+	# ‘(barley) that was taken out of Girsu as one-sixtieth’					
+	# (BM 15308 1:4; L; 21)					
+	1	igi-60-ĝál-šè	igi.ĝešd.ĝál=še	one.sixtieth=TERM	3	TERM
+	2	ĝír-suki-ta	ĝír.su=ta	Girsu=ABL	3	ABL
+	3	ře6-a	ře6-Ø-'a	bring-NFIN-NOM	0	acl
+
+	# Jagersma, Chap. 13 (23)					
+	# ‘4 labourers for 10 days: they brought straw from KI.AN to Umma.’					
+	# (TENS 205 1-3; U; 21)					
+	1	4	4	4	2	nummod
+	2	ĝuruš	ĝuruš	labourer	0	root
+	3	u4	u4.d	day	10	TERM
+	4	10-šè	10=še	10=TERM	3	nummod
+	6	KI.ANki-ta	KI.AN=ta	KI.AN=ABL	10	ABL
+	7	ummaki-<šè>	umma=še	Umma=TERM	10	TERM
+	9	in-u	in.u=Ø	straw=ABS	10	ABS
+	10	ì-im-ře6	'i-m(u)-ře6-Ø	VP-VENT-bring-3N.S/DO	2	parataxis
+	
+	# Jagersma, Chap. 13 (31a)					
+	# ‘because he had not brought this fish to the palace’					
+	# (NG 189 7; U; 21)					
+	1	mu	mu	name	0	TERM
+	2	ku6-bé	ku6=be=Ø	fish=this=ABS	4	ABS
+	3	é-gal-šè	é.gal=še	palace=TERM	4	TERM
+	4	nu-mu-un-ře6-a-šè	nu=Ø-mu-n-ře6-Ø-'a=ak=še	NEG=VP-VENT-3SG.A-bring-3N.S/DO-NOM=GEN=TERM	1	acl+GEN
+
+	# Jagersma, Chap. 13 (31b)					
+	# ‘This is wood that Ursag brought from the forest of Abbar.’					
+	# (DP 442 1:3-2:1; L; 24)					
+	1	ĝiš	ĝiš	wood	0	root
+	2	tir	tir	forest	7	ABL
+	3	abbarki-ta	abbar=ak=ta	Abbar=GEN=ABL	2	GEN
+	5	ur-saĝ-ĝe26	ur.saĝ=e	Ursag=ERG	7	ERG
+	7	mu-ře6-a-am6	Ø-mu-n-ře6-Ø-'a=Ø='am	VP-VENT-3SG.A-bring-3N.S/DO-NOM=ABS=be:3N.S	1	acl
+
+	# Jagersma, Chap. 15 (90)					
+	# ‘Who has taken away the Anzu-bird from its nest? (=The bird is now gone)’					
+	# (Lugalbanda II 89 manuscript AA; OB)					
+	1	anzumušen	anzu.d=Ø	Anzu=ABS	4	ABS
+	2	gùd-ba	gùd=be='a	nest=its=LOC	4	LOC
+	3	a-ba	a.ba=e	who=ERG	4	ERG
+	4	<ba>-ra-an-tùm	Ø-ba-ta-n-tùm-Ø	VP-MM-from-3SG.A-bring:IPFV-3N.S/DO	0	root
+
+take away
+	ABS theme (thing taken)
+	COM source
+	ERG agent (taker)
+
+	# Jagersma, Chap. 19 (19)					
+	# ‘Nobody takes away its fish.’					
+	# (Ukg. 6 3:9'; L; 24)					
+	1	ku6-bé	ku6=be=Ø	fish=its=ABS	3	ABS
+	2	lú	lú=e	man=ERG	3	ERG
+	3	nu-ba-dab6-kar-re	nu=Ø-ba-da-b-kar-e	NEG=VP-MM-with-3N.DO-take.away-3SG.A:IPFV	0	root
+
+	# Jagersma, Chap. 19 (45)					
+	# ‘Three ban of barley seed was taken away from the slave of PN, the farmer.’					
+	# (OrSP 47/49:502 9-10; U; 21)					
+	1	0.0.3	0.0.3	3.ban	2	nummod
+	2	še-numun	še.numun=Ø	seed.barley=ABS	7	ABS
+	3	urdu2	urdu2.d	slave	7	COM
+	4	PN	PN	PN	3	GEN
+	6	engar-da	engar=ak=da	farmer=GEN=COM	4	appos
+	7	ba-an-da-kar	Ø-ba-n-da-kar-Ø	VP-MM-3SG-with-take.away-3N.S/DO	7	root
+
 
 ### Multiple agents in a transaction
 
