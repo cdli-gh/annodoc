@@ -1338,6 +1338,12 @@ In headless phrases, concatenate the dependency label of the phrase with the dep
 
 Here, *jectug2* is the (head of the explicit) genitive phrase, its (implicit) head serves as ergative argument of the clause. In UD mapping, preserve the grammatical function of the implicit head only, here `nsubj`.
 
+	# Jagersma, Chap. 8 (33)					
+	# ‘because of your captive wife’					
+	# (Inanna B 141; OB copy)					
+	1	dam	dam	wife	0	GEN+ADV
+	2	dab5-ba-za-ke4-eš	dab5-Ø-'a=zu=ak=eš	take-NFIN-NOM=your=GEN=ADV	1	amod
+
 #### Genitive case: GEN
 
 Along with equative, the genitive is an adnominal case (not resumed by any dimensional prefix) indicating possession, origin or affiliation.
