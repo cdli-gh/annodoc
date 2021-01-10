@@ -2367,13 +2367,36 @@ However, the epithet analysis is inconsistent with cases in which explicit morph
 
 	[giri3 <-GEN- XY.GEN] -obl-> "gave"
 
-Analysis of functional dependents should follow examples where explicit morphology is provided, e.g., for *ki* 
+Analysis of functional dependents should follow examples where explicit morphology is provided, e.g., for *ki* "from"
 
 	# Jagersma, Chap. 6 (18)					
 	# ‘from the slave women’					
 	# (MVN 22:273 obv 2; L; 21)					
 	1	ki	ki	place	0	ABL
 	2	geme2-ne-ta	geme2=enē=ak=ta	slave.woman=PL=GEN=ABL	1	GEN
+
+cf. *szag* "in"
+
+	# Jagersma, Chap. 19 (70)					
+	# ‘when he had taken his hand out of the midst of 216000 men’					
+	# (St B 3:10-11; L; 22)					
+	1	šà	šà.g	heart	6	ABL
+	2	lú	lú	man	1	GEN
+	3	216000-ta	216000=ak=ta	216000=GEN=ABL	2	nummod
+	5	šu-né	šu=ane=Ø	hand=his=ABS	6	ABS
+	6	ba-ta-an-dab5-ba-a	Ø-ba-ta-n-dab5-Ø-'a='a	VP-MM-from-3SG.A-take-3N.S/DO-NOM=LOC	0	acl+LOC
+
+tbc: case of szag in the following
+
+	# Jagersma, Chap. 24 (117)						
+	# ‘They are men taken captive and in the guardhouse.’						
+	# (DAS 206 17; L; 21)						
+	1	lú	lú	man	3	ABS	different from Jagersma's gloss: The men taken captive are in the guardhouse
+	2	al-dab5-ba	'a-dab5-Ø-'a	VP-take-3N.S/DO-NOM	1	amod	
+	3	šà	šà.g	heart	0	root	case (?ABS, ?ABL) => copular predicate
+	4	en-nu-me	en.nu.ĝ=ak=Ø=me-eš	guard=GEN=ABS=be-3PL.S	3	GEN	
+
+
 
 TO BE CONFIRMED: This means that the epithet analysis is to be avoided in such cases.
 TODO: list all possible functional dependents, along with explicit examples, if possible.
@@ -2899,6 +2922,16 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+if the first word is propositional, how can it be head of a relative clause (as entailed by translation):
+
+	# Jagersma, Chap. 8 (22)						
+	# ‘It is he who (lit. “(he) who is he”, cf. §29.6.2) holds him for me on orders of the guard.’						
+	# (TCS 1:54 6; L; 21)						
+	1	e-ne-àm	e.ne=Ø='am	he=ABS=be:3SG.S	0	root	
+	2	inim	inim	word	4	ABL	
+	3	en-nu-ĝá-[ta]	en.nu.ĝ=ak=ta	guard=GEN=ABL	2	GEN	
+	4	ma-an-dab5	Ø-ma-n-dab5-Ø	VP-1SG.IO-3SG.A-take-3SG.S/DO	1	parataxis	? acl
 
 Jagersma's 2010 glosses don't add up to a valid parse:
 
