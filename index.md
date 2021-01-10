@@ -1232,6 +1232,18 @@ TODO: Check `conj` vs. `list` in taglist
 
 TODO: confirm and validate where to attach `cc`
 
+If multiple conjuncts with an explicit conjunction are marked redundantly for the same case, annotate the first only, use `conj` for the others:
+
+	# Jagersma, Chap. 7 (125)					
+	# ‘that they will not say it to the king or to the administrator’					
+	# (NRVN 1:180 12; N; 21)					
+	1	lugal-ra	lugal=ra	king=DAT	0	DAT
+	2	ù	ù	or	1	cc
+	3	saĝĝa	saĝĝa=r(a)	administrator=DAT	1	conj
+	4	nu-na-bé-ne-a	nu='i-nna-b-'e-enē-'a	NEG=VP-3SG.IO-3N.OO-say:IPFV-3PL.A:IPFV-NOM	1	acl
+	
+(In our understanding of the grammar, such replicated case markers are not necessary, if not ungrammatical, but they may occur due to scribal errors or to enforce the case for long series of conjunctions -- and, similarly, appositions.)
+
 ### Punctuation: punct
 
 No punctuation in Sumerian. However, breaks (new line, different column, different side) are sometimes used to separate different thoughts. If these are encoded explicitly as part of the text (as done, for example, by Jagersma 2010), the recommended dependency is `punct`. Likewise, if a Sumerian transcript includes modern punctuation signs.
