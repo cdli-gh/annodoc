@@ -2417,7 +2417,13 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 
 TODO: compare with other explicit verbs of supply and reception:
 
-"receive": ERG receiver, ?ABS commodity
+verbs of transfer
+
+"receive": 
+	ERG receiver
+	ABS commodity
+	TERM manner
+	ki+ABL supplier
 
 	# Jagersma, Chap. 6 (3)					
 	# ‘Beli-arik and Urnigingar received this.’					
@@ -2436,6 +2442,71 @@ TODO: compare with other explicit verbs of supply and reception:
 	4	ur-nigin3-ĝar	ur.nigin3.ĝar.k=e	Urnigingar=ERG	1	conj
 	6	šu	šu=e	hand=DIR	7	DIR
 	7	ba-ab-ti	Ø-ba-b-ti-Ø	VP-3N.IO-3N.A-approach-3N.S/DO	0	root
+
+	# Jagersma, Chap. 7 (233)					
+	# ‘Urdukuga received from Ur-Suen two shekels of silver as a loan.’					
+	# (NATN 422 1-5; N; 21)				
+	1	2	2	2	2	nummod
+	2	giĝ4	giĝ4	shekel	3	nmod
+	3	kù-babbar	kù.babbar=Ø	silver=ABS	13	ABS
+	5	ur5-šè	ur5=še	loan=TERM	13	TERM
+	7	ki	ki	place	13	ABL
+	8	ur-dsuen-ta	ur.suen=ak=ta	Ursuen=GEN=ABL	7	GEN
+	10	ur-du6-kù-ga	ur.du6.kù.ga=e	Urdukuga=ERG	13	ERG
+	12	šu	šu=e	hand=DIR	13	DIR
+	13	ba-ti	Ø-ba-n-ti-Ø	VP-3N.IO-3SG.A-approach-3N.S/DO	13	root
+
+pay (= place on [account])
+	ABS theme [e.g. interest]
+	LOC target [account]
+	(ERG supplier)
+
+	# Jagersma, Chap. 20 (91)					
+	# ‘He will pay interest on this.’					
+	# (NG 144 15; U; 21)					
+	1	ugu4-ba	a.gù=be='a	top=its=LOC	3	LOC
+	2	máš	máš=Ø	interest=ABS	3	ABS
+	3	ì-íb-ĝá-ĝ[á]	'i-b(i)-ĝar:RDP-e	VP-3N:on-place:IPFV-3SG.A:IPFV	0	root
+
+cf. place on:
+	ABS theme
+	LOC target
+	(ERG: supplier)
+		
+	# Jagersma, Chap. 25 (114)					
+	# ‘I will put Ea's ox in its place!’					
+	# (TCS 1:58 7-8; L; 21)					
+	1	gu4	gu4.ř	ox	5	ABS
+	2	e-a-a	e.a'=ak=Ø	Ea=GEN=ABS	1	GEN
+	4	ki-ba	ki=be='a	place=its=LOC	5	LOC
+	5	ga-ra-a-ĝá-ar	ga-ra-e-ĝar	MOD:1SG.A/S-2SG.IO-on-place	0	root
+
+give:
+	?ABS commodity
+	ERG supplier
+	DAT receiver
+	
+	# Jagersma, Chap. 27 (135)						
+	# ‘Six gurs of apples, worth five shekels of silver: Dalu and Ur-Ab'u gave this to Ur-Shara, the merchant, before one could estimate it.’						
+	# (BM 105356 7-11; U; 21)						
+	1	6	6	6	2	nummod	
+	2	ĝišhašhur	hašhur	apple	18	ABS	???
+	3	gur	gur	gur	2	appos	
+	5	kù-bé	kù.g=be	silver=its	2	appos	
+	6	5	5	5	7	nummod	
+	7	giĝ4	giĝ4	shekel	5	appos	
+	9	káb	káb=Ø	?=ABS	10	ABS	
+	10	nu-ub-da-ab-du11-ga-aš	nu='i-b-da-b-du11.g-Ø-'a=še	NEG=VP-3N-with-3N.A-do-3N.S/DO-NOM=TERM		acl+TERM	
+	12	da-lu5	da.lu5	Dalu	18	ERG	
+	13	ù	'ù	and	12	cc	
+	14	ur-dab-ú-ke4	ur.ab.ú.k=e	Urab'u=ERG	12	conj	
+	16	ur-dšara2	ur.šara2	Urshara	18	DAT	
+	17	dam-[ga]ra3	dam.gara3=r(a)	merchant=DAT	16	appos	
+	18	in-na-šúm	'i-nna-b-šúm-Ø	VP-3SG.IO-3N.A-give-3N.S/DO	0	root	
+
+take:
+	ERG receiver
+	?ABS commodity
 
 	# Jagersma, Chap. 6 (33)					
 	# ‘The fatteners took them.’					
