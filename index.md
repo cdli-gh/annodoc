@@ -1312,6 +1312,14 @@ Agents in a transaction without morphological marks for their grammatical struct
 
 In UD export, annotated as `obl`. CDLI labels should be human-readable English short-hands, guided by common translations, e.g., `via` for *giri3*. TODO: Check annotation projection and current treatment in pre-annotation.
 
+	# Jagersma, Chap. 7 (72)					
+	# ‘via his son Abbasaga’					
+	# (AUCT 1:388 5; D; 21)					
+	1	ĝiri3	ĝiri3	foot	0	root
+	2	ab-ba-sa6-ga	ab.ba.sa6.ga	Abbasaga	1	GEN
+	3	dumu-na	dumu=ane=ak	child=his=GEN	2	appos
+
+
 List all examples here.
 
 QUESTION: Does that include *a-gù* "on (the account of)"?
