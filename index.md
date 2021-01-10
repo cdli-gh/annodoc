@@ -3071,6 +3071,19 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+confirm case of acl+GEN (acl+GEN+ABS?)
+
+	# Jagersma, Chap. 7 (87)						
+	# ‘He took an oath by the king’s name to repay it (viz. a barley loan) until the month of Nesag (lit. “of repaying until the Month Nesag, he called a king’s name about it”).’						
+	# (SAT 3:1229 6-8; U; 21)						
+	1	iti	iti.d	month	4	TERM	
+	2	nesaĝ-šè	nesaĝ=ak=še	Nesaĝ=GEN=TERM	1	GEN	
+	4	su-su-da	su.g:RDP-ed-Ø=ak	repay:IPFV-IPFV-NFIN=GEN	8	acl+GEN	???
+	6	mu	mu	name	8	ABS	
+	7	lugal-bé	lugal=ak=be=Ø	king=GEN=its=ABS	6	GEN	
+	8	in-pà	'i-n-pà.d-Ø	VP-3SG.A-call-3N.S/DO	0	root	
+
+
 if the first word is propositional, how can it be head of a relative clause (as entailed by translation):
 
 	# Jagersma, Chap. 8 (22)						
