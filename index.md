@@ -516,6 +516,17 @@ Example without morphological marking:
 ~~~
 (P102313)
 
+Note that the implicitcopula allows to treat *every word* to be head of a relative clause:
+
+	# Jagersma, Chap. 8 (94)						
+	# ‘the knowledge acquired by me, which is now this and that,’						
+	# (Shulgi B 316; 21, OB copy)						
+	1	ĝeštu2	ĝeštu2.g	wisdom	0	root	
+	2	dab5-ba-ĝu10	dab5-Ø-'a=ĝu	take-NFIN-NOM=my	1	amod	
+	3	ì-ne-šè	ì.ne.šè	now	4	LOC	?
+	4	ne-e	nēn	this	1	acl	ABS => copular predicate => (implicit) relative clause
+	5	ur5-ra-àm	ur5=Ø='am	that=ABS=be:3N.SG	4	appos	
+
 TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
 ### Subordinating conjunction: mark
