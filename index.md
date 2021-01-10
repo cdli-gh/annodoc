@@ -1994,7 +1994,17 @@ The head of a copula clause is the (head of the) nominal predicate, that is eith
 
 Note that the (nominal) head of a copula may be a deverbal noun, i.e., a relative clause (`acl` or `amod`).
 
-The predicate of a copular clause is its head. The morphological case of a copular predicate is *not* annotated. This also includes cases in which the head has a more complex structure, e.g., do not annotate the genitive relation in the following example:
+The predicate of a copular clause is its head. The morphological case of a copular predicate is *not* annotated. In many cases, this will be an `ABS` argument, so, giving it a clausal annotation allows to reliably distinguish subject (first `ABS` argument) and predicate (second `ABS` argument):
+
+	# Jagersma, Chap. 7 (115)						
+	# ‘that Luzah was a slave of (the god) Shara’						
+	# (NG 212 46; U; 21)						
+	1	lú-zàh	lú.zàh=Ø	Luzah=ABS	2	ABS	
+	2	urdu2	urdu2.d	slave	0	root	ABS => copular predicate
+	3	dšara2	šara2=ak=Ø	Shara=GEN=ABS	2	GEN	
+	4	ì-me-a	'i-me-Ø-'a	VP-be-3SG.S-NOM	2	cop	
+
+This also includes cases in which the head has a more complex structure, e.g., do not annotate the genitive relation in the following example:
 
 	# Jagersma, Chap. 5 (21)						
 	# ‘They are the ones of Geme-Bau.’						
