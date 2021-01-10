@@ -1796,7 +1796,26 @@ Note that the elements conjoined by `parataxis` can be subject to further means 
 
 In this analysis (according to Hayes), two paratactically linked clauses ("Barley rations and wool rations have been given to Ur-Lamar ..." and "Sheshkala the slave was born to Ur-Lamar on the premises of Ur-Sahar-Bau") form a complex relative clause (morphologically marked at i3-tud-da, at the end of the second clause) that is an argument to (the content of) the oath that Luguda and Dumudu swore. Only the oath is a complete sentence.
 
-? special treatment of seals
+TO BE CONFIRMED: `parataxis` vs. `acl` vs. `abs` (~ other cases or `vocative`):
+If a noun phrase is to be connected with a statement and overt morphology for syntactic subordination (=> `acl`) or case (=> `abs`, etc) are missing, different analyses are possible. Suggestion:
+
+- annotate case if and only if explicit in the morphological glossing
+- prefer `parataxis` interpretation: the detached noun phrase is inherently propositional, e.g., an elliptic representation of a transaction
+- prefer `acl` interpretation is the detached noun phrase is not inherently propositional, e.g., because its nominal head is subsequently modified
+- in case of doubt, chose the more frequently applied construction for a specific constellation and leave a comment
+- if no preference can be established, leave a comment and annotate `parataxis` (to be confirmed)
+
+	# Jagersma, Chap. 7 (102)						
+	# ‘One bear: the dogs seized it in the presence of the king.’						
+	# (UDT 123 8-9; D; 21)						
+	1	1	1	1	2	nummod	
+	2	aza	aza	bear	0	root	
+	3	igi	igi	eye	7	TERM	
+	4	lugal-šè	lugal=ak=še	king=GEN=TERM	3	GEN	
+	6	ur-gi7-re	ur.gi7.r=e	dog=ERG	7	ERG	
+	7	íb-dab5	'i-b-dab5-Ø	VP-3N.A-take-3N.S/DO	2	acl	no morphological marks of subordination. parataxis ? (=> one bear is propositional)
+
+DISCUSSION: special treatment of seals
 
 taglist suggests `admin` for the relationship between the text and the sealing
 	
