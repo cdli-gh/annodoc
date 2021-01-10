@@ -2953,6 +2953,18 @@ take away
 	6	engar-da	engar=ak=da	farmer=GEN=COM	4	appos
 	7	ba-an-da-kar	Ø-ba-n-da-kar-Ø	VP-MM-3SG-with-take.away-3N.S/DO	7	root
 
+supply (from place)
+	ERG supplier
+	ABL source
+	(ABS supplied thing)
+
+	# Jagersma, Chap. 7 (95)					
+	# ‘Shulme the steward supplied this from the palace.’					
+	# (DP 512 4:1-4; L; 24)					
+	1	šul-me	šul.me	Shulme	7	ERG
+	3	agrig-ge	agrig=e	steward=ERG	1	appos
+	5	é-gal-ta	é.gal=ta	palace=ABL	7	ABL
+	7	e-ta-ĝar	'i-b-ta-n-ĝar-Ø	VP-3N-from-3SG.A-place-3N.S/DO	0	root
 
 ### Multiple agents in a transaction
 
