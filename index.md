@@ -2189,6 +2189,28 @@ Dates can be written discontinuously:
 
 In this case, create multiple date relations with the respective root element.
 
+TODO: change internal structure of month names according to the following Jagersma examples:
+
+	# Jagersma, Chap. 7 (67)					
+	# ‘in the month of Shunumun’					
+	# (NRVN 1:114 5; N; 21)					
+	1	iti	iti.d	month	0	LOC
+	2	šu-numun-a-ka	šu.numun=ak='a	Shunumun=GEN=LOC	1	GEN
+						
+	# Jagersma, Chap. 7 (68)					
+	# ‘in the month of Nesag’					
+	# (SANTAG 6:313 obv 5; U; 21)					
+	1	iti	iti.d	month	0	LOC
+	2	nesaĝ2-ka	nesaĝ2=ak='a	Nesag=GEN=LOC	1	GEN
+
+Note: When describing periods, other cases need to be assumed
+
+	# Jagersma, Chap. 7 (69)					
+	# ‘from the month of Shunumun’					
+	# (YOS 4:162 5; U; 21)					
+	1	iti	iti.d	month	0	ABL
+	2	šu-numun-na-ta	šu.numun=ak=ta	Shunumun=GEN=ABL	1	GEN
+
 TODO: consolidate guidelines and data:
 - taglist recommends `appos` for `MN` (month name), with head being the word *iti* (month)
 	- this is also implemented in the MTAAC pre-annotation
