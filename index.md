@@ -1033,6 +1033,28 @@ Note that the epithet also applies to proper names other than personal names, e.
 	3	řú-a	řú-Ø-'a=š(e)	erect-NFIN-NOM=TERM	2	amod	
 	5	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
 
+epithets can also be relational verbs, e.g., family terms
+
+	# Jagersma, Chap. 25 (129)					
+	#	‘He surely was my brother Ningirsu!’  				
+	# (Cyl A 5:17; L; 22)					
+	1	ses-ĝu10	ses=ĝu	brother=my	2	nmod
+	2	{d}nin-ĝír-su	nin.ĝír.su.k=Ø	Ningirsu=ABS	3	ABS
+	3	ga-nam-me-àm	ga-na-me-Ø='am	MOD-PFM-be-3SG.S=be:3SG.S	0	root
+
+epithets can also be metaphorical rather than lexicalized
+
+	# Jagersma, Chap. 26 (6)						
+	# ‘You carry charm for the Great Mountain Enlil.’						
+	#	(BE 31:04:00 01:06 (Shulgi H); N; 21, OB copy)					
+	1	kur	kur	mountain	3	nmod	epithet!
+	2	gal	gal	big	1	amod	
+	3	{d}en-líl-ra	en.líl=ra	Enlil=DAT	5	DAT	
+	4	ul	ul=Ø	charm=ABS	5	ABS	
+	5	ša-mu-na-gùr-ù	ši-mu-nna-gùr-e	PFM-VENT-3SG.IO-carry-3SG.A:IPFV	0	root	
+
+epithets share certain characteristics with determiners
+
 	# Jagersma, Chap. 5 (73)						
 	# ‘the river Tigris and the river Euphrates’						
 	# (Cyl B 17:10; L; 22)						
