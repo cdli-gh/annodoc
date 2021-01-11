@@ -2170,6 +2170,16 @@ This also includes cases in which the head has a more complex structure, e.g., d
 	# ‘They are the ones of Geme-Bau.’						
 	# (Nik 1:7 2:4; L; 24)						
 	1	geme2-{d}ba-ú-ka-me	geme2.ba.ú.k=ak=Ø=me-eš	Geme-Bau=GEN=ABS=be-3PL.S	0	root	copular predicate is a headless absolutive NP with a genitive argument
+	
+Note that the copular predicate can also carry cases other than `ABS`. In these cases they can be read as adnominal cases of a headless NP (e.g., "`ABL+ABS`").
+
+	# Jagersma, Chap. 29 (90)						
+	# ‘if it was by the hand of SI.A-a’						
+	#	(NG 215 49; U; 21)					
+	1	tukum-bé	tukum.bé	if	2	mark	
+	2	šu	[šu	[hand	0	advcl	ABL => copular predicate; tukumbi => advcl
+	3	SI.A-a-ta-àm	SI.A.a=ak=ta]='am	SI.A.a=GEN=ABL]=be:3N.S	2	GEN	
+
 
 ## Genre specifics
 
