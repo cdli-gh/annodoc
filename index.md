@@ -1370,6 +1370,14 @@ According to Jagersma (2010, p.90), "[a] noun phrase can also contain another no
 	6	dumu-né-ta	dumu=ane=ta=e	child=his=ABL=ERG	5	appos
 	10	ì-gu7-ne	'i-b-gu7-enē	VP-3N.DO-eat-3PL.A:IPFV	0	root
 
+	# Jagersma, Chap. 28 (111)					
+	# ‘Atu was proven to have given the boat (lit. “Atu was made firm as one who gave the boat”).’					
+	#	(NG 62 11; U; 21). Note that a-tu is the subject of ba-ge-en6 and not of šúm-ma  				
+	1	a-tu	a.tu=Ø	Atu=ABS	4	ABS
+	2	má	má=Ø	boat=ABS	3	ABS
+	3	šúm-ma-aš	šúm-Ø-'a=še	give-NFIN-NOM=TERM	1	acl+TERM
+	4	ba-ge-en6	Ø-ba-ge.n-Ø	VP-MM-be.firm-3SG.S/DO	0	root
+
 While these may be undebatable examples, there can also be ambiguity as to whether ablatives, terminatives, etc. are adnominal or clausal arguments (the following analyses according to Jagersma):
 
 	# Jagersma, Chap. 5 (11)						
