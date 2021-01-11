@@ -68,7 +68,14 @@ title: Dependency Syntax for Sumerian
 
 ## Status of this document
 
-Draft for annotation guidelines for syntax, under development. Currently documents the design decisions taken in the development of syntax pre-annotation tools. The goal is, however, to provide a full-fledged annotation scheme for Sumerian, a small gold corpus and its export to UD v.2 
+Draft for annotation guidelines for syntax, under development. Currently documents the design decisions taken in the development of syntax pre-annotation tools. The goal is, however, to provide a full-fledged annotation scheme for Sumerian, a small gold corpus and its export to UD v.2.
+
+At the moment, this document summarizes
+- decisions previously taken in morphological annotation and annotation experiments
+- design decisions of automated pre-annotation and projection tools (morphology-based pre-annotation, transaction parser, annotation projection)
+- examples from the literature to extend or revise both aforementioned 
+
+Note that it requires substantial internal consolidation before it can be used for actual annotation.
 
 Known issues/todos:
 - inconsistent transcription principles (reflecting different sources for the examples), to be normalized according to CDLI conventions
@@ -1842,7 +1849,30 @@ Note that year names should not be annotated as `ccomp` (although they could be 
 
 ### Adverbial clause: advcl
 
-`advcl` is used for subordinate clauses with an explicit `mark` that indicates an adverbial function, e.g., *tukumbi* "if":
+`advcl` is used for 
+- subordinate clauses with an explicit `mark` that indicates an adverbial function, e.g., *tukumbi* "if", or
+- a temporal clause established with the perfective relative past marker *'u*
+
+#### perfective relative past
+
+Jagersma (2010: 518, 521): "A verbal form with the prefix {÷u} is subordinate to the following verb and expresses an anterior action. A clause with such a form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’ ... 
+The relative-past prefix {÷u} is incompatible with the imperfective and only occurs in perfective verbal forms. A form with {÷u} is subordinate to the following verb and expresses an action with the approximate meaning ‘under the circumstance that (…) has happened’. It designates an action which is both anterior and circumstantial to the action expressed by the following verb. A clause with such a verbal form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’, or with a participial construction."
+
+	# Jagersma, Chap. 24 (18)					
+	# ‘The sealed document about this was lost. When it is found, it is to be destroyed.’					
+	#	(OrSP 47/49:411 7-9; U; 21). The phrasal verb ú-gu—dé means ‘lose’				
+	1	kišib-bé	kišib=be=Ø	seal=its=ABS	3	ABS
+	2	ú-gu	ú.gu=e	?=DIR	3	DIR
+	3	ba-an-dé	ba-n(i)-dé-Ø	MM-in-pour-3N.S/DO	0	root
+	4	/	_	_	3	punct
+	5	ù-ul-pà	'u-pà.d-Ø	REL.PAST-find-3N.S/DO	7	ccomp
+	6	/	_	_	7	punct
+	7	ze-re-dam	ze.r-ed-Ø='am	destroy-IPFV-NFIN=be:3N.S	3	parataxis
+
+TODO: update references to advcl elsewhere in this document
+TODO: scan data and examples for instances of this morpheme. how is this represented in CDLI?
+
+#### *tubumbi*
 
 ~~~ conllu
 1	lugal-ju10	lugal	king	_	_	7	ERG	_	_
