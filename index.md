@@ -1459,6 +1459,16 @@ According to Jagersma (2010, p. 152), "[a] noun phrase in the genitive case can 
 	8	šu-a	šu='a	hand=LOC	9	LOC
 	9	bí-gi4-a	Ø-bi-b-gi4-'a='a	VP-3N:on-3N.A-turn-NOM=LOC	0	acl+LOC
 
+Postposed genitives that represent the `ERG` arguments of a relative clause should be annotated as genitive dependents of the matrix noun, not the relative clause. If, by, consequence, no overt arguments of the `acl` remain, annotate it as `amod`.
+
+	# Jagersma, Chap. 7 (156)					
+	# ‘shepherd (ergative) chosen in his pure heart by Ningirsu (lit. “the by the heart found one of Ningirsu”)’					
+	# (St B 2:8-9; L; 22)					
+	1	sipa	sipa	shepherd	0	ERG
+	2	šà-ge	šà.g=e	heart=DIR	3	DIR
+	3	pà-da	pà.d-Ø-'a	find-NFIN-NOM	2	acl
+	5	dnin-ĝír-su-ka-ke4	nin.ĝír.su.k=ak=e	Ningirsu=GEN=ERG	1	GEN
+
 
 #### Equative case: EQU
 
