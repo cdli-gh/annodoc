@@ -1869,6 +1869,23 @@ The relative-past prefix {÷u} is incompatible with the imperfective and only oc
 	6	/	_	_	7	punct
 	7	ze-re-dam	ze.r-ed-Ø='am	destroy-IPFV-NFIN=be:3N.S	3	parataxis
 
+Note that `advcl` should also be used if the the clause does not contain any modifiers. There is no `advmod` tag. (Note that this is different from the treatment of `acl` and `amod`. This is motivated by the comparably higher number of "adjectives" that functionally overlap with adjectives in English, whereas the functional counterpart of English adverbs are mostly Sumerian nominals with oblique case.)
+
+	# Jagersma, Chap. 24 (26)					
+	# ‘When she (viz. a slave bought) gets lost or when she dies, Ur-Suen will not place a claim on Ur-Shulpae.’					
+	#	(FAOS 17:94** 8-11; U; 21). Note that the phrasal verb ú-gu—dé means ‘lose’ _				
+	1	ú-gu	ú.gu=Ø	?=ABS	2	ABS
+	2	a-ba-dé	'u-ba-dé-Ø	REL.PAST-MM-pour-3N.S/DO	10	advcl
+	3	a-ba-úš	'u-ba-'úš-Ø	REL.PAST-MM-die-3N.S/DO	10	advcl
+	4	/	_	_	10	punct
+	5	ur-dsuen-ke4	ur.suen.k=e	Ursuen=ERG	10	ERG
+	6	/	_	_	10	punct
+	7	ur-dšul-pa-è	ur.šul.pa.è.k=ra	Urshulpae=DAT	10	DAT
+	8	/	_	_	10	punct
+	9	inim	inim=Ø	word=ABS	10	ABS
+	10	nu-un-ĝá-ĝá	nu='i-n-ĝar:RDP-e	NEG=VP-3SG.OO-place:IPFV-3SG.A:IPFV	0	root
+
+
 TODO: update references to advcl elsewhere in this document
 TODO: scan data and examples for instances of this morpheme. how is this represented in CDLI?
 
@@ -2981,6 +2998,21 @@ put on
 	1	kù-bé	kù.g=be=Ø	silver=this=ABS	4	ABS
 	2	šu-ne-ne-a	šu=anēnē='a	hand=their=LOC	4	LOC
 	4	ab-si	'a-b(i)-si.g-Ø	VP-3N:on-put-3N.S/DO	0	root
+
+put into
+	ABL quantity
+	ABS thing put into
+	(ERG supplier)
+
+	# Jagersma, Chap. 20 (4a)					
+	# ‘Fifteen baskets of (one ba-rí-ga=) sixty litres each: dates were put into them.’					
+	#	(MVN 16 Um. 1677 obv 1-2; U; 21).				
+	1	15	15	15	2	nummod
+	2	gegur-dub	gur.dub	basket	6	ABL
+	3	0.1.0-ta	0.1.0=ta	1=ABL	2	nommod
+	4	/	_	_	6	punct
+	5	zú-lum	zú.lum=Ø	dates=ABS	6	ABS
+	6	ba-an-si	Ø-ba-n(i)-si.g-Ø	VP-MM-in-put-3N.S/DO	0	root
 
 buy (barter towards)	
 	ABS theme (thing bought)
