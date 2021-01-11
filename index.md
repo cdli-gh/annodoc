@@ -2712,7 +2712,12 @@ This is a frequent formula in ditilas, roughly meaning "it is an oath". Accordin
 If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities as ABS. This corresponds to the verbal frame of "give":
 
 
-"give": ERG supplier, DAT recipient, ABS commodity, ABL source
+"give": 
+	ERG supplier
+	DAT recipient
+	ABS commodity
+	ABL source
+	DIR target (?)
 
 ~~~ conllu
 1	a-bi-a-ti	_	to.Abiati	_	_	2	DAT	_	_
@@ -2739,6 +2744,19 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 	12	lagas{ki}-ka-ke4	lagas=ak=ak=e	Lagash=GEN=GEN=ERG	10	GEN
 	14	é-gal-ta	é.gal=ta	palace=ABL	16	ABL
 	16	e-na-šúm	'i-nna-n-šúm-Ø	VP-3SG.IO-3SG.A-give-3N.S/DO	0	root
+	
+	# Jagersma, Chap. 7 (136)					
+	# ‘The Ummaite set fire to the border dike. He set fire to the Antasurra.’					
+	# (Ukg. 16 1:1-5; L; 24)					
+	1	lú	lú	man	8	ERG
+	2	ummaki-ke4	umma=ak=e	Umma=GEN=ERG	1	GEN
+	4	e	e.g	dike	8	DIR
+	5	ki-surx(ERIM)-ra-ke4	ki.sur.ra=ak=e	border=GEN=DIR	4	GEN
+	7	izi	izi=Ø	fire=ABS	8	ABS
+	8	ba-šúm	Ø-ba-n-šúm-Ø	VP-3N.IO-3SG.A-give-3N.S/DO	0	root
+	10	an-ta-sur-ra	an.ta.sur.ra=e	Antasurra=DIR	13	DIR
+	12	izi	izi=Ø	fire=ABS	13	ABS
+	13	ba-šúm	Ø-ba-n-šúm-Ø	VP-3N.IO-3SG.A-give-3N.S/DO	8	parataxis
 
 TODO: compare with other explicit verbs of supply and reception:
 
