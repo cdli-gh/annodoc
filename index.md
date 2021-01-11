@@ -2043,6 +2043,19 @@ alternative analysis here with 2 being ABS argument of 6, and 6 being acl of 1. 
 	5	udu-na	udu=ane='a	sheep=his=LOC	6	LOC	
 	6	ba-an-dab5-ba-šè	Ø-ba-n(i)-dab5-Ø-'a=ak=še	VP-MM-in-take-3N.S/DO-NOM=GEN=TERM	2	parataxis	
 
+If an argument is morphologically marked by an (emphatic?) copula and an interpretation as independent clause is semantically and syntactically possible (a minimal requirement is that it does not interrupt the sequence of arguments), annotate in accordance with its overt morphology:
+
+	# Jagersma, Chap. 15 (84)					
+	# ‘Why does Urlama not allow grazing?’					
+	#	(TCS 1:121 6-9; L; 21)				
+	1	a-na-aš-àm	a.na=š(e)='am	what=TERM=be:3N.S	0	root
+	2	/	_	_	1	punct
+	3	ur-dlama3-ke4	ur.lama3.k=e	Urlama=ERG	8	ERG
+	4	/	_	_	8	punct
+	5	ú	ú=Ø	grass=ABS	6	ABS
+	6	gu7-dè	gu7-ed-Ø=e	eat-IPFV-NFIN=DIR	8	acl+DIR
+	7	/	_	_	8	punct
+	8	nu-ub-še-ge	nu='i-b-še.g-e	NEG=VP-3N.OO-allow-3SG.A:IPFV	1	parataxis
 
 DISCUSSION: special treatment of seals
 
