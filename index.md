@@ -1304,11 +1304,38 @@ In morphology, labels are `DAT-H` and `DAT-NH`. Suggestion: Simplify as `DAT` (t
  
 Terminative-locatives (if annotated as such) in dative function are treated as oblique arguments, not as datives.
 
-#### Oblique arguments: LOC, TERM, ABL
+#### Oblique arguments: LOC, TERM, ABL, DIR
 
 In CDLI annotation, use morphological case as labels. In UD export, map to `obl`. For better alignment with annotation projection, use `LOC` in place of `L1`, `L2-NH` and `L3-NH`, etc.
 
 TODO: Check treatment in pre-annotation.
+
+Normally, these obliques can be mapped to semantic roles. Occasionally, however, two semantic roles may be encoded by the same morphological case, then, the relative order of oblique arguments seems to determine their semantic interpretation, cf. TERM [AMOUNT] and TERM [GOAL] in the following example:
+
+	# Jagersma, Chap. 13 (23)					
+	# ‘4 labourers for 10 days: they brought straw from KI.AN to Umma.’					
+	# (TENS 205 1-3; U; 21)					
+	1	4	4	4	2	nummod
+	2	ĝuruš	ĝuruš	labourer	0	root
+	3	u4	u4.d	day	10	TERM
+	4	10-šè	10=še	10=TERM	3	nummod
+	6	KI.ANki-ta	KI.AN=ta	KI.AN=ABL	10	ABL
+	7	ummaki-<šè>	umma=še	Umma=TERM	10	TERM
+	9	in-u	in.u=Ø	straw=ABS	10	ABS
+	10	ì-im-ře6	'i-m(u)-ře6-Ø	VP-VENT-bring-3N.S/DO	2	parataxis
+
+Aside from marking semantic roles, oblique cases could also be used to express a pragmatic function. In Old Sumerian, the `DIR`, modifying a relative, could also used as a topic marker. Annotate according to the morphology, not the pragmatics. (Should not occur in Ur III data.)
+
+	# Jagersma, Chap. 7 (160)						
+	# ‘As for your punting-poles, you are a dragon, sleeping a sweet sleep in its den.’						
+	# (Shulgi R 13; N; 21, OB copy)						
+	1	ge-m[u]š?-zu-ù	ge.muš=zu=e	punting.pole=your=DIR	2	DIR	
+	2	ušumgal	ušumgal	dragon	0	root	ABS (marked on 6) => copular predicate
+	3	ki-nú-bé-a	ki.nú=be='a	lying.place=its=LOC	6	LOC	
+	4	ù	ù	sleep	6	ABS	
+	5	du10	du10.g=Ø	sweet=ABS	4	amod	
+	6	ku4-me-èn	ku4-Ø=Ø=me-en	sleep-NFIN=ABS=be-2SG.S	2	acl	
+
 
 #### Adnominal dependents: GEN, EQU
 
