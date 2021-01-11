@@ -1336,7 +1336,7 @@ According to Jagersma (2010, p.90), "[a] noun phrase can also contain another no
 	6	dumu-né-ta	dumu=ane=ta=e	child=his=ABL=ERG	5	appos
 	10	ì-gu7-ne	'i-b-gu7-enē	VP-3N.DO-eat-3PL.A:IPFV	0	root
 
-While this is an undebatable example, there can also be ambiguity as to whether ablatives, terminatives, etc. are adnominal or clausal arguments (the following analyses according to Jagersma):
+While these may be undebatable examples, there can also be ambiguity as to whether ablatives, terminatives, etc. are adnominal or clausal arguments (the following analyses according to Jagersma):
 
 	# Jagersma, Chap. 5 (11)						
 	# ‘with five hides per (lit.“in”) two shekels of silver’						
@@ -1360,6 +1360,16 @@ While this is an undebatable example, there can also be ambiguity as to whether 
 	7	ba-hulu-šè	Ø-ba-hulu-Ø=še	VP-MM-destroy-3N.S/DO=TERM	5	acl
 
 Both examples are not fully clear because context is not given. In an alternative analysis, both arguments could also be considered oblique arguments of a clause, with the relation between them established by the verb. If both interpretations are possible, annotate morphologically marked arguments other than genitives as clausal rather than adnominal arguments.
+
+If no overt verb is given but an annotation of an adnominal modification is possible, annotate it as such.
+
+	# Jagersma, Chap. 7 (142)						
+	# ‘From the house next to the one of Mesandu’						
+	# (DP 173 5:5; L; 24)						
+	1	é	é	house	0	DIR	
+	2	dmes-an-du-ke4	mes.an.du=ak=e	Mesandu=GEN=DIR	1	GEN	
+	3	ús-sa-ta	ús-Ø-'a=ta	be.next.to-NFIN-NOM=ABL	1	ABL	not acl+ABL, as this is an amod
+
 
 #### "Functional obliques"
 
