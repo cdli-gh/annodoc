@@ -1849,9 +1849,29 @@ Note that year names should not be annotated as `ccomp` (although they could be 
 
 ### Adverbial clause: advcl
 
-`advcl` is used for 
+Adverbial clauses in Sumerian are annotated in accordance with their morphology, not their functional interpretation. 
+
+`advcl` is thus used for a subset of adverbial clauses only: 
 - subordinate clauses with an explicit `mark` that indicates an adverbial function, e.g., *tukumbi* "if", or
 - a temporal clause established with the perfective relative past marker *'u*
+
+Other forms of subordinate clauses with adverbial interpretation can be formed by combining markers of syntactic subordination with an oblique case. They are to be annotated as `acl+case`. 
+
+	# Jagersma, Chap. 27 (180)						
+	# ‘Nin-Idmah took an oath by the king’s name – as to that she would not go back on Irini-she, the herald.’						
+	#	(SRU 84 13-16; I; 23) (Similarly: SRU 85 1-6; I; 23)					
+	1	nin-íd-<mah>-e	nin.íd.mah=e	Nin.Idmah=ERG	5	ERG	
+	2	/	_	_	5	punct	
+	3	mu	mu	name	5	ABS	
+	4	lugal	lugal=ak=Ø	king=GEN=ABS	3	GEN	
+	5	in-pa	'i-n-pà.d-Ø	VP-3SG.A-find-3N.S/DO	0	root	
+	6	/	_	_	10	punct	
+	7	iri-né-šè	iri.né.šè	Irineshe	10	DAT	
+	8	niĝir-ra	niĝir=ra	herald=DAT	8	appos	
+	9	/	_	_	10	punct	
+	10	la-ba-gi4-gi4-da-šè	nu=Ø-ba-n-gi4:RDP-ed-Ø-'a=še	NEG=VP-MM-3SG.OO-turn:IPFV-IPFV-3SG.S:IPFV-NOM=TERM	5	acl+TERM	adverbial clause
+
+The label `advcl` is only to be used where no morphological case marking is used or restored during morphological annotation.
 
 #### perfective relative past
 
