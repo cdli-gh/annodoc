@@ -2577,6 +2577,31 @@ In this case, create multiple date relations with the respective root element.
 
 TODO: change internal structure of month names according to the following Jagersma examples:
 
+	# Jagersma, Chap. 7 (167)					
+	# ‘in the month when the granaries were heaped up’					
+	# (BIN 8:362 7:3; L; 24)					
+	1	iti	iti.d	month	0	LOC
+	2	guru7	guru7	granary	3	ABS
+	3	dub-ba-a	dub-Ø-'a='a	heap.up-NFIN-NOM=LOC	1	acl
+
+	
+	# Jagersma, Chap. 7 (168)					
+	# ‘in the month when Bau’s wool is supplied’					
+	# (Nik 1:63 13:2; L; 24)					
+	1	iti	iti.d	month	0	LOC
+	2	siki	siki	wool	4	ABS
+	3	dba-ú	ba.ú=ak=Ø	Bau=GEN=ABS	2	GEN
+	4	e-ta-ĝar-ra-a	'i-b-ta-ĝar-Ø-'a='a	VP-3N-from-place-3N.S/DO-NOM=LOC	1	acl
+
+? what about the following ?
+	(we could model it as appos by assuming that it contains an implicit copula, i.e., "in the month that is Duku")
+	
+	# Jagersma, Chap. 7 (186)					
+	# ‘in the month Duku’					
+	# (NRVN 1:38 5; N; 21)					
+	1	iti	iti.d	month	0	LOC
+	2	du6-kù-ga	du6.kù.g='a	Duku=LOC	1	appos
+
 	# Jagersma, Chap. 7 (67)					
 	# ‘in the month of Shunumun’					
 	# (NRVN 1:114 5; N; 21)					
@@ -2588,6 +2613,7 @@ TODO: change internal structure of month names according to the following Jagers
 	# (SANTAG 6:313 obv 5; U; 21)					
 	1	iti	iti.d	month	0	LOC
 	2	nesaĝ2-ka	nesaĝ2=ak='a	Nesag=GEN=LOC	1	GEN
+
 
 Note: When describing periods, other cases need to be assumed
 
