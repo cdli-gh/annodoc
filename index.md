@@ -1480,6 +1480,59 @@ Occasionally, the arguments of a relative clause may occur as postposed genitive
 	8	80	80	80	9	nummod	
 	9	níĝ-řá	níĝ.řá	nindan	0	root	
 
+#### Other adnominal dependenty
+
+adnominal LOC
+
+Jagersma (2010:178) "Adnominal use [of the locative -- CC] occurs in distributive expressions. ... Note, however, that what looks like adnominal use in a distributive expression may actually be adverbial use with ellipsis of the verb" 
+							
+	# Jagersma, Chap. 7 (195)						
+	# ‘with two ban of barley in a month for one pig’						
+	# (VS 14:9 9:3-4; L; 24)						
+	1	šáh	šáh	pig	5	TERM	
+	2	1-šè	1=še	1=TERM	1	nummod	
+	3	/	_	_	1	punct	
+	4	iti-da	iti.d='a	month=LOC	1	LOC	
+	5	še	še	barley	0	root	morphologically ABL
+	6	0.0.2-ta	0.0.2=ta	2.ban=ABL	5	nummod	
+							
+	# Jagersma, Chap. 7 (196)						
+	# ‘with nine bundles in a bale’						
+	# (Zinbun 18 p. 101 6 BM 16163 1; L; 21)						
+	1	gu-niĝin2-na	gu.niĝin2='a	bale=LOC	5	LOC	
+	2	10	9	9	1	nummod	
+	3	lá	_	_	2	acl	
+	4	1	_	_	3	nummod	
+	5	sa-ta	sa=ta	bundle=ABL	0	root	morphologically ABL
+
+for the latter, cf.
+	
+	# Jagersma, Chap. 7 (197)						
+	# ‘They (= bundles) were placed in a bale with twenty bundles each.’						
+	# (AAICAB I/4 pl.269 Bod. S 425 4; D; 21)						
+	1	gu-niĝin2-na	gu.niĝin2='a	bale=LOC	4	LOC	
+	2	10	10	10	3	nummod	
+	3	sa-ta	sa=ta	bundle=ABL	4	ABL	
+	4	ba-an-ĝar	Ø-ba-n(i)-ĝar-Ø	VP-MM-in-place-3N.S/DO	0	root	
+
+Note that the rule in eliptic transactions is to mark the commodity as head. Both the adnominal and the adverbial-elliptic interpretation of the locatives are consistent with this annotation.
+		
+cf. adnominal ABL
+
+	# Jagersma, Chap. 7 (204a)						
+	# ‘from the wall of the Medib-field to the middle imnun: 50 nindan’						
+	# (DP 641 3:4-5; L; 24)						
+	1	bàd	bàd	wall	8	ABL	
+	2	ašag	ašag	field	3	nmod	
+	3	me-dib-ta	me.dib=ak=ta	Medib=GEN=ABL	1	GEN	
+	4	/	_	_	8	punct	
+	5	im-nun	im.nun	imnun	8	TERM	
+	6	mu5-ru5-šè	mu5.ru5b=ak=še	middle=GEN=TERM	5	GEN	
+	7	80	50	50	8	nummod	
+	8	níĝ-řá	níĝ.řá	nindan	0	root	
+
+	if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
+
 #### "Functional obliques"
 
 Agents in a transaction without morphological marks for their grammatical structure.
