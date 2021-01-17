@@ -3359,6 +3359,36 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+#### doubtful analyses
+
+Jagersma (2010, p.138, in the context of a possible further case): "Twice in our corpus, a formal element -na-an-na is found which may be a further case marker but which may also be a complex form that includes a known case marker, like, for instance, the locative case marker {÷a}. According to Falkenstein (1956: II, 40) and Edzard (2003b: 158), this -na-an-na means ‘without, apart from’. As I am unable to provide an analysis, I give the two attestations with tentative translations"
+
+suggestion: annotate these as `LOC`
+
+	# Jagersma, Chap. 7 (4)								
+	# ‘that, apart from Urbalagkuga, no man slept with her’								
+	# (NG 24 10'; L; 21)								
+	1	ur-balaĝ-kù-ga-na-an-na	ur.balaĝ.kù.ga.k=nanna	Urbalagkuga=apart.from	4	LOC	Jagersma 2010: 138: analysis uncertain		
+	2	/	_	_		punct			
+	3	lú	lú=Ø	man=ABS	4	ABS			
+	4	nu-ù-da-nú-a	nu='i-n-da-nú-Ø-'a	NEG=VP-3SG-with-lie-3SG.S/DO-NOM	0	acl			
+
+	# Jagersma, Chap. 7 (5)								
+	# ‘the Dublamah – this temple was unbuilt, apart from that it had been (a...since time immemorial)’								
+	# (FAOS9/2 Amarsuen123-8; Ur;21)								
+	1	dub-lá-mah	dub.lá.mah	Dublamah	0	root			
+	2	/	_	_		punct			
+	3	(...)	(...)	(...)	1	dep			
+	4	/	_	_		punct			
+	5	ì-me-a-na-an-na	'i-me-Ø-'a=nanna	VP-be-3N.S-NOM=apart.from	1	acl+LOC	# not amod, as there are dependents in 3	Jagersma 2010: 138: analysis uncertain	
+	6	/	_	_		punct			
+	7	é-bé	é=be=Ø	house=this=ABS	8	ABS			
+	8	nu-řú-àm	nu=řú-Ø='am	NEG=erect-NFIN=be:3N.S	1	acl			
+
+
+
+#### acl
+
 confirm case of acl+GEN (acl+GEN+ABS?)
 
 	# Jagersma, Chap. 7 (87)						
@@ -3370,7 +3400,6 @@ confirm case of acl+GEN (acl+GEN+ABS?)
 	6	mu	mu	name	8	ABS	
 	7	lugal-bé	lugal=ak=be=Ø	king=GEN=its=ABS	6	GEN	
 	8	in-pà	'i-n-pà.d-Ø	VP-3SG.A-call-3N.S/DO	0	root	
-
 
 if the first word is propositional, how can it be head of a relative clause (as entailed by translation):
 
@@ -3393,6 +3422,7 @@ Jagersma's 2010 glosses don't add up to a valid parse:
 	4	me-me-a	me-me='a	being-being=LOC	5	LOC	
 	5	diri-ga	diri.g-Ø-'a	exceed-NFIN-NOM	2	acl	
 
+#### copula
 
 A headless relative clause serving as predicate of a copula sentence whose root is on the same token:
 
