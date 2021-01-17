@@ -309,6 +309,21 @@ TO BE DISCUSSED: abandon in favor of acl? (when working through Jagersma's gloss
 	1	mu	mu	name	0	TERM
 	2	kas4-ke4-ne-šè	kas4-Ø=ak=enē=ak=še	run-NFIN=GEN=PL=GEN=TERM	1	amod+GEN
 
+Occasionally, the arguments of a relative clause may occur as postposed genitive attributes of its syntactic head. Annotate according to their morphology, i.e., the relative clause as `amod`  (if no other arguments are given) and its arguments as adnominal `GEN`.
+
+	# Jagersma, Chap. 7 (204b)						
+	# ‘from Sagub to the border of the work done by Bau’s men: 80 nindan’						
+	# (DP 636 2:3-3:1; L; 24)						
+	1	saĝ-ub!-ta	saĝ.ub=ta	Sagub=ABL	9	ABL	
+	2	/	_	_	1	punct	
+	3	kíĝ	kíĝ	work	9	TERM	
+	4	ak	ak-Ø	make-NFIN	3	amod	
+	5	lú	lú	man	5	GEN	
+	6	dba-ú-ka	ba.ú=ak=ak	Bau=GEN=GEN	5	GEN	
+	7	zà-bé	zà.g=be=š(e)	border=its=TERM	3	appos	
+	8	80	80	80	9	nummod	
+	9	níĝ-řá	níĝ.řá	nindan	0	root	
+
 
 ### Subordinate clauses: acl
 
@@ -580,6 +595,22 @@ Note that the implicit copula allows to treat *every word* to be head of a relat
 	5	ur5-ra-àm	ur5=Ø='am	that=ABS=be:3N.SG	4	appos	
 
 Note: If a clause is ambiguous between an analysis as a (morphologically unmarked) relative clause or a declarative clause, annotate it as declarative clause.
+
+Occasionally, the arguments of a relative clause may occur as postposed genitive attributes of its syntactic head. Annotate according to their morphology, i.e., the relative clause as `amod`  (if no other arguments are given) and its arguments as adnominal `GEN`.
+
+	# Jagersma, Chap. 7 (204b)						
+	# ‘from Sagub to the border of the work done by Bau’s men: 80 nindan’						
+	# (DP 636 2:3-3:1; L; 24)						
+	1	saĝ-ub!-ta	saĝ.ub=ta	Sagub=ABL	9	ABL	
+	2	/	_	_	1	punct	
+	3	kíĝ	kíĝ	work	9	TERM	
+	4	ak	ak-Ø	make-NFIN	3	amod	
+	5	lú	lú	man	5	GEN	
+	6	dba-ú-ka	ba.ú=ak=ak	Bau=GEN=GEN	5	GEN	
+	7	zà-bé	zà.g=be=š(e)	border=its=TERM	3	appos	
+	8	80	80	80	9	nummod	
+	9	níĝ-řá	níĝ.řá	nindan	0	root	
+
 
 TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
@@ -1434,6 +1465,20 @@ If no overt verb is given but an annotation of an adnominal modification is poss
 	2	dmes-an-du-ke4	mes.an.du=ak=e	Mesandu=GEN=DIR	1	GEN	
 	3	ús-sa-ta	ús-Ø-'a=ta	be.next.to-NFIN-NOM=ABL	1	ABL	not acl+ABL, as this is an amod
 
+Occasionally, the arguments of a relative clause may occur as postposed genitive attributes of its syntactic head. Annotate according to their morphology, i.e., the relative clause as `amod`  (if no other arguments are given) and its arguments as adnominal `GEN`.
+
+	# Jagersma, Chap. 7 (204b)						
+	# ‘from Sagub to the border of the work done by Bau’s men: 80 nindan’						
+	# (DP 636 2:3-3:1; L; 24)						
+	1	saĝ-ub!-ta	saĝ.ub=ta	Sagub=ABL	9	ABL	
+	2	/	_	_	1	punct	
+	3	kíĝ	kíĝ	work	9	TERM	
+	4	ak	ak-Ø	make-NFIN	3	amod	
+	5	lú	lú	man	5	GEN	
+	6	dba-ú-ka	ba.ú=ak=ak	Bau=GEN=GEN	5	GEN	
+	7	zà-bé	zà.g=be=š(e)	border=its=TERM	3	appos	
+	8	80	80	80	9	nummod	
+	9	níĝ-řá	níĝ.řá	nindan	0	root	
 
 #### "Functional obliques"
 
