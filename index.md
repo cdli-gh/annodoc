@@ -505,6 +505,16 @@ Note that these are not limited to adverbial (spatio-temporal) interpretations:
 	2	éš	éš=Ø	rope=ABS	3	ABS
 	3	gíd	gíd-Ø=ak	pull-NFIN=GEN	1	acl+GEN
 
+Note that a dependency label can aggregate more than two (case) labels
+
+	# Jagersma, Chap. 7 (251)					
+	# ‘because the lamentation priest was deprived of the field (lit. “went up from the field”)’					
+	# (NG 215 47 U; 21)					
+	1	gala	gala=Ø	lamentation.priest=ABS	3	ABS
+	2	a-šà-ta	a.šà.g=ta	field=ABL	3	ABL
+	3	e11-da-ke4-eš	e11.d-Ø-'a=ak=eš	go.up-NFIN-NOM=GEN=ADV	0	acl+GEN+ADV
+
+
 Note that headless relative clauses include cases with absolutive case (which is morphologically unmarked):
 
 ~~~ conllu
@@ -1494,7 +1504,14 @@ Jagersma (2010:178) "Adnominal use [of the locative -- CC] occurs in distributiv
 	4	iti-da	iti.d='a	month=LOC	1	LOC	
 	5	še	še	barley	0	root	morphologically ABL
 	6	0.0.2-ta	0.0.2=ta	2.ban=ABL	5	nummod	
-							
+
+	# Jagersma, Chap. 7 (261)					
+	# ‘with two ... in each of its bales’					
+	# (Nik 2:111 2; U; 21)					
+	1	gu-niĝin2-ba	gu.niĝin2=be='a	bale=its=LOC	3	LOC
+	2	2	2	2	3	nummod
+	3	LAGAB-ta-a	LAGAB=ta	?=ABL	0	ABL
+
 	# Jagersma, Chap. 7 (196)						
 	# ‘with nine bundles in a bale’						
 	# (Zinbun 18 p. 101 6 BM 16163 1; L; 21)						
@@ -1518,6 +1535,12 @@ Note that the rule in eliptic transactions is to mark the commodity as head. Bot
 		
 cf. adnominal ABL
 
+	# Jagersma, Chap. 7 (268)					
+	# ‘They are men from Susa.’					
+	# (RTC 350 8; L; 21)					
+	1	lú	lú	man	0	root
+	2	susinki-ta-me	susin=ta=Ø=me-eš	Susa=ABL=ABS=be-3PL.S	1	ABL
+
 	# Jagersma, Chap. 7 (204a)						
 	# ‘from the wall of the Medib-field to the middle imnun: 50 nindan’						
 	# (DP 641 3:4-5; L; 24)						
@@ -1530,7 +1553,7 @@ cf. adnominal ABL
 	7	80	50	50	8	nummod	
 	8	níĝ-řá	níĝ.řá	nindan	0	root	
 
-	if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
+if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
 
 	# Jagersma, Chap. 7 (244)					
 	# ‘with two ban of barley in a month for one pig’					
@@ -3580,6 +3603,19 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### what=TERM=COP
+
+	# Jagersma, Chap. 7 (252)						
+	# ‘Why is it he slanders me regarding the children?’						
+	# (MVN 11:168 3-5; U; 21)						
+	1	a-na-aš-àm	a.na=še='am	what=TERM=be:3N.S	7	TERM	or root + parataxis?
+	3	dumu-dumu-e-ne-ke4-eš	dumu-dumu=enē=ak=eš	child-child=PL=GEN=ADV	7	GEN+ADV	
+	4	/			7	punct	
+	5	inim	inim	word	7	ABS	
+	6	sig-ĝu10	sig=ĝu=Ø	weak=my=ABS	5	amod	
+	7	íb-bé	'i-b-'e-e	VP-3N.OO-say:IPFV-3SG.A:IPFV	0	root	
+
 
 #### doubtful analyses
 
