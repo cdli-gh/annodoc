@@ -1532,6 +1532,15 @@ cf. adnominal ABL
 
 	if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
 
+	# Jagersma, Chap. 7 (244)					
+	# ‘with two ban of barley in a month for one pig’					
+	# (Nik 1:63 10:1-2; L; 24)					
+	1	šáh	šáh	pig	0	TERM
+	2	1-šè	1=še	1=TERM	1	nummod
+	4	iti-da	iti.d='a	month=LOC	1	LOC
+	5	še	še	barley	1	ABL
+	6	0.0.2-ta	0.0.2=ta	0.0.2=ABL	5	nummod
+
 cf. adnominal `TERM`
 
 	# Jagersma, Chap. 7 (216)					
@@ -1542,6 +1551,57 @@ cf. adnominal `TERM`
 	3	taka4-a	taka4-Ø-'a	leave-NFIN-NOM	1	acl
 	4	lugal	lugal=ak	king=GEN	1	GEN
 	5	dilmunki-šè	dilmun=še	Dilmun=TERM	1	TERM
+
+	# Jagersma, Chap. 7 (222)					
+	# ‘four labourers for 24 days’					
+	# (UTAMI 3:1605 1; U; 21)					
+	1	4	4	4	2	nummod
+	2	ĝuruš	ĝuruš	young.man	0	root
+	3	u4	u4.d	day	2	TERM
+	4	24-šè	24=še	24=TERM	3	nummod
+	
+	# Jagersma, Chap. 7 (225)					
+	# ‘from the month Shulgi’s Festival until (and including) the month Shuesha’					
+	# (UET 3:988 6-7; Ur; 21)					
+	1	iti	iti.d	month	0	ABL
+	2	ezem	ezem	festival	1	appos
+	3	dšul-ge-ta	šul.ge.r=ak=ta	Shulgi=GEN=ABL	2	GEN
+	5	iti	iti.d	month	1	TERM
+	6	šu-eš5-ša-šè	šu.eš5.ša=še	Shuesha=TERM	5	appos
+
+	# Jagersma, Chap. 7 (234)					
+	# ‘200 litres of emmer wheat (to be used) as seed’					
+	# (NATN 647 1-2; N; 21)					
+	1	0.3.2	0.3.2	200.litres	2	nummod
+	2	zíz	zíz	emmer.wheat	0	root
+	4	numun-šè	numun=še	seed=TERM	2	TERM
+
+again, these may be elliptic:
+
+	# Jagersma, Chap. 7 (245)					
+	# ‘six men: with five reeds of work for one man’					
+	# (DP 622 1:1-3; L; 24)					
+	1	6	6	6	2	nummod
+	2	lú	lú	man	0	root
+	4	lú	lú	man	7	TERM
+	5	1-šè	1=še	1=TERM	4	nummod
+	7	kíĝ	kíĝ	work	2	ABL
+	8	ge	ge	reed	7	appos
+	9	5-ta	5=ta	5=ABL	8	nummod
+
+	# Jagersma, Chap. 7 (246)					
+	# ‘12 ½ men: To one man with three cubits of work each, it has been assigned.’					
+	# (TSA 23 3:5-8; L; 24)					
+	1	12	12	12	3	nummod
+	2	½	½	½	1	nummod
+	3	lú	lú	man	0	root
+	5	lú	lú	man	12	TERM
+	6	1-šè	1=še	1=TERM	5	nummod
+	8	kíĝ	kíĝ	work	12	ABL
+	9	kùš	kùš	cubit	8	appos
+	10	3-ta	3=ta	3=ABL	9	nummod
+	12	ì-ši-ti	'i-n-ši-te-Ø	VP-3SG-to-approach-3N.S/DO	3	parataxis
+
 
 #### "Functional obliques"
 
@@ -2643,6 +2703,15 @@ Note: When describing periods, other cases need to be assumed
 	1	iti	iti.d	month	0	ABL
 	2	šu-numun-na-ta	šu.numun=ak=ta	Shunumun=GEN=ABL	1	GEN
 
+	# Jagersma, Chap. 7 (225)					
+	# ‘from the month Shulgi’s Festival until (and including) the month Shuesha’					
+	# (UET 3:988 6-7; Ur; 21)					
+	1	iti	iti.d	month	0	ABL
+	2	ezem	ezem	festival	1	appos
+	3	dšul-ge-ta	šul.ge.r=ak=ta	Shulgi=GEN=ABL	2	GEN
+	5	iti	iti.d	month	1	TERM
+	6	šu-eš5-ša-šè	šu.eš5.ša=še	Shuesha=TERM	5	appos
+
 TODO: consolidate guidelines and data:
 - taglist recommends `appos` for `MN` (month name), with head being the word *iti* (month)
 	- this is also implemented in the MTAAC pre-annotation
@@ -3006,6 +3075,7 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 "give": 
 	ERG supplier
 	DAT recipient
+	TERM manner (as price)
 	ABS commodity
 	ABL source
 	DIR target (?)
@@ -3022,6 +3092,14 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 ~~~
 
 "To Abiati speak: 1 gur of barley to Zarriq let him give." (Hayes p.319, TCS 1,13)
+
+	# Jagersma, Chap. 7 (236)					
+	# ‘As the price for him (= a slave) she gave her ... (= various items).’					
+	# (RTC 17 2:4-3:1; L; 24)					
+	1	níĝ-sám-ma-né-šè	níĝ.sám.ma=ane=še	price=his=TERM	5	TERM
+	3	(...)	(...)=Ø	(...)=ABS	5	ABS
+	5	e-na-šúm	'i-nna-n-šúm-Ø	VP-3SG.IO-3SG.A-give-3N.S/DO	0	root
+
 
 	# Jagersma, Chap. 6 (60)					
 	# ‘PN2, wife of PN3, the king of Lagash, gave this from the palace to PN1, the chief merchant.’					
