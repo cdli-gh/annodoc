@@ -611,7 +611,6 @@ Occasionally, the arguments of a relative clause may occur as postposed genitive
 	8	80	80	80	9	nummod	
 	9	níĝ-řá	níĝ.řá	nindan	0	root	
 
-
 TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
 ### Subordinating conjunction: mark
@@ -1532,6 +1531,17 @@ cf. adnominal ABL
 	8	níĝ-řá	níĝ.řá	nindan	0	root	
 
 	if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
+
+cf. adnominal `TERM`
+
+	# Jagersma, Chap. 7 (216)					
+	# ‘royal consignment (lit. “things that left the hand”) to Dilmun’					
+	# (BIN 9:391 21-22; I; 20)					
+	1	níĝ	níĝ	thing	0	root
+	2	šu	šu=Ø	hand=ABS	3	ABS
+	3	taka4-a	taka4-Ø-'a	leave-NFIN-NOM	1	acl
+	4	lugal	lugal=ak	king=GEN	1	GEN
+	5	dilmunki-šè	dilmun=še	Dilmun=TERM	1	TERM
 
 #### "Functional obliques"
 
