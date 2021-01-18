@@ -2291,6 +2291,16 @@ This also includes cases in which the head has a more complex structure, e.g., d
 	# (Nik 1:7 2:4; L; 24)						
 	1	geme2-{d}ba-ú-ka-me	geme2.ba.ú.k=ak=Ø=me-eš	Geme-Bau=GEN=ABS=be-3PL.S	0	root	copular predicate is a headless absolutive NP with a genitive argument
 	
+Likewise, do not annotate the relative clause that is the copular predicate in the following example:
+
+	# Jagersma, Chap. 7 (161)						
+	# ‘As for your (bent) spine, you are (like) one who writes tablets all the time.’						
+	# (Lugal- banda II 122; OB)						
+	1	murgu2-zu	murgu2=zu=e	back=your=DIR	3	DIR	
+	2	dub	dub=Ø	tablet=ABS	3	ABS	
+	3	sar-sar-re-me-en	sar-sar-ed-Ø=Ø=me-en	write-write-IPFV-NFIN=ABS=be-2SG.S	0	root	acl => ABS => copular predicate
+
+	
 Note that the copular predicate can also carry cases other than `ABS`. In these cases they can be read as adnominal cases of a headless NP (e.g., "`ABL+ABS`").
 
 	# Jagersma, Chap. 29 (90)						
