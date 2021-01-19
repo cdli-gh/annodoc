@@ -480,6 +480,13 @@ Analoguously for other cases:
 	2	[š]e	še=Ø	barley=ABS	3	ABS
 	3	áĝ-a	áĝ-Ø-'a=ak	measure.out-NFIN-NOM=GEN	0	acl+GEN
 
+	# Jagersma, Chap. 8 (55)					
+	# ‘of (the fact) that Huru established our freedom’					
+	# (NG 169 10; L; 21)					
+	1	hu-ru	hu.ru=e	Huru=ERG	3	ERG
+	2	ama-ar-gi4-me	ama.ar.gi4=mē=Ø	freedom=our=ABS	3	ABS
+	3	in-ĝar-ra	'i-n-ĝar-Ø-'a=ak	VP-3SG.A-place-3N.S/DO-NOM=GEN	0	acl+GEN
+
 	# Jagersma, Chap. 5 (19)					
 	# ‘for buying bitumen’					
 	# (MVN 16:1257 obv 1; U; 21)					
@@ -1958,6 +1965,14 @@ The vocative identifies the addressee of the following statements with a noun ph
 	2	ma-mu-zu	ma.mu.d=zu=Ø	dream=your=ABS	4	ABS
 	3	ĝe26	ĝe26=e	I=ERG	4	ERG
 	4	ga-mu-ra-búr-búr	ga-mu-ra-búr-búr	MOD:1SG.A/S-VENT-2SG.IO-reveal-reveal	0	root
+
+	# Jagersma, Chap. 8 (70)					
+	# ‘Slave! Is that man your master?’					
+	# (GA 69; OB)					
+	1	urdu2	urdu2.d	slave	3	voc
+	2	lú-še	lú=še=Ø	man=that=ABS	3	ABS
+	3	lugal-zu-ù	lugal=zu	master=your	0	root
+
 
 TODO: standardize vocative/voc
 
@@ -3792,6 +3807,14 @@ If an argument marked by emphatic copula can also be analyzed as an independent 
 	2	é	é=Ø	house=ABS	3	ABS
 	3	mu-řú	Ø-mu-'-řú-Ø	VP-VENT-1SG.A-erect-3N.S/DO	1	parataxis
 
+	# Jagersma, Chap. 8 (87)					
+	# (Two brothers sell their sister as a slave. If she stops working) ‘it is they who shall be slaves.’					
+	# (FAOS 17:45 10; N; 21)					
+	1	ne-me	nēn=Ø=me-eš	this=ABS=be-3PL.S	0	root
+	2	urdu2	urdu2.d=Ø	slave=ABS	3	ABS
+	3	ha-me	ha='i-me-eš	MOD=VP-be-3PL.S	1	parataxis
+
+
 otherwise, annotate the syntatically expected case (against the morphology)
 	
 	# Jagersma, Chap. 8 (15)						
@@ -3838,6 +3861,16 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### postposed ABS
+
+That should not exist. Theoretically, these could always be analysed as predicates of an implicit copula. However, the following example employs an explicit (emphatic?) copula along with such an "implicit" (?) copula:
+
+	# Jagersma, Chap. 8 (85)					
+	# ‘(Referring to various plants, Enki says:) “What is this?”’					
+	# (ENh 199; OB)					
+	1	a-na-àm	a.na=Ø='am	what=ABS=be:3N.S	0	root
+	2	ne-e	nēn=Ø	this=ABS	1	ABS
 
 #### *zi lugal* "by the king's life"
 
