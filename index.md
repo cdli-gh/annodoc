@@ -1797,6 +1797,12 @@ Along with genitive, the equative (equitative) case, marked by *gin7*, is an adn
 ~~~
 "Who is like my brother?" (Hayes, p.312, TCS 1,200)
 
+	# Jagersma, Chap. 7 (327)						
+	# ‘Who is like my brother?’						
+	# (TCS 1:143 8; L; 21)						
+	1	a-ba	a.ba=Ø	who=ABS	0	root	
+	2	ses-ĝu10-gé	ses=ĝu=gen	brother=my=EQU	1	EQU	
+
 "The equative case primarily expresses a relation of comparison between two noun phrases. Thus, like the genitive case (...), it does not indicate a semantic relation with the verb. This is undoubtedly the reason why finite verbal forms never contain an affix which is coreferential with a noun phrase in the equative or genitive case. All other cases designate some semantic relation with the verb and have their counterparts in some verbal affix." (Jagersma 2010: 203) Jagersma, chap. 7 mentions to exceptions to this rule.
 
 However, note that an annotation as adnominal is not always possible in a projective parse. The following ("correct") analysis is non-projective (crossing edges). 
