@@ -3037,6 +3037,13 @@ Analysis of functional dependents should follow examples where explicit morpholo
 	1	ki	ki	place	0	ABL
 	2	geme2-ne-ta	geme2=enē=ak=ta	slave.woman=PL=GEN=ABL	1	GEN
 
+	# Jagersma, Chap. 7 (271)					
+	# ‘This was raised from Ur-Ishtaran.’					
+	# (OSP 1:71 9-10; N; 24)					
+	1	ki	ki	place	4	ABL
+	2	ur-dištaran-ta	ur.ištaran=ak=ta	Urishtaran=GEN=ABL	1	GEN
+	4	ab-ta-zi	'a-b-ta-zi.g-Ø	VP-3N-from-rise-3N.S/DO	0	root
+
 cf. *szag*+ABL "out of"
 
 	# Jagersma, Chap. 19 (70)					
