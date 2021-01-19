@@ -3704,6 +3704,61 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+#### head in elliptic adverbial constructions
+
+	# Jagersma, Chap. 7 (289)					
+	# ‘with five reeds of work for one man’					
+	# (DP 622 1:2-3; L; 24)					
+	1	lú	lú	man	4	TERM
+	2	1-šè	1=še	1=TERM	1	nummod
+	4	kíĝ	kíĝ	work	0	ABL
+	5	ge	ge	reed	4	appos
+	6	5-ta	5=ta	5=ABL	5	nummod
+						
+	# Jagersma, Chap. 7 (290)					
+	# ‘with sixteen bundles in each of its bales’					
+	# (TENS 48 2; U; 21)					
+	1	gu-niĝin2-ba	gu.niĝin2=be='a	bale=its=LOC	3	LOC
+	2	sa	sa	bundle	0	ABL
+	3	16-ta	16=ta	16=ABL	2	nummod
+	
+	# Jagersma, Chap. 7 (291)					
+	# ‘with ten shekels (of digging work) by one man’					
+	# (ITT 5:6865 2; L; 21)					
+	1	lú	lú	man	0	ERG
+	2	1-e	1=e	1=ERG	1	nummod
+	3	10	10	10	4	nummod
+	4	giĝ4-ta	giĝ4=ta	shekel=ABL	1	ABL
+
+	
+#### head and attachment of copula clause
+
+	# Jagersma, Chap. 7 (309)								
+	# ‘It was (the case) that a slave woman was equal to her mistress.’								
+	# (St B 7:31; L; 22)								
+	1	geme2	[geme2=Ø	[slave.woman=ABS				3	ABS
+	2	nin-a-né	nin=ane=d(a)	lady=her=COM				3	COM
+	3	mu-da-sá-àm	Ø-mu-n-da-sá-Ø-'a=Ø]='am	VP-VENT-3SG-with-be.equal-3SG.S/DO-NOM=ABS]=be:3N.S				0	root
+
+	
+#### acl vs. parataxis
+
+	# Jagersma, Chap. 7 (318)						
+	# ‘four ban (of barley) PN, the cupbearer; he lives in the palace; 4 ban (of barley) PN, the barber; he lives at Lugaltemen’s place’						
+	# (DP 119 5:4-11; L; 24)						
+	1	0.0.4	0.0.4	4.ban	2	nummod	commodity is implicit, so annotate nummod; with explicit commodity, this would be head
+	2	PN	PN	PN	0	root	implicit case is DAT
+	4	sagi	sagi	cupbearer	2	appos	
+	6	é-gal-la	é.gal='a	palace=LOC	8	LOC	
+	8	ì-ti	'i-n(i)-ti.l-Ø	VP-in-live-3SG.S/DO	4	acl	on ground of morphology and translation, parataxis would be better suited; treated here like "the cupbearer who lives in the palace"
+	10	0.0.4	0.0.4	4.ban	11	nummod	
+	11	PN	PN	PN	2	parataxis	
+	13	šu-i	šu.i	barber	11	appos	
+	15	lugal-temen-da	lugal.temen=da	Lugaltemen=COM	17	COM	
+	17	e-da-ti	'i-n-da-ti.l-Ø	VP-3SG-with-live-3SG.S/DO	13	acl	
+
+
+
 #### what=TERM=COP
 
 	# Jagersma, Chap. 7 (252)						
