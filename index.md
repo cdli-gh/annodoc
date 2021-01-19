@@ -3800,6 +3800,33 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 
 Collect examples here that are not satisfactorily analyzed, yet.
 
+#### *zi lugal* "by the king's life"
+
+Jagersma (2010) never provides an interpretation of the phrase. If first element of a clause, it can be considered an elliptical clause, but this does not seem to be possible for the following case:
+
+	# Jagersma, Chap. 8 (15)						
+	# ‘By the king’s life, I, myself, gave Abbakalla to Urmes.’						
+	# (TCS 1:81 3-7; L; 21)						
+	1	ab-ba-kal-la	ab.ba.kal.la=Ø	Abbakalla=ABS	10	ABS	
+	3	ur-mes-ra	ur.mes=ra	Urmes=DAT	10	DAT	
+	5	zi	zi	life	10	???	? case
+	6	lugal	lugal=ak	king=GEN	1	GEN	
+	8	ĝe26-e-me	ĝe26=Ø=me-en	I=ABS=be-1SG.S	10	ERG	sic!
+	10	ha-na-šúm	ha='i-nna-'-šúm-Ø	MOD=VP-3SG.IO-1SG.A-give-3N.S/DO	0	root	
+	
+#### nested acls
+	
+	# Jagersma, Chap. 8 (23)						
+	# ‘because they are persons of the ... plain’						
+	# (JAOS 103 p. 64 6N-T638 1:8; N; 21)						
+	1	a-ne-ne	a.ne.ne=Ø	they=ABS	2	ABS	
+	2	lú	lú	person	0	GEN+ADV	ABS marked on 5 => copular predicate; GEN+ADV marked on 6
+	3	eden	eden	plain	4	nmod	
+	4	bar	_	_	2	GEN	consider this a proper namy
+	5	tab-ba	...=ak=Ø	...=GEN=ABS	4	appos	
+	6	al-me-a-ke4-eš	'a-me-eš-'a=ak=eš	VP-be-3PL.S-NOM=GEN=ADV	2	cop	
+
+
 #### head in elliptic adverbial constructions
 
 	# Jagersma, Chap. 7 (289)					
