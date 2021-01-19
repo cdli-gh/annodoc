@@ -3765,6 +3765,27 @@ Both these models violate the underlying morphology.
 
 Hayes mentions that copula seems to be able to replace any case marker (but can also appear in combination with them).
 
+If an argument marked by emphatic copula can also be analyzed as an independent clause (i.e., it is the first argument of the matrix clause), analyse it as such (in accordance with the morphology)
+
+	# Jagersma, Chap. 8 (26)					
+	# ‘I, the shepherd, (lit. “(I) who am the shepherd”) have built the temple.’					
+	# (Cyl B 2:5; L; 22)					
+	1	sipa-me	sipa.d=Ø=me-en	shepherd=ABS=be-1SG.S	0	root
+	2	é	é=Ø	house=ABS	3	ABS
+	3	mu-řú	Ø-mu-'-řú-Ø	VP-VENT-1SG.A-erect-3N.S/DO	1	parataxis
+
+otherwise, annotate the syntatically expected case (against the morphology)
+	
+	# Jagersma, Chap. 8 (15)						
+	# ‘By the king’s life, I, myself, gave Abbakalla to Urmes.’						
+	# (TCS 1:81 3-7; L; 21)						
+	1	ab-ba-kal-la	ab.ba.kal.la=Ø	Abbakalla=ABS	10	ABS	
+	3	ur-mes-ra	ur.mes=ra	Urmes=DAT	10	DAT	
+	5	zi	zi	life	10	???	? case
+	6	lugal	lugal=ak	king=GEN	1	GEN	
+	8	ĝe26-e-me	ĝe26=Ø=me-en	I=ABS=be-1SG.S	10	ERG	sic!
+	10	ha-na-šúm	ha='i-nna-'-šúm-Ø	MOD=VP-3SG.IO-1SG.A-give-3N.S/DO	0	root	
+
 ### Negation with *nu*
 
 Negation is normally expressed with a proclitic, but occasionally, it appears as individual word. Jagersma (2010, p.717) hints at the possibility that these may be analysed as `cop`, but then the relation between the copular clause and the following relative clause that modifies its predicate (as well as the relation between both copular clauses) is unclear.
