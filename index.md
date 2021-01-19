@@ -1797,6 +1797,23 @@ Along with genitive, the equative (equitative) case, marked by *gin7*, is an adn
 ~~~
 "Who is like my brother?" (Hayes, p.312, TCS 1,200)
 
+"The equative case primarily expresses a relation of comparison between two noun phrases. Thus, like the genitive case (...), it does not indicate a semantic relation with the verb. This is undoubtedly the reason why finite verbal forms never contain an affix which is coreferential with a noun phrase in the equative or genitive case. All other cases designate some semantic relation with the verb and have their counterparts in some verbal affix." (Jagersma 2010: 203) Jagersma, chap. 7 mentions to exceptions to this rule.
+
+However, note that an annotation as adnominal is not always possible in a projective parse. The following ("correct") analysis is non-projective (crossing edges). 
+
+	# Jagersma, Chap. 7 (328)					
+	# ‘Like the Anzu-bird, Ningirsu spreads out his wings over Irikagena.’					
+	# (Ukg. 40 1; L; 24)					
+	1	dnin-ĝír-su-ke4	nin.ĝír.su.k=e	Ningirsu=ERG	5	ERG
+	2	iri-ka-ge-na-ra	iri.ka.ge.na.k=ra	Irikagena=DAT	5	DAT
+	3	anzu{mušen}-gen	anzu2.d=gen	Anzu.bird=EQU	1	EQU
+	4	á	á=Ø	arm=ABS	5	ABS
+	5	mu-né-bař-ře	Ø-mu-nni-b-bař4-e	VP-VENT-3SG.OO-3N.DO-open-3SG.A:IPFV	0	root
+
+It is not clear how to analyze this. In particular, the `ERG` case is not extended to the `EQU`. Similar to the annotation of dislocated genitives, mark the verb as head. This is feasible, however, only, if otherwise a non-projective parse (with crossing edges) would emerge.
+
+Otherwise, `EQU` should always be annotated in relation to a noun. TODO: check in data and examples in documentation.
+
 As a general rule, nominal sentences without explicit morphological marks in the text (or their restauration in the morphology annotation) should be annotated as having an implicit copula, i.e., either as `appos` (if an appositional/equational reading is preferred, first nominal is head), or as clause (second nominal is copular predicate and head, first nominal is `ABS`). In a sequence of clauses, the copular annotation is preferred:
 
 ~~~ conllu
