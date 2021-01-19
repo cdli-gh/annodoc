@@ -1553,6 +1553,49 @@ cf. adnominal ABL
 	7	80	50	50	8	nummod	
 	8	níĝ-řá	níĝ.řá	nindan	0	root	
 
+adnominal ABL
+
+	"[T]he noun phrase in the ablative case can also be used adnominally and thus be a part of a larger noun phrase" (Jagersma 2010: 195)
+	
+	# Jagersma, Chap. 7 (269)					
+	# ‘sealed documents (lit. “impressed seals”) and letters from Anshan’					
+	# (BIN 9:302 2-3; I; 20)					
+	1	kišib	kišib	seal	0	ABS
+	2	ra-a	ra-Ø-'a	hit-NFIN-NOM	1	amod
+	3	ù-na-a-du11	ù-na.a-du11.g	letter	1	appos
+	5	an-ša-anki-ta	an.ša.an=ta=Ø	Anshan=ABL=ABS	3	ABL
+
+	# Jagersma, Chap. 7 (279)					
+	# ‘twenty pounds of wool (weighed) with the weight for the wool distribution’					
+	# (VS 25:54 1:1; L; 24)					
+	1	20	20	20	2	nummod
+	2	ma-na	ma.na	pound	3	nmod
+	3	siki	siki	wool	0	root
+	4	na4	na4	stone	3	ABL
+	5	siki-ba-ta	siki.ba=ak=ta	wool.distribution=GEN=ABL	4	GEN
+
+	# Jagersma, Chap. 7 (280)					
+	# ‘16 1/2 iku of land (measured) with the rope of purchase’					
+	# (BM 3:10 1:1; L; 24)					
+	1	0.2.4	0.2.4	16	3	nummod
+	2	1/2	1/2	1/2	1	nummod
+	3	gana2	gana2	land	0	root
+	4	éš	éš	rope	3	ABL
+	5	sám-ma-ta	sám.ma=ak=ta	purchase=GEN=ABL	4	GEN
+	
+	"The ablative case can also have a distributive meaning, usually in combination with a noun phrase in the terminative, locative, or ergative case" (Jagersma 2010: 195)
+	
+	# Jagersma, Chap. 7 (287)						
+	# ‘Dudu the temple administrator and his wife and children consumed this in the house of Kisal.’						
+	# (DP 224 6:5-9; L; 24)						
+	1	du-du	du.du	Dudu	11	ERG	marked on 6
+	3	saĝĝa	saĝĝa	administrator	1	appos	
+	5	dam	dam	wife	3	ABL	adnominal ABL
+	6	dumu-né-ta	dumu=ane=ta=e	child=his=ABL=ERG	5	appos	implicit conjunction
+	8	é	é	house	11	LOC	
+	9	ki-sal4-la-ka	ki.sal4=ak='a	Kisal=GEN=LOC	8	GEN	
+	11	ì-gu7-ne	'i-gu7-enē	VP-eat-3PL.A:IPFV	0	root	
+
 if the transaction rule does not apply, annotate like a sentence with an implicit copula, i.e., with the last argument as head
 
 	# Jagersma, Chap. 7 (244)					
