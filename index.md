@@ -1943,6 +1943,16 @@ The vocative identifies the addressee of the following statements with a noun ph
 	2	é-zu	é=zu=Ø	house=your=ABS	3	ABS
 	3	ma-ra-řú-e	Ø-mu-ra-řú'-en	VP-VENT-2SG.IO-erect-1SG.A/S:IPFV	0	root
 
+	# Jagersma, Chap. 8 (9)					
+	# ‘My shepherd, I will explain your dreams for you.’					
+	# (Cyl A 5:12; L; 22)					
+	1	sipa-ĝu10	sipa.d=ĝu=Ø	shepherd=my=ABS	4	vocative
+	2	ma-mu-zu	ma.mu.d=zu=Ø	dream=your=ABS	4	ABS
+	3	ĝe26	ĝe26=e	I=ERG	4	ERG
+	4	ga-mu-ra-búr-búr	ga-mu-ra-búr-búr	MOD:1SG.A/S-VENT-2SG.IO-reveal-reveal	0	root
+
+TODO: standardize vocative/voc
+
 Also used for absolutive arguments before the non-verbal clause in seals:
 
 "In seal inscriptions, the initial nominal phrase contains the name of the king as a vocative. The vocative normally has no marking in Sumerian ... [, but t]here are a few cases where the vocative is marked by .e; this is presumably an extension in use of the lcoative-terminative case." (Hayes, p. 275)
