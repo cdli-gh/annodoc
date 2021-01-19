@@ -267,24 +267,30 @@ Semantically, the following would be `acl` but as the verb has no overtly realiz
 	1	a-šà	a.šà.g	field	0	LOC	marked on 2
 	2	in-dab5-ba-na	'i-n-dab5-Ø-'a=ane='a	VP-3SG.A-seize-3N.S/DO-NOM=his=LOC	1	amod	no overt arguments, hence amod, not acl
 
-If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, annotate them like nouns, i.e., use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. 
+For headless "adjectives" (relative clauses without independent arguments), annotate only case, not `amod`: If adjectives (including argument-less relative clauses) appear without nominal head, but with a grammatical role (morphological case) in a clause, treat them like nouns, i.e., use the morphological case for their annotation. Likewise, lexicalized deverbal nominals are annotated like nominal arguments. This is because such constructions are systematically ambiguous between an interpretation as lexicalized nominals and as nominalized clauses.
+
+	# Jagersma, Chap. 7 (326)					
+	# ‘from (the place of) Banzigen (“He/She let me rise”)’					
+	# (Iraq 22 pl.19 MLC 42 2; D; 21)					
+	1	ki	ki	place	0	ABL
+	2	ba-zi-ge-na-ta	Ø-ba-n-zi.g-en=ak=ta	VP-MM-3SG.A-rise-1SG.S/DO=GEN=ABL	1	GEN	not: amod+GEN
 
 	# Jagersma, Chap. 27 (34)						
 	# ‘one in which it is sieved for me’						
-	1	gema-an-sim	Ø-ma-n(i)-sim-Ø	VP-1SG.IO-in-sieve-3N.S/DO	0	ABS	
+	1	gema-an-sim	Ø-ma-n(i)-sim-Ø	VP-1SG.IO-in-sieve-3N.S/DO	0	ABS	not: amod+ABS
 
 Etymologically, this is a headless relative clause, but it is lexicalized as a noun; according to CDLI conventions, that is originally an `amod`, because it comes without arguments. 
 
 	# Jagersma, Chap. 27 (36)						
 	# ‘one who has died’						
-	1	ba-úš	Ø-ba-'úš-Ø	VP-MM-die-3SG/3N.S/DO	0	ABS	
+	1	ba-úš	Ø-ba-'úš-Ø	VP-MM-die-3SG/3N.S/DO	0	ABS	not: amod+ABS
 
 Etymologically, this is a headless relative clause, but it is lexicalized as a noun.
 
 	# Jagersma, Chap. 27 (53)						
-	# ‘on whose right and left lions were laying’						
+	# ‘on whose right and left, lions were laying’						
 	# (Cyl A 5:16; L; 22)						
-	1	zi-da	zi.d-Ø-'a	be.right-NFIN-NOM	4	LOC	morphologically, this is amod+LOC
+	1	zi-da	zi.d-Ø-'a	be.right-NFIN-NOM	4	LOC	not: amod+LOC
 	2	gabu2-na	gabu2=ane='a	left=his=LOC	1	appos	
 	3	piriĝ	piriĝ=Ø	lion=ABS	4	ABS	
 	4	ì-nú-nú-a	'i-b(i)-nú-nú-Ø-'a	VP-3N:on-lie-lie-3N.S/DO-NOM	0	acl	
@@ -297,7 +303,7 @@ If a lexicalized nominalization is segmented into multiple tokens in the transli
 	# ‘freedom (lit.“returning to mother”)’					
 	# (MVN 6:52 rev 8; L; 22) 					
 	1	ama-ar-	ama=r(a)	mother=DAT	2	DAT
-	2	gi4	gi4-Ø	turn-NFIN	0	acl
+	2	gi4	gi4-Ø	turn-NFIN	0	acl	not: amod, because the chosen segmentation split off a syntactic argument
 	
 Note that this should not normally occur in CDLI data. If such instances are found, they should also be marked for subsequent checks of the transliteration/segmentation.
 
