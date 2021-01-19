@@ -1995,6 +1995,15 @@ However, numerals that constitute independent clause that do not modify or stand
 
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
+	# Jagersma, Chap. 7 (280)					
+	# ‘16 1/2 iku of land (measured) with the rope of purchase’					
+	# (BM 3:10 1:1; L; 24)					
+	1	0.2.4	0.2.4	16	3	nummod
+	2	1/2	1/2	1/2	1	nummod
+	3	gana2	gana2	land	0	root
+	4	éš	éš	rope	3	ABL
+	5	sám-ma-ta	sám.ma=ak=ta	purchase=GEN=ABL	4	GEN
+
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
 
 Note: The `nummod` rule is motivated by the need to facilitate automated annotation and to improve inter-annotator agreement.
