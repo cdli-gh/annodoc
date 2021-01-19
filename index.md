@@ -3354,6 +3354,16 @@ If no verb is provided, mark suppliers as ERG, receivers as DAT and commodities 
 	12	izi	izi=Ø	fire=ABS	13	ABS
 	13	ba-šúm	Ø-ba-n-šúm-Ø	VP-3N.IO-3SG.A-give-3N.S/DO	8	parataxis
 
+	# Jagersma, Chap. 8 (15)						
+	# ‘By the king’s life, I, myself, gave Abbakalla to Urmes.’						
+	# (TCS 1:81 3-7; L; 21)						
+	1	ab-ba-kal-la	ab.ba.kal.la=Ø	Abbakalla=ABS	10	ABS	
+	3	ur-mes-ra	ur.mes=ra	Urmes=DAT	10	DAT	
+	5	zi	zi	life	10	???	? case
+	6	lugal	lugal=ak	king=GEN	1	GEN	
+	8	ĝe26-e-me	ĝe26=Ø=me-en	I=ABS=be-1SG.S	10	ERG	sic!
+	10	ha-na-šúm	ha='i-nna-'-šúm-Ø	MOD=VP-3SG.IO-1SG.A-give-3N.S/DO	0	root	
+
 TODO: compare with other explicit verbs of supply and reception:
 
 verbs of transfer
