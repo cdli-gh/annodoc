@@ -1042,7 +1042,20 @@ Sumerian NPs usually place the head of the NP at their left periphery. For seman
 	5	ur5	ur5	debt	4	appos
 	6	a-ba	a.ba=ak=Ø	Aba=GEN=ABS	5	GEN
 
-For units, the quantified commodity is to be annotated as syntactic head. Numeral modifiers adjacent to the unit are annotated as dependents of the unit, not the commodity. If the commodity stands *between* numeral and unit, numerals modify the commodity.
+For units, the quantified commodity is to be annotated as syntactic head, unless the morphological annotation points to a genitive construction, as in the following example.
+
+	# Jagersma, Chap. 7 (295)					
+	# ‘each (person) with four rings of (lit. “with”) eight shekels of silver each’					
+	# (AUCT 1:942 5; D; 21)					
+	1	2	2	2	2	nummod
+	2	har	har	ring	0	ABL
+	3	kù-babbar	kù.babbar=ak	silver=GEN	2	GEN
+	4	8	8	8	5	nummod
+	5	giĝ4-ta-ta	giĝ4=ta=ta	shekel=ABL=ABL	2	ABL
+
+Without the `GEN` marker, two interpretations are possible: Either the commodity are actual rings, with the modifier making the material explicit, or the commodity is silver, distributed in the form of rings. From the archeological context, we adopt the first interpretation, because silver as a commodity is normally described in units of weight, and this is made explicit in the morphological annotation by restoring a `=GEN` morpheme. Even if such a restored (or overt) morpheme is absent, the annotation as unit must only be applied if the element modified is not a proper name (but see epithets below) and if the unit is listed in the documentation of metrological units, cf. ([CDLI wiki](http://cdli.ox.ac.uk/wiki/doku.php?id=ur_iii_metrological_systems)).
+
+Numeral modifiers adjacent to the unit are annotated as dependents of the unit, not the commodity. If the commodity stands *between* numeral and unit, numerals modify the commodity.
 
 ~~~ conllu
 1	sukkal	_	minister	_	_	2	nmod	_	_
@@ -1953,6 +1966,16 @@ The label `nummod` is assigned on semantic grounds (regardless of morphology) to
 	1	é	é	house	0	ABS	marked on 3
 	2	ub	ub	corner	1	appos	
 	3	imin-na-né	imin=ane=Ø	seven=his=ABS	2	nummod	
+
+Preposed and postposed numerals can occur in combination with each other:
+
+	# Jagersma, Chap. 7 (293)					
+	# ‘(silver) for six rings of five shekels each’					
+	# (UET 3:710 2; Ur; 21)					
+	1	har	har	ring	0	TERM
+	2	5	5	5	3	nummod
+	3	giĝ4-ta	giĝ4=ta	shekel=ABL	1	ABL
+	4	6-šè	6=še	6=TERM	1	nummod
 
 Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, regardless of their morphological case:
 
