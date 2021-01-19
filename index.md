@@ -920,9 +920,7 @@ Note that `appos` is overloaded and may require disambiguation. If an element is
 ~~~
 "Agua the overseer of a crew of 60 men, Adamu, the son of X, Shu-Aba the physician, Imtidam the leather worker, Abiati, Sguea, the son of Edenshilat, and Dada, the son of Ahushuni, are the relevant witnesses." (P123217)
 
-In rare cases, a phrase in a longer sequence of complex appositions may copy the case marker of its head although it does not mark the end of the phrase. 
-
-According to Jagersma (2010:92), "if the head is followed by two or more appositions, the case marker is sometimes placed after every apposition and thus repeated several times. This happens chiefly when the number of appositions is particularly large. Take, for instance, the following example, which gives only the first two appositions out of a series of twelve, all of them with an ergative case marker:"
+In rare cases, a phrase in a longer sequence of complex appositions may copy the case marker of its head although it does not mark the end of the phrase. According to Jagersma (2010:92), "if the head is followed by two or more appositions, the case marker is sometimes placed after every apposition and thus repeated several times. This happens chiefly when the number of appositions is particularly large. Take, for instance, the following example, which gives only the first two appositions out of a series of twelve, all of them with an ergative case marker:"
 
 	# Jagersma, Chap. 5 (29)						
 	# ‘Eannatum, the ruler of Lagash, the one nominated by Enlil, (...)’						
@@ -951,6 +949,17 @@ According to Jagersma (2010:92), "if the head is followed by two or more apposit
 	8	dnin-ĝiš-zi-da-ke4	nin.ĝiš.zi.da.k=e	Ningishzida=ERG	1	appos
 
 In such cases, annotate `appos` *despite the morphology*. Note that automated annotation will most likely represent such cases as multiple independent arguments with the same role. For dependencies other than `LOC`, all cases of verbs with multiple dependencies of the same type must be manually inspected.
+
+Occasionally, repeated case markers in an apposition could be a means of asserting non-identity, i.e., clarify that this is (implicit) conjunction rather than (implicit) identity. This is not made explicit on the syntactic annotation.
+
+	# Jagersma, Chap. 7 (281)						
+	# ‘by the power of the Nanshe and by the power of Ningirsu’						
+	# (St D 4:2-3; L; 22)						
+	1	á	á	arm	0	ABL	
+	2	dnanše-ta	nanše=ak=ta	Nanshe=GEN=ABL	1	GEN	
+	4	á	á	arm	1	appos	not ABL
+	5	dnin-ĝír-su-ka-ta	nin.ĝír.su.k=ak=ta	Ningirsu=GEN=ABL	4	GEN	
+
 
 ### List: list
 
