@@ -1860,6 +1860,63 @@ As a general rule, nominal sentences without explicit morphological marks in the
 
 TBC: In the mapping to UD, equative rendered as xcomp or nmod?
 
+Note that the EQU (if analyzed as adnominal) deviates from all other morphological cases in that "the case marker of the compared phrase is not copied on the phrase in the equative case. For instance, in example (332) the noun é ‘house’, which is in the ergative case, is compared with the noun h~u~ r-sag ‘mountain’. Yet, the latter noun is only in the equative case, not also in the ergative case. This is normal in Sumerian, in contrast with some other languages." (Jagersma 2010: 204)
+
+	# Jagersma, Chap. 7 (332)						
+	# ‘The house lifted the head upwards in heaven and earth like a mountain.’						
+	# (Cyl A 21:23; L; 22)						
+	1	é-e	é=e	house=ERG	7	ERG	
+	2	hur-saĝ-gen7	hur.saĝ=gen	mountain=EQU	1	EQU
+	3	an	an	heaven	7	LOC	
+	4	ki-a	ki='a	earth=LOC	3	appos	
+	5	saĝ	saĝ=Ø	head=ABS	7	ABS	
+	6	an-šè	an=še	heaven=TERM	7	TERM	
+	7	mi-ni-íb-íl	Ø-mu-ni-b-'íl-Ø	VP-VENT-in-3N.A-lift-3N.S/DO	0	root	
+
+TODO: please confirm priority of adnominal analysis for `EQU`.
+
+	# Jagersma, Chap. 7 (333)						
+	# ‘Let him seek shelter (lit. “bring his life”) in there as in his built-up city! (lit. “in there like his built city”).’						
+	# (Shulgi A 35; OB manuscript)						
+	1	iri	iri	city	4	EQU	isn't that actually EQU+LOC?
+	2	řú-a-né-gen7	řú-Ø-'a=ane=gen	erect-NFIN-NOM=his=EQU	1	amod	
+	3	zi-né	zi=ane=Ø	breath=his=ABS	4	ABS	
+	4	ha-ba-ši-in-tùm	ha=Ø-ba-ši-n-tùm-Ø	MOD=VP-MM-to-3SG.A-bring:IPFV-3N.S/DO	0	root	
+
+	
+Headless EQU
+
+	# Jagersma, Chap. 7 (331)						
+	# ‘He had it (viz. a wall) surround his city like a green mountain.’						
+	# (FAOS 9/2 Ibbīsuen 1-2 2:2-3; Ur; 21)						
+	1	hur-saĝ	hur.saĝ	mountain	5	EQU	adnominal argument of (pro-dropped) subject
+	2	sig7-ga-gen7	sig7-Ø-'a=gen	be.green-NFIN-NOM=EQU	1	acl	
+	4	iriki-né	iri=ane=e	city=his=DIR	5	DIR	
+	5	im-mi-dab6	'i-m(u)-bi-n-dab6-Ø	VP-VENT-3N.OO-3SG.A-surround-3N.S/DO	0	root	
+
+TODO: Please confirm that `EQU` can be premodifying
+
+	# Jagersma, Chap. 7 (334)					
+	# ‘Who is as good as Bau?’					
+	# (a personal name) (DP 112 5:6; L; 24)					
+	1	dba-ú-gen7-	ba.ú=gen	Bau=EQU	1	EQU
+	2	a-ba-	a.ba=Ø	who=ABS	3	ABS
+	3	sa6	'a-sa6.g-Ø	VP-be.good-3SG.S/DO	0	root
+
+TO CONFIRM: If adnominal, what does the EQU modify in the following example?
+
+	# Jagersma, Chap. 7 (335)						
+	# ‘as for the man who was as huge as heaven, as huge as the earth’						
+	# (Cyl A 5:13; L; 22)						
+	1	lú	lú	man	0	TERM	
+	2	an-gen7	an=gen	heaven=EQU	3	EQU	adnominal?
+	3	ri-ba	ri.b-Ø-'a	be.huge-NFIN-NOM	1	acl	
+	4	ki-gen7	ki=gen	earth=EQU	5	EQU	adnominal?
+	5	ri-ba-šè	ri.b-Ø-'a=še	be.huge-NFIN-NOM=TERM	1	acl	
+	
+Remark CC: Personally, I see little justification to insist on an *exclusively* adnominal interpretation of `EQU`. It is quite different from a classical adnominal case like `GEN` in terms of morphological (no case stacking) and syntactic (premodifying!?) features. However, Jagersma is quite explicit on that.
+
+
 #### Possession
 
 Annotation of possession requires co-indexing of arguments. This is not covered by the dependency annotation as this leads to non-projective structures. Argument co-indexing is left as a future extension for the DEPRELS column of CoNLL-U.
