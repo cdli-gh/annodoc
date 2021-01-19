@@ -554,6 +554,14 @@ Note that headless relative clauses include cases with absolutive case (which is
 	4	/	_	_	5	punct	
 	5	ì-ku(DU)-a-am	'i-n(i)-ku4.ř-Ø-'a=Ø='am	VP-in-enter-3N.S/DO-NOM=ABS=be:3N.S	0	acl+ABS
 
+	# Jagersma, Chap. 8 (17)					
+	# ‘The things I know, he knows too.’					
+	# (TrD 1 13; ?; 21)					
+	1	níĝ	níĝ=Ø	thing=ABS	2	ABS
+	2	ì-zu-a	'i-'-zu-Ø-'a=Ø	VP-1SG.A-know-3N.S/DO-NOM=ABS	4	acl+ABS
+	3	a-ne	a.ne=e	he=ERG	4	ERG
+	4	in-ga-an-zu	'i-nga-n-zu-Ø	VP-also-3SG.A-know-3N.S/DO	0	root
+
 Note that CDLI annotates adverbial clauses without `mark` as relative clauses. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While the use of `advcl` and `advmod` is limited in CDLI annotation, these are derived for the UD export as follows:
 	
 	acl+LOC, TERM, EQU, etc. => advcl
