@@ -489,6 +489,15 @@ Analoguously for other cases:
 	4	/	_	_	5	punct
 	5	mu-ti-la-a	Ø-mu-n(i)-ti.l-Ø-'a='a	VP-VENT-in-live-3SG.S/DO-NOM=LOC	0	acl+LOC
 
+	# Jagersma, Chap. 7 (275)					
+	# ‘since the very beginning of time (lit. “From the day when the bud came out, from when the seed sprouted”)’					
+	# (St B 8:27-28; L; 22)					
+	1	u4	u4.d	day	6	ABL
+	2	ul-	ul=Ø	bud=ABS	3	ABS
+	3	lí-a-ta	'è-Ø-'a=ta	go.out-NFIN-NOM=ABL	1	acl
+	5	numun	numun=Ø	seed=ABS	6	ABS
+	6	i-a-ta	'è-Ø-'a=ta	go.out-NFIN-NOM=ABL	0	acl+ABL
+
 Note that these are not limited to adverbial (spatio-temporal) interpretations: 
 
 	# Jagersma, Chap. 5 (25)					
