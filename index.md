@@ -3694,6 +3694,20 @@ Collect examples here that are not satisfactorily analyzed, yet.
 	7	íb-bé	'i-b-'e-e	VP-3N.OO-say:IPFV-3SG.A:IPFV	0	root	
 
 
+#### Adnominal vs. elliptic adverbial readings
+
+In the following example, either commodity could be syntactic head. If analysed as adnominal ABS resp. TERM, we would prefer 1 to be head in accordance with the general structure of noun phrases. If analysed as elliptic adverbials, we would prefer 5 to be the head as this is the argument closer to the (elliptic) verbal head.
+
+	# Jagersma, Chap. 7 (288)					
+	# ‘with ten ban of barley in a month for one pig’					
+	# (STH 1:30 9:7-8; L; 24)					
+	1	šáh	šáh	pig	5	TERM
+	2	1-šè	1=še	1=TERM	1	nummod
+	4	iti-da	iti.d='a	month=LOC	5	LOC
+	5	še	še	barley	0	ABL
+	6	0.1.4-ta	0.1.4=ta	0.1.4=ABL	5	nummod
+
+
 #### doubtful analyses
 
 Jagersma (2010, p.138, in the context of a possible further case): "Twice in our corpus, a formal element -na-an-na is found which may be a further case marker but which may also be a complex form that includes a known case marker, like, for instance, the locative case marker {÷a}. According to Falkenstein (1956: II, 40) and Edzard (2003b: 158), this -na-an-na means ‘without, apart from’. As I am unable to provide an analysis, I give the two attestations with tentative translations"
