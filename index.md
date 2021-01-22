@@ -569,6 +569,22 @@ Note that headless relative clauses include cases with absolutive case (which is
 	3	a-ne	a.ne=e	he=ERG	4	ERG
 	4	in-ga-an-zu	'i-nga-n-zu-Ø	VP-also-3SG.A-know-3N.S/DO	0	root
 
+	# Jagersma, Chap. 8 (108)					
+	# ‘I do not know what I shall do about it (lit. “I do not know its what shall I make”).’					
+	# (VS 10:193 8; ?; 21)					
+	1	a-na	a.na=Ø	what=ABS	2	ABS
+	2	íb-ak-na-bé	'i-b-'ak-en-'a=be=Ø	VP-3N.DO-make-1SG.A/S:IPFV-NOM=its=ABS	3	acl+ABS
+	3	nu-zu	nu='i-'-zu-Ø	NEG=VP-1SG.A-know-3N.S/DO	0	root
+	
+	# Jagersma, Chap. 8 (110)					
+	# ‘Say to Lugalmu what Gube says: (...)!’					
+	# (Nik 1:177 2:2-3:1; L; 24)					
+	1	gú-bé	gú.be=e	Gube=ERG	4	ERG
+	3	na-	a.na=Ø	what=ABS	4	ABS
+	4	e-a	'a-b-'e-e-'a=Ø	VP-3N.OO-say:IPFV-3SG.A:IPFV-NOM=ABS	8	acl+ABS
+	6	lugal-mu	lugal.mu=r(a)	Lugalmu=DAT	8	DAT
+	8	du11-ga-na	du11.g-'a-nna-b	say-VP-3SG.IO-3N.DO	0	root
+
 Note that CDLI annotates adverbial clauses without `mark` as relative clauses. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While the use of `advcl` and `advmod` is limited in CDLI annotation, these are derived for the UD export as follows:
 	
 	acl+LOC, TERM, EQU, etc. => advcl
@@ -981,6 +997,16 @@ Occasionally, repeated case markers in an apposition could be a means of asserti
 	4	á	á	arm	1	appos	not ABL
 	5	dnin-ĝír-su-ka-ta	nin.ĝír.su.k=ak=ta	Ningirsu=GEN=ABL	4	GEN	
 
+In the following case, redundant case marking may just be a rhetoric device, as it underlines the parallelism between both appositions
+
+	# Jagersma, Chap. 8 (88)					
+	# ‘a young woman this beautiful, this splendid’					
+	# (Enlil and Ninlil 38; OB)					
+	1	lú-ki-sikil	lú.ki.sikil	young.woman	root	DAT
+	2	ne-en	nēn	this	1	appos
+	3	sa6-ga-ra	sa6.g-Ø-'a=ra	be.beautiful-NFIN-NOM=DAT	2	acl
+	4	ne-en	nēn	this	1	appos
+	5	mul-la-ra	mul-Ø-'a=ra	be.splendid-NFIN-NOM=DAT	4	acl
 
 ### List: list
 
@@ -1221,7 +1247,19 @@ There are no determiners in Sumerian. The label det is used for postnominal quan
 
 ~~~
 "Nothing escaped their clutches." (Q000375)
-	
+
+	To be confirmed whether certain quantifiers should be annotated like determiners. Syntactically and morphologically, they behave like nominal appositions.
+		
+	# Jagersma, Chap. 8 (124)					
+	# ‘I want to hold a rented field anywhere!’					
+	# (MVN 11:168 17; U; 21)					
+	1	ki	ki	place	4	LOC
+	2	na-me-a	na.me='a	any=LOC	1	appos
+	3	apin-lá	apin.lá=Ø	rented.field=ABS	4	ABS
+	4	ga-ba-ab-dab5	ga-ba-b-dab5	MOD:1SG.A/S-MM-3N.DO-seize	0	root
+
+Note: In the Jagersma reference data, these are currently annotated as `appos`. Check whether this is done systematically in data and throughout here.
+
 ### Syntactic coordination: conj, cc
 
 Conjunction can be expressed morphologically or syntactically.
@@ -1995,9 +2033,13 @@ Also used for absolutive arguments before the non-verbal clause in seals:
 
 Discussion: depending on context, vocatives can also be annotated as parataxis, if a clausal interpretation of the preposed nominal is likely. This includes all cases of (physical) deixis and cases where ellipsis can be demonstrated on grounds of parallel examples. 
 
+Question: Require an explicit (or, restored in morphological annotation) 2nd person reference for using vocative?
+
 TODO: make consistent throughout this document.
 
 TODO: what's default here?
+
+
 
 ### Dislocation: +disloc
 
@@ -3861,6 +3903,56 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### annotation of implicit copula
+
+	# Jagersma, Chap. 8 (93)						
+	# ‘This day is something beautiful.’						
+	# (PN) (e.g., NG 193 25'; L; 21)						
+	1	u4-	u4.d	day	0	root	
+	2	ne-	nēn	this	1	appos	
+	3	níĝ-	níĝ	thing	1	appos	implicit copula?
+	4	sa6-ga	sa6.g-Ø-'a	be.beautiful-NFIN-NOM	3	amod	
+
+Appositional analysis seems to be Jagersma's preferred analysis here. For an annotation as implicit copula, we would expect an annotation for ABS on 1.
+
+#### multiple copula
+
+Annotating the functional head rather than the morphological head of copula clauses can produce complicated structures.
+	
+`a-ba me-a` : morphological head is (the copula) *me-a*, functional head is *a-ba-*
+`a-ba me-a nu`: morphological head is (the negative copula) *nu*, functional head is *a-ba-*
+`a-ba me-a nu a-ba me-a-né`: morphological head is *nu*, functional head is *a-ba-*
+
+	# Jagersma, Chap. 8 (116)					
+	# ‘whoever she is not, whoever she is.’					
+	# (Cyl A 4:23; L; 22)					
+	1	a-ba-	a.ba=Ø	who=ABS	0	DIR
+	2	me-a	'i-me-Ø-'a=Ø	VP-be-3SG.S-NOM=ABS	1	cop
+	3	nu	nu	NEG	1	cop
+	4	a-ba-	a.ba=Ø	who=ABS	1	acl
+	5	me-a-né	'i-me-Ø-'a=ane=e	VP-be-3SG.S-NOM=her=DIR	4	cop
+
+the logic is clearer from the phrase structure:
+	
+	(        # empty head (headless clause) => head stays on 1
+	 (       # clause; syntactic head: NEG/cop => annotate 1
+	  (      # nominalized, head stays
+	   (     # clause; syntactic head: cop   => annotate 1
+		  who=ABS
+		  VP-be-3SG.S ) # cop, end of "who is"
+		 –NOM         ) # relative clause, end of "that who is"
+		 =ABS           # abs argument of "is not"
+		  NEG         ) # neg. cop, end of "that who is is not"
+	 (       # relative clause => depends on head of preceding clause
+	  (      # clause; syntactic head: cop   => annotate 4
+		  who=ABS
+		  VP-be-3SG.S ) # cop, end of "who is"
+		 -NOM         ) # end of relative clause "that who is"
+		 =her           # assume that this takes scope over both sentences [i.e., the first]
+		 =DIR         ) # DIR is the case of the empty head
+
+so, DIR of 1 marked on 5; cases of copular predicates dropped: 1 marked ABS of 2 [but that is non-head]; 2 marked ABS of 3 [but that is non-head]; 
 
 #### postposed ABS
 
