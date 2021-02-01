@@ -2135,7 +2135,38 @@ Preposed and postposed numerals can occur in combination with each other:
 	3	giĝ4-ta	giĝ4=ta	shekel=ABL	1	ABL
 	4	6-šè	6=še	6=TERM	1	nummod
 
-Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, regardless of their morphological case:
+If adjacent to a unit, mark the unit as head, not the commodity. This is because the same phrase may combine multiple units:
+
+	# Jagersma, Chap. 9 (111)					
+	# ‘three pots and three and a half litre of oil’					
+	# (Nik 1:257 2:1; L; 24)					
+	1	3	eš	three	2	nummod
+	2	dug	dug	pot	6	nmod
+	3	3	eš	three	5	nummod
+	4	½	½	½	3	nummod
+	5	sila3	sila3	litre	6	nmod
+	6	ì	ì	oil	0	root
+	
+	# Jagersma, Chap. 9 (95)					
+	# ‘four and one-third of a litre of oil’					
+	# (Nik 1:261 2:7; L; 24)					
+	1	4	limmu	four	2	nummod
+	2	sila3	sila3	litre	4	nmod
+	3	igi-3-ĝál	igi.eš.ĝál	one.third	2	nummod
+	4	ì	ì	oil	0	root
+
+This may mean that multiple numeral modifiers of a commodity do not all depend on the same syntactic head:
+	
+	# Jagersma, Chap. 9 (103)						
+	# ‘eleven and one-third shekels of silver’						
+	# (OSP 2:68 1; N; 23)						
+	1	11	11	11	2	nummod	
+	2	kù	kù	silver	0	root	
+	3	giĝ4	giĝ4	shekel	2	appos	unit
+	4	igi-3	igi.eš	one.third	4	nummod	
+
+
+Adverbial numerals (numeral oblique arguments) are annotated `nummod`, regardless of their morphological case:
 
 	# Jagersma, Chap. 7 (324)						
 	# ‘that after Kuda(‘s death) fifteen years ago (lit. “since fifteen with the years”), Urbagara took him (a slave) as his share (in the inheritance)’						
@@ -2158,6 +2189,20 @@ Unmodified pronominal numerals are annotated `nummod`, regardless of morphologic
 	1	2-kam-ma	2-kamma	2-ORD	4	nummod	morphologically marked LOC ignored
 	2	ĝen-na-a	ĝen-Ø-'a='a	go-NFIN-NOM=LOC	1	acl	
 	4	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
+
+	# Jagersma, Chap. 9 (89)					
+	# ‘One-fifth of this is on top of it.’					
+	# (RA 76 p.28 1:2; U; 21)					
+	1	igi-5-ĝál-bé	igi.ja.ĝál=be=Ø	one.fifth=its=ABS	3	nummod
+	2	a-gù-ba	a.gù=be='a	top=its=LOC	3	LOC
+	3	ì-íb-ĝál	'i-b(i)-ĝál-Ø	VP-3N:on-be.there-3N.S/DO	0	root
+
+	# Jagersma, Chap. 9 (98)					
+	# ‘(gold) for four pieces of jewelry (weighing) one-fourth (of a shekel) each (lit. “with one- fourth”)’					
+	# (UET 3:438 4; Ur; 21)					
+	1	na-bí-hu-um	na.bí.hu.um	an.ornament	0	TERM
+	2	igi-4-ĝál-ta	igi.limmu.ĝál=ta	one.fourth=ABL	1	nummod
+	3	4-šè	limmu=še	four=TERM	1	nummod
 
 Exception: Annotate modified numerals (except if modified by mathematical operators or other numerlas) according to their grammatical context, not as `nummod`. This is because these can always be read as elliptic constructions.
 
@@ -2292,7 +2337,6 @@ Numerals that are predicates of copular clauses are annotated as root, not nummo
 	1	ninda-né	ninda=ane=Ø	bread=his=ABS	2	ABS
 	2	420-nam	/ĝešd-umin/=Ø='am	sixty-seven=ABS=be:3N.S	0	root
 
-
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
 
 	# Jagersma, Chap. 7 (280)					
@@ -2304,9 +2348,70 @@ Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of
 	4	éš	éš	rope	3	ABL
 	5	sám-ma-ta	sám.ma=ak=ta	purchase=GEN=ABL	4	GEN
 
+	# Jagersma, Chap. 9 (110)						
+	# ‘Its labour (expense) is that of twenty and a half days.’						
+	# (SACT 2:136 10; U; 21)						
+	1	á-bé	á=be=Ø	labour=its=ABS	2	ABS	
+	2	u4	u4.d	day	0	root	GEN => copular predicate
+	3	20	niš	twenty	2	nummod	
+	4	½-kam	½=ak='am	½=GEN=be:3N.S	4	nummod	
+
+TBC: attach numerals to last numeral? this may be semantically incorrect (as in the following example), but this would facilitate automated annotation as numeral scope will be hard to ascertain automatically.
+
+	# Jagersma, Chap. 9 (124)						
+	# ‘The labour of the troops for this is that of seventy-two days and four-fifths (lit. “two- thirds and eight-sixtieths”).’						
+	# (Civil FI p.191 A.5835 1:7; U; 21)						
+	1	á	á	labour	3	ABS	
+	2	eren2-na-bé	eren2=ak=be=Ø	troops=GEN=its=ABS	1	GEN	
+	3	u4	u4.d	day	0	root	copular predicate
+	4	72	72	72	3	nummod	
+	5	⅔	⅔	⅔	4	nummod	
+	6	8	8	8	4	nummod	
+	7	giĝ4-kam	giĝ4=ak='am	shekel=GEN=be:3N.S	6	nummod	
+
 > Note: Earlier, we used `compound` and `flat` for the internal structure of complex numerals. But this is inconsistent with the annotation of *la2* "minus" as `acl` (should be `flat` as well, then). Hence, another relation.
 
 Note: The `nummod` rule is motivated by the need to facilitate automated annotation and to improve inter-annotator agreement.
+
+Complex numerals can include mathematical operators. Annotate `lá`  "minus" as `acl` with `nummod` dependent. The head of `lá` should be `nummod`.
+
+	# Jagersma, Chap. 9 (102)					
+	# ‘one and two-thirds of a litre of sesame oil’					
+	# (BIN 8:156 12; I?; 21)					
+	1	2	min	two	2	nummod
+	2	sila3	sila3	litre	5	nmod
+	3	lá	lá	minus	2	acl
+	4	igi-3	igi.eš	one.third	3	nummod
+	5	ì-ĝiš	ì.ĝiš	sesame.oil	0	root
+
+TODO: confirm the analysis of `si-la`:
+	
+	# Jagersma, Chap. 9 (122)					
+	# ‘ten shekels (= ten sixtieths) split off’					
+	# (MSL 14 p.195 and 254; MSL 3 p.134)					
+	1	kin-	giĝ4	shekel	0	root
+	2	gu-	u	ten	1	nummod
+	3	si-la	si.il-Ø-'a	split.off-NFIN-NOM	1	amod
+
+TODO: confirm that ordinals are currently treated as `nummod`. In certain constellations, treating them like `amod` may be preferrable. However, such contexts are hard to detect automatically, hence left for subsequent refinement.
+
+	# Jagersma, Chap. 9 (79)						
+	# ‘This is the second heap.’						
+	# (MVN 3:5 4:1; L; 24)						
+	1	guru7	guru7	heap	0	root	
+	2	2-kam-ma-am6	min-kamma=Ø='am	two-ORD=ABS=be:3N.S	1	nummod	
+							
+	# Jagersma, Chap. 9 (80)						
+	# ‘his second son’						
+	# (RTC 76 2:4; L; 24)						
+	1	dumu	dumu	son	0	root	
+	2	2-kam-ma-né	min-kamma=ane	two-ORD=his	1	nummod	?amod
+							
+	# Jagersma, Chap. 9 (81)						
+	# ‘his second general’						
+	# (Cyl B 8:7; L; 22)						
+	1	šagina	šagina	general	0	root	
+	2	2-kam-né	min-kamma=ane	two-ORD=his	1	nummod	?amod
 
 ### Compound: compound
 
@@ -4132,6 +4237,42 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### unmarked GEN+disloc 
+
+in administrative texts -- if not `GEN+disloc`, how then?
+	
+	# Jagersma, Chap. 9 (96)					
+	# ‘one and a quarter plot of house’					
+	# (RTC 18 5:1-2; L; 24)					
+	1	1	diš	one	3	nummod
+	2	é	é	house	3	GEN+disloc
+	3	šar	sar	plot	0	root
+	5	igi-4-ĝál	igi.limmu.ĝál	one.fourth	3	nummod
+
+#### annotating calculation tables:
+
+	if equality with a sum is expressed, annotate as sum as predicate of (implicit) copula 
+
+	# Jagersma, Chap. 9 (104)						
+	# ‘Of sixty its half: thirty’						
+	# (AfO 50 p.356 BM 106425 1; U; 21)						
+	1	60-da	ĝešd=ak	sixty=GEN	3	GEN+disloc	
+	2	igi-2-bé	igi.min=be	one.half=its	1	nummod	
+	3	30	ušu	thirty	0	root	implicit copula
+
+#### discontinuous spellings
+	
+	# Jagersma, Chap. 9 (115)					
+	# ‘one-third of a pound and three shekels of silver’					
+	# (BIN 8:37 1:1; N; 24)					
+	1	šú	(šuššana)	(one.third)	?	?
+	2	3	eš	three	3	nummod
+	3	kù	kù.g	silver	0	root
+	4	ša-na	šuššana	one.third	5	nummod
+	5	giĝ4	giĝ4	shekel	3	nmod
+
+	in this example, connecting szu with sza-na will produce a non-projective parse. Also, the label has to be confirmed.
 
 #### adnominal non-genitives
 
