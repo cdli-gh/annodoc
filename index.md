@@ -2130,7 +2130,7 @@ Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, reg
 
 (numeral [oblique] argument)
 
-Likewise for pronoinal numerals. Note that these can be subsequently disambiguated on grounds of morphology: 
+Likewise for pronominal numerals. Note that these can be subsequently disambiguated on grounds of morphology: 
 
 	# Jagersma, Chap. 9 (68)						
 	# ‘This was taken away among the second ones that went.’						
@@ -2139,7 +2139,20 @@ Likewise for pronoinal numerals. Note that these can be subsequently disambiguat
 	2	ĝen-na-a	ĝen-Ø-'a='a	go-NFIN-NOM=LOC	1	acl	
 	4	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
 
+Note that the annotation of nummod without cases captures the idea that numeral modification took place, but it fails to capture the exact semantics:
+	
+	# Jagersma, Chap. 9 (17)						
+	# ‘This is of the eight statues of the Inner Room.’						
+	# (DP 53 9:14; L; 24)						
+	1	alan	alan	statue	0	root	copular predicate
+	2	é-šà-ga	é.šà.g=ak	Inner.room=GEN	1	GEN	
+	3	8-ba-kam	ussu=be=ak='am	eight=this=GEN=be:3N.S	1	nummod	
 
+	# Jagersma, Chap. 9 (20)					
+	# ‘both eyes’					
+	# (VS 14:66 3:2; L; 24)					
+	1	igi	igi	eye	0	root
+	2	2-na-bé	min-'a=be	two-NOM=this	1	nummod
 
 (TBC: How is the following example to be analyzed -- this seems to be hypercorrect (!?) morphological marking to underline that it relates to *eger5* ?)
 
@@ -2178,12 +2191,44 @@ And to numerals that carry clausal modifiers:
 	4	/	_	_	5	punct
 	5	ře6-a-am6	ře6-Ø-'a=Ø='am	carry-NFIN-NOM=ABS=be:3N.S	1	acl
 
+Note that numerals are inherently verbal. Even if this marked explicitly in the morphology, annotate as nummod, not `amod` or `acl`.
+	
+	# Jagersma, Chap. 9 (21)					
+	# ‘the three Bau temples’					
+	# (TLB 3:167 1:6; L; 21)					
+	1	é	é	house	0	root
+	2	dba-ú	ba.ú=ak	Bau=GEN	1	GEN
+	3	3-a-bé	eš-'a=be	three-NOM=this	1	nummod
+
+Clausal numerals should be annotated `nummod` if they are used as modifiers, but not if they constitute independent main clauses:
+	
+	# Jagersma, Chap. 9 (23)					
+	# ‘It was square number two (lit. “the square which is two”) that he put on the temple.’					
+	# (Cyl A 21:1; L; 22)					
+	1	é-a	é='a	house=LOC	4	LOC
+	2	sá	sá	square	4	ABS
+	3	min-nam	min='am	two=be:3N.S	2	nummod
+	4	nam-mi-sì	na-m(u)-bi-n-sì.g-Ø	PFM-VENT-3N:on-3SG.A-put-3N.S/DO	0	root
+
 However, numerals that constitute independent clause that do not modify or stand in apposition to anything should be annotated as clauses:
 	
+	# Jagersma, Chap. 9 (2)						
+	# ‘This is of the six of them.’						
+	# (VS 14:172 8:9; L; 24)						
+	1	6-a-ne-ne-kam	āš=anēnē=ak='am	six=their=GEN=be:3N.S	0	root	
+
 	# Jagersma, Chap. 7 (22)					
 	# ‘This is of the three of them.’					
 	# (DP 223 10:5'; L; 24)					
 	1	3-a-ne-ne-kam	3=anēnē=ak='am	three=their=GEN=be:3N.S	0	root	(parataxis, etc.)
+
+Numerals that are predicates of copular clauses are annotated as root, not nummod (TBC)
+	
+	# Jagersma, Chap. 9 (6)					
+	# ‘His loaves of bread are 420 (in number).’					
+	# (Ukg. 4 6:6; L; 24)					
+	1	ninda-né	ninda=ane=Ø	bread=his=ABS	2	ABS
+	2	420-nam	/ĝešd-umin/=Ø='am	sixty-seven=ABS=be:3N.S	0	root
 
 
 Furthermore, `nummod` is used for parts of a numeral, annotated as dependents of the first element in a numeral
@@ -3037,6 +3082,29 @@ In those eamples, assume that the commodity is the functional head. This may not
 	6	NÍG.KI	NÍG.KI	NÍG.KI	0	ABL	ellipsis => commodity as head
 	7	0.3.3-ta	0.3.3=ta	0.3.3=ABL	6	nummod	
 
+	# Jagersma, Chap. 8 (161)						
+	# ‘one lamb (as an offering for) Enmetena’s statue’						
+	# (ITT 1:1081 rev 1; L; 22)						
+	1	1	1	1	2	nummod	
+	2	sila4	sila4	lamb	0	root	verbless => commodity is head
+	3	alan	alan	statue	2	DAT	implicit recipient
+	4	en-	en	lord	3	GEN	
+	5	me-te-na	ní.te=ane=ak	self=his=GEN=GEN	4	GEN	
+
+Note that commodities in a broader sense can also include people. Annotate like commodity in the absence of other commodities.
+
+	# Jagersma, Chap. 9 (27)						
+	# ‘(three labourers) for four months and fifteen days; its (total number of) labourers: 405 for one day’						
+	# (TMHC NF 1/2:293 6-7; N; 21)						
+	1	iti	iti.d	month	6	TERM	marked on 4
+	2	4	4	4	1	nummod	
+	3	u4	u4.d	day	1	appos	implicit conjunction
+	4	15-šè	15=še	15=TERM	3	nummod	
+	6	ĝuruš-bé	ĝuruš=be	labourer=its	0	root	
+	7	405	405	405	6	nummod	
+	8	u4	u4.d	day	6	TERM	laborers are the "commodity" here
+	9	1-šè	1=še	1=TERM	8	nummod	
+
 
 ### Complex numerals
 
@@ -3273,6 +3341,14 @@ cf. *szag*+ABL "out of"
 	# (Ukg.4 12:29; L; 24)					
 	1	šà	šà.g	heart	0	LOC
 	2	mu-ba-ka	mu=be=ak='a	year=its=GEN=LOC	1	GEN
+
+	# Jagersma, Chap. 9 (5)					
+	# ‘among forty sealed documents’					
+	# (AUCT 3:153 2; D; 21)					
+	1	šà	šà.g	heart	0	LOC
+	2	kišib	kišib	seal	1	GEN
+	3	40-na	nimin=ak	forty=GEN	2	nummod
+
 
 tbc: case of szag in the following
 
@@ -3903,6 +3979,26 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### clarify interaction between copula and case
+
+	# Jagersma, Chap. 9 (8)					
+	# ‘In this, there are five intercalary months. (Lit. “In its heart there are extra months which are five (in number).”)’					
+	# (RA 9 p.158 obv 5; U; 21)					
+	1	šà-ba	šà.g=be='a	heart=its=LOC	5	LOC
+	2	iti	iti.d	month	5	ABS
+	3	diri	diri.g	extra	2	amod
+	4	5-àm	ja=Ø='am	five=ABS=be:3N.S	2	nummod
+	5	ì-ĝál	'i-n(i)-ĝál-Ø	VP-in-be.there-3N.S/DO	0	root
+
+	# Jagersma, Chap. 9 (10)					
+	# ‘because his three sons were on duty for it’					
+	# (MVN 6:293 3:9'; L; 21)					
+	1	mu	mu	name	0	TERM
+	2	dumu-né	dumu=ane	son=his	4	ABS
+	3	3-àm	eš=Ø='am	three=ABS=be:3N.S	2	nummod
+	4	ba-gub-ba-šè	Ø-ba-gub-Ø-'a=ak=še	VP-3N.IO-stand-3N.S/DO-NOM=GEN=TERM	1	acl+GEN
+
 
 #### annotation of implicit copula
 
