@@ -1104,6 +1104,26 @@ Without the `GEN` marker, two interpretations are possible: Either the commodity
 
 Numeral modifiers adjacent to the unit are annotated as dependents of the unit, not the commodity. If the commodity stands *between* numeral and unit, numerals modify the commodity.
 
+* if numerals appear adjacent to units, annotate the unit as head, not the commodity
+
+	# Jagersma, Chap. 9 (43)					
+	# ‘with five shekels of silver (for each sheep)’					
+	# (JCS 26 p.11 3:1; L; 24)					
+	1	kù	kù.g	silver	0	ABL
+	2	5	ja	five	3	nummod
+	3	giĝ4-ta	giĝ4=ta	shekel=ABL	1	appos
+
+* if numerals and units are separated by the commodity, annotate both as modifiers of the commodity
+	
+	# Jagersma, Chap. 9 (44)					
+	# ‘ten shekels of silver’					
+	# (BIN 8:352 2:5; L; 25)					
+	1	10	u	ten	2	nummod
+	2	kù	kù.g	silver	0	root
+	3	giĝ4	giĝ4	shekel	2	appos
+
+`nmod` is also used for epithets and titles:
+
 ~~~ conllu
 1	sukkal	_	minister	_	_	2	nmod	_	_
 2	an-sig₇-ga-ri-a	_	PN.ABS	_	_	0	ABS	_	_
@@ -2126,11 +2146,11 @@ Also, adverbial numerals (numeral oblique arguments) are annotated `nummod`, reg
 	4	15-ta	15=ta	15=ABL	7	nummod	morphologically marked as ABL
 	5	/	_	_	7	punct	
 	6	ur-ba-gara2-ke4	ur.ba.gara2.k=e	Urbagara=ERG	7	ERG	
-	7	in-ba-a	'i-n-ba-Ø-'a	VP-3SG.A-portion.out-3SG.S/DO-NOM	0	acl	
+	7	in-ba-a	'i-n-ba-Ø-'a	VP-3SG.A-portion.out-3SG.S/DO-NOM	0	acl
 
 (numeral [oblique] argument)
 
-Likewise for pronominal numerals. Note that these can be subsequently disambiguated on grounds of morphology: 
+Unmodified pronominal numerals are annotated `nummod`, regardless of morphological case. Note that these can be subsequently disambiguated on grounds of morphology: 
 
 	# Jagersma, Chap. 9 (68)						
 	# ‘This was taken away among the second ones that went.’						
@@ -2139,8 +2159,50 @@ Likewise for pronominal numerals. Note that these can be subsequently disambigua
 	2	ĝen-na-a	ĝen-Ø-'a='a	go-NFIN-NOM=LOC	1	acl	
 	4	ba-ře6	Ø-ba-ře6-Ø	VP-MM-bring-3N.S/DO	0	root	
 
+Exception: Annotate modified numerals (except if modified by mathematical operators or other numerlas) according to their grammatical context, not as `nummod`. This is because these can always be read as elliptic constructions.
+
+	# Jagersma, Chap. 9 (70)						
+	# ‘two fourth-quality (lit. “the fourth which is next”) barley-fed rams’						
+	# (PDT 2:907 rev 2; D; 21)						
+	1	2	min	two	0	nummod	
+	2	udu	udu	ram	0	root	
+	3	niga	niga	barley-fed	2	appos	
+	4	4-kam	limmu-kam	four-ORD	2	appos	modified => not annotated like nominal
+	5	ús	ús-Ø	be.next.to-NFIN	4	amod	
+
+Exception: `conj` overrides `nummod`. Again, this reflects elliptic constructions.
+
+	# Jagersma, Chap. 9 (59)					
+	# ‘The slave woman and the three of them (i.e., her children) were assigned (by the court) to PN.’					
+	# (NG 72 23’-25’; L; 21)					
+	1	geme2	geme2	slave.woman	7	ABS
+	2	ù	ù	and	1	cc
+	3	3-a-bé	eš-'a=be=Ø	three-NOM=its=ABS	1	conj
+	5	PN-ra	PN=ra	PN=DAT	7	DAT
+	7	ba-na-ge-en6	Ø-ba-nna-ge.n-Ø	VP-MM-3SG.IO-be.firm-3N.S/DO	0	root
+
 Note that the annotation of nummod without cases captures the idea that numeral modification took place, but it fails to capture the exact semantics:
-	
+The annotation does not distinguish adverbial numerals (e.g., "doing sth. twice") and adnominal numerals with elided head (e.g., "two of them"). Can be distinguished by morphology.
+
+	# Jagersma, Chap. 9 (57)					
+	# ‘He bought the house from the two of them.’					
+	# (FAOS 17 88* 13-14; U; 21)					
+	1	2-na-ne-ne-šè	min-'a=anēnē=še	two-NOM=their=TERM	4	nummod
+	3	é	é=Ø	house=ABS	4	ABS
+	4	in-ne-ši-sa10	'i-nnē-ši-n-sa10-Ø	VP-3PL-to-3SG.A-barter-3N.S/DO	0	root
+
+	# Jagersma, Chap. 9 (58)					
+	# ‘The three of them received this (lit. “let this approach the hand”).’					
+	# (Nik 1:317 2:12-13; L; 24)					
+	1	3-a-ne-ne	eš-'a=anēnē=e	three-NOM=their=ERG	4	nummod
+	3	šu	šu=e	hand=DIR	4	DIR
+	4	ba-ti-éš	Ø-ba-n-ti-eš	VP-3N.IO-3SG.A-approach-3PL	0	root
+
+	# Jagersma, Chap. 9 (71)					
+	# ‘secondly’					
+	# (Cyl A 9:5; L; 22)					
+	1	2-kam-ma-šè	min-kamma=še	two-ORD=TERM	0	nummod
+
 	# Jagersma, Chap. 9 (17)						
 	# ‘This is of the eight statues of the Inner Room.’						
 	# (DP 53 9:14; L; 24)						
@@ -3105,6 +3167,97 @@ Note that commodities in a broader sense can also include people. Annotate like 
 	8	u4	u4.d	day	6	TERM	laborers are the "commodity" here
 	9	1-šè	1=še	1=TERM	8	nummod	
 
+In transactions with morphologically marked (or annotated) copular predicate, this is the head (not the commodity)
+
+	# Jagersma, Chap. 9 (36)						
+	# ‘Fifteen rams: this is income of the second day (lit. “day two”); seven rams: this is of the third (lit. “day three”).’						
+	# (CTMMA I 8 1-2; D; 21)						
+	1	15	15	15	2	nummod	
+	2	udu	udu	ram	3	ABS	morphologically unmarked
+	3	mu-DU	mu.DU.r	income	0	root	copular predicate; this is head because of explicit copula
+	4	u4	u4.d	day	3	GEN	
+	5	2-kam	min=ak='am	two=GEN=be:3N.S	4	nummod	
+	7	7	7	7	8	nummod	
+	8	udu	udu	ram	9	ABS	
+	9	u4	u4.d	day	3	parataxis	
+	10	3-kam	eš=ak='am	three=GEN=be:3N.S	9	GEN	
+
+	# Jagersma, Chap. 9 (52)						
+	# ‘three pounds of copper: it is of two shekels of silver.’						
+	# (RA 73 p.1-22 2:1-2; I; 24)						
+	1	3	eš	three	2	nummod	
+	2	uruda	uruda	copper	6	ABS	
+	3	ma-na	ma.na	pound	2	appos	
+	5	2	min	two	6	nummod	
+	6	kù	kù.g	silver	0	root	morphologically marked copula
+	7	giĝ4-kam	giĝ4=ak='am	shekel=GEN=be:3N.S	6	appos	
+
+	# Jagersma, Chap. 9 (53)					
+	# ‘Its furrows are 25 (in number).’					
+	# (DP 395 1:7; L; 24)					
+	1	absin3-bé	absin3=be=Ø	furrow=its=ABS	2	ABS
+	2	25-am6	25=Ø='am	25=ABS=be:3N.S	0	root
+	
+TBC: is that systematically applied and recognizable from MTAAC morphology?
+	
+"graded commodities":
+In order to arrive at principled annotation in case of multiple (potential) commodities, assume the following preference:
+
+	typical product > unit or amount representing a typical product > commodities in a broader sense (labour, people) > "currency" (i.e., silver)
+	
+	# Jagersma, Chap. 9 (39)						
+	# ‘with two pounds of wool per (lit. “in one”) shekel of silver’						
+	# (Nik 1:300 3:4-4:1; L; 24)						
+	1	kù	kù.g	silver	5	LOC	
+	2	giĝ4	giĝ4	shekel	1	appos	unit
+	3	1-a	diš='a	one=LOC	2	nummod	
+	5	siki	siki	wool	0	ABL	the commodity is the wool, the silver is the (equivalent of) currency
+	6	ma-na	ma.na	pound	5	appos	
+	7	2-ta	min=ta	two=ABL	6	nummod	
+
+	# Jagersma, Chap. 9 (42)						
+	# ‘with five hides per (lit. “in”) two shekels of silver’						
+	# (Nik 1:230 5:2-3; L; 24)						
+	1	kù	kù.g	silver	5	LOC	
+	2	giĝ4	giĝ4	shekel	1	appos	unit
+	3	2-a	min='a	two=LOC	2	nummod	
+	5	kuš	kuš	hide	0	root	
+	6	5-ta	ja=ta	five=ABL	5	nummod	
+
+	# Jagersma, Chap. 9 (54)						
+	# ‘Three hundred pairs of shoes: its bull’s hides are thirty (in number).’						
+	# (TuT 83 1-2; L; 21)						
+	1	300	300	300	2	nummod	
+	2	kuše-sír	e.sír	shoe	0	root	commodity => head
+	3	é-ba-an	é-ba-an	pair	2	appos	unit
+	5	kuš	kuš	hide	7	ABS	
+	6	gu4-bé	gu4.r=ak=be=Ø	bull=GEN=its=ABS	5	GEN	
+	7	30-àm	30=Ø='am	30=ABS=be:3N.S	2	parataxis	in accordance with translation
+
+	# Jagersma, Chap. 9 (55)						
+	# ‘540 bundles of reed; with 36 (bundles) in each of its bales: its bales are 15 (in number).’						
+	# (BAOM 2 p. 39:116 1-3; U; 21)						
+	1	540	540	540	2	nummod	
+	2	sa	sa	bundle	3	nmod	unit
+	3	ge	ge	reed	0	root	
+	5	gu-niĝin2-ba	gu.niĝin2=be='a	bale=its=LOC	9	LOC	
+	6	36-ta	36=ta	36=ABL	9	nummod	
+	8	gu-niĝin2-bé	gu.niĝin2=be=Ø	bale=its=ABS	9	ABS	
+	9	15-àm	15=Ø='am	15=ABS=be:3N.S	3	parataxis	according to translation
+
+	
+These preferences are overridden by explicit or annotated morphology:
+	
+	# Jagersma, Chap. 9 (45)						
+	# ‘one-third of a pound and three shekels of silver (as payment) for damaged fleeces’						
+	# (Nik 1:295 1:1; L; 24)						
+	1	⅓ša	šuššana	one.third	2	nummod	
+	2	giĝ4	giĝ4	shekel	0	root	currency, not commodity, but morphological analysis emphasizes that the commodity is adnominal, hence head
+	3	3	eš	three	4	nummod	
+	4	kù	kù.g	silver	2	appos	implicit conjunction
+	5	bar	bar	fleece	2	GEN	this is the more likely commodity, but we follow the annotated morphology
+	6	dúb-ba	dúb-Ø-'a=ak	damage-NFIN-NOM=GEN	5	amod	
+
 
 ### Complex numerals
 
@@ -3979,6 +4132,64 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### adnominal non-genitives
+
+	# Jagersma, Chap. 9 (48)					
+	# ‘the interest a hundred litres in a gur’					
+	# (AUCT 3:329 2; N; 21)					
+	1	máš	máš	interest	0	root
+	2	1	(diš)	(one)	1	nummod
+	3	gur-ra	gur='a	gur=LOC	1	LOC
+	4	0.1.4-ta	0.1.4=ta	100.litres=ABL	1	ABL
+
+	# Jagersma, Chap. 9 (49)					
+	# ‘its furrows: with twelve in a nindan (= ca. six metres)’					
+	# (CT 1 pl. 12-13 BM 18041 4:11; L; 21)					
+	1	ab-sín-bé	ab.sín=be	furrow=its	0	root
+	2	1	1	1	1	nummod
+	3	nindan-na	nindan='a	nindan=LOC	1	ABL
+	4	12-ta	12=ta	12=ABL	3	nummod
+
+#### discuss: ordinal numbers as `amod`?
+	
+	# Jagersma, Chap. 9 (62)						
+	# ‘four ban(-units of barley for) Eku; four ban (for) Eku the second’						
+	# (STH 1:23 3:13-15; L; 24)						
+	1	0.0.4	_	_	0	root	numeral representing the (elided) commodity
+	2	é-kù	_	_	1	DAT	
+	4	0.0.4	_	_	1	parataxis	
+	5	é-kù	_	_	4	DAT	
+	7	2-kam-ma	_	_	5	amod	? nummod
+							
+	# Jagersma, Chap. 9 (63)						
+	# ‘1 Urnigingar; 1 Urnigingar the second’						
+	# (TCL 5:6036 2:12-13; U; 21)						
+	1	1	_	_	0	root	
+	2	ur-nigin3-ĝar	_	_	1	DAT	
+	4	1	_	_	1	parataxis	
+	5	ur-nigin3-ĝar	_	_	4	DAT	
+	6	2-kam	_	_	5	amod	? nummod
+
+but clearly not in
+
+	# Jagersma, Chap. 9 (64)					
+	# ‘for the third time’					
+	# (PDT 1:502 8; D; 21)					
+	1	a-řá	a.řá	time	0	TERM
+	2	3-kam-ma-aš	eš-kamma=š(e)	three-ORD=TERM	1	nummod
+
+	# Jagersma, Chap. 9 (65)					
+	# ‘The second was a warrior.’					
+	# (Cyl A 6:3; L; 22).					
+	1	2-kam-ma	min-kamma=Ø	two-ORD=ABS	2	ABS
+	2	ur-saĝ-àm	ur.saĝ=Ø='am	warrior=ABS=be:3SG.S	0	root
+
+	# Jagersma, Chap. 9 (69)					
+	# ‘third quality (lit. “the third which is next”)’					
+	# (DP 382 1:3; L; 24)					
+	1	3-kam-ma	eš-kamma	three-ORD	0	root
+	2	ús	ús-Ø	be.next.to-NFIN	1	acl
 
 #### clarify interaction between copula and case
 
