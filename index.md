@@ -307,6 +307,27 @@ If a lexicalized nominalization is segmented into multiple tokens in the transli
 	
 Note that this should not normally occur in CDLI data. If such instances are found, they should also be marked for subsequent checks of the transliteration/segmentation.
 
+adjectives can be nominalized/head can be elided
+	
+	annotate like a noun
+
+	# Jagersma, Chap. 10 (52)						
+	# ‘children (“small ones”) of the scribes’						
+	# (MVN 11:208 6; ?; 21)						
+	1	di4-di4-la	di4.di4.l-Ø-'a	be.small:be.small-NFIN-NOM	0	root	nominalized adjective
+	2	dub-sar-e-ne	dub.sar=enē=ak	scribe=PL=GEN	1	GEN	
+
+	# Jagersma, Chap. 10 (54)					
+	# ‘my sweet one’					
+	# (PN) (TCS 1:58 1; L; 21)					
+	1	du10-ga-ĝu10	du10.g-Ø-'a=ĝu	be.sweet-NFIN-NOM=my	0	root
+
+	# Jagersma, Chap. 10 (55)					
+	# ‘the sweet things of Irikagena’					
+	# (Ukg. 41 1; L; 24)					
+	1	du10-ga	du10.g-Ø-'a	be.sweet-NFIN-NOM	0	root
+	2	iri-ka-ge-na-ka	iri.ka.ge.na.k=ak	Irikagena=GEN	1	GEN
+
 TO BE DISCUSSED: abandon in favor of acl? (when working through Jagersma's glosses, confusing them seems to be a frequent source of errors)
 		
 	# Jagersma, Chap. 7 (74)					
@@ -330,6 +351,16 @@ Occasionally, the arguments of a relative clause may occur as postposed genitive
 	8	80	80	80	9	nummod	
 	9	níĝ-řá	níĝ.řá	nindan	0	root	
 
+preposed adjectives: "[A]n attributive adjective, as a rule, follows its head noun, [but] there are a few instances where an attributively used kù.g ‘pure, holy’ precedes it." (Jagersma 2010: p.273)
+
+	# Jagersma, Chap. 10 (27)						
+	# ‘The year: Enlil’s holy throne was fashioned.’						
+	# Jagersma, Chap. 10 (e.g., AUCT 2:42 7; D; 21)						
+	1	mu	mu	year	0	root	
+	2	kù	kù.g	pure	3	amod	preposed adjective?
+	3	gu-za	gu.za	throne	5	ABS	
+	4	den-líl-lá	en.lil=ak=Ø	Enlil=GEN=ABS	3	GEN	
+	5	ba-dím	Ø-ba-dím-Ø	VP-MM-create-3N.S/DO	1	ccomp	tbc
 
 ### Subordinate clauses: acl
 
@@ -486,6 +517,15 @@ Analoguously for other cases:
 	1	hu-ru	hu.ru=e	Huru=ERG	3	ERG
 	2	ama-ar-gi4-me	ama.ar.gi4=mē=Ø	freedom=our=ABS	3	ABS
 	3	in-ĝar-ra	'i-n-ĝar-Ø-'a=ak	VP-3SG.A-place-3N.S/DO-NOM=GEN	0	acl+GEN
+
+	# Jagersma, Chap. 10 (24)					
+	# ‘five new ploughshares for deep-ploughing’					
+	# (VS 14:67 2:1; L; 24).					
+	1	5	5	5	2	nummod
+	2	ĝišeme	eme	tongue	0	root
+	3	tugurx	tugurx=Ø	plough=ABS	4	ABS
+	4	si-ga	si.g-Ø-'a=ak	put.into-NFIN-NOM=GEN	2	acl+GEN
+	5	gibil	gibil	new	2	amod
 
 	# Jagersma, Chap. 5 (19)					
 	# ‘for buying bitumen’					
@@ -666,6 +706,17 @@ Occasionally, the arguments of a relative clause may occur as postposed genitive
 	7	zà-bé	zà.g=be=š(e)	border=its=TERM	3	appos	
 	8	80	80	80	9	nummod	
 	9	níĝ-řá	níĝ.řá	nindan	0	root	
+
+??? ccomp
+
+	# Jagersma, Chap. 10 (27)						
+	# ‘The year: Enlil’s holy throne was fashioned.’						
+	# Jagersma, Chap. 10 (e.g., AUCT 2:42 7; D; 21)						
+	1	mu	mu	year	0	root	
+	2	kù	kù.g	pure	3	amod	preposed adjective?
+	3	gu-za	gu.za	throne	5	ABS	
+	4	den-líl-lá	en.lil=ak=Ø	Enlil=GEN=ABS	3	GEN	
+	5	ba-dím	Ø-ba-dím-Ø	VP-MM-create-3N.S/DO	1	ccomp	tbc
 
 TODO: check all `ccomp` in the data whether to be replaced by `acl`.
 
@@ -868,7 +919,7 @@ Note that implicit conjunction also covers cases of implicit meronymy as in the 
 	2	ka	ka.g	mouth	1	appos
 	3	piriĝ-ĝá	piriĝ=ak	lion=GEN	2	GEN
 
-implicit genitive or equative
+implicit modification: genitive or equative
 ~~~ conllu
 1	kišib₃	_	_	_	_	6	ABL	_	_
 2	ur-dšul-pa-e₃-ka	_	_	_	_	1	GEN	_	_
@@ -883,6 +934,19 @@ implicit genitive or equative
 The overt morphology (according to annotation) of ur-dba-u₂-ka provides the locative marker, but the genitive remains implicit. As for the annotation of implicit genitives as `appos` or `GEN`, we rely on morphology annotation. If the genitive is restored in morphology annotation, the dependency will be labelled GEN.
 
 The pattern applies to both adnominal cases, i.e., `GEN` and `EQU`. Note that equatives forms nominal sentences, an implicit equative can thus always also be interpreted as implicit copula. We thus do not annotate implicit equatives as such. Instead, apply the annotation of implicit copula.
+
+extends to other (implicit) cases: implicit modification
+
+	# Jagersma, Chap. 10 (63)						
+	# ‘19 full-grown oxen with both eyes healthy’						
+	# (VS 14:66 2:1; L; 24).						
+	1	20	20	20	4	nummod	
+	2	lá	lá	minus	1	acl	
+	3	1	1	1	2	nummod	
+	4	gu4	gu4.ř	ox	0	root	
+	5	gal-gal	gal-gal	big-big	4	amod	
+	6	igi	igi	eye	4	appos	implicit modification
+	7	silim	silim	intact	6	amod	
 
 implicit copula
 ~~~ conllu
@@ -2083,6 +2147,17 @@ Anticipatory genitives preposed to the clause are attached the additional label 
 ~~~
 
 "Enki prepared the plan of the house for him" (Gudea CylA 17:17, example taken from PPCS manual)
+
+annotate semantic head if adjacent
+	
+	# Jagersma, Chap. 10 (76)					
+	# ‘Someone would carry off the best of those sheep.’					
+	# (Ukg. 6 1:3'-4'; L; 24)					
+	1	udu-ba	udu=be=ak	sheep=this=GEN	2	GEN+disloc
+	2	udu	udu	sheep	6	ABS
+	3	sa6-ga-bé	sa6.g-Ø-'a=be=Ø	be.good-NFIN-NOM=its=ABS	2	amod
+	5	lú	lú=e	person=ERG	6	ERG
+	6	ba-ta-túm-mu	Ø-ba-ta-túm-e	VP-MM-from-carry-3SG.A:IPFV	0	root
 
 ### Numeral modifiers: nummod
 
@@ -4237,6 +4312,28 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### interrogatives with copula
+
+parataxis or emphatic copula
+
+	# Jagersma, Chap. 10 (85)						
+	# ‘Why is it that you make things bigger than yourself? (lit. “big to your excess”)’						
+	# (Two scribes: CT 42:47 2:7 // ISET 2 pl. 97 Ni. 4194 rev. 4; N; OB)						
+	1	a-na-aš-àm	a.na=še='am	what=TERM=be:3N.S	0	root	TERM => copular predicate
+	2	diri-zu-šè	diri.g=zu=še	excess=your=TERM	4	TERM	
+	3	níĝ	níĝ=Ø	thing=ABS	4	ABS	
+	4	ab-gur4-re-en	'a-b-gur4-en	VP-3N.DO-be.thick-2SG.A/S:IPFV	1	parataxis	
+
+
+#### adverbial EQU?
+
+	# Jagersma, Chap. 10 (50)						
+	# ‘About that you are wide as the earth – let it be known!’						
+	# (Inanna B 124; OB manuscript)						
+	1	ki-gen7	ki=gen	earth=EQU	3	EQU	attachment?
+	2	daĝal-la-za	daĝal-Ø-'a=zu='a	be.wide-NFIN-NOM=your=LOC	3	LOC	amod+LOC
+	3	hé-zu-àm	ha='i-zu-Ø='am	MOD=VP-know-3N.S/DO=be:3N.S	0	root	
 
 #### unmarked GEN+disloc 
 
