@@ -285,6 +285,16 @@ Etymologically, this is a headless relative clause, but it is lexicalized as a n
 	# ‘one who has died’						
 	1	ba-úš	Ø-ba-'úš-Ø	VP-MM-die-3SG/3N.S/DO	0	ABS	not: amod+ABS
 
+Treat nominalized verbs with case like regular nouns (i.e., not `amod.ABS`, but `ABS`):
+
+	# Jagersma, Chap. 24 (15a)						
+	# ‘when the regular expenditures (lit. “what was raised of what is firm in the hand”) have been raised from it’						
+	# (TPTS 80 4; U; 21)						
+	1	zi-ga	zi.g-Ø-'a	rise-NFIN-NOM	4	ABS	treated like noun
+	2	šu-a	šu='a	hand=LOC	3	LOC	
+	3	ge-na	ge.n-Ø-'a=ak=Ø	be.firm-NFIN-NOM=GEN=ABS	1	acl.GEN	
+	4	ù-ub-ta-zi	'u-b-ta-zi.g-Ø	REL.PAST-3N-from-rise-3N.S/DO	0	advcl	
+
 Etymologically, this is a headless relative clause, but it is lexicalized as a noun.
 
 	# Jagersma, Chap. 27 (53)						
@@ -624,6 +634,19 @@ Note that headless relative clauses include cases with absolutive case (which is
 	4	e-a	'a-b-'e-e-'a=Ø	VP-3N.OO-say:IPFV-3SG.A:IPFV-NOM=ABS	8	acl+ABS
 	6	lugal-mu	lugal.mu=r(a)	Lugalmu=DAT	8	DAT
 	8	du11-ga-na	du11.g-'a-nna-b	say-VP-3SG.IO-3N.DO	0	root
+
+	# Jagersma, Chap. 24 (39)					
+	# ‘Say to Ur-Lisina what the king says:’					
+	# (TCS 1:1 1-4; U; 21)					
+	1	lugal-e	lugal=e	king=ERG	4	ERG
+	2	/	_	_	4	punct
+	3	na-	(a.)na=Ø	what=ABS	4	ABS
+	4	ab-bé-a	'a-b-'e-e-'a	VP-3N.OO-say:IPFV-3SG.A:IPFV-NOM	8	acl.ABS
+	5	/	_	_	8	punct
+	6	ur-dli9-si4-na-ra	ur.li9.si4.na.k=ra	Urlisina=DAT	8	DAT
+	7	/	_	_	8	punct
+	8	ù-na-a-du11	'u-nna-e-du11.g-Ø	REL.PAST-3SG.IO-2SG.A-say-3N.S/DO	0	advcl
+
 
 Note that CDLI annotates adverbial clauses without `mark` as relative clauses. We follow a morphology-driven approach to syntax annotation and mark syntactic subordination along with the case of the constituent. If a subordinate clause is headless (and also lacking a "relative pronoun" such as lu2), we mark it as acl+CASE. The adverbial function is not expressed in the subordination, but in the morphological case. While the use of `advcl` and `advmod` is limited in CDLI annotation, these are derived for the UD export as follows:
 	
@@ -2615,7 +2638,183 @@ Adverbial clauses in Sumerian are annotated in accordance with their morphology,
 
 `advcl` is thus used for a subset of adverbial clauses only: 
 - subordinate clauses with an explicit `mark` that indicates an adverbial function, e.g., *tukumbi* "if", or
-- a temporal clause established with the perfective relative past marker *'u*
+- a temporal clause established with the perfective relative past marker *'u* (MTAAC gloss `ANT`).
+
+"For [conditional clauses,] Sumerian uses clauses introduced by u4-da ‘if’ or tukum-bé ‘if’." (Jagersma 2010: 524)
+In addition, non-conditional adverbial clauses can also be marked morphologically
+
+	ETCSRI: `V1=ANT` *u* "prefix of anterioriy"
+	Jagersma: `REL.PAST` *ù* {'u} "relative-past prefix"
+
+MTAAC `ANT`, e.g.
+		
+	u3-na-a-du11	u-nn-a-e-dug[speak]	N	ANT.3-SG-H.DAT.2-SG-A.V.3-SG-P
+	
+"A verbal form with the prefix {'u} is subordinate to the following verb and expresses an anterior action. A clause with such a form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’" (Jagersma 2010: 518)
+	
+"The prefix {'u} has a subordinating function. If a clause has a verbal form with the prefix {'u} as its predicate, it is a subordinate clause and part of a larger sentence." (Jagersma 2010: 522)
+	
+	# Jagersma, Chap. 11 (45)						
+	# ‘When Gududu’s sealed document is brought (dynamic passive), Akalla’s sealed document is to be destroyed.’						
+	# (UTAMI 3:Um. 2247 3-6; U; 21)						
+	1	kišib	kišib	seal	4	ABS	
+	2	gu-du-du	gu.du.du=ak=Ø	Gududu=GEN=ABS	1	GEN	
+	4	ù-um-ře6	'u-m(u)-ře6-Ø	REL.PAST-VENT-bring-3N.S/DO	0	root	
+	6	kišib	kišib	seal	9	ABS	
+	7	a-kal-la	a.kal.la=ak=Ø	Akalla=GEN=ABS	6	GEN	
+	9	ze-re-dam	ze.r-ed-Ø='am	destroy-IPFV-NFIN=be:3N.S	4	parataxis	shallow annotation
+
+Functionally, these forms can also have a (polite) imperative function, esp., u3-na-a-du11 "speak!", lit. "when you have said to him". (Jagersma (2010:526): "Akkadian letters also show an imperative form in the address. Accordingly, the form ù-na-adu11 ‘(lit.) when you have said to him’ must express here an instruction, probably in a polite way.")
+
+	# CDLI, P131033
+	1	lu2-{d}szul-gi-ra	Lu-Szulgi	PN	PN	2	DAT
+	2	u3-na-a-du11	u-nn-a-e-dug[speak]	N	ANT.3-SG-H.DAT.2-SG-A.V.3-SG-P	6	advcl
+	3	1(disz)	1(disz)[one]	NU	NU	4	nummod
+	4	udu	udu[sheep]	N	N	6	ABS
+	5	ur-{d}iszkur	Uriszkur	PN	PN	6	TERM
+	6	i3-dab5	dab[seize]	V	FIN.3-SG-H-A.V.3-SG-P	0	root
+	7	ur-{d}hendur-sag-ra	Ur-Hendursag	PN	PN	10	DAT
+	8	sze-na	sze[barley]	N	N	10	LOC
+	9	szu	szu[hand]	N	N.ABS	10	ABS
+	10	ha-mu-na-a-ba-re	_[release]	V	MOD1.VEN.3-SG-H.DAT.3-SG-H-A.V.3-SG-P	6	parataxis
+	# To Lu-Šulgi speak! "1 ram did Ur-Iškur receive". To Ur-Ḫendursag: "In his barley may he release!"
+
+Note that `ANT` (Jagersma's `REL.PAST`) can also occur in relative clauses (`acl`). Annotate these as `acl`, not `advcl`: "Verbal forms with the prefix {'u} are also found in nominalized clauses (...). Since such clauses are already subordinate, the prefix {'u} primarily adds the notion ‘anterior action’ to the event expressed by such clauses." (Jagersma 2010: 525):
+	
+	# Jagersma, Chap. 24 (38)						
+	# ‘Your having directed your eyes to the people means rain and abundance (lit. “Your eyes which you have brought out towards the people are rain and abundance”).’						
+	# (Cyl A 3:4; L; 22)						
+	1	igi	igi	eye	4	ABS	marked on 3
+	2	ùĝ-šè	ùĝ=še	people=TERM	3	TERM	
+	3	ù-ši-bar-ra-zu	'u-m(u)-ši-e-bar-Ø-'a=zu=Ø	REL.PAST-VENT-to-2SG.A-be.outside-3N.S/DO-NOM=your=ABS	1	acl	not advcl
+	4	šeĝx(=IM.A)	šeĝx	rain	0	root	ABS -> copular predicate
+	5	hé-ĝál-la-àm	hé.ĝál=Ø='am	abundance=ABS=be:3N.S	4	appos	
+	
+This also extends to cases in which an `acl` clause serves an adverbial function (expressed by `acl.LOC`, here):
+	
+	# Jagersma, Chap. 17 (68)					
+	# ‘when after Ningirsu, my master, will have called for him among the people’					
+	# (St B 8 14-16; L; 22)					
+	1	dnin-ĝír-su	nin.ĝír.su.k	Ningirsu	6	ERG
+	2	lugal-ĝu10	lugal=ĝu=e	king=my=ERG	1	appos
+	3	/	_	_	6	punct
+	4	ùĝ-ĝá	ùĝ='a	people=LOC	6	LOC
+	5	gù	gù=Ø	voice=ABS	6	ABS
+	6	ù-na-dé-a	'u-nna-n-dé-Ø-'a='a	REL.PAST-3SG.IO-3SG.A-pour-3N.S/DO-NOM=LOC	0	advcl
+
+This also extends to "adverbial" relative clauses with a nominal head:
+	
+	# Jagersma, Chap. 18 (114a)					
+	# ‘when someone holds on to the field’					
+	# (MAD 4:151 10; 23)					
+	1	u4	u4.d	day	0	LOC
+	2	ašag-ga	ašag='a	field=LOC	4	LOC
+	3	lú	lú=Ø	man=ABS	4	ABS
+	4	ù-ma-a-řú-a	'u-m(u)-ba-e-řú-Ø-'a	REL.PAST-VENT-MM-on-hold-3SG.S/DO-NOM	1	acl
+	
+Note that double marking of adverbial clauses can occur, i.e., when combining *tukumbi* and *ù-*:
+	
+		# Jagersma, Chap. 24 (34)						
+		# ‘If Ur-Amma the shepherd takes an oath about this, this sealed document is to be broken.’						
+		# (CST 533 7-10; U; 21)						
+		1	tukum-bé	tukum.bé	if	7	mark	
+		2	/	_	_	7	punct	
+		3	ur-àm-ma	ur.àm.ma	Uramma	7	ERG	
+		4	sipa	sipa.d=e	shepherd=ERG	3	appos	
+		5	/	_	_	7	punct	
+		6	nam-erim2-bé	nam.'erim=be=Ø	oath=its=ABS	7	ABS	
+		7	ù-un-ku5	'u-n-ku5.ř-Ø	REL.PAST-3SG.A-cut-3N.S/DO	10	advcl	double marking: tubumbi + ù-
+		8	/	_	_	10	punct	
+		9	kišib-bé	kišib=be=Ø	seal=this=ABS	10	ABS	
+		10	ze-re-dam	ze.r-ed-Ø='am	break-IPFV-NFIN=be:3N.S	0	root	
+
+Conditional and temporal adverbial clauses can occur in the same sentence.
+	
+		# Jagersma, Chap. 24 (36)					
+		# ‘When the tablet about this is looked at, if this is not written on it, Ur-Meme will replace it.’					
+		# (NG 209 18-21; N; 21)					
+		1	im-ba	im=be='a	clay=its=LOC	3	LOC
+		2	igi	igi=Ø	eye=ABS	3	ABS
+		3	ù-bar	'u-b(i)-bar-Ø	REL.PAST-3N:on-be.outside-3N.S/DO	10	advcl
+		4	/	_	_	10	punct
+		5	tukum-bé	tukum.be	if	6	mark
+		6	nu-ub-sar	nu='i-b(i)-sar-Ø	NEG=VP-3N:on-write-3N.S/DO	10	advcl
+		7	/	_	_	10	punct
+		8	ur-me-me-ke4	ur.me.me.k=e	Urmeme=ERG	10	ERG
+		9	/	_	_	10	punct
+		10	íb-su-su	'i-b-su.g:RDP-e	VP-3N.DO-repay:IPFV-3SG.A:IPFV	0	root
+		
+		# Jagersma, Chap. 24 (37)						
+		# ‘When their prebends have been surveyed, if they are too small, the three men whose pre-bends are too small will take it, (but) if they are sufficient, Lū-šalim will take it.’						
+		# (NG 215 3-8; U; 21)						
+		1	šuku-bé	šuku.ř=be=Ø	prebend=its=ABS	2	ABS	
+		2	ù-ul-gíd	'ul-gíd-Ø	REL.PAST-survey-3N.S/DO	12	advcl	
+		3	/	_	_	12	punct	
+		4	tukum-bé	tukum.be	if	5	mark	
+		5	ì-lá	'i-lá-Ø	VP-be.short-3N.S/DO	12	advcl	
+		6	/	_	_	12	punct	
+		7	lú	lú	man	12	ERG	mared on 10
+		8	3	3	3	7	nummod	
+		9	šuku-bé	šuku.ř=be=Ø	prebend=its=ABS	10	ABS	
+		10	ì-lá-a	'i-lá-Ø-'a=e	VP-be.short-3N.S/DO-NOM=ERG	7	acl	
+		11	/	_	_	12	punct	
+		12	ba-ab-tùm	Ø-ba-b-tùm-Ø	VP-MM-3N.A-carry:IPFV-3N.S/DO	0	root	
+		13	/	_	_	12	punct	
+		14	tukum-bé	tukum.be	if	15	mark	
+		15	íb-si	'i-b-si-Ø	VP-3N.OO-fill-3N.S/DO	18	advcl	
+		16	/	_	_	18	punct	
+		17	lú-ša-lim-e	lú.ša.lim=e	Lū.šalim=ERG	18	ERG	
+		18	ba-an-tùm	Ø-ba-n-tùm-Ø	VP-MM-3SG.A-carry:IPFV-3N.S/DO	12	parataxis	
+
+No nesting of adverbial clauses. If multiple adverbial clauses occur in a sentence and interpretation is ambiguous as to whether the head of an advcl is another advcl or a main clause, annotate the main clause. (Note: In annotation practice, this means that `advcl` is very unlikely to modify another `advcl`.)
+[Objective: In the following example, it was basically impossible to find an analysis that was consistent with the translation and with the requirement that an 'u-`advcl` should modify a following clause. Either this is not a general rule, or the nesting of adverbial clauses is inferred rather than morphologically coded. We go with the latter assumption and prefer a shallow annotation. NB: Translation hints at 22 -parataxis-> 14 -advcl-> 30, morpology hints at 14 -advcl-> 22 -advcl-> 30; syntactic parallelism between 25 and 14 also hints at 14 -advcl-> 30.]
+	
+		# Jagersma, Chap. 24 (35)						
+		# ‘When a beautiful donkey is born to a subordinate and his foreman says to him “I want to buy it from you”; whether he lets him buy it from him and has said “Pay me the price I want,” or whether he does not let him buy it from him, the foreman must not become angry with him!’						
+		# (Ukg. 4 11:20-31; L; 24)						
+		1	RU-lugal-ra	RU.lugal.k=ra	subordinate=DAT	6	DAT	
+		2	/	_	_	6	punct	
+		3	anše	anše	donkey	6	ABS	marked on 4
+		4	sa6-ga	sa6.g-Ø-'a=Ø	be.good-NFIN-NOM=ABS	3	amod	
+		5	/	_	_	6	punct	
+		6	ù-na-dú	'u-nna-dú.d-Ø	REL.PAST-3SG.IO-be.born-3N.S/DO	30	advcl	temporal, before 11
+		7	/	_	_	30	punct	
+		8	ugula-né	ugula=ane=e	foreman=his=ERG	11	ERG	
+		9	ga-šè-sa10	ga-e-ši-sa10	MOD:1SG.A/S-2SG-to-barter	11	ccomp	direct speech
+		10	/	_	_	11	punct	
+		11	ù-na-du11	'u-nna-n-du11.g-Ø	REL.PAST-3SG.IO-3SG.A-say-3N.S/DO	30	advcl	temporal, before conditionals
+		12	/	_	_	30	punct	
+		13	u4-da	u4.da	if	14	mark	
+		14	mu-šè-sa10-sa10	Ø-mu-n-ši-n-sa10:RDP-e	VP-VENT-3SG-to-3SG.OO-barter:IPFV-3SG.A:IPFV	30	advcl	
+		15	/	_	_	30	punct	
+		16	kù	kù.g	silver	20	ABS	
+		17	šà-ĝá	šà.g=ĝu='a	heart=my=LOC	18	LOC	
+		18	a-sa6-ga	'a-n(i)-sa6.g-Ø-'a=Ø	VP-in-be.good-3N.S/DO-NOM=ABS	16	acl	
+		19	/	_	_	20	punct	
+		20	lá-ma	lá-Ø-ma-b	weigh-VP-1SG.IO-3N.DO	22	ccomp	
+		21	/	_	_	22	punct	
+		22	ù-na-du11	'u-nna-n-du11.g-Ø	REL.PAST-3SG.IO-3SG.A-say-3N.S/DO	30	advcl	temporal, should modify following clause; but translation indicates that this dependent on 14
+		23	/	_	_	30	punct	
+		24	u4-da	u4.da	if	25	mark	
+		25	nu-šè-sa10-sa10	nu='i-n-ši-n-sa10:RDP-e	NEG=VP-3SG-to-3SG.OO-barter:IPFV-3SG.A:IPFV	30	advcl	
+		26	/	_	_	30	punct	
+		27	ugula	ugula=e	foreman=ERG	30	ERG	
+		28	lipiš-bé	lipiš=be=Ø	anger=its=ABS	30	ABS	
+		29	/	_	_	30	punct	
+		30	na-na-tag-ge	na-nna-tag-e	NEG.MOD-3SG.IO-touch-3SG.A:IPFV	0	root	
+
+Note that adverbial clauses without explicit arguments are annotated `advcl`, not `advmod`. 
+
+	# Jagersma, Chap. 11 (46)					
+	# ‘Whenever one (of Ur-Enlila’s sealed documents) is brought (dynamic passive), it is to be destroyed.’					
+	# (NRVN 1:235 3-4; N; 21)					
+	1	ù-um-re-re	'u-m(u)-ře6-ře6-Ø	REL.PAST-VENT-bring-bring-3N.S/DO	3	advcl
+	2	/	_	_	3	punct
+	3	ze-re-dam	ze.r-ed-Ø='am	destroy-IPFV-NFIN=be:3N.S	0	root
+
+Note: The objective for the apparent imbalance with `acl`:`amod` is that adverbial clauses necessarily represent cases of ellipsis whereas relative clauses are morphologically marked as nominalizations (i.e., for an adjectival function).
+	
+	TODO: check all instances of `ANT` in corpus
 
 Other forms of subordinate clauses with adverbial interpretation can be formed by combining markers of syntactic subordination with an oblique case. They are to be annotated as `acl+case`. 
 
@@ -2637,8 +2836,8 @@ The label `advcl` is only to be used where no morphological case marking is used
 
 #### perfective relative past
 
-Jagersma (2010: 518, 521): "A verbal form with the prefix {÷u} is subordinate to the following verb and expresses an anterior action. A clause with such a form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’ ... 
-The relative-past prefix {÷u} is incompatible with the imperfective and only occurs in perfective verbal forms. A form with {÷u} is subordinate to the following verb and expresses an action with the approximate meaning ‘under the circumstance that (…) has happened’. It designates an action which is both anterior and circumstantial to the action expressed by the following verb. A clause with such a verbal form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’, or with a participial construction."
+Jagersma (2010: 518, 521): "A verbal form with the prefix {'u} is subordinate to the following verb and expresses an anterior action. A clause with such a form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’ ... 
+The relative-past prefix {'u} is incompatible with the imperfective and only occurs in perfective verbal forms. A form with {'u} is subordinate to the following verb and expresses an action with the approximate meaning ‘under the circumstance that (…) has happened’. It designates an action which is both anterior and circumstantial to the action expressed by the following verb. A clause with such a verbal form can usually be translated into English with a temporal clause introduced by ‘when’ or ‘after’, or with a participial construction."
 
 	# Jagersma, Chap. 24 (18)					
 	# ‘The sealed document about this was lost. When it is found, it is to be destroyed.’					
@@ -2667,6 +2866,14 @@ Note that `advcl` should also be used if the the clause does not contain any mod
 	9	inim	inim=Ø	word=ABS	10	ABS
 	10	nu-un-ĝá-ĝá	nu='i-n-ĝar:RDP-e	NEG=VP-3SG.OO-place:IPFV-3SG.A:IPFV	0	root
 
+	# Jagersma, Chap. 11 (46)					
+	# ‘Whenever one (of Ur-Enlila’s sealed documents) is brought (dynamic passive), it is to be destroyed.’					
+	# (NRVN 1:235 3-4; N; 21)					
+	1	ù-um-re-re	'u-m(u)-ře6-ře6-Ø	REL.PAST-VENT-bring-bring-3N.S/DO	3	advcl
+	2	/	_	_	3	punct
+	3	ze-re-dam	ze.r-ed-Ø='am	destroy-IPFV-NFIN=be:3N.S	0	root
+
+The objective for the apparent imbalance with `acl`:`amod` is that adverbial clauses necessarily represent cases of ellipsis whereas relative clauses are morphologically marked as nominalizations (i.e., for an adjectival function).	
 
 TODO: update references to advcl elsewhere in this document
 TODO: scan data and examples for instances of this morpheme. how is this represented in CDLI?
@@ -4226,7 +4433,24 @@ Note: this is consistent with the application of `nummod` to all occurrences of 
 
 ### Dependency syntax: Other uses of the copula
 
-Emphatic copula/standard marker ("STM")
+Do not annotate "emphatic" copula as copula if it serves as a nominal argument.
+
+	# Jagersma, Chap. 24 (22)						
+	# ‘When someone divorced his wife, the ruler took five shekels of silver for himself.’						
+	# (Ukg. 6 2:15'-18'; L; 24)						
+	1	lú	lú=e	man=ERG	3	ERG	
+	2	dam	dam=Ø	wife=ABS	3	ABS	
+	3	ù-taka4	'u-n-taka4-Ø	REL.PAST-3SG.A-leave-3N.S/DO	11	advcl	
+	4	/	_	_	11	punct	
+	5	kù	kù.g	silver	6	nmod	unit
+	6	giĝ4	giĝ4	shekel	11	ABS	we consider copula as emphatic and ignore for annotation
+	7	5-am6	5=Ø='am	5=ABS=be:3N.S	6	nummod	
+	8	/	_	_	11	punct	
+	9	ensi2-ke4	ensi2.k=e	ruler=ERG	11	ERG	
+	10	/	_	_	11	punct	
+	11	ba-ře6	Ø-ba-n-ře6-Ø	VP-MM-3SG.A-bring-3N.S/DO	0	root	
+
+Instead, such examples are interpreted as "emphatic copula"/"standard marker" ("STM"), basically like a focus particle.
 
 ~~~ conllu
 1	šag₄	_	heart	_	_	6	ERG	_	_
@@ -4312,6 +4536,19 @@ As the copula can be annotated as particle, a particle-based annotation for nega
 ### Hard examples
 
 Collect examples here that are not satisfactorily analyzed, yet.
+
+#### "empty" numerals?
+
+To check: what does 1 mean in the following gloss? Can that modify a proper name (in the sense of "one slave, Urnigdu", but with scrambled word order)? Or is that a replacement for, say, *ud4* "day (when)"?
+
+	# Jagersma, Chap. 22 (15)					
+	# ‘when you redeem Urnigdu, the slave, from Elu’					
+	# (NG 28 9’; L; 21)					
+	1	1	1	1	2	nummod
+	2	úr-níĝ-du10	úr.níĝ.du10.g	Urnigdu	5	ABS
+	3	urdu2	urdu2.d=Ø	slave=ABS	2	appos
+	4	é-lú-ta	é.lú=ta	Elu=ABL	5	ABL
+	5	ù-mu-duh	'u-mu-e-duh-Ø	REL.PAST-VENT-2SG.A-loosen-3N.S/DO	0	advcl
 
 #### interrogatives with copula
 
